@@ -14,7 +14,7 @@
     
     
       
-        <title>Komodor</title>
+        <title>Sensitive-Information-Redaction - Komodor</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#sensitive-data-redaction-in-komodors-k8s-watcher" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Sensitive-Information-Redaction
             
           </span>
         </div>
@@ -177,58 +177,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Welcome
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Welcome
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -386,11 +339,85 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Sensitive-Information-Redaction.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sensitive-Information-Redaction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Sensitive-Information-Redaction.html" class="md-nav__link md-nav__link--active">
         Sensitive-Information-Redaction
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-it" class="md-nav__link">
+    What is it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-integrate" class="md-nav__link">
+    How to integrate
+  </a>
+  
+    <nav class="md-nav" aria-label="How to integrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secret-resource" class="md-nav__link">
+    Secret Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmap-resource" class="md-nav__link">
+    ConfigMap resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-resource" class="md-nav__link">
+    Deployment resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -421,16 +448,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#what-is-it" class="md-nav__link">
+    What is it
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#how-to-integrate" class="md-nav__link">
+    How to integrate
   </a>
+  
+    <nav class="md-nav" aria-label="How to integrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secret-resource" class="md-nav__link">
+    Secret Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmap-resource" class="md-nav__link">
+    ConfigMap resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-resource" class="md-nav__link">
+    Deployment resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -447,21 +501,80 @@
               
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+                <h1 id="sensitive-data-redaction-in-komodors-k8s-watcher">Sensitive data redaction in Komodor’s k8s-watcher<a class="headerlink" href="#sensitive-data-redaction-in-komodors-k8s-watcher" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h2>
+<p>It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
+When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff. </p>
+<h2 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h2>
+<p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under redact key as such:</p>
+<p>komodor-k8s-watcher</p>
+<div class="codehilite"><pre><span></span><code><span class="n">watchNamespace</span><span class="o">:</span> <span class="n">all</span>
+<span class="n">namespacesBlacklist</span><span class="o">:</span>
+  <span class="o">-</span> <span class="n">kube</span><span class="o">-</span><span class="n">system</span>
+<span class="n">redact</span><span class="o">:</span>
+   <span class="o">-</span> <span class="s2">&quot;PG_.*&quot;</span>
+   <span class="o">-</span> <span class="s2">&quot;.*PASSWORD.*&quot;</span>
+<span class="n">nameBlacklist</span><span class="o">:</span> <span class="o">[</span><span class="s2">&quot;leader&quot;</span><span class="o">,</span> <span class="s2">&quot;election&quot;</span><span class="o">]</span>
+<span class="n">collectHistory</span><span class="o">:</span> <span class="kc">false</span>
 </code></pre></div>
+
+<h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
+<p>By default, Komodor’s k8s-watcher is hashing all secrets values.</p>
+<h3 id="configmap-resource">ConfigMap resource<a class="headerlink" href="#configmap-resource" title="Permanent link">&para;</a></h3>
+<p>You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.</p>
+<p>komodor-k8s-watcher.yaml:</p>
+<div class="codehilite"><pre><span></span><code>redact:
+    - &quot;SENTRY_API_KEY&quot;
+    - &quot;PG_.*&quot;
+</code></pre></div>
+
+<p>configmap.yaml:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">v1</span>
+<span class="n">kind</span><span class="o">:</span> <span class="n">ConfigMap</span>
+<span class="n">metadata</span><span class="o">:</span>
+  <span class="n">Name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">map</span>
+<span class="n">data</span><span class="o">:</span>
+  <span class="n">SENTRY_API_KEY</span><span class="o">:</span> <span class="n">super_secret</span>
+  <span class="n">PG_SECRET</span><span class="o">:</span> <span class="n">super_secret</span>
+  <span class="n">PG_USERNAME</span><span class="o">:</span> <span class="n">super_secret</span>
+</code></pre></div>
+
+<p>All the above “super_secret” will be sent has hashed value.</p>
+<h3 id="deployment-resource">Deployment resource<a class="headerlink" href="#deployment-resource" title="Permanent link">&para;</a></h3>
+<p>Komodor’s k8s-watcher will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
+<p>komodor-k8s-watcher.yaml:</p>
+<div class="codehilite"><pre><span></span><code>redact:
+    - &quot;SENTRY_API_KEY&quot;
+    - &quot;PG_.*&quot;
+</code></pre></div>
+
+<p>deployment.yaml:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
+<span class="n">kind</span><span class="o">:</span> <span class="n">Deployment</span>
+<span class="n">metadata</span><span class="o">:</span>
+  <span class="n">name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">deployment</span>
+<span class="n">spec</span><span class="o">:</span>
+  <span class="n">selector</span><span class="o">:</span>
+    <span class="n">matchLabels</span><span class="o">:</span>
+      <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
+  <span class="n">replicas</span><span class="o">:</span> <span class="mi">1</span>
+  <span class="n">template</span><span class="o">:</span>
+    <span class="n">metadata</span><span class="o">:</span>
+      <span class="n">labels</span><span class="o">:</span>
+        <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
+    <span class="n">spec</span><span class="o">:</span>
+      <span class="n">containers</span><span class="o">:</span>
+        <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+          <span class="n">image</span><span class="o">:</span> <span class="n">gcr</span><span class="o">.</span><span class="na">io</span><span class="sr">/google-samples/</span><span class="n">node</span><span class="o">-</span><span class="n">hello</span><span class="o">:</span><span class="mf">1.0</span>
+          <span class="n">env</span><span class="o">:</span>
+            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">PG_USERNAME</span>
+              <span class="n">value</span><span class="o">:</span> <span class="n">super_secret</span>
+            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">SECRET</span>
+              <span class="n">value</span><span class="o">:</span> <span class="n">this_will_show_up</span>
+</code></pre></div>
+
+<p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
+<p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration. </p>
                 
               
               
@@ -480,21 +593,21 @@ docs/
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="Annotations.html" class="md-footer__link md-footer__link--next" aria-label="Next: Annotations" rel="next">
+        <a href="komodor-source-control.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Source-Control" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
-              Annotations
+              Source-Control
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   

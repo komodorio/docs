@@ -14,7 +14,7 @@
     
     
       
-        <title>Komodor</title>
+        <title>Config-Changes - Komodor</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#config-change-api-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Config-Changes
             
           </span>
         </div>
@@ -177,58 +177,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Welcome
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Welcome
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -254,11 +207,85 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="config-changes.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Config-Changes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="config-changes.html" class="md-nav__link md-nav__link--active">
         Config-Changes
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-url" class="md-nav__link">
+    Request URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-example" class="md-nav__link">
+    Full Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -421,15 +448,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
   </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-url" class="md-nav__link">
+    Request URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#full-example" class="md-nav__link">
+    Full Example
   </a>
   
 </li>
@@ -447,21 +501,23 @@
               
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+                <h1 id="config-change-api-integration">Config Change API Integration<a class="headerlink" href="#config-change-api-integration" title="Permanent link">&para;</a></h1>
+<p>Config change API allows users to send changes in their config (from internal tools and infrastructure), and see them as part of the Komodor Service view.</p>
+<h3 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
+<h5 id="request-url">Request URL<a class="headerlink" href="#request-url" title="Permanent link">&para;</a></h5>
+<p>Mandatory query params will be used for service selection:
+* serviceName 
+* namespace
+* clusterName</p>
+<h5 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h5>
+<p>To authenticate the request use API Key on your "REST API" integration tile in the Komodor app and add it to a header with <code>X-API-KEY</code> name.</p>
+<p><em>URL example</em>:
+ https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</p>
+<h5 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h5>
+<p>This is the event itself with the relevant configuration you want to be connected to the service as JSON.
+    <code>{ key1: value1, key2: value2… }</code></p>
+<h3 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
+<p><code>curl H "X-API-KEY: &lt;rest api key&gt;" -H "Content-Type: application/json" -d '{"key":"value"}' 'https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</code></p>
                 
               
               
@@ -480,15 +536,30 @@ docs/
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="Annotations.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Annotations" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Annotations
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="Annotations.html" class="md-footer__link md-footer__link--next" aria-label="Next: Annotations" rel="next">
+        <a href="Integrations/Datadog.html" class="md-footer__link md-footer__link--next" aria-label="Next: Datadog" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Annotations
+              Datadog
             </div>
           </div>
           <div class="md-footer__button md-icon">

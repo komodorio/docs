@@ -1,0 +1,933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Annotations - Komodor</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#komodor-kubernetes-annotations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Komodor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Annotations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Komodor
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Annotations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Annotations.html" class="md-nav__link md-nav__link--active">
+        Annotations
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#komodor-kubernetes-annotations" class="md-nav__link">
+    Komodor kubernetes annotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    Notifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how" class="md-nav__link">
+    How
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-links" class="md-nav__link">
+    Service Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how_1" class="md-nav__link">
+    How
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-deploy-links" class="md-nav__link">
+    CI-Deploy Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-links" class="md-nav__link">
+    Deploy Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-example" class="md-nav__link">
+    Full example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-best-practices" class="md-nav__link">
+    Annotations Best Practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-does-komodor-utilize-annotation" class="md-nav__link">
+    Where does Komodor utilize annotation?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#official-kubernetes-recommendation" class="md-nav__link">
+    Official kubernetes recommendation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#komodor-recommendation" class="md-nav__link">
+    Komodor recommendation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    Usage example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="config-changes.html" class="md-nav__link">
+        Config-Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/Datadog.html" class="md-nav__link">
+        Datadog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/datadog-webhook.html" class="md-nav__link">
+        Datadog-Webhook
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/Grafana.html" class="md-nav__link">
+        Grafana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/LaunchDarkly.html" class="md-nav__link">
+        LaunchDarkly
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/PagerDuty.html" class="md-nav__link">
+        PagerDuty
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Integrations/Sentry.html" class="md-nav__link">
+        Sentry
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="komodor-source-control.html" class="md-nav__link">
+        Source-Control
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sensitive-Information-Redaction.html" class="md-nav__link">
+        Sensitive-Information-Redaction
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#komodor-kubernetes-annotations" class="md-nav__link">
+    Komodor kubernetes annotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    Notifications
+  </a>
+  
+    <nav class="md-nav" aria-label="Notifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how" class="md-nav__link">
+    How
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-links" class="md-nav__link">
+    Service Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how_1" class="md-nav__link">
+    How
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci-deploy-links" class="md-nav__link">
+    CI-Deploy Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-links" class="md-nav__link">
+    Deploy Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#full-example" class="md-nav__link">
+    Full example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations-best-practices" class="md-nav__link">
+    Annotations Best Practices
+  </a>
+  
+    <nav class="md-nav" aria-label="Annotations Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-does-komodor-utilize-annotation" class="md-nav__link">
+    Where does Komodor utilize annotation?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#official-kubernetes-recommendation" class="md-nav__link">
+    Official kubernetes recommendation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#komodor-recommendation" class="md-nav__link">
+    Komodor recommendation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-example" class="md-nav__link">
+    Usage example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Annotations</h1>
+                
+                <h2 id="komodor-kubernetes-annotations">Komodor kubernetes annotations<a class="headerlink" href="#komodor-kubernetes-annotations" title="Permanent link">&para;</a></h2>
+<p>Komodor annotations (AKA Komodor as code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
+Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)</p>
+<h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
+<p>Configure the Slack channel notification as part of the deployment object.</p>
+<h3 id="how">How<a class="headerlink" href="#how" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>annotation</th>
+<th>values</th>
+<th>description</th>
+<th>example</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app.komodor.com/notification.deploy.slack</td>
+<td>string</td>
+<td>Slack channel name for all deploy events notifications</td>
+<td>“deploy-brain-team"</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/notification.deploy_fail.slack</td>
+<td>string</td>
+<td>Slack channel name for failed deploy events notifications</td>
+<td>“deploy-failed"</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/notification.deploy_success.slack</td>
+<td>string</td>
+<td>Slack channel name for successful deploy events notifications</td>
+<td>“deploy-success"</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/notification.health.slack</td>
+<td>string</td>
+<td>Slack channel for health event notifications</td>
+<td>“alerts-p1”</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/notification.health.delay_seconds</td>
+<td>string</td>
+<td>Duration for delaying notifications in case of an unhealthy state</td>
+<td>“120”</td>
+<td>“30”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="service-links">Service Links<a class="headerlink" href="#service-links" title="Permanent link">&para;</a></h2>
+<p>Define quick-links for a specific service, making it easier to get context when troubleshooting.</p>
+<h3 id="how_1">How<a class="headerlink" href="#how_1" title="Permanent link">&para;</a></h3>
+<p>in the form of <code>app.komodor.com/service/link/name:url</code></p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>annotation</th>
+<th>values</th>
+<th>description</th>
+<th>example</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app.komodor.com/service.link.grafana-overall-system-health</td>
+<td>url</td>
+<td>Url for Grafana health dashboard related to this service.</td>
+<td>“deploy-brain-team"</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/service.link.datadog-http-500</td>
+<td>url</td>
+<td>Url for datadog dashboard with bad http</td>
+<td>“alerts-p1”</td>
+<td></td>
+</tr>
+<tr>
+<td>app.komodor.com/service.link.company-playbook</td>
+<td>url</td>
+<td>The playbook for the company playbook</td>
+<td>“120”</td>
+<td>“30”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ci-deploy-links">CI-Deploy Links<a class="headerlink" href="#ci-deploy-links" title="Permanent link">&para;</a></h2>
+<p>For each deployment version, you can add a quick link with the job url.</p>
+<p>How</p>
+<p><code>app.komodor.com/deploy/job/name:url</code></p>
+<p>Example:</p>
+<table>
+<thead>
+<tr>
+<th>annotation</th>
+<th>values</th>
+<th>description</th>
+<th>Example</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app.komodor.com/deploy.job.jenkins</td>
+<td>url</td>
+<td>Link to Jenkins job that deploys the service</td>
+<td>https://ci.jenkins-ci.org/computer/job</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="deploy-links">Deploy Links<a class="headerlink" href="#deploy-links" title="Permanent link">&para;</a></h2>
+<p>For each deployment version, you can add a quick link with the relevant filters already in place!</p>
+<p>How</p>
+<p><code>app.komodor.com/deploy/link/name:value</code></p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>annotation</th>
+<th>values</th>
+<th>description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app.komodor.com/deploy.link.logs</td>
+<td>url</td>
+<td>Link for the specific version logs</td>
+<td>https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1</td>
+</tr>
+<tr>
+<td>app.komodor.com/deploy.link.sentry</td>
+<td>url</td>
+<td>Link for the specific version  Sentry issues</td>
+<td>https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d</td>
+</tr>
+</tbody>
+</table>
+<h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">annotation-example</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">app.komodor.com/notification.deploy.slack</span><span class="p">:</span> <span class="s">&quot;#deploy-slack-channel&quot;</span>
+    <span class="nt">app.komodor.com/notification.alert.slack</span><span class="p">:</span> <span class="s">&quot;#p1-health-issues&quot;</span>
+    <span class="nt">app.komodor.com/service.link.grafana-overall-system-health</span><span class="p">:</span> <span class="s">&quot;https://grafana.com/service/annoation-exmaple&quot;</span>
+    <span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span> <span class="s">&quot;https://datadog.com/dashboard/annoation-exmaple&quot;</span>
+    <span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span> <span class="s">&quot;https://docs.google.com/playbook&quot;</span>    
+    <span class="nt">app.komodor.com/deploy.job.jenkins</span><span class="p">:</span> <span class="s">&quot;https://ci.jenkins-ci.org/computer/job&quot;</span>
+    <span class="nt">app.komodor.com/deploy.link.logs</span><span class="p">:</span> <span class="s">&quot;https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1&quot;</span>
+    <span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span> <span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span>        
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hello-world</span>
+          <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0.1</span>
+          <span class="nt">ports</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
+              <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</code></pre></div>
+
+<h2 id="annotations-best-practices">Annotations Best Practices<a class="headerlink" href="#annotations-best-practices" title="Permanent link">&para;</a></h2>
+<p>In Komodor we believe that k8s annotation is the best practice for describing service metadata.
+This includes all of the “extra” fields used to tag and label your service, both for other team members and for external tools.
+BTW, We collect the data both from annotations and labels.</p>
+<h3 id="where-does-komodor-utilize-annotation">Where does Komodor utilize annotation?<a class="headerlink" href="#where-does-komodor-utilize-annotation" title="Permanent link">&para;</a></h3>
+<p>Everywhere, Komodor will use these annotation to create a powerful connections between services and enrich service information in all of the following:
+* Service explorer
+* Related services
+* Events screen
+* Match alerts to the right services </p>
+<h3 id="official-kubernetes-recommendation"><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">Official kubernetes recommendation</a><a class="headerlink" href="#official-kubernetes-recommendation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">app.kubernetes.io/component</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">database</span>
+<span class="nt">app.kubernetes.io/part-of</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<span class="nt">app.kubernetes.io/managed-by</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helm</span>
+</code></pre></div>
+
+<h3 id="komodor-recommendation">Komodor recommendation<a class="headerlink" href="#komodor-recommendation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">app.koomdor.com/label/team</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">backend</span>
+<span class="nt">app.koomdor.com/label/group</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">infrastructure</span>
+<span class="nt">app.koomdor.com/labe/owners</span><span class="p">:</span> <span class="s">&quot;#infa-team&quot;</span>
+<span class="nt">app.koomdor.com/labe/alert-team</span><span class="p">:</span> <span class="s">&quot;#devs&quot;</span>
+<span class="nt">app.koomdor.com/labe/Impacted-by</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
+</code></pre></div>
+
+<h3 id="usage-example">Usage example<a class="headerlink" href="#usage-example" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tagging Team annotation on relevant services and adding relevant metadata on the alert metadata in datadog.</li>
+<li>Using the Team name in the alert tools (for example PD) as part of the komodor labels</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Welcome
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="config-changes.html" class="md-footer__link md-footer__link--next" aria-label="Next: Config-Changes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Config-Changes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+    
+  </body>
+</html>
