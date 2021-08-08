@@ -2,6 +2,8 @@ site_name: Komodor
 strict: true
 site_url: "https://www.komodor.com/docs"
 use_directory_urls: false
+repo_url: https://github.com/komodorio/docs
+repo_name: komodorio/docs
 theme:
   name: material
   favicon: 'img/favicon.png'
@@ -25,4 +27,4 @@ nav:
     - Sentry: Integrations/Sentry.md
   - Source-Control: komodor-source-control.md
   - Sensitive-Information-Redaction: Sensitive-Information-Redaction.md
-  - Interaction-With-The-Cluster: Interaction-With-The-Cluster.md
+  # - Interaction-With-The-Cluster: Interaction-With-The-Cluster.md
