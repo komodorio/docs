@@ -17,14 +17,14 @@ markdown_extensions:
 nav:
   - Welcome: index.md
   - Annotations: Annotations.md
-  - Config-Changes: config-changes.md
+  - Config Changes: config-changes.md
   - Integrations:
     - Datadog: Integrations/Datadog.md
-    - Datadog-Webhook: Integrations/datadog-webhook.md
+    - Datadog Webhook: Integrations/datadog-webhook.md
     - Grafana: Integrations/Grafana.md
     - LaunchDarkly: Integrations/LaunchDarkly.md
     - PagerDuty: Integrations/PagerDuty.md
     - Sentry: Integrations/Sentry.md
-  - Source-Control: komodor-source-control.md
-  - Sensitive-Information-Redaction: Sensitive-Information-Redaction.md
-  # - Interaction-With-The-Cluster: Interaction-With-The-Cluster.md
+  - Source Control: komodor-source-control.md
+  - Sensitive Information Redaction: Sensitive-Information-Redaction.md
+  - Interaction with the Cluster: Interaction-With-The-Cluster.md
