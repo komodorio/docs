@@ -27,4 +27,3 @@ nav:
     - Sentry: Integrations/Sentry.md
   - Source Control: komodor-source-control.md
   - Sensitive Information Redaction: Sensitive-Information-Redaction.md
-  - Interaction with the Cluster: Interaction-With-The-Cluster.md
