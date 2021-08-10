@@ -6,6 +6,7 @@ repo_url: https://github.com/komodorio/docs
 repo_name: komodorio/docs
 theme:
   name: material
+  custom_dir: overrides 
   favicon: 'img/favicon.png'
   palette:
     primary: indigo 
@@ -15,7 +16,7 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
-  - Welcome: index.md
+  - Home: index.md
   - Komodor API: https://komodor.stoplight.io/docs/komodor-api
   - Annotations: Annotations.md
   - Config Changes: config-changes.md

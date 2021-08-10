@@ -1,2 +1,4 @@
-# Welcome to Komodor
-
+---
+title: Title
+template: home.html
+---
