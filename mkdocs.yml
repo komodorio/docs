@@ -3,6 +3,7 @@ strict: true
 site_url: "https://www.komodor.com/docs"
 repo_url: https://github.com/komodorio/docs
 repo_name: komodorio/docs
+edit_uri: https://github.com/komodorio/docs/edit/main/docs/getting-started.md
 use_directory_urls: false
 theme:
   name: material
