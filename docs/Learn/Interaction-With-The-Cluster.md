@@ -6,11 +6,11 @@ Interaction with the cluster allows you to speed up the troubleshooting process.
     Komodor does not run any actions that are not initiated by one of the users in the account
 
 ## Prerequisites
-Install Komodor's watcher (version `>=0.1.44`) with `--set watcher.enableAgentTaskExecution=true` to enable interaction with the Cluster.
+Install Komodor's watcher (version `>=0.1.44`) with `--set watcher.enableAgentTaskExecution=true --set allowReadingPodLogs=true` to enable interaction with the Cluster.
 
 ### Upgrade
 ```bash
-helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.enableAgentTaskExecution=true --reuse-values
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.enableAgentTaskExecution=true --set allowReadingPodLogs=true --reuse-values
 ```
 
 ## Live Pods
