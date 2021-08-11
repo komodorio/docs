@@ -746,9 +746,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p>Komodor does not run any actions that are not initiated by one of the users in the account</p>
 </div>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>Install Komodor's watcher (version <code>&gt;=0.1.44</code>) with <code>--set watcher.enableAgentTaskExecution=true</code> to enable interaction with the Cluster.</p>
+<p>Install Komodor's watcher (version <code>&gt;=0.1.44</code>) with <code>--set watcher.enableAgentTaskExecution=true --set allowReadingPodLogs=true</code> to enable interaction with the Cluster.</p>
 <h3 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --reuse-values
+<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --set <span class="nv">allowReadingPodLogs</span><span class="o">=</span><span class="nb">true</span> --reuse-values
 </code></pre></div>
 
 <h2 id="live-pods">Live Pods<a class="headerlink" href="#live-pods" title="Permanent link">&para;</a></h2>
