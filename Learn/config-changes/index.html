@@ -1,3 +1,4 @@
+<!-- Elements added to main will be displayed on all pages -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -9,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/LaunchDarkly.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Learn/config-changes/">
       
-      <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
     
     
       
-        <title>LaunchDarkly - Komodor</title>
+        <title>Config Changes - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -32,6 +33,19 @@
       
     
     
+<script>
+var gtmId = 'GTM-TQPKQK7';
+if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+  gtmId = 'GTM-XXX'
+}
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer', gtmId);
+</script>
+
     
       
         
@@ -59,7 +73,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#launchdarkly-integration" class="md-skip">
+        <a href="#config-change-api-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +92,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="../.." title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -97,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LaunchDarkly
+              Config Changes
             
           </span>
         </div>
@@ -161,6 +175,85 @@
       
       
         
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../getting-started/" class="md-tabs__link">
+      Getting Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://komodor.stoplight.io/docs/komodor-api" class="md-tabs__link">
+      Komodor API
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Learn
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Integrations/" class="md-tabs__link">
+        Integrations
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -172,10 +265,12 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="../.." title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -207,8 +302,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        Welcome
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        Getting Started
       </a>
     </li>
   
@@ -235,36 +345,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../Annotations.html" class="md-nav__link">
-        Annotations
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config-changes.html" class="md-nav__link">
-        Config Changes
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -272,16 +352,16 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
-      <label class="md-nav__link" for="__nav_5">
-        Integrations
+      <label class="md-nav__link" for="__nav_4">
+        Learn
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" aria-label="Learn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Integrations
+          Learn
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -290,8 +370,8 @@
   
   
     <li class="md-nav__item">
-      <a href="Datadog.html" class="md-nav__link">
-        Datadog
+      <a href="../" class="md-nav__link">
+        Index
       </a>
     </li>
   
@@ -302,20 +382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="datadog-webhook.html" class="md-nav__link">
-        Datadog Webhook
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Grafana.html" class="md-nav__link">
-        Grafana
+      <a href="../Annotations/" class="md-nav__link">
+        Annotations
       </a>
     </li>
   
@@ -336,12 +404,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          LaunchDarkly
+          Config Changes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="LaunchDarkly.html" class="md-nav__link md-nav__link--active">
-        LaunchDarkly
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Config Changes
       </a>
       
         
@@ -359,8 +427,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-url" class="md-nav__link">
+    Request URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-example" class="md-nav__link">
+    Full Example
   </a>
   
 </li>
@@ -378,8 +480,8 @@
   
   
     <li class="md-nav__item">
-      <a href="PagerDuty.html" class="md-nav__link">
-        PagerDuty
+      <a href="../komodor-source-control/" class="md-nav__link">
+        Source Control
       </a>
     </li>
   
@@ -390,8 +492,20 @@
   
   
     <li class="md-nav__item">
-      <a href="Sentry.html" class="md-nav__link">
-        Sentry
+      <a href="../Sensitive-Information-Redaction/" class="md-nav__link">
+        Sensitive Information Redaction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interaction-With-The-Cluster/" class="md-nav__link">
+        Interaction with the Cluster
       </a>
     </li>
   
@@ -410,40 +524,109 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../komodor-source-control.html" class="md-nav__link">
-        Source Control
+      <a href="../../Integrations/" class="md-nav__link">
+        Index
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+          
+            
   
   
   
     <li class="md-nav__item">
-      <a href="../Sensitive-Information-Redaction.html" class="md-nav__link">
-        Sensitive Information Redaction
+      <a href="../../Integrations/Datadog/" class="md-nav__link">
+        Datadog
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+          
+            
   
   
   
     <li class="md-nav__item">
-      <a href="../Interaction-With-The-Cluster.html" class="md-nav__link">
-        Interaction with the Cluster
+      <a href="../../Integrations/datadog-webhook/" class="md-nav__link">
+        Datadog Webhook
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integrations/Grafana/" class="md-nav__link">
+        Grafana
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integrations/LaunchDarkly/" class="md-nav__link">
+        LaunchDarkly
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integrations/PagerDuty/" class="md-nav__link">
+        PagerDuty
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integrations/Sentry/" class="md-nav__link">
+        Sentry
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -474,8 +657,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-url" class="md-nav__link">
+    Request URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    Body
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-example" class="md-nav__link">
+    Full Example
   </a>
   
 </li>
@@ -492,27 +709,28 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/komodorio/docs/edit/master/docs/Integrations/LaunchDarkly.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/komodorio/docs/edit/master/docs/Learn/config-changes.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="launchdarkly-integration">LaunchDarkly Integration<a class="headerlink" href="#launchdarkly-integration" title="Permanent link">&para;</a></h1>
-<p>Integration with LaunchDarkly extends the holistic view of the environment with flags changes.
-For example:
-* Feature flag was turned on
-* Feature flag invariation changed
-* Feature flag targeting was changed</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>In order to create that integration all you need is to use navigate to <a href="https://app.launchdarkly.com/default/integrations/webhooks/new">LaunchDarkly Webhook Integration</a> and fill the form:
-1. Name - give your integration a name
-2. URL - <strong>Please contact us to provide you the URL</strong> (we also will provide you a secret to sign the webhooks payload)
-3. Sign Webhook - use the secret from Komodor
-4. Add policy
-   1. You can use <code>proj/*:env/*:flag/*</code> statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
-   2. Set the effect to "Allow"
-   3. Choose all actions</p>
-<p><img alt="image" src="https://docs.launchdarkly.com/static/c8f2ec43853827df1983cbc739c774ac/d4377/integrations-webhooks-create.png" /></p>
+                <h1 id="config-change-api-integration">Config Change API Integration<a class="headerlink" href="#config-change-api-integration" title="Permanent link">&para;</a></h1>
+<p>Config change API allows users to send changes in their config (from internal tools and infrastructure), and see them as part of the Komodor Service view.</p>
+<h3 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
+<h5 id="request-url">Request URL<a class="headerlink" href="#request-url" title="Permanent link">&para;</a></h5>
+<p>Mandatory query params will be used for service selection:
+* serviceName 
+* namespace
+* clusterName</p>
+<h5 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h5>
+<p>To authenticate the request use API Key on your "REST API" integration tile in the Komodor app and add it to a header with <code>X-API-KEY</code> name.</p>
+<p><em>URL example</em>:
+ https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</p>
+<h5 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h5>
+<p>This is the event itself with the relevant configuration you want to be connected to the service as JSON.
+    <code>{ key1: value1, key2: value2… }</code></p>
+<h3 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
+<p><code>curl H "X-API-KEY: &lt;rest api key&gt;" -H "Content-Type: application/json" -d '{"key":"value"}' 'https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</code></p>
                 
               
               
@@ -526,67 +744,34 @@ For example:
         
       </main>
       
-        
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="Grafana.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Grafana" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Grafana
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
             </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="PagerDuty.html" class="md-footer__link md-footer__link--next" aria-label="Next: PagerDuty" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              PagerDuty
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
-      
+            
+            
+            
+        </div>
     </div>
-  </div>
 </footer>
-      
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.29db7785.min.js"></script>
       
     
   </body>

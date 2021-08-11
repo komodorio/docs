@@ -1,3 +1,4 @@
+<!-- Elements added to main will be displayed on all pages -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -10,7 +11,7 @@
       
       
       <link rel="icon" href="/docs/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
     
     
       
@@ -18,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="/docs/assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="/docs/assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="/docs/assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="/docs/assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -30,6 +31,19 @@
       
     
     
+<script>
+var gtmId = 'GTM-TQPKQK7';
+if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1')) {
+  gtmId = 'GTM-XXX'
+}
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer', gtmId);
+</script>
+
     
       
         
@@ -71,7 +85,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/docs/index.html" title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="/docs/." title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -154,6 +168,83 @@
       
       
         
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="/docs/." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="/docs/getting-started/" class="md-tabs__link">
+      Getting Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://komodor.stoplight.io/docs/komodor-api" class="md-tabs__link">
+      Komodor API
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/Learn/" class="md-tabs__link">
+        Learn
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/Integrations/" class="md-tabs__link">
+        Integrations
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -165,10 +256,12 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/docs/index.html" title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="/docs/." title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -200,8 +293,23 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/index.html" class="md-nav__link">
-        Welcome
+      <a href="/docs/." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/getting-started/" class="md-nav__link">
+        Getting Started
       </a>
     </li>
   
@@ -229,25 +337,97 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Learn
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Learn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Learn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="/docs/Annotations.html" class="md-nav__link">
+      <a href="/docs/Learn/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Learn/Annotations/" class="md-nav__link">
         Annotations
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+          
+            
   
   
   
     <li class="md-nav__item">
-      <a href="/docs/config-changes.html" class="md-nav__link">
+      <a href="/docs/Learn/config-changes/" class="md-nav__link">
         Config Changes
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Learn/komodor-source-control/" class="md-nav__link">
+        Source Control
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Learn/Sensitive-Information-Redaction/" class="md-nav__link">
+        Sensitive Information Redaction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Learn/Interaction-With-The-Cluster/" class="md-nav__link">
+        Interaction with the Cluster
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -281,7 +461,19 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/Datadog.html" class="md-nav__link">
+      <a href="/docs/Integrations/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Integrations/Datadog/" class="md-nav__link">
         Datadog
       </a>
     </li>
@@ -293,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/datadog-webhook.html" class="md-nav__link">
+      <a href="/docs/Integrations/datadog-webhook/" class="md-nav__link">
         Datadog Webhook
       </a>
     </li>
@@ -305,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/Grafana.html" class="md-nav__link">
+      <a href="/docs/Integrations/Grafana/" class="md-nav__link">
         Grafana
       </a>
     </li>
@@ -317,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/LaunchDarkly.html" class="md-nav__link">
+      <a href="/docs/Integrations/LaunchDarkly/" class="md-nav__link">
         LaunchDarkly
       </a>
     </li>
@@ -329,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/PagerDuty.html" class="md-nav__link">
+      <a href="/docs/Integrations/PagerDuty/" class="md-nav__link">
         PagerDuty
       </a>
     </li>
@@ -341,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/Integrations/Sentry.html" class="md-nav__link">
+      <a href="/docs/Integrations/Sentry/" class="md-nav__link">
         Sentry
       </a>
     </li>
@@ -350,51 +542,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/komodor-source-control.html" class="md-nav__link">
-        Source Control
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/Sensitive-Information-Redaction.html" class="md-nav__link">
-        Sensitive Information Redaction
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="/docs/Interaction-With-The-Cluster.html" class="md-nav__link">
-        Interaction with the Cluster
-      </a>
     </li>
   
 
@@ -419,32 +566,34 @@
         
       </main>
       
-        
 <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
-      
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                powered by
+                <a href="https://www.mkdocs.org" title="MkDocs">MkDocs</a>
+                and
+                <a href="https://squidfunk.github.io/mkdocs-material/"
+                   title="Material for MkDocs">
+                    Material for MkDocs</a>
+            </div>
+            
+            
+            
+        </div>
     </div>
-  </div>
 </footer>
-      
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/docs/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/docs/assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "/docs/", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/docs/assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="/docs/assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="/docs/assets/javascripts/bundle.29db7785.min.js"></script>
       
     
   </body>
