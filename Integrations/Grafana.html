@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Learn/Sensitive-Information-Redaction/">
+        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/Grafana.html">
       
-      <link rel="icon" href="../../img/favicon.png">
+      <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
     
     
       
-        <title>Sensitive Information Redaction - Komodor</title>
+        <title>Grafana - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -73,7 +73,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -81,7 +81,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#sensitive-data-redaction-in-komodors-k8s-watcher" class="md-skip">
+        <a href="#grafana-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="../index.html" title="Komodor" class="md-header__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -111,7 +111,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensitive Information Redaction
+              Grafana
             
           </span>
         </div>
@@ -186,7 +186,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../index.html" class="md-tabs__link">
       Home
     </a>
   </li>
@@ -198,7 +198,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
   <li class="md-tabs__item">
-    <a href="../../getting-started/" class="md-tabs__link">
+    <a href="../getting-started.html" class="md-tabs__link">
       Getting Started
     </a>
   </li>
@@ -219,15 +219,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../Learn/index.html" class="md-tabs__link">
         Learn
       </a>
     </li>
@@ -237,13 +235,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../Integrations/" class="md-tabs__link">
+      <a href="index.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -270,7 +270,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
+    <a href="../index.html" title="Komodor" class="md-nav__button md-logo" aria-label="Komodor" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -302,7 +302,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Home
       </a>
     </li>
@@ -317,7 +317,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../getting-started.html" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -345,14 +345,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         Learn
@@ -370,7 +368,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../Learn/index.html" class="md-nav__link">
         Index
       </a>
     </li>
@@ -382,7 +380,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Annotations/" class="md-nav__link">
+      <a href="../Learn/Annotations.html" class="md-nav__link">
         Annotations
       </a>
     </li>
@@ -394,7 +392,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../config-changes/" class="md-nav__link">
+      <a href="../Learn/config-changes.html" class="md-nav__link">
         Config Changes
       </a>
     </li>
@@ -406,8 +404,100 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../komodor-source-control/" class="md-nav__link">
+      <a href="../Learn/komodor-source-control.html" class="md-nav__link">
         Source Control
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
+        Sensitive Information Redaction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
+        Interaction with the Cluster
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Datadog.html" class="md-nav__link">
+        Datadog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="datadog-webhook.html" class="md-nav__link">
+        Datadog Webhook
       </a>
     </li>
   
@@ -428,12 +518,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Sensitive Information Redaction
+          Grafana
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Sensitive Information Redaction
+      <a href="Grafana.html" class="md-nav__link md-nav__link--active">
+        Grafana
       </a>
       
         
@@ -451,37 +541,30 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate" class="md-nav__link">
-    How to integrate
-  </a>
-  
-    <nav class="md-nav" aria-label="How to integrate">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#secret-resource" class="md-nav__link">
-    Secret Resource
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configmap-resource" class="md-nav__link">
-    ConfigMap resource
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deployment-resource" class="md-nav__link">
-    Deployment resource
+  <a href="#confirmation" class="md-nav__link">
+    Confirmation
   </a>
   
 </li>
@@ -504,97 +587,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Interaction-With-The-Cluster/" class="md-nav__link">
-        Interaction with the Cluster
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      <label class="md-nav__link" for="__nav_5">
-        Integrations
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Integrations" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Integrations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Integrations/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Integrations/Datadog/" class="md-nav__link">
-        Datadog
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Integrations/datadog-webhook/" class="md-nav__link">
-        Datadog Webhook
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Integrations/Grafana/" class="md-nav__link">
-        Grafana
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Integrations/LaunchDarkly/" class="md-nav__link">
+      <a href="LaunchDarkly.html" class="md-nav__link">
         LaunchDarkly
       </a>
     </li>
@@ -606,7 +599,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Integrations/PagerDuty/" class="md-nav__link">
+      <a href="PagerDuty.html" class="md-nav__link">
         PagerDuty
       </a>
     </li>
@@ -618,7 +611,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Integrations/Sentry/" class="md-nav__link">
+      <a href="Sentry.html" class="md-nav__link">
         Sentry
       </a>
     </li>
@@ -657,37 +650,30 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate" class="md-nav__link">
-    How to integrate
-  </a>
-  
-    <nav class="md-nav" aria-label="How to integrate">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#secret-resource" class="md-nav__link">
-    Secret Resource
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configmap-resource" class="md-nav__link">
-    ConfigMap resource
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deployment-resource" class="md-nav__link">
-    Deployment resource
+  <a href="#confirmation" class="md-nav__link">
+    Confirmation
   </a>
   
 </li>
@@ -709,85 +695,37 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/komodorio/docs/edit/master/docs/Learn/Sensitive-Information-Redaction.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/komodorio/docs/edit/master/docs/Integrations/Grafana.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="sensitive-data-redaction-in-komodors-k8s-watcher">Sensitive data redaction in Komodor’s k8s-watcher<a class="headerlink" href="#sensitive-data-redaction-in-komodors-k8s-watcher" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h2>
-<p>It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
-When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff. </p>
-<h2 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h2>
-<p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under redact key as such:</p>
-<p>komodor-k8s-watcher</p>
-<div class="codehilite"><pre><span></span><code><span class="n">watchNamespace</span><span class="o">:</span> <span class="n">all</span>
-<span class="n">namespacesBlacklist</span><span class="o">:</span>
-  <span class="o">-</span> <span class="n">kube</span><span class="o">-</span><span class="n">system</span>
-<span class="n">redact</span><span class="o">:</span>
-   <span class="o">-</span> <span class="s2">&quot;PG_.*&quot;</span>
-   <span class="o">-</span> <span class="s2">&quot;.*PASSWORD.*&quot;</span>
-<span class="n">nameBlacklist</span><span class="o">:</span> <span class="o">[</span><span class="s2">&quot;leader&quot;</span><span class="o">,</span> <span class="s2">&quot;election&quot;</span><span class="o">]</span>
-<span class="n">collectHistory</span><span class="o">:</span> <span class="kc">false</span>
-</code></pre></div>
-
-<h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
-<p>By default, Komodor’s k8s-watcher is hashing all secrets values.</p>
-<h3 id="configmap-resource">ConfigMap resource<a class="headerlink" href="#configmap-resource" title="Permanent link">&para;</a></h3>
-<p>You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.</p>
-<p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code>redact:
-    - &quot;SENTRY_API_KEY&quot;
-    - &quot;PG_.*&quot;
-</code></pre></div>
-
-<p>configmap.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">v1</span>
-<span class="n">kind</span><span class="o">:</span> <span class="n">ConfigMap</span>
-<span class="n">metadata</span><span class="o">:</span>
-  <span class="n">Name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">map</span>
-<span class="n">data</span><span class="o">:</span>
-  <span class="n">SENTRY_API_KEY</span><span class="o">:</span> <span class="n">super_secret</span>
-  <span class="n">PG_SECRET</span><span class="o">:</span> <span class="n">super_secret</span>
-  <span class="n">PG_USERNAME</span><span class="o">:</span> <span class="n">super_secret</span>
-</code></pre></div>
-
-<p>All the above “super_secret” will be sent has hashed value.</p>
-<h3 id="deployment-resource">Deployment resource<a class="headerlink" href="#deployment-resource" title="Permanent link">&para;</a></h3>
-<p>Komodor’s k8s-watcher will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
-<p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code>redact:
-    - &quot;SENTRY_API_KEY&quot;
-    - &quot;PG_.*&quot;
-</code></pre></div>
-
-<p>deployment.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
-<span class="n">kind</span><span class="o">:</span> <span class="n">Deployment</span>
-<span class="n">metadata</span><span class="o">:</span>
-  <span class="n">name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">deployment</span>
-<span class="n">spec</span><span class="o">:</span>
-  <span class="n">selector</span><span class="o">:</span>
-    <span class="n">matchLabels</span><span class="o">:</span>
-      <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
-  <span class="n">replicas</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="n">template</span><span class="o">:</span>
-    <span class="n">metadata</span><span class="o">:</span>
-      <span class="n">labels</span><span class="o">:</span>
-        <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
-    <span class="n">spec</span><span class="o">:</span>
-      <span class="n">containers</span><span class="o">:</span>
-        <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
-          <span class="n">image</span><span class="o">:</span> <span class="n">gcr</span><span class="o">.</span><span class="na">io</span><span class="sr">/google-samples/</span><span class="n">node</span><span class="o">-</span><span class="n">hello</span><span class="o">:</span><span class="mf">1.0</span>
-          <span class="n">env</span><span class="o">:</span>
-            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">PG_USERNAME</span>
-              <span class="n">value</span><span class="o">:</span> <span class="n">super_secret</span>
-            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">SECRET</span>
-              <span class="n">value</span><span class="o">:</span> <span class="n">this_will_show_up</span>
-</code></pre></div>
-
-<p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
-<p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration. </p>
+                <h1 id="grafana-integration">Grafana Integration<a class="headerlink" href="#grafana-integration" title="Permanent link">&para;</a></h1>
+<p>Grafana Integration adds <strong>Grafana Alerts</strong> events to your service on Komodor.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>A running instance of Grafana.</p>
+<h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure the prerequisites above are met.</li>
+<li>Locate the Grafana installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
+<li>Press <strong>Install Integration</strong>. A dialog will open.</li>
+<li>Go to your Grafana instance.   </li>
+<li>In the Grafana side bar, hover your cursor over the Alerting (bell) icon and then click <code>Notification channels</code>.</li>
+<li>Press <strong>New channel</strong>.</li>
+<li>In the <code>Name</code> field, enter a name for the channel.</li>
+<li>In the <code>Type</code> field, choose <em>webhook</em>.   </li>
+<li>Copy the webhook URL to the <code>Url</code> field.</li>
+<li>Open the <code>Notifications settings</code>.</li>
+<li>Check the <strong>Default</strong> option. When selected, this option sends a notification on this channel for all alert rules.</li>
+<li>Press <strong>Save</strong></li>
+<li>Press <strong>Install Grafana Installation</strong></li>
+</ol>
+<h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>A Grafana Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
+<li>When a Grafana alert is triggered it will be added to the relevant service on Komodor.</li>
+</ol>
                 
               
               
@@ -825,10 +763,10 @@ When configured - we will redact the specific value. That way Komodor won't see 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.29db7785.min.js"></script>
+      <script src="../assets/javascripts/bundle.29db7785.min.js"></script>
       
     
   </body>

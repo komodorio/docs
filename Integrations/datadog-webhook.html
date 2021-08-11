@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/index.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/datadog-webhook.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
     
     
       
-        <title>Index - Komodor</title>
+        <title>Datadog Webhook - Komodor</title>
       
     
     
@@ -80,6 +80,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#datadog-webhook-integration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Datadog Webhook
             
           </span>
         </div>
@@ -465,19 +470,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Index
       </a>
-      
     </li>
   
 
@@ -497,11 +494,85 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="datadog-webhook.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Datadog Webhook
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="datadog-webhook.html" class="md-nav__link md-nav__link--active">
         Datadog Webhook
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmation" class="md-nav__link">
+    Confirmation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-webhook-in-datadog" class="md-nav__link">
+    Configuring the webhook in Datadog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -567,19 +638,151 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-steps" class="md-nav__link">
+    Installation Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirmation" class="md-nav__link">
+    Confirmation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-the-webhook-in-datadog" class="md-nav__link">
+    Configuring the webhook in Datadog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/komodorio/docs/edit/master/docs/Integrations/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/komodorio/docs/edit/master/docs/Integrations/datadog-webhook.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Index</h1>
-                
-                
+                <h1 id="datadog-webhook-integration">Datadog Webhook Integration<a class="headerlink" href="#datadog-webhook-integration" title="Permanent link">&para;</a></h1>
+<p>Komodor-Datadog webhook integration allows Komodor to receive alerts from Datadog Monitors. You will see all alerts in the Komodor Service View.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>In order for us to connect your services according to Datadog events, the following environment variables should exist on your k8s deployments:
+- <code>DD_ENV</code> should match the environment specified on the Datadog tags
+- <code>DD_SERVICE</code> should match the service name specified on the Datadog tags</p>
+<h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure the prerequisites above are met.</li>
+<li>Locate the Datadog installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
+<li>Press <strong>Install</strong>.</li>
+<li>Follow instructions on the screen.</li>
+</ol>
+<h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>A Datadog Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
+</ol>
+<h3 id="configuring-the-webhook-in-datadog">Configuring the webhook in Datadog<a class="headerlink" href="#configuring-the-webhook-in-datadog" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <a href="https://app.datadoghq.com/account/settings#integrations/webhooks">Datadog Webhook Integration Setup</a></li>
+<li>Create a <code>+ New</code> Webhook</li>
+<li>Call the webhook <code>komodor</code></li>
+<li>Enter the webhook server URL in the URL field: https://app.komodor.com/collector/datadog/webhook</li>
+<li>Copy the following Payload schema into the Payload field:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>    <span class="p">{</span>
+    <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;$EVENT_MSG&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;last_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;$LAST_UPDATED&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;event_type&quot;</span><span class="p">:</span> <span class="s2">&quot;$EVENT_TYPE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;$EVENT_TITLE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;$DATE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;org&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;$ORG_ID&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;$ORG_NAME&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;$ID&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="s2">&quot;$TAGS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;alert&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_ID&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_TYPE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;transition&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_TRANSITION&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cycleId&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_CYCLE_KEY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;$PRIORITY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_STATUS&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;scope&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_SCOPE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_QUERY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;$ALERT_METRIC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;metric_namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;$METRIC_NAMESPACE&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;aggregation_key&quot;</span><span class="p">:</span> <span class="s2">&quot;$AGGREG_KEY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;$LINK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;snapshot&quot;</span><span class="p">:</span> <span class="s2">&quot;$SNAPSHOT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;$USER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;$USERNAME&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;$EMAIL&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ol>
+<li>Add a Custom Header <code>X-API-KEY</code> with the Api Key found in the Komodor Integration page from the Datadog integration tile at the bottom of the setup modal in a JSON format.</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>    <span class="o">{</span><span class="s2">&quot;X-API-KEY&quot;</span>: <span class="s2">&quot;YOUR_KOMODOR_API_KEY&quot;</span><span class="o">}</span>
+</code></pre></div>
+
+<ol>
+<li>Save your changes</li>
+<li>For every monitor you wish to receive alerts to Komodor. Edit the monitor and add <code>@webhook-komodor</code> at the end of the Monitor message.</li>
+</ol>
                 
               
               
