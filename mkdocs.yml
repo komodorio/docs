@@ -1,11 +1,15 @@
 site_name: Komodor 
 strict: true
 site_url: "https://www.komodor.com/docs"
-use_directory_urls: false
 repo_url: https://github.com/komodorio/docs
 repo_name: komodorio/docs
+use_directory_urls: true
 theme:
   name: material
+  custom_dir: overrides 
+  language: en
+  features:
+    - navigation.tabs
   favicon: 'img/favicon.png'
   palette:
     primary: indigo 
@@ -15,17 +19,21 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
-  - Welcome: index.md
+  - Home: index.md
+  - Getting Started: getting-started.md
   - Komodor API: https://komodor.stoplight.io/docs/komodor-api
-  - Annotations: Annotations.md
-  - Config Changes: config-changes.md
+  - Learn:
+    - Index: Learn/index.md
+    - Annotations: Learn/Annotations.md
+    - Config Changes: Learn/config-changes.md
+    - Source Control: Learn/komodor-source-control.md
+    - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
+    - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
   - Integrations:
+    - Index: Integrations/index.md
     - Datadog: Integrations/Datadog.md
     - Datadog Webhook: Integrations/datadog-webhook.md
     - Grafana: Integrations/Grafana.md
     - LaunchDarkly: Integrations/LaunchDarkly.md
     - PagerDuty: Integrations/PagerDuty.md
     - Sentry: Integrations/Sentry.md
-  - Source Control: komodor-source-control.md
-  - Sensitive Information Redaction: Sensitive-Information-Redaction.md
-  - Interaction with the Cluster: Interaction-With-The-Cluster.md
