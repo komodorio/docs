@@ -22,7 +22,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  - Komodor API: https://komodor.stoplight.io/docs/komodor-api
+  - Komodor API: openapi/redoc-static.html
   - Learn:
     - Index: Learn/index.md
     - Annotations: Learn/Annotations.md
