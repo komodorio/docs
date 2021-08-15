@@ -1,4 +1,4 @@
 ---
-title: Title
+title: Documentation
 template: home.html
 ---
