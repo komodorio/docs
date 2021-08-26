@@ -13,6 +13,7 @@ In order to get logs from the cluster please use `--set watcher.allowReadingPodL
 
 ### Upgrade
 ```bash
+helm repo update
 helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.enableAgentTaskExecution=true --set watcher.allowReadingPodLogs=true --reuse-values
 ```
 
