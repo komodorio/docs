@@ -23,6 +23,7 @@ nav:
   - Home: index.md
   - Komodor API: openapi/redoc-static.html
   - Learn:
+    - Komodor's Agent: Learn/Komodor-Agent.md
     - Annotations: Learn/Annotations.md
     - Config Changes: Learn/config-changes.md
     - Source Control: Learn/komodor-source-control.md
