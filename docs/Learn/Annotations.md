@@ -16,7 +16,6 @@ Configure the Slack channel notification as part of the deployment object.
 | app.komodor.com/notification.deploy_fail.slack    | string | Slack channel name for failed deploy events notifications         | “deploy-failed"     |         |
 | app.komodor.com/notification.deploy_success.slack | string | Slack channel name for successful deploy events notifications     | “deploy-success"    |         |
 | app.komodor.com/notification.health.slack         | string | Slack channel for health event notifications                      | “alerts-p1”         |         |
-| app.komodor.com/notification.health.delay_seconds | string | Duration for delaying notifications in case of an unhealthy state | “120”               | “30”    |
 
 
 ## Service Links
