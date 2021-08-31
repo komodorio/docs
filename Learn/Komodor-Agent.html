@@ -421,6 +421,60 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Advanced Configuration
   </a>
   
+    <nav class="md-nav" aria-label="Advanced Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-reduction" class="md-nav__link">
+    Data Reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blacklisting" class="md-nav__link">
+    Blacklisting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-tasks" class="md-nav__link">
+    Agent Tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -697,6 +751,60 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Advanced Configuration
   </a>
   
+    <nav class="md-nav" aria-label="Advanced Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-reduction" class="md-nav__link">
+    Data Reduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blacklisting" class="md-nav__link">
+    Blacklisting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-tasks" class="md-nav__link">
+    Agent Tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -767,7 +875,7 @@ helm upgrade --install k8s-watcher komodorio/k8s-watcher <span class="se">\</spa
 </code></pre></div>
 
 <h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
-<p>Komodor's Agents uses native RBAC model of Kubernetes. All the permissions listed here:</p>
+<p>Komodor's Agents uses the native RBAC model of Kubernetes. All the permissions are listed here:</p>
 <ol>
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml">helm</a></li>
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml">kustomize base</a>, <a href="https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml">kustomize final</a></li>
@@ -777,8 +885,49 @@ helm upgrade --install k8s-watcher komodorio/k8s-watcher <span class="se">\</spa
 <li>linux/amd64</li>
 <li>linux/arm64 (v8) - starting from agent version 0.1.29</li>
 </ul>
-<p>The default is linux/amd64. If you wish to install the chart for linux/arm64 all you need to do is set image.arm flag. For example: <code>--set image.arm=true</code></p>
+<p>The default is linux/amd64. If you wish to install the chart for linux/arm64 all you need to do is <code>--set image.arm=true</code> flag.</p>
 <h2 id="advanced-configuration">Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">&para;</a></h2>
+<p>The agent uses configuration file <code>komodor-k8s-watcher.yaml</code>, all the agent's features and capabilities can be configured here (assuming the RBAC permissions are satisfied).
+More detailed list can be found <a href="https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration">here</a></p>
+<h3 id="data-reduction">Data Reduction<a class="headerlink" href="#data-reduction" title="Permanent link">&para;</a></h3>
+<p><a href="Sensitive-Information-Redaction.html">Read more</a></p>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
+<p>By default the agent watching on almost all the resources (<strong>secrets and events are opt out</strong>)
+To turn on/off resource:</p>
+<ol>
+<li>Helm: <code>--set watcher.resources.RESOURCE=true/off</code></li>
+<li>Kustomize: update the configuration file and the RBAC rule to have <code>get</code>, <code>list</code> and <code>watch</code> permissions</li>
+</ol>
+<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
+<p>The agent watching all the namespaces, by default <code>watchNamespace=all</code> watching all namespaces.</p>
+<p>To watch single namespace:</p>
+<ol>
+<li>Helm: <code>--set watcher.watchNamespace=NAMESPACE</code></li>
+<li>Kustomize: patch the configuration file <code>watchNamespace=NAMESPACE</code></li>
+</ol>
+<h4 id="blacklisting">Blacklisting<a class="headerlink" href="#blacklisting" title="Permanent link">&para;</a></h4>
+<p>Using <code>namespacesBlacklist</code> you can opt list of namespaces</p>
+<h3 id="agent-tasks">Agent Tasks<a class="headerlink" href="#agent-tasks" title="Permanent link">&para;</a></h3>
+<p>Agent tasks are used to interact with the cluster on demand, read more about interaction with the cluster <a href="Interaction-With-The-Cluster.html">here</a></p>
+<p>To enable agent tasks (default is <code>off</code>):</p>
+<ol>
+<li>Helm: <code>--set watcher.enableAgentTaskExecution=true &amp;&amp; --set watcher.allowReadingPodLogs=true</code></li>
+<li>Kustomize: The <code>full</code> overlay already has this turned on. If you are building it manually from <code>base</code>, patch the configuration file <code>enableAgentTaskExecution=true</code> and make sure to have RBAC permissions to <code>get</code> and <code>list</code> for <code>pods</code> and <code>pods/log</code></li>
+</ol>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>Alternativly, you can pass the configuration as environment variables using the <code>KOMOKW_</code> prefix and by replacing all the . to _, for the root items the camelcase transforms into underscores as well.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># apiKey</span>
+<span class="nv">KOMOKW_API_KEY</span><span class="o">=</span>1a2b3c4d5e6f7g7h
+<span class="c1"># watcher.resources.replicaSet</span>
+<span class="nv">KOMOKW_RESOURCES_REPLICASET</span><span class="o">=</span><span class="nb">false</span>
+
+<span class="c1"># watcher.watchNamespace</span>
+<span class="nv">KOMOKW_WATCH_NAMESPACE</span><span class="o">=</span>my-namespace
+<span class="c1"># watcher.collectHistory</span>
+<span class="nv">KOMOKW_COLLECT_HISTORY</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+
 <h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">&para;</a></h2>
 <h3 id="kustomize_1">Kustomize<a class="headerlink" href="#kustomize_1" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>kubectl delete ns komodor
