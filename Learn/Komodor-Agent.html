@@ -384,8 +384,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kustomize" class="md-nav__link">
-    Kustomize
+  <a href="#get-an-api-key" class="md-nav__link">
+    Get an API Key
   </a>
   
 </li>
@@ -393,6 +393,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <li class="md-nav__item">
   <a href="#helm" class="md-nav__link">
     Helm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kustomize" class="md-nav__link">
+    Kustomize
   </a>
   
 </li>
@@ -714,8 +721,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kustomize" class="md-nav__link">
-    Kustomize
+  <a href="#get-an-api-key" class="md-nav__link">
+    Get an API Key
   </a>
   
 </li>
@@ -723,6 +730,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <li class="md-nav__item">
   <a href="#helm" class="md-nav__link">
     Helm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kustomize" class="md-nav__link">
+    Kustomize
   </a>
   
 </li>
@@ -853,17 +867,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                 <h1 id="komodors-agent">Komodor's Agent<a class="headerlink" href="#komodors-agent" title="Permanent link">&para;</a></h1>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p>Before installing the agent, get your API key from the Integration page</p>
-</div>
+<h3 id="get-an-api-key">Get an API Key<a class="headerlink" href="#get-an-api-key" title="Permanent link">&para;</a></h3>
+<p>Tha API key can be found in the <a href="https://app.komodor.com/main/integration">Integration page</a>.</p>
 <p><img alt="API Key Location" src="img/api_key_location.png" /></p>
-<h3 id="kustomize">Kustomize<a class="headerlink" href="#kustomize" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_API_KEY</span><span class="o">=</span> <span class="c1"># API KEY Required</span>
-<span class="nb">export</span> <span class="nv">KOMOKW_CLUSTER_NAME</span><span class="o">=</span> <span class="c1"># Optional</span>
-kubectl create ns komodor
-kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref<span class="o">=</span>master
-</code></pre></div>
-
 <h3 id="helm">Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>helm repo add komodorio https://helm-charts.komodor.io
 helm repo update
@@ -872,6 +878,13 @@ helm upgrade --install k8s-watcher komodorio/k8s-watcher <span class="se">\</spa
  --set watcher.clusterName<span class="o">=</span>CLUSTER_NAME <span class="se">\</span>
  --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
  --set watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+
+<h3 id="kustomize">Kustomize<a class="headerlink" href="#kustomize" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_API_KEY</span><span class="o">=</span> <span class="c1"># API KEY Required</span>
+<span class="nb">export</span> <span class="nv">KOMOKW_CLUSTER_NAME</span><span class="o">=</span> <span class="c1"># Optional</span>
+kubectl create ns komodor
+kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref<span class="o">=</span>master
 </code></pre></div>
 
 <h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
