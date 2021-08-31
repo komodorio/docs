@@ -81,7 +81,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#komodors-agent" class="md-skip">
+        <a href="#the-komodor-agent" class="md-skip">
           Skip to content
         </a>
       
@@ -432,8 +432,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-reduction" class="md-nav__link">
-    Data Reduction
+  <a href="#data-redaction" class="md-nav__link">
+    Data Redaction
   </a>
   
 </li>
@@ -769,8 +769,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-reduction" class="md-nav__link">
-    Data Reduction
+  <a href="#data-redaction" class="md-nav__link">
+    Data Redaction
   </a>
   
 </li>
@@ -865,7 +865,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                   </a>
                 
                 
-                <h1 id="komodors-agent">Komodor's Agent<a class="headerlink" href="#komodors-agent" title="Permanent link">&para;</a></h1>
+                <h1 id="the-komodor-agent">The Komodor Agent<a class="headerlink" href="#the-komodor-agent" title="Permanent link">&para;</a></h1>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="get-an-api-key">Get an API Key<a class="headerlink" href="#get-an-api-key" title="Permanent link">&para;</a></h3>
 <p>Tha API key can be found in the <a href="https://app.komodor.com/main/integration">Integration page</a>.</p>
@@ -888,7 +888,7 @@ kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/o
 </code></pre></div>
 
 <h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
-<p>Komodor's Agents uses the native RBAC model of Kubernetes. All the permissions are listed here:</p>
+<p>The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:</p>
 <ol>
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml">helm</a></li>
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml">kustomize base</a>, <a href="https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml">kustomize final</a></li>
@@ -900,20 +900,20 @@ kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/o
 </ul>
 <p>The default is linux/amd64. If you wish to install the chart for linux/arm64 all you need to do is <code>--set image.arm=true</code> flag.</p>
 <h2 id="advanced-configuration">Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">&para;</a></h2>
-<p>The agent uses configuration file <code>komodor-k8s-watcher.yaml</code>, all the agent's features and capabilities can be configured here (assuming the RBAC permissions are satisfied).
-More detailed list can be found <a href="https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration">here</a></p>
-<h3 id="data-reduction">Data Reduction<a class="headerlink" href="#data-reduction" title="Permanent link">&para;</a></h3>
-<p><a href="Sensitive-Information-Redaction.html">Read more</a></p>
+<p>You can configure the agent's functionality using the following configuration file: <code>komodor-k8s-watcher.yaml</code> (assuming the RBAC permissions are satisfied).
+A more detailed list of the configurable parameters can be found <a href="https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration">here</a></p>
+<h3 id="data-redaction">Data Redaction<a class="headerlink" href="#data-redaction" title="Permanent link">&para;</a></h3>
+<p>Learn how to set up <a href="Sensitive-Information-Redaction.html">data redaction</a> in Komodor</p>
 <h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
-<p>By default the agent watching on almost all the resources (<strong>secrets and events are opt out</strong>)
-To turn on/off resource:</p>
+<p>By default, the Komodor agent watches the majority of the resources in your cluster (<strong>secrets and events are opt out</strong>)
+You can enable/disable watching a resource using the following command:</p>
 <ol>
 <li>Helm: <code>--set watcher.resources.RESOURCE=true/off</code></li>
 <li>Kustomize: update the configuration file and the RBAC rule to have <code>get</code>, <code>list</code> and <code>watch</code> permissions</li>
 </ol>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<p>The agent watching all the namespaces, by default <code>watchNamespace=all</code> watching all namespaces.</p>
-<p>To watch single namespace:</p>
+<p>The Komodor agent watches all the namespaces (by default <code>watchNamespace=all</code>)</p>
+<p>To watch a single namespace use the following command:</p>
 <ol>
 <li>Helm: <code>--set watcher.watchNamespace=NAMESPACE</code></li>
 <li>Kustomize: patch the configuration file <code>watchNamespace=NAMESPACE</code></li>
