@@ -1,4 +1,4 @@
-# Komodor's Agent
+# The Komodor Agent
 
 ## Installation
 
@@ -32,7 +32,7 @@ kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/o
 
 
 ## Permissions
-Komodor's Agents uses the native RBAC model of Kubernetes. All the permissions are listed here:
+The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:
 
 1. [helm](https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml)
 2. [kustomize base](https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml), [kustomize final](https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml)
@@ -47,23 +47,23 @@ The default is linux/amd64. If you wish to install the chart for linux/arm64 all
 
 ## Advanced Configuration
 
-The agent uses configuration file `komodor-k8s-watcher.yaml`, all the agent's features and capabilities can be configured here (assuming the RBAC permissions are satisfied).
-More detailed list can be found [here](https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration)
+You can configure the agent's functionality using the following configuration file: `komodor-k8s-watcher.yaml` (assuming the RBAC permissions are satisfied).
+A more detailed list of the configurable parameters can be found [here](https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration)
 
-### Data Reduction
-[Read more](./Sensitive-Information-Redaction.md)
+### Data Redaction
+Learn how to set up [data redaction](./Sensitive-Information-Redaction.md) in Komodor
 
 ### Resources
-By default the agent watching on almost all the resources (**secrets and events are opt out**)
-To turn on/off resource:
+By default, the Komodor agent watches the majority of the resources in your cluster (**secrets and events are opt out**)
+You can enable/disable watching a resource using the following command:
 
 1. Helm: `--set watcher.resources.RESOURCE=true/off`
 2. Kustomize: update the configuration file and the RBAC rule to have `get`, `list` and `watch` permissions
 
 ### Namespaces
-The agent watching all the namespaces, by default `watchNamespace=all` watching all namespaces.
+The Komodor agent watches all the namespaces (by default `watchNamespace=all`)
 
-To watch single namespace:
+To watch a single namespace use the following command:
 
 1. Helm: `--set watcher.watchNamespace=NAMESPACE`
 2. Kustomize: patch the configuration file `watchNamespace=NAMESPACE`
