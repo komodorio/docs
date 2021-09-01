@@ -133,11 +133,11 @@ app.kubernetes.io/managed-by: helm
 
 ### Komodor recommendation
 ```yaml
-app.koomdor.com/label/team: backend
-app.koomdor.com/label/group: infrastructure
-app.koomdor.com/labe/owners: "#infa-team"
-app.koomdor.com/labe/alert-team: "#devs"
-app.koomdor.com/labe/Impacted-by: redis
+app.komodor.com/label.team: backend
+app.komodor.com/label.group: infrastructure
+app.komodor.com/labe.owners: "#infa-team"
+app.komodor.com/labe.alert-team: "#devs"
+app.komodor.com/labe.Impacted-by: redis
 ```
 
 ### Usage example
