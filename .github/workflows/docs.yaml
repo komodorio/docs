@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.repository == 'komodorio/docs'
     steps:
       - uses: actions/checkout@v1
       - name: Setup Python
