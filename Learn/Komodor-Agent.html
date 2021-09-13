@@ -894,11 +894,7 @@ kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/o
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml">kustomize base</a>, <a href="https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml">kustomize final</a></li>
 </ol>
 <h2 id="arm-support">ARM Support<a class="headerlink" href="#arm-support" title="Permanent link">&para;</a></h2>
-<ul>
-<li>linux/amd64</li>
-<li>linux/arm64 (v8) - starting from agent version 0.1.29</li>
-</ul>
-<p>The default is linux/amd64. If you wish to install the chart for linux/arm64 all you need to do is <code>--set image.arm=true</code> flag.</p>
+<p>Arm64 image is supported via docker manifest. </p>
 <h2 id="advanced-configuration">Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">&para;</a></h2>
 <p>You can configure the agent's functionality using the following configuration file: <code>komodor-k8s-watcher.yaml</code> (assuming the RBAC permissions are satisfied).
 A more detailed list of the configurable parameters can be found <a href="https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration">here</a></p>
