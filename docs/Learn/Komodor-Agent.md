@@ -40,10 +40,7 @@ The Komodor agent uses the native RBAC model of Kubernetes. All the permissions 
 
 ## ARM Support
 
-* linux/amd64
-* linux/arm64 (v8) - starting from agent version 0.1.29
-
-The default is linux/amd64. If you wish to install the chart for linux/arm64 all you need to do is `--set image.arm=true` flag.
+Arm64 image is supported via docker manifest. 
 
 ## Advanced Configuration
 
