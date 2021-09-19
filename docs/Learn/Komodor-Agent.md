@@ -4,7 +4,7 @@
 
 
 ### Get an API Key
-Tha API key can be found in the [Integration page](https://app.komodor.com/main/integration).
+The API key can be found in the [Integration page](https://app.komodor.com/main/integration).
 
 ![API Key Location](./img/api_key_location.png)
 
