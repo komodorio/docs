@@ -680,18 +680,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <h3 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
 <h5 id="request-url">Request URL<a class="headerlink" href="#request-url" title="Permanent link">&para;</a></h5>
 <p>Mandatory query params will be used for service selection:
-* serviceName 
-* namespace
-* clusterName</p>
+- serviceName 
+- namespace
+- clusterName</p>
+<p>URL example
+ https://api.komodor.com/v0/config_change?serviceName=backend-service&amp;namespace=default&amp;clusterName=production"</p>
 <h5 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h5>
 <p>To authenticate the request use API Key on your "REST API" integration tile in the Komodor app and add it to a header with <code>X-API-KEY</code> name.</p>
-<p><em>URL example</em>:
- https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</p>
+<p>The REST API key can be found in the <a href="https://app.komodor.com/main/integration">Integration page</a>.</p>
+<p>If REST API integration isn't available for your account, please contact your account manager in Komodor.</p>
 <h5 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h5>
 <p>This is the event itself with the relevant configuration you want to be connected to the service as JSON.
     <code>{ key1: value1, key2: value2… }</code></p>
 <h3 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<p><code>curl H "X-API-KEY: &lt;rest api key&gt;" -H "Content-Type: application/json" -d '{"key":"value"}' 'https://api.komodor.com/v0/event/config_change?serviceName=backend-service?namespace=default&amp;clusterName=production"</code></p>
+<p><code>curl -H "X-API-KEY: &lt;rest api key&gt;" -H "Content-Type: application/json" -d '{"key":"value"}' "https://api.komodor.com/v0/config_change?serviceName=backend-service&amp;namespace=default&amp;clusterName=production"</code></p>
                 
               
               
