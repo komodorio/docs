@@ -84,7 +84,6 @@ metadata:
   name: annotation-example
   annotations:
     app.komodor.com/notification.deploy.slack: "#deploy-slack-channel"
-    app.komodor.com/notification.alert.slack: "#p1-health-issues"
     app.komodor.com/service.link.grafana-overall-system-health: "https://grafana.com/service/annoation-exmaple"
     app.komodor.com/service.link.datadog: "https://datadog.com/dashboard/annoation-exmaple"
     app.komodor.com/service.link.playbook: "https://docs.google.com/playbook"    
