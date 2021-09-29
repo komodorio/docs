@@ -19,6 +19,8 @@ markdown_extensions:
 - admonition
 - toc:
     permalink: true
+extra:
+  homepage: https://www.komodor.com
 nav:
   - Home: index.md
   - Komodor API: openapi/redoc-static.html
