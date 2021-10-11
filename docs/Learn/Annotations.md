@@ -65,7 +65,7 @@ For each deployment version, you can add a quick link with the relevant filters 
 
 How
 
-`app.komodor.com/deploy/link/name:value`
+`app.komodor.com/deploy/link/name:url`
 
 Examples:
 
@@ -74,6 +74,44 @@ Examples:
 |------------------------------------|--------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | app.komodor.com/deploy.link.logs   | url    | Link for the specific version logs           | https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1                                             |
 | app.komodor.com/deploy.link.sentry | url    | Link for the specific version  Sentry issues | https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d |
+
+
+
+
+## Custom Links
+
+You can create custom links to external and internal applications by crafting your own URL to the appplication using a skelaton URL and placeholders provided by Komodor.
+ 
+
+How
+
+`app.komodor.com/service/link/name:value`
+
+Examples:
+
+
+| annotation                         | values | description                                  | Example                                                                                                    |
+|------------------------------------|--------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| app.komodor.com/service.link.coralogix   | url    | Link for the custom URL                      | https://komodortest.coralogix.com/#/query-new/logs?query=(coralogix.metadata.cluster:(%22${cluster}%22))%20AND%20(coralogix.metadata.namespace:(%22${namespace}%22))%20AND%20(coralogix.metadata.service:(%22${service}%22))&time=from:${timestampStart=YYYY-MM-DDTHH:mm:ss.SSSZ},to:${timestampEnd=YYYY-MM-DDTHH:mm:ss.SSSZ}                                             |
+
+
+
+The following values can be used to enrich the URL:
+
+| Placeholder                         | value |
+|------------------------------------|--------|
+| app.komodor.com/service.link.coralogix   | url    |
+|${epochStart} | Start Time in Epoch Time|
+|${epochEnd} | End Time in Epoch Time|
+|${service} | Service Name|
+|${namespace} | Namespace Name|
+|${cluster} | Custer Name|
+|${timestempStart=DDMMYYYY} | Start Time in custom format*|
+|${timestempEnd=DDMMYYYY} | End Time in custom format*|
+
+*dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+
+
 
 ### Full example
 
