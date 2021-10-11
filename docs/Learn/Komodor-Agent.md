@@ -94,7 +94,18 @@ KOMOKW_WATCH_NAMESPACE=my-namespace
 KOMOKW_COLLECT_HISTORY=true
 ```
 
+## Updating the agent
 
+### Kustomize
+```bash
+kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref=master
+```
+
+### Helm
+```bash
+helm repo update
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --reuse-values
+```
 
 ## Uninstalling
 
