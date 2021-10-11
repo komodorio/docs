@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Komodor-Agent.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1c75ef36.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.24c991ad.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -495,11 +495,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstalling" class="md-nav__link">
-    Uninstalling
+  <a href="#updating-the-agent" class="md-nav__link">
+    Updating the agent
   </a>
   
-    <nav class="md-nav" aria-label="Uninstalling">
+    <nav class="md-nav" aria-label="Updating the agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -511,6 +511,33 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
           <li class="md-nav__item">
   <a href="#helm_1" class="md-nav__link">
+    Helm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling" class="md-nav__link">
+    Uninstalling
+  </a>
+  
+    <nav class="md-nav" aria-label="Uninstalling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kustomize_2" class="md-nav__link">
+    Kustomize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm_2" class="md-nav__link">
     Helm
   </a>
   
@@ -859,11 +886,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstalling" class="md-nav__link">
-    Uninstalling
+  <a href="#updating-the-agent" class="md-nav__link">
+    Updating the agent
   </a>
   
-    <nav class="md-nav" aria-label="Uninstalling">
+    <nav class="md-nav" aria-label="Updating the agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -875,6 +902,33 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
           <li class="md-nav__item">
   <a href="#helm_1" class="md-nav__link">
+    Helm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalling" class="md-nav__link">
+    Uninstalling
+  </a>
+  
+    <nav class="md-nav" aria-label="Uninstalling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kustomize_2" class="md-nav__link">
+    Kustomize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm_2" class="md-nav__link">
     Helm
   </a>
   
@@ -974,12 +1028,22 @@ You can enable/disable watching a resource using the following command:</p>
 <span class="nv">KOMOKW_COLLECT_HISTORY</span><span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
 
-<h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">&para;</a></h2>
+<h2 id="updating-the-agent">Updating the agent<a class="headerlink" href="#updating-the-agent" title="Permanent link">&para;</a></h2>
 <h3 id="kustomize_1">Kustomize<a class="headerlink" href="#kustomize_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>kubectl delete ns komodor
+<div class="codehilite"><pre><span></span><code>kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref<span class="o">=</span>master
 </code></pre></div>
 
 <h3 id="helm_1">Helm<a class="headerlink" href="#helm_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>helm repo update
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --reuse-values
+</code></pre></div>
+
+<h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">&para;</a></h2>
+<h3 id="kustomize_2">Kustomize<a class="headerlink" href="#kustomize_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>kubectl delete ns komodor
+</code></pre></div>
+
+<h3 id="helm_2">Helm<a class="headerlink" href="#helm_2" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>helm uninstall k8s-watcher
 </code></pre></div>
                 
@@ -1022,7 +1086,7 @@ You can enable/disable watching a resource using the following command:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c7d1b464.min.js"></script>
+      <script src="../assets/javascripts/bundle.bc35569b.min.js"></script>
       
     
   </body>
