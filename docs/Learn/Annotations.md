@@ -102,7 +102,7 @@ Examples:
 
 The following values can be used to enrich the URL:
 
-| Placeholder                         | value |
+| Placeholder                         | Value |
 |------------------------------------|--------|
 |${epochStart} | Start Time in Epoch Time|
 |${epochEnd} | End Time in Epoch Time|
