@@ -104,7 +104,6 @@ The following values can be used to enrich the URL:
 
 | Placeholder                         | value |
 |------------------------------------|--------|
-| app.komodor.com/service.link.coralogix   | url    |
 |${epochStart} | Start Time in Epoch Time|
 |${epochEnd} | End Time in Epoch Time|
 |${service} | Service Name|
