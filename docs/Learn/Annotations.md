@@ -10,7 +10,7 @@ Configure the Slack channel notification as part of the deployment object.
 
 ### How
 
-| annotation                                        | values | description                                                       | example             | default |
+| Annotation                                        | Values | Description                                                       | Example             | Default |
 |---------------------------------------------------|--------|-------------------------------------------------------------------|---------------------|---------|
 | app.komodor.com/notification.deploy.slack         | string | Slack channel name for all deploy events notifications            | “deploy-brain-team" |         |
 | app.komodor.com/notification.deploy_fail.slack    | string | Slack channel name for failed deploy events notifications         | “deploy-failed"     |         |
@@ -25,12 +25,12 @@ Define quick-links for a specific service, making it easier to get context when 
 
 ### How
 
- in the form of `app.komodor.com/service/link/name:url`
+ In the form of `app.komodor.com/service/link/name:url`
 
 Examples:
 
 
-| annotation                                                 | values | description                                                | example             | default |
+| Annotation                                                 | Values | Description                                                | Example             | Default |
 |------------------------------------------------------------|--------|------------------------------------------------------------|---------------------|---------|
 | app.komodor.com/service.link.grafana-overall-system-health | url    | Url for Grafana health dashboard related to this service.  | “deploy-brain-team" |         |
 | app.komodor.com/service.link.datadog-http-500              | url    | Url for datadog dashboard with bad http                    | “alerts-p1”         |         |
@@ -50,9 +50,9 @@ How
 
 Example:
 
-| annotation                         | values | description                                  | Example                                | default |
-|------------------------------------|--------|----------------------------------------------|----------------------------------------|---------|
-| app.komodor.com/deploy.job.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |         |
+| Annotation                         | Values | Description                                  | Example                                |
+|------------------------------------|--------|----------------------------------------------|----------------------------------------|
+| app.komodor.com/deploy.job.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |
 
 
 
@@ -65,15 +65,56 @@ For each deployment version, you can add a quick link with the relevant filters 
 
 How
 
+`app.komodor.com/deploy/link/name:url`
+
+Examples:
+
+
+| Annotation                         | Values | Description                                  | Example                                                                                                    |
+|------------------------------------|--------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| app.komodor.com/deploy.link.logs   | url    | Link for the specific version logs           | https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1                                             |
+| app.komodor.com/deploy.link.sentry | url    | Link for the specific version  Sentry issues | https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d |
+
+
+
+
+## Custom Links
+
+You can create custom links to external and internal applications by crafting your own URL to the appplication using a skelaton URL and placeholders provided by Komodor.
+Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the appplication, and replace them with placeholders for your own use.
+Please find the below examples as references for common applications.
+ 
+
+How
+
 `app.komodor.com/deploy/link/name:value`
 
 Examples:
 
 
-| annotation                         | values | description                                  | Example                                                                                                    |
-|------------------------------------|--------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| app.komodor.com/deploy.link.logs   | url    | Link for the specific version logs           | https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1                                             |
-| app.komodor.com/deploy.link.sentry | url    | Link for the specific version  Sentry issues | https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d |
+| Annotation                         | Values | Description                                  | Example                                                                                                    |
+| --- | --- | --- | :-- |
+| app.komodor.com/deploy.link.coralogix   | url    | Link for the custom URL, coralogix                     | https://komodortest.coralogix.com/#/query-new/logs?query=(coralogix.metadata.cluster:(%22${cluster}%22))%20AND%20(coralogix.metadata.namespace:(%22${namespace}%22))%20AND%20(coralogix.metadata.service:(%22${service}%22))&time=from:${timestampStart=YYYY-MM-DDTHH:mm:ss.SSSZ},to:${timestampEnd=YYYY-MM-DDTHH:mm:ss.SSSZ}                                             |
+| app.komodor.com/deploy.link.logzio | url | Link for the custom URL, logz.io | https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex*',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex*',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex*',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})))),index:'logzioCustomerIndex*',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&discoverTab=logz-logs-tab&switchToAccountId=138828&accountIds=true |
+| app.komodor.com/deploy.link.datadog | url | Link for the custom URL, DataDog | https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&historicalData=true&messageDisplay=inline&sort=desc&streamTraces=true&start=${epochStart}&end=${epochEnd}&paused=true |
+
+
+
+The following values can be used to enrich the URL:
+
+| Placeholder                         | Value |
+|------------------------------------|--------|
+|${epochStart} | Start Time in Epoch Time|
+|${epochEnd} | End Time in Epoch Time|
+|${service} | Service Name|
+|${namespace} | Namespace Name|
+|${cluster} | Custer Name|
+|${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*|
+|${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*|
+
+*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+
+
 
 ### Full example
 
@@ -89,7 +130,8 @@ metadata:
     app.komodor.com/service.link.playbook: "https://docs.google.com/playbook"    
     app.komodor.com/deploy.job.jenkins: "https://ci.jenkins-ci.org/computer/job"
     app.komodor.com/deploy.link.logs: "https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1"
-    app.komodor.com/deploy.link.sentry: "https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d"        
+    app.komodor.com/deploy.link.sentry: "https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d"
+    app.komodor.com/service.link.datadog: "https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&historicalData=true&messageDisplay=inline&sort=desc&streamTraces=true&start=${epochStart}&end=${epochEnd}&paused=true"
 spec:
   selector:
     matchLabels:
