@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Annotations.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.24c991ad.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -454,7 +454,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Deploy Links
   </a>
   
-    <nav class="md-nav" aria-label="Deploy Links">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-links" class="md-nav__link">
+    Custom Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -781,7 +788,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Deploy Links
   </a>
   
-    <nav class="md-nav" aria-label="Deploy Links">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-links" class="md-nav__link">
+    Custom Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -865,11 +879,11 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <table>
 <thead>
 <tr>
-<th>annotation</th>
-<th>values</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
+<th>Annotation</th>
+<th>Values</th>
+<th>Description</th>
+<th>Example</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -906,16 +920,16 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <h2 id="service-links">Service Links<a class="headerlink" href="#service-links" title="Permanent link">&para;</a></h2>
 <p>Define quick-links for a specific service, making it easier to get context when troubleshooting.</p>
 <h3 id="how_1">How<a class="headerlink" href="#how_1" title="Permanent link">&para;</a></h3>
-<p>in the form of <code>app.komodor.com/service/link/name:url</code></p>
+<p>In the form of <code>app.komodor.com/service/link/name:url</code></p>
 <p>Examples:</p>
 <table>
 <thead>
 <tr>
-<th>annotation</th>
-<th>values</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
+<th>Annotation</th>
+<th>Values</th>
+<th>Description</th>
+<th>Example</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -950,11 +964,10 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <table>
 <thead>
 <tr>
-<th>annotation</th>
-<th>values</th>
-<th>description</th>
+<th>Annotation</th>
+<th>Values</th>
+<th>Description</th>
 <th>Example</th>
-<th>default</th>
 </tr>
 </thead>
 <tbody>
@@ -963,21 +976,20 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <td>url</td>
 <td>Link to Jenkins job that deploys the service</td>
 <td>https://ci.jenkins-ci.org/computer/job</td>
-<td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="deploy-links">Deploy Links<a class="headerlink" href="#deploy-links" title="Permanent link">&para;</a></h2>
 <p>For each deployment version, you can add a quick link with the relevant filters already in place!</p>
 <p>How</p>
-<p><code>app.komodor.com/deploy/link/name:value</code></p>
+<p><code>app.komodor.com/deploy/link/name:url</code></p>
 <p>Examples:</p>
 <table>
 <thead>
 <tr>
-<th>annotation</th>
-<th>values</th>
-<th>description</th>
+<th>Annotation</th>
+<th>Values</th>
+<th>Description</th>
 <th>Example</th>
 </tr>
 </thead>
@@ -996,6 +1008,83 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 </tr>
 </tbody>
 </table>
+<h2 id="custom-links">Custom Links<a class="headerlink" href="#custom-links" title="Permanent link">&para;</a></h2>
+<p>You can create custom links to external and internal applications by crafting your own URL to the appplication using a skelaton URL and placeholders provided by Komodor.
+Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the appplication, and replace them with placeholders for your own use.
+Please find the below examples as references for common applications.</p>
+<p>How</p>
+<p><code>app.komodor.com/deploy/link/name:value</code></p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Annotation</th>
+<th>Values</th>
+<th>Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app.komodor.com/deploy.link.coralogix</td>
+<td>url</td>
+<td>Link for the custom URL, coralogix</td>
+<td align="left">https://komodortest.coralogix.com/#/query-new/logs?query=(coralogix.metadata.cluster:(%22${cluster}%22))%20AND%20(coralogix.metadata.namespace:(%22${namespace}%22))%20AND%20(coralogix.metadata.service:(%22${service}%22))&amp;time=from:${timestampStart=YYYY-MM-DDTHH:mm:ss.SSSZ},to:${timestampEnd=YYYY-MM-DDTHH:mm:ss.SSSZ}</td>
+</tr>
+<tr>
+<td>app.komodor.com/deploy.link.logzio</td>
+<td>url</td>
+<td>Link for the custom URL, logz.io</td>
+<td align="left">https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex<em>',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex</em>',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex<em>',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})))),index:'logzioCustomerIndex</em>',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&amp;discoverTab=logz-logs-tab&amp;switchToAccountId=138828&amp;accountIds=true</td>
+</tr>
+<tr>
+<td>app.komodor.com/deploy.link.datadog</td>
+<td>url</td>
+<td>Link for the custom URL, DataDog</td>
+<td align="left">https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&amp;cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&amp;historicalData=true&amp;messageDisplay=inline&amp;sort=desc&amp;streamTraces=true&amp;start=${epochStart}&amp;end=${epochEnd}&amp;paused=true</td>
+</tr>
+</tbody>
+</table>
+<p>The following values can be used to enrich the URL:</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${epochStart}</td>
+<td>Start Time in Epoch Time</td>
+</tr>
+<tr>
+<td>${epochEnd}</td>
+<td>End Time in Epoch Time</td>
+</tr>
+<tr>
+<td>${service}</td>
+<td>Service Name</td>
+</tr>
+<tr>
+<td>${namespace}</td>
+<td>Namespace Name</td>
+</tr>
+<tr>
+<td>${cluster}</td>
+<td>Custer Name</td>
+</tr>
+<tr>
+<td>${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>Start Time in custom format*</td>
+</tr>
+<tr>
+<td>${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>End Time in custom format*</td>
+</tr>
+</tbody>
+</table>
+<p>*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
@@ -1008,7 +1097,8 @@ Komodor annotations should be placed in the deployment resource annotations (ann
     <span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span> <span class="s">&quot;https://docs.google.com/playbook&quot;</span>    
     <span class="nt">app.komodor.com/deploy.job.jenkins</span><span class="p">:</span> <span class="s">&quot;https://ci.jenkins-ci.org/computer/job&quot;</span>
     <span class="nt">app.komodor.com/deploy.link.logs</span><span class="p">:</span> <span class="s">&quot;https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1&quot;</span>
-    <span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span> <span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span>        
+    <span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span> <span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span>
+    <span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span> <span class="s">&quot;https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&amp;cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&amp;historicalData=true&amp;messageDisplay=inline&amp;sort=desc&amp;streamTraces=true&amp;start=${epochStart}&amp;end=${epochEnd}&amp;paused=true&quot;</span>
 <span class="nt">spec</span><span class="p">:</span>
   <span class="nt">selector</span><span class="p">:</span>
     <span class="nt">matchLabels</span><span class="p">:</span>
@@ -1093,10 +1183,10 @@ BTW, We collect the data both from annotations and labels.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.bc35569b.min.js"></script>
+      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>
