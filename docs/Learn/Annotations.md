@@ -80,7 +80,7 @@ Examples:
 
 ## Custom Links
 
-You can create custom links to external and internal applications by crafting your own URL to the appplication using a skelaton URL and placeholders provided by Komodor.
+You can create custom links to external and internal applications by crafting your own URL to the appplication using a skeleton URL and placeholders provided by Komodor.
 Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the appplication, and replace them with placeholders for your own use.
 Please find the below examples as references for common applications.
  
