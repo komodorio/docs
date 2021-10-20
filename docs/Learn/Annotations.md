@@ -111,7 +111,7 @@ The following values can be used to enrich the URL:
 |${cluster} | Custer Name|
 |${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*|
 |${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*|
-|${container[<name>].image} | Image name of a container*|
+|${container[<name\>].image} | Image name of a container*|
 
 *Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
