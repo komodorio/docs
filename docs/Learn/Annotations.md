@@ -102,16 +102,16 @@ Examples:
 
 The following values can be used to enrich the URL:
 
-| Placeholder                         | Value |
-|------------------------------------|--------|
+| Placeholder                         | Value | Example |
+|------------------------------------|--------|---------|
 |${epochStart} | Start Time in Epoch Time|
 |${epochEnd} | End Time in Epoch Time|
 |${service} | Service Name|
 |${namespace} | Namespace Name|
 |${cluster} | Cluster Name|
-|${container[<name\>].image} | Image name of a container|
-|${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*|
-|${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*|
+|${container[<name\>].image} | Image name of a container| ${container[web].image}
+|${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*| ${timestempStart=yyyy-MM-dd}
+|${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*| ${timestempEnd=yyyy-MM-dd}
 
 *Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
