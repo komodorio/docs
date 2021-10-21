@@ -1035,7 +1035,7 @@ Please find the below examples as references for common applications.</p>
 <td>app.komodor.com/deploy.link.logzio</td>
 <td>url</td>
 <td>Link for the custom URL, logz.io</td>
-<td align="left">https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex<em>',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex</em>',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex<em>',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})))),index:'logzioCustomerIndex</em>',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&amp;discoverTab=logz-logs-tab&amp;switchToAccountId=138828&amp;accountIds=true</td>
+<td align="left">https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})),query:(match_phrase:(kubernetes.container_image:${container[web].image})))),index:'logzioCustomerIndex',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&amp;discoverTab=logz-logs-tab&amp;switchToAccountId=138828&amp;accountIds=true</td>
 </tr>
 <tr>
 <td>app.komodor.com/deploy.link.datadog</td>
@@ -1051,36 +1051,49 @@ Please find the below examples as references for common applications.</p>
 <tr>
 <th>Placeholder</th>
 <th>Value</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>${epochStart}</td>
 <td>Start Time in Epoch Time</td>
+<td></td>
 </tr>
 <tr>
 <td>${epochEnd}</td>
 <td>End Time in Epoch Time</td>
+<td></td>
 </tr>
 <tr>
 <td>${service}</td>
 <td>Service Name</td>
+<td></td>
 </tr>
 <tr>
 <td>${namespace}</td>
 <td>Namespace Name</td>
+<td></td>
 </tr>
 <tr>
 <td>${cluster}</td>
-<td>Custer Name</td>
+<td>Cluster Name</td>
+<td></td>
+</tr>
+<tr>
+<td>${container[&lt;name>].image}</td>
+<td>Image name of a container</td>
+<td>${container[web].image}</td>
 </tr>
 <tr>
 <td>${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
 <td>Start Time in custom format*</td>
+<td>${timestempStart=yyyy-MM-dd}</td>
 </tr>
 <tr>
 <td>${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
 <td>End Time in custom format*</td>
+<td>${timestempEnd=yyyy-MM-dd}</td>
 </tr>
 </tbody>
 </table>
