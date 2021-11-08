@@ -13,7 +13,7 @@ In order for us to connect your services according to Datadog events, the follow
 ### Installation Steps
 
 1. Make sure the prerequisites above are met.
-1. Locate the Datadog installation tile on [Komodor Integration Settings](https://app.komodor.com/main/integration).
+1. Locate the Datadog installation tile on [Komodor Integrations](https://app.komodor.com/main/integration) page.
 1. Press __Install Integration__.
 1. Follow the on screen instructions.
 
