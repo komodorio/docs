@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Learn/index.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Learn/RBAC.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Index - Komodor</title>
+        <title>RBAC - Komodor</title>
       
     
     
@@ -80,6 +80,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#role-based-access-control" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +113,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              RBAC
             
           </span>
         </div>
@@ -206,13 +211,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Komodor-Agent.html" class="md-tabs__link">
+      <a href="Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
         Learn
       </a>
     </li>
@@ -316,12 +323,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -426,11 +435,69 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="RBAC.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          RBAC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="RBAC.html" class="md-nav__link md-nav__link--active">
         RBAC
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role-Based Access Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Role-Based Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#komodor-roles" class="md-nav__link">
+    Komodor Roles:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -567,19 +634,114 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    Role-Based Access Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Role-Based Access Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#komodor-roles" class="md-nav__link">
+    Komodor Roles:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/RBAC.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Index</h1>
+                  <h1>RBAC</h1>
                 
-                
+                <h2 id="role-based-access-control">Role-Based Access Control<a class="headerlink" href="#role-based-access-control" title="Permanent link">&para;</a></h2>
+<h3 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h3>
+<p>Roles categorize users and define what permissions those users have, such as what data they can read or what they can modify.</p>
+<h3 id="komodor-roles">Komodor Roles:<a class="headerlink" href="#komodor-roles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Permissions</th>
+<th>Admin</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View all features</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Invite Admin member</td>
+<td>✓</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>Invite User member</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Add a new integration</td>
+<td>✓</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>See API keys in the Integrations page</td>
+<td>✓</td>
+<td>✘</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>An account can have multiple admins</p>
                 
               
               
