@@ -2,17 +2,17 @@
 
 ### Intro
 
-Roles categorize users and define what account permissions those users have, such as what data they can read or what they can modify.
+Roles categorize users and define what permissions those users have, such as what data they can read or what they can modify.
+
+### Komodor Roles:
+
+| Permissions                           | Admin | User |
+| ------------------------------------- | ----- | ---- |
+| View all features                     | ✓     | ✓    |
+| Invite Admin member                   | ✓     | ✘    |
+| Invite User member                    | ✓     | ✓    |
+| Add a new integration                 | ✓     | ✘    |
+| See API keys in the Integrations page | ✓     | ✘    |
 
 !!! Note
-By default, all users have the same access and permissions and are set as 'Admin'
-
-### Komodor role
-
-| Attempt              | Admin | User |
-| -------------------- | ----- | ---- |
-| Basic access         | ✓     | ✓    |
-| Invite Admin memever | ✓     | ✘    |
-| Invite User memever  | ✓     | ✓    |
-| Add Integrations     | ✓     | ✘    |
-| See API keys         | ✓     | ✘    |
+An account can have multiple admins
