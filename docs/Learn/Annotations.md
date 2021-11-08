@@ -1,4 +1,4 @@
-## Komodor kubernetes annotations
+# Komodor kubernetes annotations
 
 Komodor annotations (AKA Komodor as code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)
