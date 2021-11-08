@@ -6,7 +6,7 @@ Komodor-Datadog webhook integration allows Komodor to receive alerts from Datado
 
 ### Prerequisites
 
-In order for us to connect your services according to Datadog events, the following environment variables should exist on your k8s deployments:
+In order for us to connect your services according to Datadog events, the following environment variables should exist on your kubernetes deployments:
 - `DD_ENV` should match the environment specified on the Datadog tags
 - `DD_SERVICE` should match the service name specified on the Datadog tags
 
@@ -14,18 +14,18 @@ In order for us to connect your services according to Datadog events, the follow
 
 1. Make sure the prerequisites above are met.
 1. Locate the Datadog installation tile on [Komodor Integration Settings](https://app.komodor.com/main/integration).
-1. Press __Install__.
-1. Follow instructions on the screen.
+1. Press __Install Integration__.
+1. Follow the on screen instructions.
 
 ### Confirmation
 
-1. A Datadog Integration tile will be added to the top section of labeled __Installed Integrations__.
+1. A Datadog Integration tile will be added to the top section under __Installed Integrations__.
 
 ### Configuring the webhook in Datadog
 
 1. Go to [Datadog Webhook Integration Setup](https://app.datadoghq.com/account/settings#integrations/webhooks)
 1. Create a `+ New` Webhook
-1. Call the webhook `komodor`
+1. Name the webhook `komodor`
 1. Enter the webhook server URL in the URL field: https://app.komodor.com/collector/datadog/webhook
 1. Copy the following Payload schema into the Payload field:
 ```json
@@ -68,5 +68,5 @@ In order for us to connect your services according to Datadog events, the follow
     {"X-API-KEY": "YOUR_KOMODOR_API_KEY"}
 ```
 
-1. Save your changes
-1. For every monitor you wish to receive alerts to Komodor. Edit the monitor and add `@webhook-komodor` at the end of the Monitor message.
+1. When completed click on `Save`.
+1. For every monitor you wish to receive alerts from in Komodor. Edit the monitor and add `@webhook-komodor` at the end of the Monitor message.
