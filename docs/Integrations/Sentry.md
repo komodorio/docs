@@ -1,15 +1,15 @@
 # Sentry Integration
 
-The Sentry <> Komodor integration allows you to see sentry issues in Komodor. For each service, Komodor automatically maps the relevant Sentry project to Komodor service and allows you to gain a full-service timeline: both relevant changes (deploys, config changes etc’) and issues from Sentry all in one place.
+The Sentry integration allows you to see sentry issues in Komodor. For each service, Komodor automatically maps the relevant Sentry project to Komodor services and allows you to gain a full-service timeline: both relevant changes (deploys, config changes etc’) and issues from Sentry will all be in one place.
 
 ## Installation
 
 
 ### Installation Steps
 
-1. Make sure the services you track on Komodor use the SENTRY_DSN environment variable.
-1. Locate the Sentry installation tile on [Komodor Integration Settings](https://app.komodor.com/main/integration).
-1. Click __Install__.
+1. Make sure the services you track in Komodor use the SENTRY_DSN environment variable.
+1. Locate the Sentry installation tile on the [Komodor Integrations](https://app.komodor.com/main/integration) page.
+1. Click __Install Integration__.
 1. A dialog will open with a webhook URL and a link to Sentry to define an internal integration.
 1. Go to your Sentry account and click on settings in the left menu. Click on Developer Settings in the settings menu:
 ![image6](https://user-images.githubusercontent.com/13674505/106886073-21c7f680-66ec-11eb-9129-91b36a84223c.png)
@@ -33,13 +33,13 @@ The Sentry <> Komodor integration allows you to see sentry issues in Komodor. Fo
 
 ### In your deployment.yaml
 
-We use the value of the environment variable `SENTRY_DSN` to match __Sentry Issue__ events with your service on Komodor.
+We use the value of the environment variable `SENTRY_DSN` to match __Sentry Issue__ events with your services in Komodor.
 
-Please make sure your K8s deployment has the environment variable `SENTRY_DSN`.
+Make sure your kubernetes deployment has the environment variable `SENTRY_DSN`.
 
 ### Confirmation
 
-1. A Sentry Integration tile will be added to the top section of labeled __Installed Integrations__.
-1. When everything is ready you’re going to be able to see Sentry events in you service view:
+1. A Sentry Integration tile will be added to the top section under __Installed Integrations__.
+1. Once completed you will be able to see Sentry events in you services view:
 ![image5](https://user-images.githubusercontent.com/13674505/106886842-0ad5d400-66ed-11eb-9352-2cabb12975a8.png)
 
