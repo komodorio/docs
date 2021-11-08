@@ -717,25 +717,25 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                 
                 <h1 id="pagerduty-integration">PagerDuty Integration<a class="headerlink" href="#pagerduty-integration" title="Permanent link">&para;</a></h1>
-<p>PagerDuty Integration adds <strong>PagerDuty Incident</strong> events to your service events.</p>
-<p><strong>NOTE: Currently we support PD events that originate on Datadog.</strong></p>
+<p>PagerDuty Integration adds <strong>PagerDuty Incident</strong> events to your services events.</p>
+<p><strong>NOTE: We currently only support PD events that originate in Datadog.</strong></p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>In order for us to connect your Datadog-PD incidents to your services on Komodor, we need to find a match between environment variables found on the Datadog service and your service on K8s.</p>
-<p>Please make sure the following environment variables exist on your K8s deployment:
+<p>In order to connect your Datadog-PD incidents to your services in Komodor, you need to match environment variables found in Datadog to your services in Kubernetes.</p>
+<p>Please make sure the following environment variables exist in your kubernetes deployment:
 - <code>DD_ENV</code> should match the environment specified on the Datadog service
 - <code>DD_SERVICE</code> should match the service name specified on the Datadog service</p>
 <h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Make sure the prerequisites above are met.</li>
-<li>Locate the PagerDuty installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
-<li>Press <strong>Install</strong>.</li>
-<li>At this point you should be redirected to Pagerduty and back to Komodor successfully.</li>
+<li>Locate the PagerDuty installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integrations</a> page.</li>
+<li>Press <strong>Install Integration</strong>.</li>
+<li>You will be redirected to Pagerduty and back to Komodor successfully.</li>
 </ol>
 <h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
 <ol>
 <li>A PagerDuty Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
-<li>When an issue from Datadog is raised through PD, you will be able to find it in the appropriate Komodor service page.</li>
+<li>When an issue from Datadog is raised through PD, you will be able to find it in the appropriate Komodor services page.</li>
 </ol>
                 
               

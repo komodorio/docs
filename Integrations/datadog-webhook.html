@@ -734,25 +734,25 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p>Komodor-Datadog webhook integration allows Komodor to receive alerts from Datadog Monitors. You will see all alerts in the Komodor Service View.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>In order for us to connect your services according to Datadog events, the following environment variables should exist on your k8s deployments:
+<p>In order for us to connect your services according to Datadog events, the following environment variables should exist on your kubernetes deployments:
 - <code>DD_ENV</code> should match the environment specified on the Datadog tags
 - <code>DD_SERVICE</code> should match the service name specified on the Datadog tags</p>
 <h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Make sure the prerequisites above are met.</li>
 <li>Locate the Datadog installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
-<li>Press <strong>Install</strong>.</li>
-<li>Follow instructions on the screen.</li>
+<li>Press <strong>Install Integration</strong>.</li>
+<li>Follow the on screen instructions.</li>
 </ol>
 <h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
 <ol>
-<li>A Datadog Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
+<li>A Datadog Integration tile will be added to the top section under <strong>Installed Integrations</strong>.</li>
 </ol>
 <h3 id="configuring-the-webhook-in-datadog">Configuring the webhook in Datadog<a class="headerlink" href="#configuring-the-webhook-in-datadog" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Go to <a href="https://app.datadoghq.com/account/settings#integrations/webhooks">Datadog Webhook Integration Setup</a></li>
 <li>Create a <code>+ New</code> Webhook</li>
-<li>Call the webhook <code>komodor</code></li>
+<li>Name the webhook <code>komodor</code></li>
 <li>Enter the webhook server URL in the URL field: https://app.komodor.com/collector/datadog/webhook</li>
 <li>Copy the following Payload schema into the Payload field:</li>
 </ol>
@@ -796,8 +796,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </code></pre></div>
 
 <ol>
-<li>Save your changes</li>
-<li>For every monitor you wish to receive alerts to Komodor. Edit the monitor and add <code>@webhook-komodor</code> at the end of the Monitor message.</li>
+<li>When completed click on <code>Save</code>.</li>
+<li>For every monitor you wish to receive alerts from in Komodor. Edit the monitor and add <code>@webhook-komodor</code> at the end of the Monitor message.</li>
 </ol>
                 
               

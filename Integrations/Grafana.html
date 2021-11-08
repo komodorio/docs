@@ -717,14 +717,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                 
                 <h1 id="grafana-integration">Grafana Integration<a class="headerlink" href="#grafana-integration" title="Permanent link">&para;</a></h1>
-<p>Grafana Integration adds <strong>Grafana Alerts</strong> events to your service on Komodor.</p>
+<p>Grafana Integration adds <strong>Grafana Alert</strong> events to your service in Komodor.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>A running instance of Grafana.</p>
 <h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Make sure the prerequisites above are met.</li>
-<li>Locate the Grafana installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
+<li>Make sure the above prerequisites are met.</li>
+<li>Locate the Grafana installation tile on the <a href="https://app.komodor.com/main/integration">Komodor Integrations</a> page.</li>
 <li>Press <strong>Install Integration</strong>. A dialog will open.</li>
 <li>Go to your Grafana instance.   </li>
 <li>In the Grafana side bar, hover your cursor over the Alerting (bell) icon and then click <code>Notification channels</code>.</li>
@@ -733,14 +733,17 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li>In the <code>Type</code> field, choose <em>webhook</em>.   </li>
 <li>Copy the webhook URL to the <code>Url</code> field.</li>
 <li>Open the <code>Notifications settings</code>.</li>
-<li>Check the <strong>Default</strong> option. When selected, this option sends a notification on this channel for all alert rules.</li>
+<li>Check the <strong>Default</strong> option. <ol>
+<li>When selected, this option sends a notification on this channel for all alert rules.</li>
+</ol>
+</li>
 <li>Press <strong>Save</strong></li>
 <li>Press <strong>Install Grafana Installation</strong></li>
 </ol>
 <h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
 <ol>
-<li>A Grafana Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
-<li>When a Grafana alert is triggered it will be added to the relevant service on Komodor.</li>
+<li>A Grafana Integration tile will be added to the top section under <strong>Installed Integrations</strong>.</li>
+<li>When a Grafana alert is triggered it will be added to the relevant service in Komodor.</li>
 </ol>
                 
               

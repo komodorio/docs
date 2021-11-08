@@ -717,13 +717,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                 
                 <h1 id="sentry-integration">Sentry Integration<a class="headerlink" href="#sentry-integration" title="Permanent link">&para;</a></h1>
-<p>The Sentry &lt;&gt; Komodor integration allows you to see sentry issues in Komodor. For each service, Komodor automatically maps the relevant Sentry project to Komodor service and allows you to gain a full-service timeline: both relevant changes (deploys, config changes etc’) and issues from Sentry all in one place.</p>
+<p>The Sentry integration allows you to see sentry issues in Komodor. For each service, Komodor automatically maps the relevant Sentry project to Komodor services and allows you to gain a full-service timeline: both relevant changes (deploys, config changes etc’) and issues from Sentry will all be in one place.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Make sure the services you track on Komodor use the SENTRY_DSN environment variable.</li>
-<li>Locate the Sentry installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integration Settings</a>.</li>
-<li>Click <strong>Install</strong>.</li>
+<li>Make sure the services you track in Komodor use the SENTRY_DSN environment variable.</li>
+<li>Locate the Sentry installation tile on the <a href="https://app.komodor.com/main/integration">Komodor Integrations</a> page.</li>
+<li>Click <strong>Install Integration</strong>.</li>
 <li>A dialog will open with a webhook URL and a link to Sentry to define an internal integration.</li>
 <li>Go to your Sentry account and click on settings in the left menu. Click on Developer Settings in the settings menu:
 <img alt="image6" src="https://user-images.githubusercontent.com/13674505/106886073-21c7f680-66ec-11eb-9129-91b36a84223c.png" /></li>
@@ -746,12 +746,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <code>Install</code></li>
 </ol>
 <h3 id="in-your-deploymentyaml">In your deployment.yaml<a class="headerlink" href="#in-your-deploymentyaml" title="Permanent link">&para;</a></h3>
-<p>We use the value of the environment variable <code>SENTRY_DSN</code> to match <strong>Sentry Issue</strong> events with your service on Komodor.</p>
-<p>Please make sure your K8s deployment has the environment variable <code>SENTRY_DSN</code>.</p>
+<p>We use the value of the environment variable <code>SENTRY_DSN</code> to match <strong>Sentry Issue</strong> events with your services in Komodor.</p>
+<p>Make sure your kubernetes deployment has the environment variable <code>SENTRY_DSN</code>.</p>
 <h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
 <ol>
-<li>A Sentry Integration tile will be added to the top section of labeled <strong>Installed Integrations</strong>.</li>
-<li>When everything is ready you’re going to be able to see Sentry events in you service view:
+<li>A Sentry Integration tile will be added to the top section under <strong>Installed Integrations</strong>.</li>
+<li>Once completed you will be able to see Sentry events in you services view:
 <img alt="image5" src="https://user-images.githubusercontent.com/13674505/106886842-0ad5d400-66ed-11eb-9352-2cabb12975a8.png" /></li>
 </ol>
                 
