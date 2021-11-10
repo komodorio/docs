@@ -14,7 +14,10 @@ In order to create the integration navigate to [LaunchDarkly Webhook Integration
 2. URL - __Please contact us to provide you the URL__ (we also will provide you a secret to sign the webhooks payload)
 3. Sign Webhook - use the secret from Komodor
 4. Add policy
-   1. You can use `proj/*:env/*:flag/*` statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
+   1. You can use the following statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
+   ```commandline
+   proj/*:env/*:flag/*
+   ```
    2. Set the effect to "Allow"
    3. Choose all actions
    4. Click "Update"
