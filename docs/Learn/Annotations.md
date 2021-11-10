@@ -1,4 +1,4 @@
-## Komodor kubernetes annotations
+# Komodor kubernetes annotations
 
 Komodor annotations (AKA Komodor as code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)
@@ -44,7 +44,7 @@ For each deployment version, you can add a quick link with the job url.
 
  
 
-How
+### How
 
 `app.komodor.com/deploy/job/name:url`
 
@@ -63,7 +63,7 @@ For each deployment version, you can add a quick link with the relevant filters 
 
  
 
-How
+### How
 
 `app.komodor.com/deploy/link/name:url`
 
@@ -85,15 +85,15 @@ Just copy the URL of the application you want to link to, identify the placehold
 Please find the below examples as references for common applications.
  
 
-How
+### How
 
 `app.komodor.com/deploy/link/name:value`
 
 Examples:
 
 
-| Annotation                         | Values | Description                                  | Example                                                                                                    |
-| --- | --- | --- | :-- |
+| Annotation | Values | Description | Example |
+|-----|-----|-----|--- |
 | app.komodor.com/deploy.link.coralogix   | url    | Link for the custom URL, coralogix                     | https://komodortest.coralogix.com/#/query-new/logs?query=(coralogix.metadata.cluster:(%22${cluster}%22))%20AND%20(coralogix.metadata.namespace:(%22${namespace}%22))%20AND%20(coralogix.metadata.service:(%22${service}%22))&time=from:${timestampStart=YYYY-MM-DDTHH:mm:ss.SSSZ},to:${timestampEnd=YYYY-MM-DDTHH:mm:ss.SSSZ}                                             |
 | app.komodor.com/deploy.link.logzio | url | Link for the custom URL, logz.io | https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})),query:(match_phrase:(kubernetes.container_image:${container[web].image})))),index:'logzioCustomerIndex',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&discoverTab=logz-logs-tab&switchToAccountId=138828&accountIds=true |
 | app.komodor.com/deploy.link.datadog | url | Link for the custom URL, DataDog | https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&historicalData=true&messageDisplay=inline&sort=desc&streamTraces=true&start=${epochStart}&end=${epochEnd}&paused=true |
@@ -113,7 +113,7 @@ The following values can be used to enrich the URL:
 |${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*| ${timestempStart=yyyy-MM-dd}
 |${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*| ${timestempEnd=yyyy-MM-dd}
 
-*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
 
 
@@ -155,25 +155,25 @@ spec:
 
 
 ## Annotations Best Practices
-In Komodor we believe that k8s annotation is the best practice for describing service metadata.
-This includes all of the “extra” fields used to tag and label your service, both for other team members and for external tools.
+At Komodor we believe that k8s annotations are the best method for describing services metadata.
+This includes all of the “extra” fields used to tag and label your services, both for other team members and for external tools.
 BTW, We collect the data both from annotations and labels.
 
-### Where does Komodor utilize annotation?
-Everywhere, Komodor will use these annotation to create a powerful connections between services and enrich service information in all of the following:
-* Service explorer
+### Where does Komodor utilize annotations?
+Everywhere! Komodor will use these annotations to create powerful connections between services and enrich service information in the following areas:
+* Services explorer
 * Related services
 * Events screen
-* Match alerts to the right services 
+* Matching alerts to the correct services 
 
-### [Official kubernetes recommendation](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+### [Official Kubernetes recommendations](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 ```yaml 
 app.kubernetes.io/component: database
 app.kubernetes.io/part-of: wordpress
 app.kubernetes.io/managed-by: helm
 ```
 
-### Komodor recommendation
+### Komodor recommendations
 ```yaml
 app.komodor.com/label.team: backend
 app.komodor.com/label.group: infrastructure
@@ -183,5 +183,5 @@ app.komodor.com/label.Impacted-by: redis
 ```
 
 ### Usage example
-* Tagging Team annotation on relevant services and adding relevant metadata on the alert metadata in datadog.
-* Using the Team name in the alert tools (for example PD) as part of the komodor labels
+* Tagging Team annotations on relevant services and adding relevant metadata on the alert metadata in datadog.
+* Using the Team name in the alert tools (for example PagerDuty) as part of the Komodor labels.
