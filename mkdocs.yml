@@ -39,3 +39,4 @@ nav:
     - LaunchDarkly: Integrations/LaunchDarkly.md
     - PagerDuty: Integrations/PagerDuty.md
     - Sentry: Integrations/Sentry.md
+    - Micosoft Teams: Integrations/MicrosoftTeams.md
