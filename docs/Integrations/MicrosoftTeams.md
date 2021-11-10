@@ -33,4 +33,4 @@ The Teams integration allows configuration of notifications for events such as D
 
 7. Click on **Create Notification** to complete the Notification Configuration
 
-Mor more information on Microsoft Teams integation with Webhooks can we found in the [Official Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
+More information on Microsoft Teams integration with webhooks can be found in the [Official Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook).
