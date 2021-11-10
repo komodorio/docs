@@ -674,7 +674,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 2. URL - <strong>Please contact us to provide you the URL</strong> (we also will provide you a secret to sign the webhooks payload)
 3. Sign Webhook - use the secret from Komodor
 4. Add policy
-   1. You can use <code>proj/*:env/*:flag/*</code> statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
+   1. You can use the following statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
+   <code>commandline
+   proj/*:env/*:flag/*</code>
    2. Set the effect to "Allow"
    3. Choose all actions
    4. Click "Update"
