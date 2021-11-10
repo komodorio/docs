@@ -6,7 +6,7 @@ The Teams integration allows configuration of notifications for events such as D
 
 ###  Configuration Steps
 
-1. Open up the Komodor [Notifications Panel](https://app.komodor.com/main/notifications/configuration). In this screen you can see all existing notifications and configure new ones.
+1. Open up the Komodor [Notifications Panel](https://app.komodor.com/main/notifications/configuration). On this screen you can see all existing notifications or configure new ones.
 2. Scroll to the bottom of the page and decide which type of notification you would like to create, Deployment or Health Change.
 
 <p align="center">
@@ -14,7 +14,7 @@ The Teams integration allows configuration of notifications for events such as D
 </p>
 
 3. Select **Add this notification** for the type of notification you would like to configure.
-4. Chose the cluster that you would like to alert on, or leave empty to alert on all clusters. Click **Continue** to proceed to the webhook configuration.
+4. Choose the cluster that you would like to alert on, or leave empty to alert on all clusters. Click **Continue** to proceed to the webhook configuration.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/28837372/140756824-9a6e42cb-db05-40a2-83c3-dcd2b5aa7aa8.png" />
@@ -23,8 +23,8 @@ The Teams integration allows configuration of notifications for events such as D
 5. Enter the channel name that you would like to post to (starting with @. "@channel" for example)
 6. Retrieve the webhook URL from Teams using the on screen instructions:
 	1.  Navigate to the channel where you want to add the webhook and select (•••) More Options from the top navigation bar.
-	2. Choose  **Connectors**  from the drop-down menu and search for Incoming Webhook.
-	3.  Select the  **Configure**  button, provide a name, and, optionally, upload an image avatar for your webhook.
+	2.  Choose  **Connectors**  from the drop-down menu and search for Incoming Webhook.
+	3.  Select the  **Configure**  button, provide a name, and optionally, upload an image avatar for your webhook.
 	4.  The dialog window will present a unique URL that will map to the channel. Make sure that you copy and paste the URL into the "webhook URL" field.
 
 <p align="center">
@@ -33,4 +33,4 @@ The Teams integration allows configuration of notifications for events such as D
 
 7. Click on **Create Notification** to complete the Notification Configuration
 
-More information on Microsoft Teams integation with Webhooks can we found in the [Official Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
+Mor more information on Microsoft Teams integation with Webhooks can we found in the [Official Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
