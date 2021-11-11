@@ -97,6 +97,7 @@ Examples:
 | app.komodor.com/deploy.link.coralogix   | url    | Link for the custom URL, coralogix                     | https://komodortest.coralogix.com/#/query-new/logs?query=(coralogix.metadata.cluster:(%22${cluster}%22))%20AND%20(coralogix.metadata.namespace:(%22${namespace}%22))%20AND%20(coralogix.metadata.service:(%22${service}%22))&time=from:${timestampStart=YYYY-MM-DDTHH:mm:ss.SSSZ},to:${timestampEnd=YYYY-MM-DDTHH:mm:ss.SSSZ}                                             |
 | app.komodor.com/deploy.link.logzio | url | Link for the custom URL, logz.io | https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})),query:(match_phrase:(kubernetes.container_image:${container[web].image})))),index:'logzioCustomerIndex',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&discoverTab=logz-logs-tab&switchToAccountId=138828&accountIds=true |
 | app.komodor.com/deploy.link.datadog | url | Link for the custom URL, DataDog | https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&historicalData=true&messageDisplay=inline&sort=desc&streamTraces=true&start=${epochStart}&end=${epochEnd}&paused=true |
+| app.komodor.com/deploy.link.
 
 
 
@@ -112,10 +113,37 @@ The following values can be used to enrich the URL:
 |${container[<name\>].image} | Image name of a container| ${container[web].image}
 |${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*| ${timestempStart=yyyy-MM-dd}
 |${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*| ${timestempEnd=yyyy-MM-dd}
+|${yaml[<spec_path\>]} | Full yaml's path specification | ${yaml[metadata.labels.app]}
 
-*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+Example on how to use yaml full path:
 
+```YAML
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    spec:
+      containers:
+      - name: test
+      image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+      - name: test2
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
 
+| Yaml Path                                      | Value         | Explanation                             |
+|------------------------------------------------|---------------|-----------------------------------------|
+|{$yaml[spec.replicas]}                          | 5             | full path usage                         |
+|{$yaml[spec.template.spec.containers[0\].name]} | test          | full path usage using path index        |
+|{$yaml[spec.my_replicas]}                       | undefined     | path doesn't exist                      |
+|{$yaml[spec.tamplate.spec.containers]}          | undefined     | path doesn't resolve to an actual value |
+
+*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
 ### Full example
 
