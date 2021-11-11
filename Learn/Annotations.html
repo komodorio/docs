@@ -1206,14 +1206,16 @@ Please find the below examples as references for common applications.</p>
 
 <h2 id="annotations-best-practices">Annotations Best Practices<a class="headerlink" href="#annotations-best-practices" title="Permanent link">&para;</a></h2>
 <p>At Komodor we believe that k8s annotations are the best method for describing services metadata.
-This includes all of the “extra” fields used to tag and label your services, both for other team members and for external tools.
-BTW, We collect the data both from annotations and labels.</p>
+This includes all the “extra” fields used to tag and label your services, both for other team members and for external tools.
+BTW, We collect data from both annotations and labels.</p>
 <h3 id="where-does-komodor-utilize-annotations">Where does Komodor utilize annotations?<a class="headerlink" href="#where-does-komodor-utilize-annotations" title="Permanent link">&para;</a></h3>
-<p>Everywhere! Komodor will use these annotations to create powerful connections between services and enrich service information in the following areas:
-* Services explorer
-* Related services
-* Events screen
-* Matching alerts to the correct services </p>
+<p>Everywhere! Komodor will use these annotations to create powerful connections between services and enrich service information in the following areas:</p>
+<ul>
+<li>Services explorer</li>
+<li>Related services</li>
+<li>Events screen</li>
+<li>Matching alerts to the correct services </li>
+</ul>
 <h3 id="official-kubernetes-recommendations"><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">Official Kubernetes recommendations</a><a class="headerlink" href="#official-kubernetes-recommendations" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">app.kubernetes.io/component</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">database</span>
 <span class="nt">app.kubernetes.io/part-of</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wordpress</span>
