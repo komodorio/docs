@@ -156,15 +156,16 @@ spec:
 
 ## Annotations Best Practices
 At Komodor we believe that k8s annotations are the best method for describing services metadata.
-This includes all of the “extra” fields used to tag and label your services, both for other team members and for external tools.
-BTW, We collect the data both from annotations and labels.
+This includes all the “extra” fields used to tag and label your services, both for other team members and for external tools.
+BTW, We collect data from both annotations and labels.
 
 ### Where does Komodor utilize annotations?
 Everywhere! Komodor will use these annotations to create powerful connections between services and enrich service information in the following areas:
-* Services explorer
-* Related services
-* Events screen
-* Matching alerts to the correct services 
+
+- Services explorer
+- Related services
+- Events screen
+- Matching alerts to the correct services 
 
 ### [Official Kubernetes recommendations](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 ```yaml 
