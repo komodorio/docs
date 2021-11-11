@@ -733,18 +733,18 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 <h1 id="sensitive-data-redaction-in-komodors-k8s-watcher">Sensitive data redaction in Komodor’s k8s-watcher<a class="headerlink" href="#sensitive-data-redaction-in-komodors-k8s-watcher" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h2>
 <p>It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
-When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff. </p>
+When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff.</p>
 <h2 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h2>
 <p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under redact key as such:</p>
 <p>komodor-k8s-watcher</p>
-<div class="codehilite"><pre><span></span><code><span class="n">watchNamespace</span><span class="o">:</span> <span class="n">all</span>
-<span class="n">namespacesBlacklist</span><span class="o">:</span>
-  <span class="o">-</span> <span class="n">kube</span><span class="o">-</span><span class="n">system</span>
-<span class="n">redact</span><span class="o">:</span>
-   <span class="o">-</span> <span class="s2">&quot;PG_.*&quot;</span>
-   <span class="o">-</span> <span class="s2">&quot;.*PASSWORD.*&quot;</span>
-<span class="n">nameBlacklist</span><span class="o">:</span> <span class="o">[</span><span class="s2">&quot;leader&quot;</span><span class="o">,</span> <span class="s2">&quot;election&quot;</span><span class="o">]</span>
-<span class="n">collectHistory</span><span class="o">:</span> <span class="kc">false</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">watchNamespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="nt">namespacesBlacklist</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class="nt">redact</span><span class="p">:</span>
+   <span class="p p-Indicator">-</span> <span class="s">&quot;PG_.*&quot;</span>
+   <span class="p p-Indicator">-</span> <span class="s">&quot;.*PASSWORD.*&quot;</span>
+<span class="nt">nameBlacklist</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;leader&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;election&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">collectHistory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 
 <h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
@@ -752,58 +752,58 @@ When configured - we will redact the specific value. That way Komodor won't see 
 <h3 id="configmap-resource">ConfigMap resource<a class="headerlink" href="#configmap-resource" title="Permanent link">&para;</a></h3>
 <p>You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.</p>
 <p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code>redact:
-    - &quot;SENTRY_API_KEY&quot;
-    - &quot;PG_.*&quot;
+<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;SENTRY_API_KEY&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;PG_.*&quot;</span>
 </code></pre></div>
 
 <p>configmap.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">v1</span>
-<span class="n">kind</span><span class="o">:</span> <span class="n">ConfigMap</span>
-<span class="n">metadata</span><span class="o">:</span>
-  <span class="n">Name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">map</span>
-<span class="n">data</span><span class="o">:</span>
-  <span class="n">SENTRY_API_KEY</span><span class="o">:</span> <span class="n">super_secret</span>
-  <span class="n">PG_SECRET</span><span class="o">:</span> <span class="n">super_secret</span>
-  <span class="n">PG_USERNAME</span><span class="o">:</span> <span class="n">super_secret</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">Name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensitive-config-map</span>
+<span class="nt">data</span><span class="p">:</span>
+  <span class="nt">SENTRY_API_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+  <span class="nt">PG_SECRET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+  <span class="nt">PG_USERNAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">super_secret</span>
 </code></pre></div>
 
 <p>All the above “super_secret” will be sent has hashed value.</p>
 <h3 id="deployment-resource">Deployment resource<a class="headerlink" href="#deployment-resource" title="Permanent link">&para;</a></h3>
 <p>Komodor’s k8s-watcher will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
 <p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code>redact:
-    - &quot;SENTRY_API_KEY&quot;
-    - &quot;PG_.*&quot;
+<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;SENTRY_API_KEY&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;PG_.*&quot;</span>
 </code></pre></div>
 
 <p>deployment.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
-<span class="n">kind</span><span class="o">:</span> <span class="n">Deployment</span>
-<span class="n">metadata</span><span class="o">:</span>
-  <span class="n">name</span><span class="o">:</span> <span class="n">sensitive</span><span class="o">-</span><span class="n">deployment</span>
-<span class="n">spec</span><span class="o">:</span>
-  <span class="n">selector</span><span class="o">:</span>
-    <span class="n">matchLabels</span><span class="o">:</span>
-      <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
-  <span class="n">replicas</span><span class="o">:</span> <span class="mi">1</span>
-  <span class="n">template</span><span class="o">:</span>
-    <span class="n">metadata</span><span class="o">:</span>
-      <span class="n">labels</span><span class="o">:</span>
-        <span class="n">run</span><span class="o">:</span> <span class="n">example</span>
-    <span class="n">spec</span><span class="o">:</span>
-      <span class="n">containers</span><span class="o">:</span>
-        <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
-          <span class="n">image</span><span class="o">:</span> <span class="n">gcr</span><span class="o">.</span><span class="na">io</span><span class="sr">/google-samples/</span><span class="n">node</span><span class="o">-</span><span class="n">hello</span><span class="o">:</span><span class="mf">1.0</span>
-          <span class="n">env</span><span class="o">:</span>
-            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">PG_USERNAME</span>
-              <span class="n">value</span><span class="o">:</span> <span class="n">super_secret</span>
-            <span class="o">-</span> <span class="n">name</span><span class="o">:</span> <span class="n">SECRET</span>
-              <span class="n">value</span><span class="o">:</span> <span class="n">this_will_show_up</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sensitive-deployment</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hello-world</span>
+          <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span>
+          <span class="nt">env</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PG_USERNAME</span>
+              <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+            <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET</span>
+              <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">this_will_show_up</span>
 </code></pre></div>
 
 <p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
-<p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration. </p>
+<p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration.</p>
                 
               
               
