@@ -44,6 +44,16 @@ spec:
               protocol: TCP
 ```
 
+### Microsoft DevOps Pipelines Example
+Microsoft DevOps Pipelines provides predefined variables that contains all the data needed to configure the source control annotations.
+Modify your pipeline to use these variables when templating the Kubernetes manifests. 
+```yaml
+annotations:
+    app.komodor.com/app: $(Build.Repository.Uri)
+    app.komodor.com/app.ref: $(Build.SourceVersion)
+```
+
+
 ### Tracked Files
 Once the integration with Github is established, Komodor will scan the pull requests files (only the names), to see if there are common, interesting files that have been updated. For example, when there was a change in `Dockerfile`, Komodor will show that in the Deploy summary.
 
