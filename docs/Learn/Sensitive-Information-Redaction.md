@@ -3,14 +3,14 @@
 ## What is it
 
 It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
-When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff. 
+When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff.
 
 ## How to integrate
 
 Inside `komodor-k8s-watcher.yaml` you should add a list of string or regular expressions under redact key as such:
 
 komodor-k8s-watcher
-```
+``` yaml
 watchNamespace: all
 namespacesBlacklist:
   - kube-system
@@ -29,14 +29,14 @@ You can preconfigure a list of keys for Kubernetes watcher to also redact specif
 
 
 komodor-k8s-watcher.yaml:
-```
+``` yaml
 redact:
     - "SENTRY_API_KEY"
     - "PG_.*"
 ```
 
 configmap.yaml:
-```
+``` yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -53,14 +53,14 @@ All the above “super_secret” will be sent has hashed value.
 Komodor’s k8s-watcher will hash `template.spec.template.[containeres|initContainers].env` list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.
 
 komodor-k8s-watcher.yaml:
-```
+``` yaml
 redact:
     - "SENTRY_API_KEY"
     - "PG_.*"
 ```
 
 deployment.yaml:
-```
+``` yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -87,4 +87,4 @@ spec:
 
 In the above deployment example we will not send the secret values for PG_USERNAME.
 
-SECRET will show up as is due to the fact it won’t match any string or regex in our configuration. 
+SECRET will show up as is due to the fact it won’t match any string or regex in our configuration.
