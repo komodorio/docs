@@ -451,6 +451,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
+  <a href="#microsoft-devops-pipelines-example" class="md-nav__link">
+    Microsoft DevOps Pipelines Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tracked-files" class="md-nav__link">
     Tracked Files
   </a>
@@ -681,6 +688,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
+  <a href="#microsoft-devops-pipelines-example" class="md-nav__link">
+    Microsoft DevOps Pipelines Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tracked-files" class="md-nav__link">
     Tracked Files
   </a>
@@ -742,6 +756,14 @@ Doing so connects the specific service with repositories that might not be the o
           <span class="nt">ports</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
               <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</code></pre></div>
+
+<h3 id="microsoft-devops-pipelines-example">Microsoft DevOps Pipelines Example<a class="headerlink" href="#microsoft-devops-pipelines-example" title="Permanent link">&para;</a></h3>
+<p>Microsoft DevOps Pipelines provides predefined variables that contains all the data needed to configure the source control annotations.
+Modify your pipeline to use these variables when templating the Kubernetes manifests. </p>
+<div class="codehilite"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">app.komodor.com/app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$(Build.Repository.Uri)</span>
+    <span class="nt">app.komodor.com/app.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$(Build.SourceVersion)</span>
 </code></pre></div>
 
 <h3 id="tracked-files">Tracked Files<a class="headerlink" href="#tracked-files" title="Permanent link">&para;</a></h3>
