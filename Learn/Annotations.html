@@ -1117,6 +1117,12 @@ Please find the below examples as references for common applications.</p>
 <td>Link for the custom URL, DataDog</td>
 <td>https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&amp;cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&amp;historicalData=true&amp;messageDisplay=inline&amp;sort=desc&amp;streamTraces=true&amp;start=${epochStart}&amp;end=${epochEnd}&amp;paused=true</td>
 </tr>
+<tr>
+<td>app.komodor.com/deploy.link.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <p>The following values can be used to enrich the URL:</p>
@@ -1169,9 +1175,64 @@ Please find the below examples as references for common applications.</p>
 <td>End Time in custom format*</td>
 <td>${timestempEnd=yyyy-MM-dd}</td>
 </tr>
+<tr>
+<td>${yaml[&lt;spec_path>]}</td>
+<td>Full yaml's path specification</td>
+<td>${yaml[metadata.labels.app]}</td>
+</tr>
 </tbody>
 </table>
-<p>*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
+<p>Example on how to use yaml full path:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
+        <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test2</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
+        <span class="nt">ports</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Yaml Path</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{$yaml[spec.replicas]}</td>
+<td>5</td>
+<td>full path usage</td>
+</tr>
+<tr>
+<td>{$yaml[spec.template.spec.containers[0].name]}</td>
+<td>test</td>
+<td>full path usage using path index</td>
+</tr>
+<tr>
+<td>{$yaml[spec.my_replicas]}</td>
+<td>undefined</td>
+<td>path doesn't exist</td>
+</tr>
+<tr>
+<td>{$yaml[spec.tamplate.spec.containers]}</td>
+<td>undefined</td>
+<td>path doesn't resolve to an actual value</td>
+</tr>
+</tbody>
+</table>
+<p>*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
