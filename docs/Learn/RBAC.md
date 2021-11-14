@@ -15,4 +15,5 @@ Roles categorize users and define what permissions those users have, such as wha
 | See API keys in the Integrations page | ✓     | ✘    |
 
 !!! Note
-An account can have multiple admins
+
+    An account can have multiple admins
