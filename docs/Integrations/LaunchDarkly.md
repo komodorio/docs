@@ -4,7 +4,7 @@ Integration with LaunchDarkly extends the holistic view of the environment with 
 
 For example:
 - Feature flag was turned on
-- Feature flag invariation changed
+- Feature flag in variation changed
 - Feature flag targeting was changed
 
 ## Installation
