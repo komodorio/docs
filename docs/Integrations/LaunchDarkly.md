@@ -26,4 +26,5 @@ In order to create the integration navigate to [LaunchDarkly Webhook Integration
       4. Check "I have read and agree to the Integration Terms and Conditions"
       5. Click "Save Changes" to finish the integration.
 
+
 ![image](https://docs.launchdarkly.com/static/c99f23ba46f8e0abae01f46a4011e327/6af66/integrations-webhooks-create.png)
