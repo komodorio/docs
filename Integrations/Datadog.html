@@ -520,36 +520,23 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#installation-steps" class="md-nav__link">
     Installation Steps
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#confirmation" class="md-nav__link">
     Confirmation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -680,36 +667,23 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#installation-steps" class="md-nav__link">
     Installation Steps
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#confirmation" class="md-nav__link">
     Confirmation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -731,12 +705,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                 
                 <h1 id="datadog-integration">Datadog Integration<a class="headerlink" href="#datadog-integration" title="Permanent link">&para;</a></h1>
-<p>Komodor-Datadog integration allows you to see service connections in Komodor. Services that are detected as related by Datadog will be added to the <strong>Related Services</strong> section in the Komodor Services View.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>DataDog integration allows DataDog Monitor Alerts to be available in Komodor and to suggest related service based on services connection deteced by DataDog.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>In order for us to connect your services according to Datadog tracing, the following environment variables should exist on your kubernetes deployments:
-- <code>DD_ENV</code> should match the environment specified on the Datadog service
-- <code>DD_SERVICE</code> should match the service name specified on the Datadog service</p>
+<p>For Komodor service correlation, your services according to Datadog, the following DataDog's service tags should be available on the resources.
+- environment - should match the environment specified on the Datadog service (<code>DD_ENV</code>)
+- service - should match the service name specified on the Datadog service (<code>DD_SERVICE</code>)</p>
+<p>DataDog's tags can be done by environment variables, labels, and annotations.
+To do the correlation, the tags must be a string value and not a reference value.</p>
+<p>For more information about DataDog tags for Kubernetes go into <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes">DataDog tagging documentation</a></p>
 <h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Make sure the above prerequisites are met.</li>
