@@ -707,9 +707,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 <h1 id="datadog-integration">Datadog Integration<a class="headerlink" href="#datadog-integration" title="Permanent link">&para;</a></h1>
 <p>DataDog integration allows DataDog Monitor Alerts to be available in Komodor and to suggest related service based on services connection deteced by DataDog.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>For Komodor service correlation, your services according to Datadog, the following DataDog's service tags should be available on the resources.
-- environment - should match the environment specified on the Datadog service (<code>DD_ENV</code>)
-- service - should match the service name specified on the Datadog service (<code>DD_SERVICE</code>)</p>
+<p>For Komodor service correlation, your services according to Datadog, the following DataDog's service tags should be available on the resources.</p>
+<ul>
+<li>environment - should match the environment specified on the Datadog service (<code>DD_ENV</code>)</li>
+<li>service - should match the service name specified on the Datadog service (<code>DD_SERVICE</code>)</li>
+</ul>
 <p>DataDog's tags can be done by environment variables, labels, and annotations.
 To do the correlation, the tags must be a string value and not a reference value.</p>
 <p>For more information about DataDog tags for Kubernetes go into <a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes">DataDog tagging documentation</a></p>
