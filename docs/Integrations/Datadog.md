@@ -1,15 +1,17 @@
 # Datadog Integration
 
-Komodor-Datadog integration allows you to see service connections in Komodor. Services that are detected as related by Datadog will be added to the __Related Services__ section in the Komodor Services View.
-
-## Installation
+DataDog integration allows DataDog Monitor Alerts to be available in Komodor and to suggest related service based on services connection deteced by DataDog.
 
 ### Prerequisites
 
-In order for us to connect your services according to Datadog tracing, the following environment variables should exist on your kubernetes deployments:
-- `DD_ENV` should match the environment specified on the Datadog service
-- `DD_SERVICE` should match the service name specified on the Datadog service
+For Komodor service correlation, your services according to Datadog, the following DataDog's service tags should be available on the resources.
+- environment - should match the environment specified on the Datadog service (`DD_ENV`)
+- service - should match the service name specified on the Datadog service (`DD_SERVICE`)
 
+DataDog's tags can be done by environment variables, labels, and annotations.
+To do the correlation, the tags must be a string value and not a reference value.
+
+For more information about DataDog tags for Kubernetes go into [DataDog tagging documentation](https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes)
 ### Installation Steps
 
 1. Make sure the above prerequisites are met.
