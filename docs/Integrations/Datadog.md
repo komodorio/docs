@@ -5,6 +5,7 @@ DataDog integration allows DataDog Monitor Alerts to be available in Komodor and
 ### Prerequisites
 
 For Komodor service correlation, your services according to Datadog, the following DataDog's service tags should be available on the resources.
+
 - environment - should match the environment specified on the Datadog service (`DD_ENV`)
 - service - should match the service name specified on the Datadog service (`DD_SERVICE`)
 
