@@ -459,6 +459,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-to-integarate-using-helm-upgrade-command" class="md-nav__link">
+    How to integarate using helm upgrade command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#secret-resource" class="md-nav__link">
     Secret Resource
   </a>
@@ -702,6 +709,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-to-integarate-using-helm-upgrade-command" class="md-nav__link">
+    How to integarate using helm upgrade command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#secret-resource" class="md-nav__link">
     Secret Resource
   </a>
@@ -759,6 +773,10 @@ When configured - we will redact the specific value. That way Komodor won't see 
    <span class="p p-Indicator">-</span> <span class="s">&quot;.*PASSWORD.*&quot;</span>
 <span class="nt">nameBlacklist</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;leader&quot;</span><span class="p p-Indicator">,</span> <span class="s">&quot;election&quot;</span><span class="p p-Indicator">]</span>
 <span class="nt">collectHistory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+<h3 id="how-to-integarate-using-helm-upgrade-command">How to integarate using helm upgrade command<a class="headerlink" href="#how-to-integarate-using-helm-upgrade-command" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact<span class="o">=</span><span class="s2">&quot;{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}&quot;</span> --set <span class="nv">apiKey</span><span class="o">=</span>&lt;API-KEY&gt; --set watcher.clusterName<span class="o">=</span>&lt;cluster-name&gt; --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --set watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span> 
 </code></pre></div>
 
 <h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
