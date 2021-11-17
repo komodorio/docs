@@ -103,6 +103,7 @@ The following values can be used to enrich the URL:
 
 | Placeholder                         | Value | Example |
 |------------------------------------|--------|---------|
+|${test} | Test field| 
 |${epochStart} | Start Time in Epoch Time|
 |${epochEnd} | End Time in Epoch Time|
 |${service} | Service Name|
