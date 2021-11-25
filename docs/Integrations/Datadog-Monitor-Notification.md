@@ -40,4 +40,8 @@ https://app.komodor.com/main/deep-dive/greatcompany.{{k8s_clustername}}-{{k8s_na
 
 1. For an end-to-end testing, add the dynamic link to a test monitor and use the 'Test Notification' button in DataDog.  
 2. Use the generated link in your alert provider, check that it directs you to the correct service in Komodor.
-3. If the link fails, check the [dynamic link prerequisites](https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html##prerequisites). 
+3. If the link fails, check the [dynamic link prerequisites](https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html##prerequisites).
+
+### See also
+
+DataDog documentation on [monitor notifications ](https://docs.datadoghq.com/monitors/notify/#message)
