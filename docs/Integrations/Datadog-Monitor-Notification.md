@@ -9,7 +9,7 @@ You will see the alert link in your Alerting provider connected to DataDog.
 
 To use DataDog variables in monitor notifications, there are two prerequisites imposed by DataDog:
 1. Make sure there are variables defined for: cluster name, namespace, service name.
-2. make sure monitor query is grouped by these tags.
+2. Make sure the tags are used in the monitor, or grouped by them.
 
 ### Link Setup
 
@@ -34,12 +34,12 @@ https://app.komodor.com/main/deep-dive/greatcompany.{{k8s_clustername}}-{{k8s_na
 ### Confirmation and testing
 
 1. Dynamic Komodor link will be added to your next DataDog alert.
-2. the link will include the relevant information.
+2. The link will include the relevant information.
 
 #### Testing
 
 1. For an end-to-end testing, add the dynamic link to a test monitor and use the 'Test Notification' button in DataDog.  
-2. Use the generated link in your alert provider, check that it directs you to the correct service in Komodor.
+2. Use the generated link in your alert provider and make sure it directs you to the correct service in Komodor.
 3. If the link fails, check the [dynamic link prerequisites](https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html##prerequisites).
 
 ### See also
