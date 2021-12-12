@@ -1,4 +1,4 @@
-# Integration with Okta for customers
+# Okta Integration
 
 Only Okta administrators can add Komodor, if you aren't an Okta administrator, please contact him.
 
