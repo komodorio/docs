@@ -1,25 +1,30 @@
+
 # Okta Integration
 
-Only Okta administrators can add Komodor, if you aren't an Okta administrator, please contact him.
+Use Okta's deep, pre-built integrations to securely connect to Komodor.
 
-Here are the steps in order to integrate Komodor with Okta:
+Note: Only Okta administrators can add the Komodor application, if you aren't an Okta administrator, please contact your Okta administrator to the application added.
 
-1. Go to Okta admin -> Applications -> Browse App Catalog
+Follow these steps to integrate Komodor with Okta:
+
+1. Go to Okta Admin -> Applications -> Browse App Catalog
 
    ![BrowseAppCatalog](./browse_app_catalog.png)
 
-2. Search fot Komodor and click 'Add'
-
+2. Search for "Komodor".
    ![SearchKomodor](./search_komodor.png)
+
+3. Then click 'Add'.
 
    ![AddKomodor](./add_komodor.png)
 
-3. In the 'Application Label' you can enter what you want. It is for internal use and will be your nickname for the App.
+4. Enter any application label you want in 'Application Label'. This is for internal use only and will also be the nickname for the Application.
+
    ![OktaApplicationLabel](./okta_application_label.png)
 
-4. Go to application -> 'Sign On' tab -> 'Settings' and click 'Edit'
+5. Go to application -> 'Sign On' tab -> 'Settings' and click 'Edit'.
 
-5. In 'Advanced Sign-on settings' enter variable of 'Account Name' and pass this varibale to us (in example: 'Komodorio').
+6. In 'Advanced Sign-on settings' enter variable of 'Account Name' and pass this variable to us, for example: 'Komodorio'.
    ![KomodorioAccountName](./komodorio_account_name.png)
 
-6. Click 'View Setup Instructions' and then pass the 'Metadata URL' to us (with the Account Name variable)
+7. Click 'View Setup Instructions' and then pass the 'Metadata URL' to us with the Account Name variable.
