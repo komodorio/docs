@@ -25,7 +25,8 @@ Follow these steps to integrate Komodor with Okta:
 
 7. Click 'View Setup Instructions'.
    ![ViewSetupInstructions](./view_setup_instructions.png)
+
 8. Send the 'Metadata URL' and Account Name variable to support@komodor.com to complete the Okta setup.
    ![OktaMetadataUrl](./okta_metadata_url.png)
 
-9. Once Customer Success has comepleted the setup you can begin to use Okta for SSO.
+9. Once Customer Success has completed the setup you can begin to use Okta for SSO.
