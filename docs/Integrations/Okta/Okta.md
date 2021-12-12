@@ -28,3 +28,4 @@ Follow these steps to integrate Komodor with Okta:
 
 7. Click 'View Setup Instructions' and then pass the 'Metadata URL' to us (with the Account Name variable)
    ![ViewSetupInstructions](./view_setup_instructions.png)
+   ![OktaMetadataUrl](./okta_metadata_url.png)
