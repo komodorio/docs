@@ -7,18 +7,15 @@ Note: Only Okta administrators can add the Komodor application, if you aren't an
 Follow these steps to integrate Komodor with Okta:
 
 1. Go to Okta Admin -> Applications -> Browse App Catalog
-
    ![BrowseAppCatalog](./browse_app_catalog.png)
 
 2. Search for "Komodor".
    ![SearchKomodor](./search_komodor.png)
 
 3. Then click 'Add'.
-
    ![AddKomodor](./add_komodor.png)
 
 4. Enter any application label you want in 'Application Label'. This is for internal use only and will also be the nickname for the Application.
-
    ![OktaApplicationLabel](./okta_application_label.png)
 
 5. Go to application -> 'Sign On' tab -> 'Settings' and click 'Edit'.
@@ -28,7 +25,6 @@ Follow these steps to integrate Komodor with Okta:
 
 7. Click 'View Setup Instructions'.
    ![ViewSetupInstructions](./view_setup_instructions.png)
-   
 8. Send the 'Metadata URL' and Account Name variable to support@komodor.com to complete the Okta setup.
    ![OktaMetadataUrl](./okta_metadata_url.png)
 
