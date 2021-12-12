@@ -26,6 +26,8 @@ Follow these steps to integrate Komodor with Okta:
 6. In 'Advanced Sign-on settings' enter variable of 'Account Name' and pass this variable to us, for example: 'Komodorio'.
    ![KomodorioAccountName](./komodorio_account_name.png)
 
-7. Click 'View Setup Instructions' and then pass the 'Metadata URL' to us (with the Account Name variable)
+7. Click 'View Setup Instructions'.
    ![ViewSetupInstructions](./view_setup_instructions.png)
+   
+8. Send the 'Metadata URL' and Account Name variable to support@komodor.com to complete the Okta setup.
    ![OktaMetadataUrl](./okta_metadata_url.png)
