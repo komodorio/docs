@@ -2,7 +2,7 @@
 
 Use Okta's deep, pre-built integrations to securely connect to Komodor.
 
-Note: Only Okta administrators can add the Komodor application, if you aren't an Okta administrator, please contact your Okta administrator to the application added.
+Note: Only Okta administrators can add the Komodor application, if you aren't an Okta administrator, please contact your Okta administrator to have the application added.
 
 Follow these steps to integrate Komodor with Okta:
 
