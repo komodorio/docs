@@ -11,6 +11,8 @@ Roles categorize users and define what permissions those users have, such as wha
 | View all features                     | ✓     | ✓    |
 | Invite Admin member                   | ✓     | ✘    |
 | Invite User member                    | ✓     | ✓    |
+| Edit users' name and rule.            | ✓     | ✘    |
+| Delete User and Admin members         | ✓     | ✘    |
 | Add a new integration                 | ✓     | ✘    |
 | See API keys in the Integrations page | ✓     | ✘    |
 
