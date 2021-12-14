@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.komodor.com/docs/index.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/getting-started.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/index.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/Datadog-Monitor-Notification.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/Datadog.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/Grafana.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/LaunchDarkly.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/MicrosoftTeams.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/PagerDuty.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/Sentry.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/datadog-webhook.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Integrations/Okta/Okta.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/index.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/Annotations.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/Interaction-With-The-Cluster.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/Komodor-Agent.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/RBAC.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/Sensitive-Information-Redaction.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/config-changes.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.komodor.com/docs/Learn/komodor-source-control.html</loc>
-         <lastmod>2021-12-12</lastmod>
+         <lastmod>2021-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
