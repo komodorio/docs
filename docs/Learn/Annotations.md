@@ -142,7 +142,7 @@ spec:
 |{$yaml[spec.my_replicas]}                       | undefined     | path doesn't exist                      |
 |{$yaml[spec.tamplate.spec.containers]}          | undefined     | path doesn't resolve to an actual value |
 
-*Custom link with failedPod won't appear for events which aren't connected to a failedPod
+*Custom links with a failed pod name will be created on health events only. 
 **Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
 ### Full example
