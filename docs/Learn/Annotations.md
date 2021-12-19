@@ -108,7 +108,7 @@ The following values can be used to enrich the URL:
 |${service} | Service Name|
 |${namespace} | Namespace Name|
 |${cluster} | Cluster Name|
-|${failedPod} | Failed pod name connected to event* |
+|${failedPod} | The pod name of a failed pod that triggered this health event.* |
 |${container[<name\>].image} | Image name of a container| ${container[web].image}
 |${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format**| ${timestempStart=yyyy-MM-dd}
 |${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format**| ${timestempEnd=yyyy-MM-dd}
