@@ -143,7 +143,7 @@ spec:
 |{$yaml[spec.tamplate.spec.containers]}          | undefined     | path doesn't resolve to an actual value |
 
 *Custom links with a failed pod name will be created on health events only. 
-**Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+**Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
 ### Full example
 
