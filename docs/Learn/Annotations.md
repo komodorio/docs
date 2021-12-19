@@ -108,9 +108,10 @@ The following values can be used to enrich the URL:
 |${service} | Service Name|
 |${namespace} | Namespace Name|
 |${cluster} | Cluster Name|
+|${failedPod} | Failed pod name connected to event* |
 |${container[<name\>].image} | Image name of a container| ${container[web].image}
-|${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format*| ${timestempStart=yyyy-MM-dd}
-|${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format*| ${timestempEnd=yyyy-MM-dd}
+|${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS} | Start Time in custom format**| ${timestempStart=yyyy-MM-dd}
+|${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} | End Time in custom format**| ${timestempEnd=yyyy-MM-dd}
 |${yaml[<spec_path\>]} | Full yaml's path specification | ${yaml[metadata.labels.app]}
 
 Example on how to use yaml full path:
@@ -141,7 +142,8 @@ spec:
 |{$yaml[spec.my_replicas]}                       | undefined     | path doesn't exist                      |
 |{$yaml[spec.tamplate.spec.containers]}          | undefined     | path doesn't resolve to an actual value |
 
-*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
+*Custom link with failedPod won't appear for events which aren't connected to a failedPod
+**Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
 
 ### Full example
 
