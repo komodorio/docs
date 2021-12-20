@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Annotations.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.23b6d78a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1190,18 +1190,23 @@ Please find the below examples as references for common applications.</p>
 <td></td>
 </tr>
 <tr>
+<td>${failedPod}</td>
+<td>The pod name of a failed pod that triggered this health event.*</td>
+<td></td>
+</tr>
+<tr>
 <td>${container[&lt;name>].image}</td>
 <td>Image name of a container</td>
 <td>${container[web].image}</td>
 </tr>
 <tr>
 <td>${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
-<td>Start Time in custom format*</td>
+<td>Start Time in custom format**</td>
 <td>${timestempStart=yyyy-MM-dd}</td>
 </tr>
 <tr>
 <td>${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
-<td>End Time in custom format*</td>
+<td>End Time in custom format**</td>
 <td>${timestempEnd=yyyy-MM-dd}</td>
 </tr>
 <tr>
@@ -1261,7 +1266,8 @@ Please find the below examples as references for common applications.</p>
 </tr>
 </tbody>
 </table>
-<p>*Dates can be crasfted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
+<p><em>Custom links with a failed pod name will be created on health events only. 
+</em>*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
@@ -1359,10 +1365,10 @@ BTW, We collect data from both annotations and labels.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.c7dec7e7.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.da79ceb7.min.js"></script>
+      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
