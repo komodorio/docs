@@ -18,6 +18,7 @@ The details will also show you which service might have been impacted by this no
 In the service screen there is now a button that will show you on which nodes your service is currently running on, and how many pods is running on a specific node.
 
 In case for a node error you will see it once clicking the button:
+
 ![Node button](./img/node-button.png)
 
 ![Node screen](./img/node-button-open.png)
@@ -25,6 +26,6 @@ In case for a node error you will see it once clicking the button:
 
 ## Installation
 
-### Prerequisites
+### Requirements
 
 In order to see node live data make sure you are running [komodor-agent](https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher) version `0.1.60` or higher. Also make sure the node resource watcher is on, you can do this as part of [helm configuration](https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration).
