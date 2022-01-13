@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/komodor-source-control.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -759,79 +759,79 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 Doing so connects the specific service with repositories that might not be the original codebase, such as infrastructure or CI repos, which are still relevant changes.</p>
 <h3 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h3>
 <p>Add the following annotations to your service's Kubernetes spec:</p>
-<div class="codehilite"><pre><span></span><code>    <span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">FULL_REPO_URL</span>
-    <span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name].ref</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SOURCE_CONTROL_REF</span>
-    <span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ANOTHER_FULL_REPO_URL</span>
-    <span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name].ref</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ANOTHER_ SOURCE_CONTROL_REF</span>    
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name]</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FULL_REPO_URL</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name].ref</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SOURCE_CONTROL_REF</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name]</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ANOTHER_FULL_REPO_URL</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name].ref</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ANOTHER_ SOURCE_CONTROL_REF</span><span class="w">    </span>
 </code></pre></div>
 
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">git-example</span>
-  <span class="nt">annotations</span><span class="p">:</span>
-    <span class="nt">app.komodor.com/app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span>
-    <span class="nt">app.komodor.com/app.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span>     
-    <span class="nt">app.komodor.com/infra</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span>
-    <span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span> 
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">matchLabels</span><span class="p">:</span>
-      <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">labels</span><span class="p">:</span>
-        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-    <span class="nt">spec</span><span class="p">:</span>
-      <span class="nt">containers</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hello-world</span>
-          <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span>
-          <span class="nt">ports</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
-              <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span><span class="w">     </span>
+<span class="w">    </span><span class="nt">app.komodor.com/infra</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span><span class="w"> </span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span><span class="w"></span>
+<span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
+<span class="w">              </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="microsoft-devops-pipelines-example">Microsoft DevOps Pipelines Example<a class="headerlink" href="#microsoft-devops-pipelines-example" title="Permanent link">&para;</a></h3>
 <p>Microsoft DevOps Pipelines provides predefined variables that contains all the data needed to configure the source control annotations.
 Modify your pipeline to use these variables when templating the Kubernetes manifests. </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span>
-    <span class="nt">app.komodor.com/app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$(Build.Repository.Uri)</span>
-    <span class="nt">app.komodor.com/app.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$(Build.SourceVersion)</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(Build.Repository.Uri)</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(Build.SourceVersion)</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="tracked-files">Tracked Files<a class="headerlink" href="#tracked-files" title="Permanent link">&para;</a></h3>
 <p>Once the integration with Github is established, Komodor will scan the pull requests files (only the names), to see if there are common, interesting files that have been updated. For example, when there was a change in <code>Dockerfile</code>, Komodor will show that in the Deploy summary.</p>
 <p>To customize which files will be tracked by Komodor. Using Kubernetes annotation <code>app.komodor.com/tracked_files</code> that accepts multiline string (gitignore like) to specify the files. 
 For example, track any <code>yaml</code> files:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">git-example</span>
-  <span class="nt">annotations</span><span class="p">:</span>
-    <span class="nt">app.komodor.com/tracked_files</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-      <span class="no">*.yaml</span>
-    <span class="nt">app.komodor.com/app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span>
-    <span class="nt">app.komodor.com/app.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span>     
-    <span class="nt">app.komodor.com/infra</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span>
-    <span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span> 
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">matchLabels</span><span class="p">:</span>
-      <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">labels</span><span class="p">:</span>
-        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-    <span class="nt">spec</span><span class="p">:</span>
-      <span class="nt">containers</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hello-world</span>
-          <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span>
-          <span class="nt">ports</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
-              <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/tracked_files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">      </span><span class="no">*.yaml</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span><span class="w">     </span>
+<span class="w">    </span><span class="nt">app.komodor.com/infra</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span><span class="w"> </span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span><span class="w"></span>
+<span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
+<span class="w">              </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP&quot;</span><span class="w"></span>
 </code></pre></div>
 
               
@@ -867,10 +867,10 @@ For example, track any <code>yaml</code> files:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
       
     
   </body>

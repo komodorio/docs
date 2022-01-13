@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Annotations.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -980,7 +980,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 <h1 id="komodor-kubernetes-annotations">Komodor kubernetes annotations<a class="headerlink" href="#komodor-kubernetes-annotations" title="Permanent link">&para;</a></h1>
-<p>Komodor annotations (AKA Komodor as code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
+<p>Komodor annotations (AKA Komodor as Code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)</p>
 <h2 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
 <p>Configure the Slack channel notification as part of the deployment object.</p>
@@ -992,7 +992,6 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <th>Values</th>
 <th>Description</th>
 <th>Example</th>
-<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -1001,28 +1000,24 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <td>string</td>
 <td>Slack channel name for all deploy events notifications</td>
 <td>“deploy-brain-team"</td>
-<td></td>
 </tr>
 <tr>
 <td>app.komodor.com/notification.deploy_fail.slack</td>
 <td>string</td>
 <td>Slack channel name for failed deploy events notifications</td>
 <td>“deploy-failed"</td>
-<td></td>
 </tr>
 <tr>
 <td>app.komodor.com/notification.deploy_success.slack</td>
 <td>string</td>
 <td>Slack channel name for successful deploy events notifications</td>
 <td>“deploy-success"</td>
-<td></td>
 </tr>
 <tr>
 <td>app.komodor.com/notification.health.slack</td>
 <td>string</td>
 <td>Slack channel for health event notifications</td>
 <td>“alerts-p1”</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -1038,30 +1033,26 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <th>Values</th>
 <th>Description</th>
 <th>Example</th>
-<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>app.komodor.com/service.link.grafana-overall-system-health</td>
 <td>url</td>
-<td>Url for Grafana health dashboard related to this service.</td>
-<td>“deploy-brain-team"</td>
-<td></td>
+<td>URL to Grafana health dashboard related to this service.</td>
+<td>https://play.grafana.org/d/000000010/annotations?orgId=1&amp;from=now-3h&amp;to=now</td>
 </tr>
 <tr>
 <td>app.komodor.com/service.link.datadog-http-500</td>
 <td>url</td>
-<td>Url for datadog dashboard with bad http</td>
-<td>“alerts-p1”</td>
-<td></td>
+<td>URL for datadog dashboard with bad http</td>
+<td>https://app.datadoghq.com/dashboard/g1b-2jw-a97/http-500</td>
 </tr>
 <tr>
 <td>app.komodor.com/service.link.company-playbook</td>
 <td>url</td>
-<td>The playbook for the company playbook</td>
-<td>“120”</td>
-<td>“30”</td>
+<td>URL to service playbook</td>
+<td>https://mycompany.confluence.com/service-playbooks/${service}</td>
 </tr>
 </tbody>
 </table>
@@ -1118,8 +1109,8 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 </tbody>
 </table>
 <h2 id="custom-links">Custom Links<a class="headerlink" href="#custom-links" title="Permanent link">&para;</a></h2>
-<p>You can create custom links to external and internal applications by crafting your own URL to the appplication using a skeleton URL and placeholders provided by Komodor.
-Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the appplication, and replace them with placeholders for your own use.
+<p>You can create custom links to external and internal applications by crafting your own URL to the application using a skeleton URL and placeholders provided by Komodor.
+Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the application, and replace them with placeholders for your own use.
 Please find the below examples as references for common applications.</p>
 <h3 id="how_4">How<a class="headerlink" href="#how_4" title="Permanent link">&para;</a></h3>
 <p><code>app.komodor.com/deploy/link/name:value</code></p>
@@ -1144,7 +1135,7 @@ Please find the below examples as references for common applications.</p>
 <td>app.komodor.com/deploy.link.logzio</td>
 <td>url</td>
 <td>Link for the custom URL, logz.io</td>
-<td>https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})),query:(match_phrase:(kubernetes.container_image:${container[web].image})))),index:'logzioCustomerIndex',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&amp;discoverTab=logz-logs-tab&amp;switchToAccountId=138828&amp;accountIds=true</td>
+<td>https://app.logz.io/#/dashboard/kibana/discover?_a=(columns:!(message,kubernetes.namespace_name,kubernetes.container_name,params.clusterName),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.namespace_name,negate:!f,params:(query:default),type:phrase),query:(match_phrase:(kubernetes.namespace_name:${namespace}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:params.clusterName,negate:!f,params:(query:main),type:phrase),query:(match_phrase:(params.clusterName:${cluster}))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'logzioCustomerIndex',key:kubernetes.container_name,negate:!f,params:(query:k8s-events-collector),type:phrase),query:(match_phrase:(kubernetes.container_name:${service})),query:(match_phrase:(kubernetes.container_image:${container[web].image})))),index:'logzioCustomerIndex',interval:auto,query:(language:lucene,query:''),sort:!(!('@timestamp',desc)))&amp;_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS}',to:'${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS}'))&amp;discoverTab=logz-logs-tab&amp;switchToAccountId=138828&amp;accountIds=true</td>
 </tr>
 <tr>
 <td>app.komodor.com/deploy.link.datadog</td>
@@ -1200,14 +1191,14 @@ Please find the below examples as references for common applications.</p>
 <td>${container[web].image}</td>
 </tr>
 <tr>
-<td>${timestempStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
 <td>Start Time in custom format**</td>
-<td>${timestempStart=yyyy-MM-dd}</td>
+<td>${timestampStart=yyyy-MM-dd}</td>
 </tr>
 <tr>
-<td>${timestempEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>${timestampEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
 <td>End Time in custom format**</td>
-<td>${timestempEnd=yyyy-MM-dd}</td>
+<td>${timestampEnd=yyyy-MM-dd}</td>
 </tr>
 <tr>
 <td>${yaml[&lt;spec_path>]}</td>
@@ -1216,29 +1207,29 @@ Please find the below examples as references for common applications.</p>
 </tr>
 </tbody>
 </table>
-<p>Example on how to use yaml full path:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">matchLabels</span><span class="p">:</span>
-      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">spec</span><span class="p">:</span>
-      <span class="nt">containers</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
-      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
-        <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test2</span>
-        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
-        <span class="nt">ports</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+<p>Example on how to use YAML full path:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span><span class="w"></span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span><span class="w"></span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
 </code></pre></div>
 
 <table>
 <thead>
 <tr>
-<th>Yaml Path</th>
+<th>YAML Path</th>
 <th>Value</th>
 <th>Explanation</th>
 </tr>
@@ -1260,7 +1251,7 @@ Please find the below examples as references for common applications.</p>
 <td>path doesn't exist</td>
 </tr>
 <tr>
-<td>{$yaml[spec.tamplate.spec.containers]}</td>
+<td>{$yaml[spec.template.spec.containers]}</td>
 <td>undefined</td>
 <td>path doesn't resolve to an actual value</td>
 </tr>
@@ -1269,35 +1260,35 @@ Please find the below examples as references for common applications.</p>
 <p><em>Custom links with a failed pod name will be created on health events only. 
 </em>*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">annotation-example</span>
-  <span class="nt">annotations</span><span class="p">:</span>
-    <span class="nt">app.komodor.com/notification.deploy.slack</span><span class="p">:</span> <span class="s">&quot;#deploy-slack-channel&quot;</span>
-    <span class="nt">app.komodor.com/service.link.grafana-overall-system-health</span><span class="p">:</span> <span class="s">&quot;https://grafana.com/service/annoation-exmaple&quot;</span>
-    <span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span> <span class="s">&quot;https://datadog.com/dashboard/annoation-exmaple&quot;</span>
-    <span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span> <span class="s">&quot;https://docs.google.com/playbook&quot;</span>    
-    <span class="nt">app.komodor.com/deploy.job.jenkins</span><span class="p">:</span> <span class="s">&quot;https://ci.jenkins-ci.org/computer/job&quot;</span>
-    <span class="nt">app.komodor.com/deploy.link.logs</span><span class="p">:</span> <span class="s">&quot;https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1&quot;</span>
-    <span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span> <span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span>
-    <span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span> <span class="s">&quot;https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&amp;cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&amp;historicalData=true&amp;messageDisplay=inline&amp;sort=desc&amp;streamTraces=true&amp;start=${epochStart}&amp;end=${epochEnd}&amp;paused=true&quot;</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">matchLabels</span><span class="p">:</span>
-      <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">labels</span><span class="p">:</span>
-        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-    <span class="nt">spec</span><span class="p">:</span>
-      <span class="nt">containers</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hello-world</span>
-          <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0.1</span>
-          <span class="nt">ports</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
-              <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">annotation-example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/notification.deploy.slack</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#deploy-slack-channel&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/service.link.grafana-overall-system-health</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://grafana.com/service/annotation-example&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://datadog.com/dashboard/annotation-example&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://docs.google.com/playbook&quot;</span><span class="w">    </span>
+<span class="w">    </span><span class="nt">app.komodor.com/deploy.job.jenkins</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://ci.jenkins-ci.org/computer/job&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/deploy.link.logs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://app.datadoghq.com/apm/traces?query=service%3A${service}%20kube_namespace%3A${namespace}%20env%3A${cluster}&amp;cols=core_service%2Ccore_resource_name%2Clog_duration%2Clog_http.method%2Clog_http.status_code&amp;historicalData=true&amp;messageDisplay=inline&amp;sort=desc&amp;streamTraces=true&amp;start=${epochStart}&amp;end=${epochEnd}&amp;paused=true&quot;</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0.1</span><span class="w"></span>
+<span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
+<span class="w">              </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="annotations-best-practices">Annotations Best Practices<a class="headerlink" href="#annotations-best-practices" title="Permanent link">&para;</a></h2>
@@ -1313,17 +1304,17 @@ BTW, We collect data from both annotations and labels.</p>
 <li>Matching alerts to the correct services </li>
 </ul>
 <h3 id="official-kubernetes-recommendations"><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">Official Kubernetes recommendations</a><a class="headerlink" href="#official-kubernetes-recommendations" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">app.kubernetes.io/component</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">database</span>
-<span class="nt">app.kubernetes.io/part-of</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wordpress</span>
-<span class="nt">app.kubernetes.io/managed-by</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helm</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">app.kubernetes.io/component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database</span><span class="w"></span>
+<span class="nt">app.kubernetes.io/part-of</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span><span class="w"></span>
+<span class="nt">app.kubernetes.io/managed-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">helm</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="komodor-recommendations">Komodor recommendations<a class="headerlink" href="#komodor-recommendations" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">app.komodor.com/label.team</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">backend</span>
-<span class="nt">app.komodor.com/label.group</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">infrastructure</span>
-<span class="nt">app.komodor.com/label.owners</span><span class="p">:</span> <span class="s">&quot;#infa-team&quot;</span>
-<span class="nt">app.komodor.com/label.alert-team</span><span class="p">:</span> <span class="s">&quot;#devs&quot;</span>
-<span class="nt">app.komodor.com/label.Impacted-by</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">app.komodor.com/label.team</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backend</span><span class="w"></span>
+<span class="nt">app.komodor.com/label.group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">infrastructure</span><span class="w"></span>
+<span class="nt">app.komodor.com/label.owners</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#infa-team&quot;</span><span class="w"></span>
+<span class="nt">app.komodor.com/label.alert-team</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#devs&quot;</span><span class="w"></span>
+<span class="nt">app.komodor.com/label.Impacted-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="usage-example">Usage example<a class="headerlink" href="#usage-example" title="Permanent link">&para;</a></h3>
@@ -1365,10 +1356,10 @@ BTW, We collect data from both annotations and labels.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
       
     
   </body>
