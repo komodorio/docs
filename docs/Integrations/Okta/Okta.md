@@ -21,6 +21,8 @@ Follow these steps to integrate Komodor with Okta:
 5. Go to application -> 'Sign On' tab -> 'Settings' and click 'Edit'.
 
 6. In 'Advanced Sign-on settings' enter variable of 'Account Name' and pass this variable to us, for example: 'Komodorio'.
+   Please change application username format to Email.
+   \*\*NOTE once you defined 'companyName' it can't be changed
    ![KomodorioAccountName](./komodorio_account_name.png)
 
 7. Click 'View Setup Instructions'.
