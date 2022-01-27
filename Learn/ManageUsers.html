@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Learn/RBAC.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Learn/ManageUsers.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
-        <title>RBAC - Komodor</title>
+        <title>Manage Users - Komodor</title>
       
     
     
@@ -78,7 +78,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#role-based-access-control" class="md-skip">
+        <a href="#how-to-manage-users" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RBAC
+              Manage Users
             
           </span>
         </div>
@@ -430,68 +430,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          RBAC
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="RBAC.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="RBAC.html" class="md-nav__link">
         RBAC
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#role-based-access-control" class="md-nav__link">
-    Role-Based Access Control
-  </a>
-  
-    <nav class="md-nav" aria-label="Role-Based Access Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#komodor-roles" class="md-nav__link">
-    Komodor Roles:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -501,11 +444,66 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ManageUsers.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Manage Users
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ManageUsers.html" class="md-nav__link md-nav__link--active">
         Manage Users
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-inviteadd-a-new-user" class="md-nav__link">
+    How to Invite/Add a new user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-modify-an-existing-user" class="md-nav__link">
+    How to modify an existing user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-delete-a-user" class="md-nav__link">
+    How to delete a user
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -694,6 +692,8 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -702,29 +702,23 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#role-based-access-control" class="md-nav__link">
-    Role-Based Access Control
-  </a>
-  
-    <nav class="md-nav" aria-label="Role-Based Access Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
+  <a href="#how-to-inviteadd-a-new-user" class="md-nav__link">
+    How to Invite/Add a new user
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#komodor-roles" class="md-nav__link">
-    Komodor Roles:
+      
+        <li class="md-nav__item">
+  <a href="#how-to-modify-an-existing-user" class="md-nav__link">
+    How to modify an existing user
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-delete-a-user" class="md-nav__link">
+    How to delete a user
+  </a>
   
 </li>
       
@@ -740,67 +734,69 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/RBAC.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/ManageUsers.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>RBAC</h1>
-
-<h2 id="role-based-access-control">Role-Based Access Control<a class="headerlink" href="#role-based-access-control" title="Permanent link">&para;</a></h2>
-<h3 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h3>
-<p>Roles categorize users and define what permissions those users have, such as what data they can read or what they can modify.</p>
-<h3 id="komodor-roles">Komodor Roles:<a class="headerlink" href="#komodor-roles" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Permissions</th>
-<th>Admin</th>
-<th>User</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>View all features</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Invite Admin member</td>
-<td>✓</td>
-<td>✘</td>
-</tr>
-<tr>
-<td>Invite User member</td>
-<td>✓</td>
-<td>✓</td>
-</tr>
-<tr>
-<td>Edit users' name and rule.</td>
-<td>✓</td>
-<td>✘</td>
-</tr>
-<tr>
-<td>Delete User and Admin members</td>
-<td>✓</td>
-<td>✘</td>
-</tr>
-<tr>
-<td>Add a new integration</td>
-<td>✓</td>
-<td>✘</td>
-</tr>
-<tr>
-<td>See API keys in the Integrations page</td>
-<td>✓</td>
-<td>✘</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>An account can have multiple admins</p>
-</div>
+<h1 id="how-to-manage-users">How to Manage Users<a class="headerlink" href="#how-to-manage-users" title="Permanent link">&para;</a></h1>
+<p>This article will detail how to Invite, Modify and Delete users in the Komodor platform.</p>
+<h2 id="how-to-inviteadd-a-new-user">How to Invite/Add a new user<a class="headerlink" href="#how-to-inviteadd-a-new-user" title="Permanent link">&para;</a></h2>
+<ol>
+<li>To invite another user click on the manage team icon in the top right corner, this will take you to the "Manage Team" page.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/ManageUsersMainPage.png" /></p>
+<blockquote>
+<p><strong><em>Note:</em></strong> You must have the Admin role in order to invite another Admin to the platform.</p>
+</blockquote>
+<ol>
+<li>Click on "Add Member".</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/ManageTeam.png" /></p>
+<ol>
+<li>Provide the users Full Name, Email Address and select a role for the user and then click "Send Invite" to invite the user to the platform.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/AddMember.png" /></p>
+<blockquote>
+<p><strong><em>Note:</em></strong> More on user roles can be found <a href="https://docs.komodor.com/Learn/RBAC.html" title="Komodor RBAC">here</a>.</p>
+</blockquote>
+<ol>
+<li>The user will receive an invitation to the platform, click "Close" to finish.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/MemberAdded.png" /></p>
+<h2 id="how-to-modify-an-existing-user">How to modify an existing user<a class="headerlink" href="#how-to-modify-an-existing-user" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click on the manage user icon in the top right corner, this will take you to the "Manage Team" page.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/ManageUsersMainPage.png" /></p>
+<ol>
+<li>You will see a list of users for the account, select "Edit" to the far right of the user you wish to modify.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/UserList.png" /></p>
+<ol>
+<li>In the "Edit Member" dialogue, modify the users Full Name or Role and click on "Save Details" to save the changes.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/EditMember.png" /></p>
+<blockquote>
+<p><strong><em>Note:</em></strong> In order to change a users email address you will need to create a new user by inviting them to the platform using their new email address. </p>
+</blockquote>
+<h2 id="how-to-delete-a-user">How to delete a user<a class="headerlink" href="#how-to-delete-a-user" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click on the manage user icon in the top right corner, this will take you to the "Manage Team" page.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/ManageUsersMainPage.png" /></p>
+<ol>
+<li>You will see a list of users for the account, select "Edit" beside the user you wish to delete.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/UserList.png" /></p>
+<ol>
+<li>On the "Edit Member" dialogue, click on the red garbage bin in the top right corner to delete the user.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/EditMember.png" /></p>
+<ol>
+<li>Click on "Yes, Remove" to delete the user.</li>
+</ol>
+<p><img alt="BrowseAppCatalog" src="img/DeleteUserCOnfirmation.png" /></p>
 
               
             </article>
