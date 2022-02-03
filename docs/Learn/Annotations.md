@@ -81,18 +81,18 @@ Examples:
 
 The following values can be used to enrich the URL:
 
-| Placeholder                                   | Value                                                           | Example                      |
-| --------------------------------------------- | --------------------------------------------------------------- | ---------------------------- |
-| ${epochStart}\*                               | Start Time in Epoch Time                                        |
-| ${epochEnd}\*                                 | End Time in Epoch Time                                          |
-| ${service}                                    | Service Name                                                    |
-| ${namespace}                                  | Namespace Name                                                  |
-| ${cluster}                                    | Cluster Name                                                    |
-| ${failedPod}\*                                | The pod name of a failed pod that triggered this health event\* |
-| ${container[<name\>].image}\*                 | Image name of a container                                       | ${container[web].image}      |
-| ${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS}\* | Start Time in custom format\*\*                                 | ${timestampStart=yyyy-MM-dd} |
-| ${timestampEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}\*   | End Time in custom format\*\*                                   | ${timestampEnd=yyyy-MM-dd}   |
-| ${yaml[<spec_path\>]}                         | Full yaml's path specification                                  | ${yaml[metadata.labels.app]} |
+| Placeholder                                    | Value                                                           | Example                      |
+| ---------------------------------------------- | --------------------------------------------------------------- | ---------------------------- |
+| ${epochStart} \*                               | Start Time in Epoch Time                                        |
+| ${epochEnd} \*                                 | End Time in Epoch Time                                          |
+| ${service}                                     | Service Name                                                    |
+| ${namespace}                                   | Namespace Name                                                  |
+| ${cluster}                                     | Cluster Name                                                    |
+| ${failedPod} \*                                | The pod name of a failed pod that triggered this health event\* |
+| ${container[<name\>].image} \*                 | Image name of a container                                       | ${container[web].image}      |
+| ${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS} \* | Start Time in custom format\*\*                                 | ${timestampStart=yyyy-MM-dd} |
+| ${timestampEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} \*   | End Time in custom format\*\*                                   | ${timestampEnd=yyyy-MM-dd}   |
+| ${yaml[<spec_path\>]}                          | Full yaml's path specification                                  | ${yaml[metadata.labels.app]} |
 
 \*Not applicable in Service context.
 
