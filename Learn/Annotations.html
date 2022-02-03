@@ -1251,22 +1251,22 @@ Please find the below examples as references for common applications.</p>
 </thead>
 <tbody>
 <tr>
-<td>{$yaml[spec.replicas]}</td>
+<td>${yaml[spec.replicas]}</td>
 <td>5</td>
 <td>full path usage</td>
 </tr>
 <tr>
-<td>{$yaml[spec.template.spec.containers[0].name]}</td>
+<td>${yaml[spec.template.spec.containers[0].name]}</td>
 <td>test</td>
 <td>full path usage using path index</td>
 </tr>
 <tr>
-<td>{$yaml[spec.my_replicas]}</td>
+<td>${yaml[spec.my_replicas]}</td>
 <td>undefined</td>
 <td>path doesn't exist</td>
 </tr>
 <tr>
-<td>{$yaml[spec.template.spec.containers]}</td>
+<td>${yaml[spec.template.spec.containers]}</td>
 <td>undefined</td>
 <td>path doesn't resolve to an actual value</td>
 </tr>
