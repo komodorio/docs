@@ -119,10 +119,10 @@ spec:
 
 | YAML Path                                       | Value     | Explanation                             |
 | ----------------------------------------------- | --------- | --------------------------------------- |
-| {$yaml[spec.replicas]}                          | 5         | full path usage                         |
-| {$yaml[spec.template.spec.containers[0\].name]} | test      | full path usage using path index        |
-| {$yaml[spec.my_replicas]}                       | undefined | path doesn't exist                      |
-| {$yaml[spec.template.spec.containers]}          | undefined | path doesn't resolve to an actual value |
+| ${yaml[spec.replicas]}                          | 5         | full path usage                         |
+| ${yaml[spec.template.spec.containers[0\].name]} | test      | full path usage using path index        |
+| ${yaml[spec.my_replicas]}                       | undefined | path doesn't exist                      |
+| ${yaml[spec.template.spec.containers]}          | undefined | path doesn't resolve to an actual value |
 
 \*Custom links with a failed pod name will be created on health events only.
 \*\*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
