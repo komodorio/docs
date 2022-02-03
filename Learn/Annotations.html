@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Annotations.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1117,7 +1117,7 @@ Komodor annotations should be placed in the deployment resource annotations (ann
 <tr>
 <td>app.komodor.com/deploy.link.sentry</td>
 <td>url</td>
-<td>Link for the specific version  Sentry issues</td>
+<td>Link for the specific version Sentry issues</td>
 <td>https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d</td>
 </tr>
 </tbody>
@@ -1170,12 +1170,12 @@ Please find the below examples as references for common applications.</p>
 </thead>
 <tbody>
 <tr>
-<td>${epochStart}</td>
+<td>${epochStart} *</td>
 <td>Start Time in Epoch Time</td>
 <td></td>
 </tr>
 <tr>
-<td>${epochEnd}</td>
+<td>${epochEnd} *</td>
 <td>End Time in Epoch Time</td>
 <td></td>
 </tr>
@@ -1195,22 +1195,22 @@ Please find the below examples as references for common applications.</p>
 <td></td>
 </tr>
 <tr>
-<td>${failedPod}</td>
+<td>${failedPod} *</td>
 <td>The pod name of a failed pod that triggered this health event*</td>
 <td></td>
 </tr>
 <tr>
-<td>${container[&lt;name>].image}</td>
+<td>${container[&lt;name>].image} *</td>
 <td>Image name of a container</td>
 <td>${container[web].image}</td>
 </tr>
 <tr>
-<td>${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>${timestampStart=yyyy-MM-dd'T'HH:mm:ss.SSS} *</td>
 <td>Start Time in custom format**</td>
 <td>${timestampStart=yyyy-MM-dd}</td>
 </tr>
 <tr>
-<td>${timestampEnd=yyyy-MM-dd'T'HH:mm:ss.SSS}</td>
+<td>${timestampEnd=yyyy-MM-dd'T'HH:mm:ss.SSS} *</td>
 <td>End Time in custom format**</td>
 <td>${timestampEnd=yyyy-MM-dd}</td>
 </tr>
@@ -1221,6 +1221,7 @@ Please find the below examples as references for common applications.</p>
 </tr>
 </tbody>
 </table>
+<p>*Not applicable in Service context.</p>
 <p>Example on how to use YAML full path:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
@@ -1271,8 +1272,8 @@ Please find the below examples as references for common applications.</p>
 </tr>
 </tbody>
 </table>
-<p><em>Custom links with a failed pod name will be created on health events only. 
-</em>*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
+<p>*Custom links with a failed pod name will be created on health events only.
+**Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format</p>
 <h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
@@ -1282,7 +1283,7 @@ Please find the below examples as references for common applications.</p>
 <span class="w">    </span><span class="nt">app.komodor.com/notification.deploy.slack</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#deploy-slack-channel&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.komodor.com/service.link.grafana-overall-system-health</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://grafana.com/service/annotation-example&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.komodor.com/service.link.datadog</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://datadog.com/dashboard/annotation-example&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://docs.google.com/playbook&quot;</span><span class="w">    </span>
+<span class="w">    </span><span class="nt">app.komodor.com/service.link.playbook</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://docs.google.com/playbook&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.komodor.com/deploy.job.jenkins</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://ci.jenkins-ci.org/computer/job&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.komodor.com/deploy.link.logs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://app.logz.io/#/dashboard/kibana/discover?_a=env:1.0.1&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.komodor.com/deploy.link.sentry</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://sentry.io/organizations/rookoutz/issues/?project=1320440&amp;query=sdk.version%3A1.0.1&amp;statsPeriod=14d&quot;</span><span class="w"></span>
@@ -1315,7 +1316,7 @@ BTW, We collect data from both annotations and labels.</p>
 <li>Services explorer</li>
 <li>Related services</li>
 <li>Events screen</li>
-<li>Matching alerts to the correct services </li>
+<li>Matching alerts to the correct services</li>
 </ul>
 <h3 id="official-kubernetes-recommendations"><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">Official Kubernetes recommendations</a><a class="headerlink" href="#official-kubernetes-recommendations" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="nt">app.kubernetes.io/component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database</span><span class="w"></span>
