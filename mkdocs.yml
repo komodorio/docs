@@ -23,7 +23,6 @@ extra:
   homepage: https://www.komodor.com
 nav:
   - Home: index.md
-  - Komodor API: openapi/redoc-static.html
   - Learn:
     - Komodor's Agent: Learn/Komodor-Agent.md
     - Annotations: Learn/Annotations.md
@@ -43,3 +42,4 @@ nav:
     - Sentry: Integrations/Sentry.md
     - Microsoft Teams: Integrations/MicrosoftTeams.md
     - Okta: Integrations/Okta/Okta.md
+  - Komodor API: openapi/redoc-static.html
