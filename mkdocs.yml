@@ -26,13 +26,13 @@ nav:
   - Learn:
     - Komodor's Agent: Learn/Komodor-Agent.md
     - Annotations: Learn/Annotations.md
+    - Workflows: Learn/Workflows.md
     - Config Changes: Learn/config-changes.md
     - Source Control: Learn/komodor-source-control.md
     - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
     - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
     - Manage Users: Learn/ManageUsers.md
     - RBAC: Learn/RBAC.md
-    - Workflows: Learn/Workflows.md
   - Integrations:
     - Datadog: Integrations/Datadog.md
     - Datadog Webhook: Integrations/datadog-webhook.md
