@@ -31,7 +31,7 @@ Node Conditions change to a faulty Condition, the faulty condition/s last throug
     - Node overall resource consumption including top 5 pod consumers (requires metric-server installed)
 
 - Notes
-    - The Node detector currently does not deal with nodes in an Unknown state (this means Spot interruptions or scale-down events will not be handled by the WF, this could affect other scenarios as well)
+    - The Node detector currently does not cover nodes in an "Unknown" state (this means Spot interruptions or scale-down events will not be handled by the WF, this could affect other scenarios as well)
     - The Node detector will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the workflow)
 
 ## PVC Detector
