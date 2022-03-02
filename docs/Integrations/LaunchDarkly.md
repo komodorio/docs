@@ -18,15 +18,15 @@ For example:
 To enable the Komodor LaunchDarkly integration go to [Komodor integrations page](https://app.komodor.com/main/integration) and select LaunchDarkly
 ![LaunchDarkly select integration](../img/Launchdarkly-integration-select.jpg)
 
-this will open a window with the LaunchDarkly webhook URL and sign key
+This will open a window with the LaunchDarkly webhook URL and sign key
 ![LaunchDarkly Install Window](../img/Launchdarkly-install-window.png)
 *Note: you can use the `LaunchDarkly Webhook Integration` link to continue with the webhook creation
 
 ### Creating the LaunchDarkly webhook
-To create the LaunchDarkly webhook goto [LaunchDarkly Webhook Integration Page](https://app.launchdarkly.com/default/integrations/webhooks/new)
-and use the values from the Komodor integration page
+To create the LaunchDarkly webhook go to [LaunchDarkly Webhook Integration Page](https://app.launchdarkly.com/default/integrations/webhooks/new)
+and use the values from Komodor's integration page
 
-1. Name: Integration a name.
+1. Name: Your integration's name
 2. URL:  Use the URL from the integration window in Komodor 
 3. Check the "Sign this webhook" checkbox
 4. Secret: Use the Secret value from the integration window in Komodor 
