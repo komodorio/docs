@@ -1,18 +1,18 @@
 # Workflows
 
-Komodor Workflows are built to detect different scenarios, investigate certain aspects around them and provide additional context to simplify the troubleshooting process and reduce the MTTR
+Komodor Workflows are built to detect different scenarios, investigate certain aspects around them and provide additional context to simplify the troubleshooting process and reduce MTTR
 
 ## Supported configurations per Workflow:
 
 - Resources to monitor (cluster & namespaces)
-- Duration - specifies the time the issue has to occur for prior to running the actual checks, if the problem has been resolved during the Duration the workflow will not run (currently defaults to 60 for all workflows)
+- Duration - specifies the length of time the issue has to presist prior to running the actual checks, if the problem has been resolved during the duration of the workflow it will not run (currently defaults to 60s for all workflows)
 - Sink/Notification - will be triggered whenever a workflow runs
 
 ## Prerequisites:
 
-**Required agent version** - 1.0.72 (recommended - latest version)  
+**Required agent version** - 0.1.72 (recommended - latest version)  
 
-**Please note**: recently the ClusterRole was updated with metric-server related permissions thus might require an update for customers already running with 1.0.72.
+**Please note**: recently the ClusterRole was updated with metric-server related permissions and might require an update for customers already running with 0.1.72 .
 
 ## Node Detector
 Detects Nodes with faulty [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).
@@ -23,15 +23,16 @@ Node Conditions change to a faulty Condition, the faulty condition/s last throug
     - Is the node ready?
     - Is the node overcommitted?
     - Is the node under pressure?
-    - Are system Pods healthy?
+    - Are system pods healthy?
     - Is the network available?
-    - Are Pods being evicted?
-    -Are user pods healthy?
+    - Are pods being evicted?
+    - Are user pods healthy?
     - Is the node schedulable?
     - Node overall resource consumption including top 5 pod consumers (requires metric-server installed)
+
 - Notes
-    - The Node detector currently does not deal with nodes in an Unknown state (this means Spot interruptions or scale-down events will not be handled by the WF, could affect other scenarios as well)
-    - Will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the WF)
+    - The Node detector currently does not deal with nodes in an Unknown state (this means Spot interruptions or scale-down events will not be handled by the WF, this could affect other scenarios as well)
+    - The Node detector will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the workflow)
 
 ## PVC Detector
 Detects PVCs in a pending state.
