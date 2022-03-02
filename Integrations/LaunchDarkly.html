@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Integrations/LaunchDarkly.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.4">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -48,8 +48,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     
       
         
+        
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -573,6 +574,33 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Installation
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-launchdarkly-integration-involves-two-parts" class="md-nav__link">
+    The LaunchDarkly integration involves two parts:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-integration-in-komodor" class="md-nav__link">
+    Enabling the integration in Komodor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-launchdarkly-webhook" class="md-nav__link">
+    Creating the LaunchDarkly webhook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -692,6 +720,33 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Installation
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-launchdarkly-integration-involves-two-parts" class="md-nav__link">
+    The LaunchDarkly integration involves two parts:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-integration-in-komodor" class="md-nav__link">
+    Enabling the integration in Komodor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-launchdarkly-webhook" class="md-nav__link">
+    Creating the LaunchDarkly webhook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -713,7 +768,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 <h1 id="launchdarkly-integration">LaunchDarkly Integration<a class="headerlink" href="#launchdarkly-integration" title="Permanent link">&para;</a></h1>
-<p>Integration with LaunchDarkly extends the holistic view of the environment with flag changes.</p>
+<p>Integration with LaunchDarkly extends the holistic view of the environment with flag change events on the timeline.</p>
 <p>For example:</p>
 <ul>
 <li>Feature flag was turned on</li>
@@ -721,24 +776,38 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li>Feature flag targeting was changed</li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>In order to create the integration, navigate to <a href="https://app.launchdarkly.com/default/integrations/webhooks/new">LaunchDarkly Webhook Integration</a> and fill in the form:</p>
+<h3 id="the-launchdarkly-integration-involves-two-parts">The LaunchDarkly integration involves two parts:<a class="headerlink" href="#the-launchdarkly-integration-involves-two-parts" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Name - give your integration a name.</li>
-<li>URL - <strong>Please contact us to provide you the URL</strong> (we also will provide you a secret to sign the webhooks payload).</li>
-<li>Sign the Webhook - use the secret from Komodor.</li>
-<li>Add policy</li>
-<li>You can use the following statement to tell LaunchDarkly to send to Komodor all the changes for all your flags across all your environments. You may use the "Resource finder" to customize it for your needs.
-         <code>commandline
-         proj/*:env/*:flag/*</code><ol>
-<li>Set the effect to "<strong>Allow</strong>"</li>
-<li>Choose all actions</li>
-<li>Click "<strong>Update</strong>"</li>
-<li>Check "<strong>I have read and agree to the Integration Terms and Conditions</strong>"</li>
-<li>Click "<strong>Save Settings</strong>" to finish the integration.</li>
+<li>Enabling the integration in Komodor.</li>
+<li>Creating a LaunchDarkly webhook.</li>
 </ol>
-</li>
+<h3 id="enabling-the-integration-in-komodor">Enabling the integration in Komodor<a class="headerlink" href="#enabling-the-integration-in-komodor" title="Permanent link">&para;</a></h3>
+<p>To enable the Komodor LaunchDarkly integration go to <a href="https://app.komodor.com/main/integration">Komodor integrations page</a> and select LaunchDarkly
+<img alt="LaunchDarkly select integration" src="../img/Launchdarkly-integration-select.jpg" /></p>
+<p>This will open a window with the LaunchDarkly webhook URL and sign key
+<img alt="LaunchDarkly Install Window" src="../img/Launchdarkly-install-window.png" />
+*Note: you can use the <code>LaunchDarkly Webhook Integration</code> link to continue with the webhook creation</p>
+<h3 id="creating-the-launchdarkly-webhook">Creating the LaunchDarkly webhook<a class="headerlink" href="#creating-the-launchdarkly-webhook" title="Permanent link">&para;</a></h3>
+<p>To create the LaunchDarkly webhook go to <a href="https://app.launchdarkly.com/default/integrations/webhooks/new">LaunchDarkly Webhook Integration Page</a>
+and use the values from Komodor's integration page</p>
+<ol>
+<li>Name: Your integration's name</li>
+<li>URL:  Use the URL from the integration window in Komodor </li>
+<li>Check the "Sign this webhook" checkbox</li>
+<li>Secret: Use the Secret value from the integration window in Komodor 
+<img alt="LaunchDarkly-webhook" src="../img/Launchdarkly-webhook.png" /></li>
+<li>Filter Policy:
+   To send all LaunchDarkly event to Komodor:</li>
+<li>press the "+ Add statment"
+<img alt="LaunchDarkly-webhook" src="../img/Launchdarkly-add-statment.png" /></li>
+<li>Choose resources for this policy statement: <code>proj/*:env/*:flag/*</code></li>
+<li>Allow or deny actions on the resource: <code>Allow</code></li>
+<li>Choose actions to allow or deny: <code>All actions</code></li>
+<li>"<strong>Update statement</strong>"
+<img alt="LaunchDarkly-webhook" src="../img/Launchdarkly-filter-policy.png" /></li>
+<li>Check "<strong>I have read and agree to the <a href="https://launchdarkly.com/policies/integrations">Integration Terms and Conditions</a></strong>"</li>
+<li>"<strong>Save Settings</strong>" to finish the integration.</li>
 </ol>
-<p><img alt="image" src="../img/launchdarkly-integrations-webhooks-create.png" /></p>
 
               
             </article>
@@ -776,7 +845,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../assets/javascripts/bundle.5413a266.min.js"></script>
       
     
   </body>
