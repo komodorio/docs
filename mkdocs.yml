@@ -26,6 +26,7 @@ nav:
   - Learn:
     - Komodor's Agent: Learn/Komodor-Agent.md
     - Annotations: Learn/Annotations.md
+    - Workflows: Learn/Workflows.md
     - Config Changes: Learn/config-changes.md
     - Source Control: Learn/komodor-source-control.md
     - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
