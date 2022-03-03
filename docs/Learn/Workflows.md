@@ -17,8 +17,7 @@ Komodor Workflows are built to detect different scenarios, investigate certain a
 ## Node Detector
 Detects Nodes with faulty [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).
 
-- Triggered when -
-Node Conditions change to a faulty Condition, the faulty condition/s last through the configured Duration
+- Triggered when a Node Condition/s changes to a faulty Condition and lasts through the configured Duration
 - We perform the following checks as part of our investigation
     - Is the node ready?
     - Is the node overcommitted?
@@ -37,8 +36,7 @@ Node Conditions change to a faulty Condition, the faulty condition/s last throug
 ## PVC Detector
 Detects PVCs in a pending state.
 
-- Triggered when - 
-PVC in a pending state for the defined duration
+- Triggered when a PVC is in a pending state for the defined duration
 - We perform the following checks as part of our investigation 
     - PVC creation, utilization, and readiness issues
     - Volume provisioner related issues
