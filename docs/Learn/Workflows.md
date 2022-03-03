@@ -15,9 +15,9 @@ Komodor Workflows are built to detect different scenarios, investigate certain a
 **Please note**: recently the ClusterRole was updated with metric-server related permissions and might require an update for customers already running with 0.1.72 .
 
 ## Node Detector
-Detects Nodes with faulty [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).
+Detects Nodes with faulty [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition). 
 
-Triggered when a Node Condition/s changes to a faulty Condition and lasts through the configured Duration. 
+The Detector is triggered when a Node Condition/s changes to a faulty Condition and lasts through the configured Duration. 
 
 - We perform the following checks as part of our investigation 
     - Is the node ready?
@@ -35,9 +35,9 @@ Triggered when a Node Condition/s changes to a faulty Condition and lasts throug
     - The Node detector will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the workflow)
 
 ## PVC Detector
-Detects PVCs in a pending state.
+Detects PVCs in a pending state. 
 
-Triggered when a PVC is in a pending state for the defined duration. 
+The Detector is triggered when a PVC is in a pending state for the defined duration. 
 - We perform the following checks as part of our investigation   
     - PVC creation, utilization, and readiness issues
     - Volume provisioner related issues
