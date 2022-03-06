@@ -22,7 +22,7 @@ Define quick-links for a specific service, making it easier to get context when 
 
 ### How
 
-In the form of `app.komodor.com/service/link/name:url`
+In the form of `app.komodor.com/service.link.name:url`
 
 Examples:
 
@@ -38,7 +38,7 @@ For each deployment version, you can add a quick link with the job url.
 
 ### How
 
-`app.komodor.com/deploy/job/name:url`
+`app.komodor.com/deploy.job.name:url`
 
 Example:
 
@@ -52,7 +52,7 @@ For each deployment version, you can add a quick link with the relevant filters 
 
 ### How
 
-`app.komodor.com/deploy/link/name:url`
+`app.komodor.com/deploy.link.name:url`
 
 Examples:
 
@@ -69,7 +69,7 @@ Please find the below examples as references for common applications.
 
 ### How
 
-`app.komodor.com/deploy/link/name:value`
+`app.komodor.com/deploy.link.name:value`
 
 Examples:
 
