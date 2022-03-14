@@ -56,7 +56,7 @@ The Detector is triggered when a PVC is in a pending state for the defined durat
 - Edit: Change Sensors, Duration, Notifications and Name.
 - Remove: Delete a workflow.
 
-## How to Configure
+## How to Create a Workflow
 
 1. Click on the _workflows_ tab
 
@@ -78,27 +78,19 @@ The Detector is triggered when a PVC is in a pending state for the defined durat
 
 10. Name the workflow and click _Activate Workflow_
 
+## How to Pause a Workflow
+
+1: TODO
+
+## How to Edit a Workflow
+
+1: TODO
+
+
 ## How to Remove a Workflow
 
-1: Select the workflow you want to delete
-
-## How to Remove a Workflow
-
-1: Select the workflow you want to delete
+1: TODO
 
 
-## How to delete a Workflow
-
-1: Select the workflow you want to delete
-
-
-
-
-
-
-
-## Prerequisites for Workflows
-
-**Agent version** - 0.1.72 and above we recommended running the latest version. See how to update the agent [here](https://docs.komodor.com/Learn/Komodor-Agent.html#updating-the-agent).
-
-**Please note**: Recently the ClusterRole was updated with metric-server related permissions and might require an update for customers already running agent version 0.1.72.
+# Delete before publishing
+Editor notes: need screenshots throughout
