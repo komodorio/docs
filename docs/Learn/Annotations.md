@@ -189,8 +189,8 @@ app.kubernetes.io/managed-by: helm
 ```yaml
 app.komodor.com/label.team: backend
 app.komodor.com/label.group: infrastructure
-app.komodor.com/label.owners: "#infa-team"
-app.komodor.com/label.alert-team: "#devs"
+app.komodor.com/label.owners: "infa-team"
+app.komodor.com/label.alert-team: "devs"
 app.komodor.com/label.Impacted-by: redis
 ```
 
