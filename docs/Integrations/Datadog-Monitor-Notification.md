@@ -8,6 +8,7 @@ You will see the alert link in your Alerting provider connected to DataDog.
 ### Prerequisites
 
 To use DataDog variables in monitor notifications, there are two prerequisites imposed by DataDog:
+
 1. Make sure there are variables defined for: cluster name, namespace, service name.
 2. Make sure the tags are used in the monitor, or grouped by them.
 
