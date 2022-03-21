@@ -4,7 +4,7 @@
 
 Once configured, Komodor Workflows are designed to automatically detect different failure scenarios in nodes, PersistentVolumeClaims (PVC) and services such as Loadbalancers, Ingress controllers and Endpoints, and investigate certain aspects around them in order to provide additional information to simplify the troubleshooting process and reduce mean time to resolution.
 
-Komodor currently offers two Workflows, they are the Node Detector and PVC Detector.
+Komodor currently offers two Workflows, the Node Detector and PVC Detector.
 
 ## Node Detector
 
@@ -30,20 +30,18 @@ Detects PVCs in a pending state.
 The PVC Detector is triggered when a PVC is in a pending state for the defined duration (default is 60 seconds).
 - We perform the following checks as part of our investigation   
     - PVC creation, utilization, and readiness issues
-    - Volume provisioner related issues
+    - Volume provisioner issues
     - PVC spec changes
     - Identify the impact on related services
 
 ##  Services Detector (Coming Soon)
-Detects services such as Ingress controller, endpoints and Loadblancers in an unhealthy state. 
+Detect unhealthy services and get context on the underlying issue.
 
-The Detector is triggered when a PVC is in a pending state for the defined duration.
+##  Resource Detector (Coming Soon)
+Detects unhealthy resources such as Ingress controller, endpoints and Loadblancers in an unhealthy state. 
 
-- We perform the following checks as part of our investigation   
-    - PVC creation, utilization, and readiness issues
-    - Volume provisioner related issues
-    - PVC spec changes
-    - Identify the impact on related services
+##  Failed Deployment Detector (Coming Soon)
+Identify failed deployments and get a rich context on the failure reason(s).
 
 ## Settings
 
@@ -57,6 +55,49 @@ The Detector is triggered when a PVC is in a pending state for the defined durat
 - Remove: Delete a workflow.
 
 ## How to Create a Workflow
+
+1. Click on the _Workflows_ tab
+
+2. Mouse over the workflow you would like to add and click _Add Workflow_
+
+3. Click _Activate_ on the top right hand corner
+
+4. Configure the Sensor
+
+5. Pick a cluster
+
+6. Pick a namespace(s) or leave this option blank for all namepsaces on the selected cluster
+
+7. Click on _Continue_
+
+8. Set the minimum duration in seconds, default is 60 seconds.
+
+9. Choose a notification platform and channel, or choose _Continue without notifications_
+
+10. Name the workflow and click _Activate Workflow_
+
+## How to Pause or Resume a Workflow
+
+1. Click on the _workflows_ tab
+
+2. Under _Workflows (#)_ click the workflow you would like to Pause or Resume
+
+3. Click on _More Actions_ on the top right hand corner and select _Pause Workflow_
+
+4. To resume the workflow click on _More Actions_ and select _Resume Workflow_
+
+## How to Edit a Workflow
+
+1. Click on the _workflows_ tab
+
+2. Under _Workflows (#)_ click the workflow you would like to edit
+
+3. Click on _More Actions_ on the top right hand corner and select _Edit Configuration_
+
+4. Walk through the workflow
+
+
+## How to Remove a Workflow
 
 1. Click on the _workflows_ tab
 
@@ -77,20 +118,3 @@ The Detector is triggered when a PVC is in a pending state for the defined durat
 9. Choose a notification platform and channel, or choose _Continue without notifications_
 
 10. Name the workflow and click _Activate Workflow_
-
-## How to Pause a Workflow
-
-1: TODO
-
-## How to Edit a Workflow
-
-1: TODO
-
-
-## How to Remove a Workflow
-
-1: TODO
-
-
-# Delete before publishing
-Editor notes: need screenshots throughout
