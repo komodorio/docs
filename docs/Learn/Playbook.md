@@ -45,14 +45,14 @@ Identify failed deployments and get a rich context on the failure reason(s).
 
 ## Settings
 
-- Sensor: Resources can be monitored at either the cluster scope or namespace(s) scope.
-- Duration: The minimum time the issue has to presist prior to running the Workflow checks, if the problem has been resolved during this duration the Workflow will not run. Default is 60 seconds.
-- Sink/Notification: Where Komodor will send a notifications when a Workflow is triggered, supports either Slack or Microsoft Teams.
+- **Sensor**: Resources can be monitored at either the cluster scope or namespace(s) scope.
+- **Duration**: The minimum time the issue has to presist prior to running the Workflow checks, if the problem has been resolved during this duration the Workflow will not run. Default is 60 seconds.
+- **Sink/Notification**: Where Komodor will send a notifications when a Workflow is triggered, supports either Slack or Microsoft Teams.
 
 ## Supported Actions
-- Pause: Pause a workflow and its notifications.
-- Edit: Change Sensors, Duration, Notifications and Name.
-- Remove: Delete a workflow.
+- **Pause**: Pause a workflow and its notifications.
+- **Edit**: Change Sensors, Duration, Notifications and Name.
+- **Remove**: Delete a workflow.
 
 ## How to Create a Workflow
 
