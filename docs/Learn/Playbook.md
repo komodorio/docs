@@ -34,14 +34,14 @@ The PVC Detector is triggered when a PVC is in a pending state for the defined d
     - PVC spec changes
     - Identify the impact on related services
 
-##  Services Detector (Coming Soon)
-Detect unhealthy services and get context on the underlying issue.
+##  Services Detector
+(Coming Soon) - Detect unhealthy services and get context on the underlying issue.
 
-##  Resource Detector (Coming Soon)
-Detects unhealthy resources such as Ingress controller, endpoints and Loadblancers in an unhealthy state. 
+##  Resource Detector
+(Coming Soon) - Detects unhealthy resources such as Ingress controller, endpoints and Loadblancers in an unhealthy state. 
 
-##  Failed Deployment Detector (Coming Soon)
-Identify failed deployments and get a rich context on the failure reason(s).
+##  Failed Deployment Detector
+(Coming Soon) - Identify failed deployments and get a rich context on the failure reason(s).
 
 ## Settings
 
