@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Slack integration allows you to recieve notification for events such as Deployment or Health state changes from Komodor to a Slack channel. Komodor supports different granularity levels, Cluster, Namespace and Service for each notification. The notification type, destination, and granularity can be defined in the Komodor Notifications screen.
+The Slack integration allows you to recieve notification for events such as successfull or failed deployments, service health state changes, and triggered Workflows from Komodor to a Slack channel. Komodor supports different granularity levels, Cluster, Namespace and Service for each notification. The notification type, destination, and granularity can be defined in the Komodor Notifications screen.
 
 ### Requirements
 Depending on your companies Slack settings a company admin may be required to enable the integration, the same user will need to be a Komodor Admin in order to start the installation from the Komodor integration page.
