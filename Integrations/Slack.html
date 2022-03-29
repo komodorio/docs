@@ -78,6 +78,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#slack-integration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -207,13 +212,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Datadog.html" class="md-tabs__link">
+      <a href="Datadog.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -457,12 +464,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -581,6 +590,88 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Slack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Slack.html" class="md-nav__link md-nav__link--active">
+        Slack
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-notifications" class="md-nav__link">
+    Creating notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="MicrosoftTeams.html" class="md-nav__link">
@@ -633,6 +724,66 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-notifications" class="md-nav__link">
+    Creating notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -644,9 +795,44 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 
-  <h1>Slack</h1>
+<h1 id="slack-integration">Slack Integration<a class="headerlink" href="#slack-integration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Slack integration allows you to recieve notification for events such as successfull or failed deployments, service health state changes, and triggered Workflows from Komodor to a Slack channel. Komodor supports different granularity levels, Cluster, Namespace and Service for each notification. The notification type, destination, and granularity can be defined in the Komodor Notifications screen.</p>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<p>Depending on your companies Slack settings a company admin may be required to enable the integration, the same user will need to be a Komodor Admin in order to start the installation from the Komodor integration page.</p>
+<p>!!! Note The free version of Slack is limited to 10 applications.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Once logged into the Komodor platform click on the <a href="https://app.komodor.com/main/integration"><em>Integrations</em></a> tab.</p>
+</li>
+<li>
+<p>Locate the Slack integration under the <em>Avaiable Integrations</em> section and click on <em>Install Integration</em> to start, this will forward you to the Slack Workspace login page.</p>
+</li>
+</ol>
+<figure>
+    <img src="./img/slack/install_integration.png" width="400">
+</figure>
 
-<p>ToDo - slack install docs</p>
+<ol>
+<li>You might be prompted to login to your Slack workspace, if so login and and click <em>Continue</em>.</li>
+</ol>
+<figure>
+    <img src="./img/slack/slack_step1.png" width="400">
+</figure>
+
+<ol>
+<li>Click on <em>Allow</em> to complete the Slack integration.</li>
+</ol>
+<figure>
+    <img src="./img/slack/slack_step2.png" width="400">
+</figure>
+
+<ol>
+<li>Once completed you will be forwarded back to the Komodor Integration page where you will find the Slack integration listed under the <em>Installed Integrations</em>.</li>
+</ol>
+<h3 id="creating-notifications">Creating notifications<a class="headerlink" href="#creating-notifications" title="Permanent link">&para;</a></h3>
+<p>To enable per service or deployment notifications you may either use the <a href="https://app.komodor.com/main/notifications">Notifications</a> tab in the UI or create them using <a href="https://docs.komodor.com/Learn/Annotations.html#notifications">deployment annotations</a>.</p>
 
               
             </article>
