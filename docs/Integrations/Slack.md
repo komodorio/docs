@@ -13,25 +13,25 @@ Depending on your companies Slack settings a company admin may be required to en
 
 1. Once logged into the Komodor platform click on the [_Integrations_][3] tab.
 
-1. Locate the Slack integration under the _Avaiable Integrations_ section and click on _Install Integration_ to start, this will forward you to the Slack Workspace login page.
+2. Locate the Slack integration under the _Avaiable Integrations_ section and click on _Install Integration_ to start, this will forward you to the Slack Workspace login page.
 
 <figure>
     <img src="./img/slack/install_integration.png" width="400">
 </figure>
 
-1. You might be prompted to login to your Slack workspace, if so login and and click _Continue_.
+3. You might be prompted to login to your Slack workspace, if so login and and click _Continue_.
 
 <figure>
     <img src="./img/slack/slack_step1.png" width="400">
 </figure>
 
-1. Click on _Allow_ to complete the Slack integration.
+4. Click on _Allow_ to complete the Slack integration.
 
 <figure>
     <img src="./img/slack/slack_step2.png" width="400">
 </figure>
 
-1. Once completed you will be forwarded back to the Komodor Integration page where you will find the Slack integration listed under the _Installed Integrations_.
+5. Once completed you will be forwarded back to the Komodor Integration page where you will find the Slack integration listed under the _Installed Integrations_.
 
 ### Creating notifications
 To enable per service or deployment notifications you may either use the [Notifications][1] tab in the UI or create them using [deployment annotations][2].
