@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Otherwise then helping you troubleshoot incidents over kubernetes, Komodor wants to 
+Otherwise then helping you troubleshoot incidents over Kubernetes, Komodor wants to 
 help you prevent those incidents from happening in the first place.
 
 ### How it works?
 
-Each time your workload got rolled out and something got changed in the workload yaml, we run
-some checks statically on your yaml. Those checks are supposed to help you improve your yaml reliability
+Each time your workload got rolled out and something got changed in the workload YAML, we run
+some checks statically on your yaml. Those checks are supposed to help you improve your YAML reliability
 and efficiency.
 
 Checks results are presented under `Best practices` block within every service.
