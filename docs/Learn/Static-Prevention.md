@@ -7,13 +7,13 @@ help you prevent those incidents from happening in the first place.
 
 ### How it works?
 
-Each time your workload got rolled out and something got changes in the yaml, we run
-some checks statically on you yaml. Those checks supposed to help you improve your yaml reliability
+Each time your workload got rolled out and something got changed in the workload yaml, we run
+some checks statically on your yaml. Those checks are supposed to help you improve your yaml reliability
 and efficiency.
 
 Checks results are presented under `Best practices` block within every service.
 
-If you wish to ignore any check, just click on the ignore button under the `Best practices` popup.
+If you wish to ignore any check, just click on the `ignore` button under the `Best practices` popup.
 
 ### Checks we run
 
