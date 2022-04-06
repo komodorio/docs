@@ -33,6 +33,7 @@ nav:
     - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
     - Manage Users: Learn/ManageUsers.md
     - RBAC: Learn/RBAC.md
+    - Static Prevention: Learn/Static-Prevention.md
   - Integrations:
     - Datadog: Integrations/Datadog.md
     - Datadog Webhook: Integrations/datadog-webhook.md
