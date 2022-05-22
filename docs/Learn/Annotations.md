@@ -3,34 +3,6 @@
 Komodor annotations (AKA Komodor as Code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)
 
-## Notifications
-
-Configure the Slack channel notification as part of the deployment object.
-
-### How
-
-| Annotation                                        | Values | Description                                                   | Example             |
-| ------------------------------------------------- | ------ | ------------------------------------------------------------- | ------------------- |
-| app.komodor.com/notification.deploy.slack         | string | Slack channel name for all deploy events notifications        | “deploy-brain-team" |
-| app.komodor.com/notification.deploy_fail.slack    | string | Slack channel name for failed deploy events notifications     | “deploy-failed"     |
-| app.komodor.com/notification.deploy_success.slack | string | Slack channel name for successful deploy events notifications | “deploy-success"    |
-| app.komodor.com/notification.health.slack         | string | Slack channel for health event notifications                  | “alerts-p1”         |
-
-## Service Links
-
-Define quick-links for a specific service, making it easier to get context when troubleshooting.
-
-### How
-
-In the form of `app.komodor.com/service.link.name:url`
-
-Examples:
-
-| Annotation                                                 | Values | Description                                              | Example                                                                     |
-| ---------------------------------------------------------- | ------ | -------------------------------------------------------- | --------------------------------------------------------------------------- |
-| app.komodor.com/service.link.grafana-overall-system-health | url    | URL to Grafana health dashboard related to this service. | https://play.grafana.org/d/000000010/annotations?orgId=1&from=now-3h&to=now |
-| app.komodor.com/service.link.datadog-http-500              | url    | URL for datadog dashboard with bad http                  | https://app.datadoghq.com/dashboard/g1b-2jw-a97/http-500                    |
-| app.komodor.com/service.link.company-playbook              | url    | URL to service playbook                                  | https://mycompany.confluence.com/service-playbooks/${service}               |
 
 ## CI-Deploy Links
 
@@ -135,7 +107,6 @@ kind: Deployment
 metadata:
   name: annotation-example
   annotations:
-    app.komodor.com/notification.deploy.slack: "#deploy-slack-channel"
     app.komodor.com/service.link.grafana-overall-system-health: "https://grafana.com/service/annotation-example"
     app.komodor.com/service.link.datadog: "https://datadog.com/dashboard/annotation-example"
     app.komodor.com/service.link.playbook: "https://docs.google.com/playbook"
