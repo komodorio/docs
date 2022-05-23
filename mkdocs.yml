@@ -46,4 +46,5 @@ nav:
     - Microsoft Teams: Integrations/MicrosoftTeams.md
     - Okta: Integrations/Okta/Okta.md
     - Azure Active Directory: Integrations/AzureActiveDirectory.md
+    - Prometheus Alert Manager: Integrations/PrometheusAlertManager.md
   - Komodor API: openapi/redoc-static.html
