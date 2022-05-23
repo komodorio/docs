@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Learn/komodor-source-control.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/PrometheusAlertManager.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Source Control - Komodor</title>
+        <title>Prometheus Alert Manager - Komodor</title>
       
     
     
@@ -79,7 +79,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#komodor-source-control-support" class="md-skip">
+        <a href="#prometheus-alert-manager-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Source Control
+              Prometheus Alert Manager
             
           </span>
         </div>
@@ -196,15 +196,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../Learn/Komodor-Agent.html" class="md-tabs__link">
         Learn
       </a>
     </li>
@@ -214,13 +212,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Integrations/Datadog.html" class="md-tabs__link">
+      <a href="Datadog.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -304,14 +304,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -334,7 +332,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Komodor-Agent.html" class="md-nav__link">
+      <a href="../Learn/Komodor-Agent.html" class="md-nav__link">
         Komodor's Agent
       </a>
     </li>
@@ -348,7 +346,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Annotations.html" class="md-nav__link">
+      <a href="../Learn/Annotations.html" class="md-nav__link">
         Annotations
       </a>
     </li>
@@ -362,7 +360,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Playbook.html" class="md-nav__link">
+      <a href="../Learn/Playbook.html" class="md-nav__link">
         Workflows
       </a>
     </li>
@@ -376,7 +374,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="config-changes.html" class="md-nav__link">
+      <a href="../Learn/config-changes.html" class="md-nav__link">
         Config Changes
       </a>
     </li>
@@ -388,80 +386,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Source Control
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="komodor-source-control.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Learn/komodor-source-control.html" class="md-nav__link">
         Source Control
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate" class="md-nav__link">
-    How to integrate
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#full-example" class="md-nav__link">
-    Full example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#microsoft-devops-pipelines-example" class="md-nav__link">
-    Microsoft DevOps Pipelines Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracked-files" class="md-nav__link">
-    Tracked Files
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -473,7 +402,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Sensitive-Information-Redaction.html" class="md-nav__link">
+      <a href="../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
         Sensitive Information Redaction
       </a>
     </li>
@@ -487,7 +416,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Interaction-With-The-Cluster.html" class="md-nav__link">
+      <a href="../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
         Interaction with the Cluster
       </a>
     </li>
@@ -501,7 +430,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="ManageUsers.html" class="md-nav__link">
+      <a href="../Learn/ManageUsers.html" class="md-nav__link">
         Manage Users
       </a>
     </li>
@@ -515,7 +444,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="RBAC.html" class="md-nav__link">
+      <a href="../Learn/RBAC.html" class="md-nav__link">
         RBAC
       </a>
     </li>
@@ -529,7 +458,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Static-Prevention.html" class="md-nav__link">
+      <a href="../Learn/Static-Prevention.html" class="md-nav__link">
         Static Prevention
       </a>
     </li>
@@ -549,12 +478,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -577,7 +508,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Datadog.html" class="md-nav__link">
+      <a href="Datadog.html" class="md-nav__link">
         Datadog
       </a>
     </li>
@@ -591,7 +522,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/datadog-webhook.html" class="md-nav__link">
+      <a href="datadog-webhook.html" class="md-nav__link">
         Datadog Webhook
       </a>
     </li>
@@ -605,7 +536,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Datadog-Monitor-Notification.html" class="md-nav__link">
+      <a href="Datadog-Monitor-Notification.html" class="md-nav__link">
         Datadog Monitor Notifications
       </a>
     </li>
@@ -619,7 +550,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Grafana.html" class="md-nav__link">
+      <a href="Grafana.html" class="md-nav__link">
         Grafana
       </a>
     </li>
@@ -633,7 +564,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/LaunchDarkly.html" class="md-nav__link">
+      <a href="LaunchDarkly.html" class="md-nav__link">
         LaunchDarkly
       </a>
     </li>
@@ -647,7 +578,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/PagerDuty.html" class="md-nav__link">
+      <a href="PagerDuty.html" class="md-nav__link">
         PagerDuty
       </a>
     </li>
@@ -661,7 +592,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Sentry.html" class="md-nav__link">
+      <a href="Sentry.html" class="md-nav__link">
         Sentry
       </a>
     </li>
@@ -675,7 +606,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Slack.html" class="md-nav__link">
+      <a href="Slack.html" class="md-nav__link">
         Slack
       </a>
     </li>
@@ -689,7 +620,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/MicrosoftTeams.html" class="md-nav__link">
+      <a href="MicrosoftTeams.html" class="md-nav__link">
         Microsoft Teams
       </a>
     </li>
@@ -703,7 +634,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Okta/Okta.html" class="md-nav__link">
+      <a href="Okta/Okta.html" class="md-nav__link">
         Okta
       </a>
     </li>
@@ -717,7 +648,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/AzureActiveDirectory.html" class="md-nav__link">
+      <a href="AzureActiveDirectory.html" class="md-nav__link">
         Azure Active Directory
       </a>
     </li>
@@ -729,11 +660,79 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Integrations/PrometheusAlertManager.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Prometheus Alert Manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="PrometheusAlertManager.html" class="md-nav__link md-nav__link--active">
         Prometheus Alert Manager
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-alert-manager-integration-involves-2-parts" class="md-nav__link">
+    The Alert Manager integration involves 2 parts:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-integration-in-komodor" class="md-nav__link">
+    Enabling the integration in Komodor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-webhook-and-configure-labels" class="md-nav__link">
+    Creating webhook and configure labels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -787,37 +786,36 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-it" class="md-nav__link">
-    What is it
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-alert-manager-integration-involves-2-parts" class="md-nav__link">
+    The Alert Manager integration involves 2 parts:
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-integrate" class="md-nav__link">
-    How to integrate
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-integration-in-komodor" class="md-nav__link">
+    Enabling the integration in Komodor
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#full-example" class="md-nav__link">
-    Full example
+        
+          <li class="md-nav__item">
+  <a href="#creating-webhook-and-configure-labels" class="md-nav__link">
+    Creating webhook and configure labels
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#microsoft-devops-pipelines-example" class="md-nav__link">
-    Microsoft DevOps Pipelines Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tracked-files" class="md-nav__link">
-    Tracked Files
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -833,91 +831,35 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/komodor-source-control.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Integrations/PrometheusAlertManager.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="komodor-source-control-support">Komodor source control support<a class="headerlink" href="#komodor-source-control-support" title="Permanent link">&para;</a></h1>
-<h3 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h3>
-<p>Enrich services with relevant source control metadata. This allows to show smart-diffs as part of Komodor service changes tracking.
-Doing so connects the specific service with repositories that might not be the original codebase, such as infrastructure or CI repos, which are still relevant changes.</p>
-<h3 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h3>
-<p>Add the following annotations to your service's Kubernetes spec:</p>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name]</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FULL_REPO_URL</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[name].ref</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SOURCE_CONTROL_REF</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name]</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ANOTHER_FULL_REPO_URL</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">app.komodor.com/[another-name].ref</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ANOTHER_ SOURCE_CONTROL_REF</span><span class="w">    </span>
+<h1 id="prometheus-alert-manager-integration">Prometheus Alert Manager Integration<a class="headerlink" href="#prometheus-alert-manager-integration" title="Permanent link">&para;</a></h1>
+<p>Integration with alert manager reports alerts also to Komodor. We connect the alert to the Kubernetes workload and display the events on the timeline.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="the-alert-manager-integration-involves-2-parts">The Alert Manager integration involves 2 parts:<a class="headerlink" href="#the-alert-manager-integration-involves-2-parts" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Enabling the integration in Komodor.</li>
+<li>Creating webhook on the alert manager and adding labels to the alert.</li>
+</ol>
+<h3 id="enabling-the-integration-in-komodor">Enabling the integration in Komodor<a class="headerlink" href="#enabling-the-integration-in-komodor" title="Permanent link">&para;</a></h3>
+<p>To enable the Komodor Prometheus Alert Manager integration go to <a href="https://app.komodor.com/main/integration">Komodor integrations page</a> and select Prometheus Alert Manager.</p>
+<h3 id="creating-webhook-and-configure-labels">Creating webhook and configure labels<a class="headerlink" href="#creating-webhook-and-configure-labels" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The configuration of webhook is presented in Komodor integrations page.</li>
+<li>Please note to specify 2 <strong>labels</strong> on the alert in order to connect them to the Kubernetes workload:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;workload-name&gt;</span><span class="w"></span>
+<span class="nt">cluster</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;cluster-name&gt;</span><span class="w"></span>
 </code></pre></div>
 
-<h3 id="full-example">Full example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span><span class="w">     </span>
-<span class="w">    </span><span class="nt">app.komodor.com/infra</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span><span class="w"> </span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
-<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span><span class="w"></span>
-<span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
-<span class="w">              </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
-</code></pre></div>
-
-<h3 id="microsoft-devops-pipelines-example">Microsoft DevOps Pipelines Example<a class="headerlink" href="#microsoft-devops-pipelines-example" title="Permanent link">&para;</a></h3>
-<p>Microsoft DevOps Pipelines provides predefined variables that contains all the data needed to configure the source control annotations.
-Modify your pipeline to use these variables when templating the Kubernetes manifests. </p>
-<div class="codehilite"><pre><span></span><code><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(Build.Repository.Uri)</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$(Build.SourceVersion)</span><span class="w"></span>
-</code></pre></div>
-
-<h3 id="tracked-files">Tracked Files<a class="headerlink" href="#tracked-files" title="Permanent link">&para;</a></h3>
-<p>Once the integration with Github is established, Komodor will scan the pull requests files (only the names), to see if there are common, interesting files that have been updated. For example, when there was a change in <code>Dockerfile</code>, Komodor will show that in the Deploy summary.</p>
-<p>To customize which files will be tracked by Komodor. Using Kubernetes annotation <code>app.komodor.com/tracked_files</code> that accepts multiline string (gitignore like) to specify the files. 
-For example, track any <code>yaml</code> files:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git-example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/tracked_files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">      </span><span class="no">*.yaml</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/infra</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/app.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3350e3311f9520fe5e237e2d71f339029ee051d8</span><span class="w">     </span>
-<span class="w">    </span><span class="nt">app.komodor.com/infra</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/komodorio/helm-charts</span><span class="w"></span>
-<span class="w">    </span><span class="nt">app.komodor.com/infra.ref</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32b355df32713afc511528d909eff296e91dbe74</span><span class="w"> </span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
-<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span><span class="w"></span>
-<span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
-<span class="w">              </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP&quot;</span><span class="w"></span>
+<ol>
+<li>[Optional] defining custom description to the alert on Komodor (specify it in the <strong>annotation</strong>):</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;content&gt;</span><span class="w"></span>
 </code></pre></div>
 
               
