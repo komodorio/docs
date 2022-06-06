@@ -850,7 +850,48 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p>To enable the Komodor Prometheus Alert Manager integration go to <a href="https://app.komodor.com/main/integration">Komodor integrations page</a> and select Prometheus Alert Manager.</p>
 <h3 id="creating-webhook-and-configure-labels">Creating webhook and configure labels<a class="headerlink" href="#creating-webhook-and-configure-labels" title="Permanent link">&para;</a></h3>
 <ol>
-<li>The configuration of webhook is presented in Komodor integrations page.</li>
+<li>Open your <code>alertmanager.yml</code> configuration file</li>
+<li>Add a receiver to your receivers list, name the receiver <code>komodor</code> and attach a sink to <code>webhook_configs</code>. In the <code>url</code> field, put the URL that was provided to you during the integration setup. Also set the field <code>send_resolved</code> to <code>true</code>.</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">receivers</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">komodor</span><span class="w"></span>
+<span class="w">    </span><span class="nt">webhook_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;URL_FROM_KOMODOR&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">send_resolved</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</code></pre></div>
+
+<ol>
+<li>Next, in <code>alertmanager.yml</code>, configure a route so that your alert is routed to komodor</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="nt">route</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">komodor</span><span class="w"></span>
+</code></pre></div>
+
+<p>If you already have configured routes you can config multiple as follows:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">routes</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">critical</span><span class="w"></span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pagerduty</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">komodor</span><span class="w"></span>
+</code></pre></div>
+
+<p>A note about the <code>continue</code> configuration of <a href="https://prometheus.io/docs/alerting/latest/configuration/#route">AlertManager routing rules</a>. If it is set to false, AlertManager sends the alert to the first matching route and stops. <code>continue</code> default value is false.</p>
+<p>A full YAML configuration example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">global</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">group_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5m</span><span class="w"></span>
+<span class="w">  </span><span class="nt">repeat_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12h</span><span class="w"></span>
+<span class="nt">routes</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">komodor</span><span class="w"></span>
+<span class="nt">receivers</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">komodor</span><span class="w"></span>
+<span class="w">    </span><span class="nt">webhook_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;URL_FROM_KOMODOR&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">send_resolved</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</code></pre></div>
+
+<ol>
 <li>Please note to specify 2 <strong>labels</strong> on the alert in order to connect them to the Kubernetes workload:</li>
 </ol>
 <div class="codehilite"><pre><span></span><code><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;workload-name&gt;</span><span class="w"></span>
