@@ -9,26 +9,27 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Learn/Playbook.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Learn/Monitors.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.2">
     
     
       
-        <title>Workflows - Komodor</title>
+        <title>Monitors - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5d38496d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
           <meta name="theme-color" content="#4051b5">
         
+      
       
     
     
@@ -79,7 +80,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#workflows" class="md-skip">
+        <a href="#monitors" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +113,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workflows
+              Monitors
             
           </span>
         </div>
@@ -372,12 +373,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Workflows
+          Monitors
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="Playbook.html" class="md-nav__link md-nav__link--active">
-        Workflows
+      <a href="Monitors.html" class="md-nav__link md-nav__link--active">
+        Monitors
       </a>
       
         
@@ -396,85 +397,36 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#supported-configurations-per-monitor" class="md-nav__link">
+    Supported configurations per Monitor:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#node-detector" class="md-nav__link">
-    Node Detector
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pvc-detector" class="md-nav__link">
-    PVC Detector
+  <a href="#availability-monitor" class="md-nav__link">
+    Availability Monitor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#services-detector" class="md-nav__link">
-    Services Detector
+  <a href="#node-monitor" class="md-nav__link">
+    Node Monitor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resource-detector" class="md-nav__link">
-    Resource Detector
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#failed-deployment-detector" class="md-nav__link">
-    Failed Deployment Detector
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-actions" class="md-nav__link">
-    Supported Actions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-create-a-workflow" class="md-nav__link">
-    How to Create a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-pause-or-resume-a-workflow" class="md-nav__link">
-    How to Pause or Resume a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-edit-a-workflow" class="md-nav__link">
-    How to Edit a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-remove-a-workflow" class="md-nav__link">
-    How to Remove a Workflow
+  <a href="#pvc-monitor" class="md-nav__link">
+    PVC Monitor
   </a>
   
 </li>
@@ -836,85 +788,36 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#supported-configurations-per-monitor" class="md-nav__link">
+    Supported configurations per Monitor:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#node-detector" class="md-nav__link">
-    Node Detector
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pvc-detector" class="md-nav__link">
-    PVC Detector
+  <a href="#availability-monitor" class="md-nav__link">
+    Availability Monitor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#services-detector" class="md-nav__link">
-    Services Detector
+  <a href="#node-monitor" class="md-nav__link">
+    Node Monitor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resource-detector" class="md-nav__link">
-    Resource Detector
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#failed-deployment-detector" class="md-nav__link">
-    Failed Deployment Detector
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-    Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-actions" class="md-nav__link">
-    Supported Actions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-create-a-workflow" class="md-nav__link">
-    How to Create a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-pause-or-resume-a-workflow" class="md-nav__link">
-    How to Pause or Resume a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-edit-a-workflow" class="md-nav__link">
-    How to Edit a Workflow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-remove-a-workflow" class="md-nav__link">
-    How to Remove a Workflow
+  <a href="#pvc-monitor" class="md-nav__link">
+    PVC Monitor
   </a>
   
 </li>
@@ -931,162 +834,85 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/Playbook.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/Monitors.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>Once configured, Komodor Workflows are designed to automatically detect different failure scenarios in nodes, PersistentVolumeClaims (PVC) and services such as Loadbalancers, Ingress controllers and Endpoints, and investigate certain aspects around them in order to provide additional information to simplify the troubleshooting process and reduce mean time to resolution.</p>
-<p>Komodor currently offers two Workflows, the Node Detector and PVC Detector.</p>
-<h2 id="node-detector">Node Detector<a class="headerlink" href="#node-detector" title="Permanent link">&para;</a></h2>
-<p>The Node Detector is triggered when a node condition changes to a faulty <a href="https://kubernetes.io/docs/concepts/architecture/nodes/#condition">condition</a> and persists longer then the configured duration (default is 60 seconds).</p>
+<h1 id="monitors">Monitors<a class="headerlink" href="#monitors" title="Permanent link">&para;</a></h1>
+<p>Komodor Monitors are built to detect different scenarios, investigate certain aspects around them and provide additional context to simplify the troubleshooting process and reduce the MTTR.</p>
+<h2 id="supported-configurations-per-monitor">Supported configurations per Monitor:<a class="headerlink" href="#supported-configurations-per-monitor" title="Permanent link">&para;</a></h2>
+<p>Komodor monitors are being configured on a cluster level, each monitor supports the following configurations:
+- Trigger conditions - specify when this monitor should be triggered, conditions vary per monitor.
+- Scope - which resources should be monitored, the scope can be configured for the entire cluster, specific namespaces, annotations or labels, the relationship between the selected resources is currently OR relationship.
+- Sink/Notification - where do you want to receive notifications.</p>
+<h2 id="prerequisites">Prerequisites:<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p><strong>Required agent version</strong> - 1.0.78 (recommended - latest version)  </p>
+<h2 id="availability-monitor">Availability Monitor<a class="headerlink" href="#availability-monitor" title="Permanent link">&para;</a></h2>
+<p>Monitor your workload’s health (available replicas &lt; desired replicas), creates an Availability issue on the Events and Service timelines that provides relevant information to resolve the issue.
+The Availability monitor will not be triggered during an active rollout.</p>
+<p><strong>Please note</strong> Modifying the scope of an Availability monitor might affect (remove) events from the timeline.</p>
 <ul>
-<li>Once triggered, we perform the following checks as part of our investigation <ul>
+<li>
+<p>Monitor is triggered by - 
+Service (Deployment/DaemonSet/Rollout/StatefulSet) number of available replicas &lt; desired replicas by the specified conditions for the defined duration</p>
+</li>
+<li>
+<p>The following checks are performed - </p>
+<ul>
+<li>Pods health 
+Foreach Pod we'll provide the following:<ul>
+<li>Phase, Reason, Pod events</li>
+<li>Containers list with their state, reason &amp; logs</li>
+</ul>
+</li>
+<li>Service latest deployments</li>
+<li>Service describe </li>
+</ul>
+</li>
+</ul>
+<p><strong>Please note</strong> Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.</p>
+<h2 id="node-monitor">Node Monitor<a class="headerlink" href="#node-monitor" title="Permanent link">&para;</a></h2>
+<p>Monitors Nodes with faulty <a href="https://kubernetes.io/docs/concepts/architecture/nodes/#condition">Conditions</a>.</p>
+<ul>
+<li>Monitor is triggered by -
+Node Conditions change to a faulty Condition, the faulty condition/s last through the configured Duration</li>
+<li>We perform the following checks as part of our investigation<ul>
 <li>Is the node ready?</li>
 <li>Is the node overcommitted?</li>
 <li>Is the node under pressure?</li>
+<li>Are system Pods healthy?</li>
 <li>Is the network available?</li>
-<li>Is the node schedulable?</li>
-<li>Are pods being evicted?</li>
-<li>Are user pods healthy?</li>
-<li>Are system pods healthy?</li>
+<li>Are Pods being evicted?
+-Are user pods healthy?</li>
+<li>Is the node scheduable?</li>
 <li>Node overall resource consumption including top 5 pod consumers (requires metric-server installed)</li>
 </ul>
 </li>
-<li>Note<ul>
-<li>The Node Detector currently does not detect nodes in an "unknown" state, this means spot instance interruptions or scale-down events will not be handled by the Workflow, this could possibly affect other scenarios as well.</li>
-<li>The Node detector will only run on nodes that have a creation time greater than 3 minutes.</li>
+<li>Notes<ul>
+<li>The Node detector currently does not deal with nodes in an Unknown state (this means Spot interruptions or scale-down events will not be handled by the WF, could affect other scenarios as well)</li>
+<li>Will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the WF)</li>
 </ul>
 </li>
 </ul>
-<h2 id="pvc-detector">PVC Detector<a class="headerlink" href="#pvc-detector" title="Permanent link">&para;</a></h2>
-<p>Detects PVCs in a pending state. </p>
-<p>The PVC Detector is triggered when a PVC is in a pending state for the defined duration (default is 60 seconds).
-- We perform the following checks as part of our investigation <br />
-    - PVC creation, utilization, and readiness issues
-    - Volume provisioner issues
-    - PVC spec changes
-    - Identify the impact on related services</p>
-<h2 id="services-detector">Services Detector<a class="headerlink" href="#services-detector" title="Permanent link">&para;</a></h2>
-<p>(Coming Soon) - Detect unhealthy services and get context on the underlying issue.</p>
-<h2 id="resource-detector">Resource Detector<a class="headerlink" href="#resource-detector" title="Permanent link">&para;</a></h2>
-<p>(Coming Soon) - Detects unhealthy resources such as Ingress controller, endpoints and Loadblancers in an unhealthy state. </p>
-<h2 id="failed-deployment-detector">Failed Deployment Detector<a class="headerlink" href="#failed-deployment-detector" title="Permanent link">&para;</a></h2>
-<p>(Coming Soon) - Identify failed deployments and get a rich context on the failure reason(s).</p>
-<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h2 id="pvc-monitor">PVC Monitor<a class="headerlink" href="#pvc-monitor" title="Permanent link">&para;</a></h2>
+<p>Monitors PVCs in a pending state.</p>
 <ul>
-<li><strong>Sensor</strong>: Resources can be monitored at either the cluster scope or namespace(s) scope.</li>
-<li><strong>Duration</strong>: The minimum time the issue has to presist prior to running the Workflow checks, if the problem has been resolved during this duration the Workflow will not run. Default is 60 seconds.</li>
-<li><strong>Sink/Notification</strong>: Where Komodor will send a notifications when a Workflow is triggered, supports either Slack or Microsoft Teams.</li>
+<li>Triggered by - 
+PVC in a pending state for the defined duration</li>
+<li>We perform the following checks as part of our investigation <ul>
+<li>PVC creation, utilization, and readiness issues</li>
+<li>Volume provisioner related issues</li>
+<li>PVC spec change</li>
+<li>Identify the impact on your services</li>
 </ul>
-<h2 id="supported-actions">Supported Actions<a class="headerlink" href="#supported-actions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Pause</strong>: Pause a workflow and its notifications.</li>
-<li><strong>Edit</strong>: Change Sensors, Duration, Notifications and Name.</li>
-<li><strong>Remove</strong>: Delete a workflow.</li>
+</li>
 </ul>
-<h2 id="how-to-create-a-workflow">How to Create a Workflow<a class="headerlink" href="#how-to-create-a-workflow" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Click on the <em>Workflows</em> tab</p>
-</li>
-<li>
-<p>Mouse over the workflow you would like to add and click <em>Add Workflow</em></p>
-</li>
-<li>
-<p>Click <em>Activate</em> on the top right hand corner</p>
-</li>
-<li>
-<p>Configure the Sensor</p>
-</li>
-<li>
-<p>Pick a cluster</p>
-</li>
-<li>
-<p>Pick a namespace(s) or leave this option blank for all namepsaces on the selected cluster</p>
-</li>
-<li>
-<p>Click on <em>Continue</em></p>
-</li>
-<li>
-<p>Set the minimum duration in seconds, default is 60 seconds.</p>
-</li>
-<li>
-<p>Choose a notification platform and channel, or choose <em>Continue without notifications</em></p>
-</li>
-<li>
-<p>Name the workflow and click <em>Activate Workflow</em></p>
-</li>
-</ol>
-<h2 id="how-to-pause-or-resume-a-workflow">How to Pause or Resume a Workflow<a class="headerlink" href="#how-to-pause-or-resume-a-workflow" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Click on the <em>workflows</em> tab</p>
-</li>
-<li>
-<p>Under <em>Workflows (#)</em> click the workflow you would like to Pause or Resume</p>
-</li>
-<li>
-<p>Click on <em>More Actions</em> on the top right hand corner and select <em>Pause Workflow</em></p>
-</li>
-<li>
-<p>To resume the workflow click on <em>More Actions</em> and select <em>Resume Workflow</em></p>
-</li>
-</ol>
-<h2 id="how-to-edit-a-workflow">How to Edit a Workflow<a class="headerlink" href="#how-to-edit-a-workflow" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Click on the <em>workflows</em> tab</p>
-</li>
-<li>
-<p>Under <em>Workflows (#)</em> click the workflow you would like to edit</p>
-</li>
-<li>
-<p>Click on <em>More Actions</em> on the top right hand corner and select <em>Edit Configuration</em></p>
-</li>
-<li>
-<p>Walk through the workflow</p>
-</li>
-</ol>
-<h2 id="how-to-remove-a-workflow">How to Remove a Workflow<a class="headerlink" href="#how-to-remove-a-workflow" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Click on the <em>workflows</em> tab</p>
-</li>
-<li>
-<p>Mouse over the workflow you would like to add and click <em>Add Workflow</em></p>
-</li>
-<li>
-<p>Click <em>Activate</em> on the top right hand corner</p>
-</li>
-<li>
-<p>Configure the Sensor</p>
-</li>
-<li>
-<p>Pick a cluster</p>
-</li>
-<li>
-<p>Pick a namespace(s) or leave this option blank for all namepsaces on the selected cluster</p>
-</li>
-<li>
-<p>Click on <em>Continue</em></p>
-</li>
-<li>
-<p>Set the minimum duration in seconds, default is 60 seconds.</p>
-</li>
-<li>
-<p>Choose a notification platform and channel, or choose <em>Continue without notifications</em></p>
-</li>
-<li>
-<p>Name the workflow and click <em>Activate Workflow</em></p>
-</li>
-</ol>
 
               
             </article>
+            
           </div>
         </div>
         
@@ -1118,10 +944,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../assets/javascripts/bundle.7f366e99.min.js"></script>
       
     
   </body>
