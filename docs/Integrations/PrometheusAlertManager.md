@@ -16,7 +16,7 @@ To enable the Komodor Prometheus Alert Manager integration go to [Komodor integr
 ### Creating webhook and configure labels
 
 1. Open your `alertmanager.yml` configuration file
-2. Add receiver to your receivers name `komodor` and his sink is `webhook_configs` as the URL from the integration, while set resolved is set to `true`.
+2. Add receiver to your receivers, name the receiver `komodor` and attach sink of `webhook_configs`. In the `-url`, put the URL from the integration. Also set `send_resolved` to `true`.
 
 ```yaml
 receivers:
