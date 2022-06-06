@@ -16,7 +16,7 @@ To enable the Komodor Prometheus Alert Manager integration go to [Komodor integr
 ### Creating webhook and configure labels
 
 1. Open your `alertmanager.yml` configuration file
-2. Add receiver to your receivers, name the receiver `komodor` and attach sink of `webhook_configs`. In the `-url`, put the URL from the integration. Also set `send_resolved` to `true`.
+2. Add a receiver to your receivers list, name the receiver `komodor` and attach a sink to `webhook_configs`. In the `url` field, put the URL that was provided to you during the integration setup. Also set the field `send_resolved` to `true`.
 
 ```yaml
 receivers:
@@ -26,14 +26,14 @@ receivers:
         send_resolved: true
 ```
 
-3. Then also in `alertmanager.yml` configure the route so alert will come to komodor
+3. Next, in `alertmanager.yml`, configure a route so that your alert is routed to komodor
 
 ```yaml
 route:
   receiver: komodor
 ```
 
-If you already have receivers you can config many of them like that:
+If you already have configured routes you can config multiple as follows:
 
 ```yaml
 routes:
@@ -44,9 +44,9 @@ routes:
     receiver: komodor
 ```
 
-Please note about the [routing rules](https://prometheus.io/docs/alerting/latest/configuration/#route) of Alert Manager. Note that if `continue` is set to false, it stops after the first matching child (continue default is false).
+A note about the `continue` configuration of [AlertManager routing rules](https://prometheus.io/docs/alerting/latest/configuration/#route). If it is set to false, AlertManager sends the alert to the first matching route and stops. `continue` default value is false.
 
-Full yaml can look like that:
+A full YAML configuration example:
 
 ```yaml
 global:
