@@ -44,7 +44,7 @@ routes:
     receiver: komodor
 ```
 
-Please note about the [routing rules](https://prometheus.io/docs/alerting/latest/configuration/#route) of Alert Manager. Note that if `continue` is set to false, it stops after the first matching child. If `continue` (continue default is false).
+Please note about the [routing rules](https://prometheus.io/docs/alerting/latest/configuration/#route) of Alert Manager. Note that if `continue` is set to false, it stops after the first matching child (continue default is false).
 
 Full yaml can look like that:
 
