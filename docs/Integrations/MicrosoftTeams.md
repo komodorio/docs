@@ -6,7 +6,7 @@ The Teams integration allows configuration of notifications for events such as D
 
 ###  Configuration Steps
 
-1. Open up the Komodor [Notifications Panel](https://app.komodor.com/main/notifications/configuration). On this screen you can see all existing notifications or configure new ones.
+1. Open up the Komodor [Notifications Panel](https://app.komodor.com/main/notifications). On this screen you can see all existing notifications or configure new ones.
 2. Scroll to the bottom of the page and decide which type of notification you would like to create, Deployment or Health Change.
 
 <p align="center">
