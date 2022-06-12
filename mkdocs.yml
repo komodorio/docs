@@ -1,4 +1,4 @@
-site_name: Komodor 
+site_name: Komodor
 strict: true
 site_url: "https://www.komodor.com/docs"
 repo_url: https://github.com/komodorio/docs
@@ -7,44 +7,44 @@ edit_uri: https://github.com/komodorio/docs/edit/main/docs/getting-started.md
 use_directory_urls: false
 theme:
   name: material
-  custom_dir: overrides 
+  custom_dir: overrides
   language: en
   features:
     - navigation.tabs
-  favicon: 'img/favicon.png'
+  favicon: "img/favicon.png"
   palette:
-    primary: indigo 
+    primary: indigo
 markdown_extensions:
-- codehilite
-- admonition
-- toc:
-    permalink: true
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
 extra:
   homepage: https://docs.komodor.com/
 nav:
   - Home: index.md
   - Learn:
-    - Komodor's Agent: Learn/Komodor-Agent.md
-    - Annotations: Learn/Annotations.md
-    - Monitors: Learn/Monitors.md
-    - Config Changes: Learn/config-changes.md
-    - Source Control: Learn/komodor-source-control.md
-    - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
-    - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
-    - Manage Users: Learn/ManageUsers.md
-    - RBAC: Learn/RBAC.md
-    - Static Prevention: Learn/Static-Prevention.md
+      - Komodor's Agent: Learn/Komodor-Agent.md
+      - Annotations: Learn/Annotations.md
+      - Monitors: Learn/Monitors.md
+      - Config Changes: Learn/config-changes.md
+      - Source Control: Learn/komodor-source-control.md
+      - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
+      - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
+      - Manage Users: Learn/ManageUsers.md
+      - RBAC: Learn/RBAC.md
+      - Static Prevention: Learn/Static-Prevention.md
   - Integrations:
-    - Datadog: Integrations/Datadog.md
-    - Datadog Webhook: Integrations/datadog-webhook.md
-    - Datadog Monitor Notifications: Integrations/Datadog-Monitor-Notification.md 
-    - Grafana: Integrations/Grafana.md
-    - LaunchDarkly: Integrations/LaunchDarkly.md
-    - PagerDuty: Integrations/PagerDuty.md
-    - Sentry: Integrations/Sentry.md
-    - Slack: Integrations/Slack.md
-    - Microsoft Teams: Integrations/MicrosoftTeams.md
-    - Okta: Integrations/Okta/Okta.md
-    - Azure Active Directory: Integrations/AzureActiveDirectory.md
-    - Prometheus Alert Manager: Integrations/PrometheusAlertManager.md
+      - Datadog: Integrations/Datadog.md
+      - Datadog Webhook: Integrations/datadog-webhook.md
+      - Datadog Monitor Notifications: Integrations/Datadog-Monitor-Notification.md
+      - Grafana: Integrations/Grafana.md
+      - LaunchDarkly: Integrations/LaunchDarkly.md
+      - PagerDuty: Integrations/PagerDuty.md
+      - Sentry: Integrations/Sentry.md
+      - Slack: Integrations/Slack.md
+      - Microsoft Teams: Integrations/MicrosoftTeams.md
+      - Okta: Integrations/Okta/Okta.md
+      - Azure Active Directory: Integrations/AzureActiveDirectory.md
+      - Alert Manager: Integrations/AlertManager.md
   - Komodor API: openapi/redoc-static.html
