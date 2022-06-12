@@ -1,12 +1,12 @@
 # Prometheus/Grafana Alert Manager Integration
 
-Integration with alert manager reports alerts also to Komodor. We connect the alert to the Kubernetes workload and display the events on the timeline.
+The Integration of Grafana / Prometheus AlertManager allows alerts triggered by AlertManager to appear on Komodor's timelines.
 
 ---
 
 ## Installation
 
-### The Alert Manager integration involves 3 parts:
+### The Alert Manager integration involves 3 steps:
 
 1. Enabling the integration in Komodor.
 2. Creating webhook on the alert manager / Grafana.
@@ -16,7 +16,7 @@ Integration with alert manager reports alerts also to Komodor. We connect the al
 
 ### 1. Enabling the integration in Komodor
 
-To enable the Komodor Prometheus Alert Manager integration go to [Komodor integrations page](https://app.komodor.com/main/integration) and select Prometheus/Grafana Alert Manager.
+To enable the Komodor Prometheus Alert Manager integration go to [Komodor integrations page](https://app.komodor.com/main/integration), select Prometheus/Grafana Alert Manager, and install the integration.
 
 ### 2. (Option A) The following steps are for manual configuration on alert manager
 
@@ -90,6 +90,8 @@ receivers:
 5. In the notification policies, configure komodor contact endpoint as you wish to configure alerts to Komodor.
 
 ### 3. Adding labels to the alert.
+
+To relate the alert to the relevant workload and make the alerts visible on workloads timelines - adding labels to alerts is required. Each alert without a label will be added to the system without mapping to a specific service.
 
 1. Please note to specify 2 **labels** on the alert in order to connect them to the Kubernetes workload:
 
