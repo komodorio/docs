@@ -45,5 +45,5 @@ nav:
       - Microsoft Teams: Integrations/MicrosoftTeams.md
       - Okta: Integrations/Okta/Okta.md
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
-      - Alert Manager: Integrations/AlertManager.md
+      - Grafana / Alert Manager: Integrations/AlertManager.md
   - Komodor API: openapi/redoc-static.html
