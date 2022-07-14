@@ -39,6 +39,7 @@ nav:
       - Datadog Webhook: Integrations/datadog-webhook.md
       - Datadog Monitor Notifications: Integrations/Datadog-Monitor-Notification.md
       - LaunchDarkly: Integrations/LaunchDarkly.md
+      - Opsgenie: Integrations/Opsgenie.md
       - PagerDuty: Integrations/PagerDuty.md
       - Sentry: Integrations/Sentry.md
       - Slack: Integrations/Slack.md
