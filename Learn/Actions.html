@@ -849,13 +849,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
 <ul>
 <li>User triggers a Manual Action through the Komodor platform </li>
-<li>A command is registered to the Komodor SaaS</li>
+<li>A command is registered to the Komodor SaaS </li>
 <li>The Agent running in the cluster fetches the command from the Komodor SaaS (communication is always done from the Agent outside of the cluster) </li>
 <li>The command is triggered against the Kuberenetes API </li>
 <li>Kubernetes will now execute the command</li>
 <li>During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.</li>
 </ul>
 <p><strong>Please note:</strong> Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates</p>
+<p><a href="https://www.loom.com/share/efa85af0f07c40618f39f4320d9396c2" title="Komodor Actions Demo"><img alt="Komodor Actions Demo" src="https://cdn.loom.com/sessions/thumbnails/efa85af0f07c40618f39f4320d9396c2-1658315688940-with-play.gif" /></a> </p>
 <h3 id="audit">Audit<a class="headerlink" href="#audit" title="Permanent link">&para;</a></h3>
 <p>For auditing purposes, Manual Actions events are created on the Komodor timeline</p>
 <h3 id="what-type-of-actions-are-supported-and-where-can-they-be-triggered-from">What type of Actions are supported and where can they be triggered from?<a class="headerlink" href="#what-type-of-actions-are-supported-and-where-can-they-be-triggered-from" title="Permanent link">&para;</a></h3>
@@ -864,12 +865,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 - Delete Pod - can be triggered from both the Pod inspection page (under Workloads) and the Pods &amp; Logs screen</p>
 <p>In the future, we will spread Actions all across the platform to help mitigating on-going issues</p>
 <h2 id="coming-soon-komodor-actions-roadmap">Coming soon / Komodor Actions roadmap<a class="headerlink" href="#coming-soon-komodor-actions-roadmap" title="Permanent link">&para;</a></h2>
-<p>We plan on adding mutliple actions in the near future, here are some of those
-- Create/Update/Delete resource (will be supported for all resources)
-- Modify requests/limits
-- Restart service
-- Re-trigger failed Job
-- Revert deployment</p>
+<p>We plan on adding mutliple actions in the near future, here are some of those<br />
+- Create/Update/Delete resource (will be supported for all resources)<br />
+- Modify requests/limits<br />
+- Restart service<br />
+- Re-trigger failed Job<br />
+- Revert deployment  </p>
 
               
             </article>
