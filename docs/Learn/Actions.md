@@ -69,4 +69,10 @@ We plan on adding mutliple actions in the near future, here are some of those
 - Modify requests/limits
 - Restart service
 - Re-trigger failed Job
+<<<<<<< HEAD
 - Revert deployment
+=======
+- Revert deployment
+
+We are also planning to allow configuring who can perform what actions on which resources
+>>>>>>> 9c7afaf27b458b26723697ddea29ba6dbb1fe43b
