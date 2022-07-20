@@ -6,7 +6,7 @@ Using Komodor you can run multiple actions against your resources, including the
 
 ## Prerequisites 
 - Agent version 0.1.104
-- Required permissions (will change as more actions will be added to the platform) 
+- Required permissions (as more actions will be supported, more permissions will be required) 
 ```
   - apiGroups:
     - apps
@@ -22,7 +22,7 @@ Using Komodor you can run multiple actions against your resources, including the
     verbs:
     - delete
 ```
-- **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure who can perform what actions on which resources
+- **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions
 
 ## How to opt-in 
 ### New cluster installation
@@ -41,8 +41,6 @@ To disable the usage of Actions using helm, use the following command:
 helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions=false --reuse-values
 ```
 
-Alternativly you can manually edit the `k8s-watcher-config` ConfigMap resource and set `actions` to `false` 
-
 ## How does it work?
 - User triggers a Manual Action through the Komodor platform 
 - A command is registered to the Komodor SaaS
@@ -51,17 +49,17 @@ Alternativly you can manually edit the `k8s-watcher-config` ConfigMap resource a
 - Kubernetes will now execute the command
 - During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.
 
-**Please note:** Due to Kubernetes nature, this feature is built in an async way, we are working to improve the whole experience around that, review the timeline after triggering any action for updates
+**Please note:** Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates
 
 // TODO: Add a video that captures the entire process 
 
 ### Audit
-As part of the Manual Actions events created on the Komodor timeline you'll be able to track who triggered the specific action
+For auditing purposes, Manual Actions events are created on the Komodor timeline
 
 ### What type of Actions are supported and where can they be triggered from?
 We currently support two main actions:
 - Scale service - can be triggered from a Service Timeline page
-- Delete Pod - can be triggered from both the Pod Inspection feature and Pods & Logs screen
+- Delete Pod - can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen
 
 In the future, we will spread Actions all across the platform to help mitigating on-going issues
 
@@ -71,6 +69,4 @@ We plan on adding mutliple actions in the near future, here are some of those
 - Modify requests/limits
 - Restart service
 - Re-trigger failed Job
-- Revert 
-
-We are also planning to allow configuring who can perform what actions on which resources
+- Revert deployment
