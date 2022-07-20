@@ -67,7 +67,7 @@ We currently support two main actions:
 In the future, we will spread Actions all across the platform to help mitigating on-going issues
 
 ## Coming soon / Komodor Actions roadmap
-We plan on adding mutliple actions in the near future, here are some of those
+We plan on adding mutliple actions in the near future, here are some of those  
 - Create/Update/Delete resource (will be supported for all resources)  
 - Modify requests/limits  
 - Restart service  
