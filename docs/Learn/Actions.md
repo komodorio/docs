@@ -51,7 +51,10 @@ helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm 
 
 **Please note:** Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates
 
-<div style="position: relative; padding-bottom: 54.961832061068705%; height: 0;"><iframe src="https://www.loom.com/embed/efa85af0f07c40618f39f4320d9396c2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<a href="https://www.loom.com/share/efa85af0f07c40618f39f4320d9396c2">
+    <p>Komodor Actions Demo - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/efa85af0f07c40618f39f4320d9396c2-1658315688940-with-play.gif">
+  </a>
 
 ### Audit
 For auditing purposes, Manual Actions events are created on the Komodor timeline
