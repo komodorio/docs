@@ -12,11 +12,11 @@
         <link rel="canonical" href="https://www.komodor.com/docs/Learn/Actions.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Actions (private beta) - Komodor</title>
+        <title>Actions (initial release) - Komodor</title>
       
     
     
@@ -80,7 +80,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#actions-private-beta" class="md-skip">
+        <a href="#actions-initial-release" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Actions (private beta)
+              Actions (initial release)
             
           </span>
         </div>
@@ -715,8 +715,76 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites-limitations" class="md-nav__link">
-    Prerequisites &amp; Limitations
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-opt-in" class="md-nav__link">
+    How to opt-in
+  </a>
+  
+    <nav class="md-nav" aria-label="How to opt-in">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-cluster-installation" class="md-nav__link">
+    New cluster installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-upgrade" class="md-nav__link">
+    Cluster upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-revoke" class="md-nav__link">
+    How to revoke
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    Audit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-type-of-actions-are-supported-and-where-can-they-be-triggered-from" class="md-nav__link">
+    What type of Actions are supported and where can they be triggered from?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-soon-komodor-actions-roadmap" class="md-nav__link">
+    Coming soon / Komodor Actions roadmap
   </a>
   
 </li>
@@ -739,12 +807,89 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 
-<h1 id="actions-private-beta">Actions (private beta)<a class="headerlink" href="#actions-private-beta" title="Permanent link">&para;</a></h1>
-<p>In order to allow our users to close the troubleshooting loop through Komodor, we’ve decided to add the ability to perform Actions through the platform.</p>
+<h1 id="actions-initial-release">Actions (initial release)<a class="headerlink" href="#actions-initial-release" title="Permanent link">&para;</a></h1>
+<p>To allow our users to close the troubleshooting loop through Komodor, we’re adding the ability to perform Actions through the platform.</p>
 <p>Using Komodor you can run multiple actions against your resources, including the ability to terminate Pod/s, scale your Deployments, re-trigger your Jobs, revert a deployment and many more to come.</p>
-<h2 id="prerequisites-limitations">Prerequisites &amp; Limitations<a class="headerlink" href="#prerequisites-limitations" title="Permanent link">&para;</a></h2>
-<p>In order to use actions through Komodor, you will have to allow provide the Komodor agent with the following permissions:</p>
-<p><strong>Please note:</strong> Currently, only account Admins can see and perform actions against their resources, in the near future we will add the ability to configure who can perform what actions on which resources.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Agent version 0.1.104</li>
+<li>Required permissions (as more actions will be supported, more permissions will be required) </li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  - apiGroups:
+    - apps
+    resources:
+    - deployments/scale
+    - statefulsets/scale
+    verbs:
+    - patch
+  - apiGroups:
+    - &quot;&quot;
+    resources:
+    - pods
+    verbs:
+    - delete
+</code></pre></div>
+
+<ul>
+<li><strong>Please note:</strong> At this stage, only account <strong>Admins</strong> can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions</li>
+</ul>
+<h2 id="how-to-opt-in">How to opt-in<a class="headerlink" href="#how-to-opt-in" title="Permanent link">&para;</a></h2>
+<h3 id="new-cluster-installation">New cluster installation<a class="headerlink" href="#new-cluster-installation" title="Permanent link">&para;</a></h3>
+<p>To install a new cluster with actions enabled just follow the installation process from the Komodor console</p>
+<p><img src="./img/install-cluster-with-actions.png" width="450"></p>
+<h3 id="cluster-upgrade">Cluster upgrade<a class="headerlink" href="#cluster-upgrade" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="o">=</span><span class="nt">true</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="how-to-revoke">How to revoke<a class="headerlink" href="#how-to-revoke" title="Permanent link">&para;</a></h2>
+<p>To disable the usage of Actions using helm, use the following command:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="o">=</span><span class="nt">false</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li>User triggers a Manual Action through the Komodor platform </li>
+<li>A command is registered to the Komodor SaaS</li>
+<li>The Agent running in the cluster fetches the command from the Komodor SaaS (communication is always done from the Agent outside of the cluster) </li>
+<li>The command is triggered against the Kuberenetes API </li>
+<li>Kubernetes will now execute the command</li>
+<li>During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.</li>
+</ul>
+<p><strong>Please note:</strong> Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates</p>
+<p>// TODO: Add a video that captures the entire process </p>
+<h3 id="audit">Audit<a class="headerlink" href="#audit" title="Permanent link">&para;</a></h3>
+<p>For auditing purposes, Manual Actions events are created on the Komodor timeline</p>
+<h3 id="what-type-of-actions-are-supported-and-where-can-they-be-triggered-from">What type of Actions are supported and where can they be triggered from?<a class="headerlink" href="#what-type-of-actions-are-supported-and-where-can-they-be-triggered-from" title="Permanent link">&para;</a></h3>
+<p>We currently support two main actions:
+- Scale service - can be triggered from a Service Timeline page
+- Delete Pod - can be triggered from both the Pod inspection page (under Workloads) and the Pods &amp; Logs screen</p>
+<p>In the future, we will spread Actions all across the platform to help mitigating on-going issues</p>
+<h2 id="coming-soon-komodor-actions-roadmap">Coming soon / Komodor Actions roadmap<a class="headerlink" href="#coming-soon-komodor-actions-roadmap" title="Permanent link">&para;</a></h2>
+<p>We plan on adding mutliple actions in the near future, here are some of those
+- Create/Update/Delete resource (will be supported for all resources)
+- Modify requests/limits
+- Restart service
+- Re-trigger failed Job
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+- Revert deployment
+=======
+- Revert deployment</p>
+<p>We are also planning to allow configuring who can perform what actions on which resources</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>9c7afaf27b458b26723697ddea29ba6dbb1fe43b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
               
             </article>
