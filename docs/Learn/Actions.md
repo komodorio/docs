@@ -43,13 +43,15 @@ helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm 
 
 ## How does it work?
 - User triggers a Manual Action through the Komodor platform 
-- A command is registered to the Komodor SaaS
+- A command is registered to the Komodor SaaS 
 - The Agent running in the cluster fetches the command from the Komodor SaaS (communication is always done from the Agent outside of the cluster) 
 - The command is triggered against the Kuberenetes API 
 - Kubernetes will now execute the command
 - During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.
 
 **Please note:** Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates
+
+<div style="position: relative; padding-bottom: 54.961832061068705%; height: 0;"><iframe src="https://www.loom.com/embed/efa85af0f07c40618f39f4320d9396c2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Audit
 For auditing purposes, Manual Actions events are created on the Komodor timeline
@@ -63,8 +65,8 @@ In the future, we will spread Actions all across the platform to help mitigating
 
 ## Coming soon / Komodor Actions roadmap
 We plan on adding mutliple actions in the near future, here are some of those
-- Create/Update/Delete resource (will be supported for all resources)
-- Modify requests/limits
-- Restart service
-- Re-trigger failed Job
-- Revert deployment
+- Create/Update/Delete resource (will be supported for all resources)  
+- Modify requests/limits  
+- Restart service  
+- Re-trigger failed Job  
+- Revert deployment  
