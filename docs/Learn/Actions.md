@@ -51,8 +51,6 @@ helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm 
 
 **Please note:** Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates
 
-// TODO: Add a video that captures the entire process 
-
 ### Audit
 For auditing purposes, Manual Actions events are created on the Komodor timeline
 
@@ -69,10 +67,4 @@ We plan on adding mutliple actions in the near future, here are some of those
 - Modify requests/limits
 - Restart service
 - Re-trigger failed Job
-<<<<<<< HEAD
 - Revert deployment
-=======
-- Revert deployment
-
-We are also planning to allow configuring who can perform what actions on which resources
->>>>>>> 9c7afaf27b458b26723697ddea29ba6dbb1fe43b
