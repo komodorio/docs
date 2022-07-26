@@ -67,7 +67,7 @@ helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm 
 For auditing purposes, Manual Actions events are created on the Komodor timeline
 
 ### What type of Actions are supported and where can they be triggered from?
-We currently the following actions:
+We currently support the following actions:
 - Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page
 - Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen
 - Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page
