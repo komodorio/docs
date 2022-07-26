@@ -34,6 +34,7 @@ nav:
       - Manage Users: Learn/ManageUsers.md
       - RBAC: Learn/RBAC.md
       - Static Prevention: Learn/Static-Prevention.md
+      - Actions: Learn/Actions.md
   - Integrations:
       - Datadog: Integrations/Datadog.md
       - Datadog Webhook: Integrations/datadog-webhook.md
