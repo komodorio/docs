@@ -13,7 +13,7 @@ Using Komodor you can run multiple actions against your resources, including the
     resources:
     - deployments/scale
     - statefulsets/scale
-    - deploy    ments
+    - deployments
     - replicasets
     - statefulsets
     verbs:
