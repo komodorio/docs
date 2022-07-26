@@ -11,11 +11,11 @@ Using Komodor you can run multiple actions against your resources, including the
   - apiGroups:
     - apps
     resources:
-    - deployments
     - deployments/scale
+    - statefulsets/scale
+    - deployments
     - replicasets
     - statefulsets
-    - statefulsets/scale
     verbs:
     - patch
   - apiGroups:
@@ -24,6 +24,13 @@ Using Komodor you can run multiple actions against your resources, including the
     - pods
     verbs:
     - delete
+  - apiGroups:
+    - batch
+    resources:
+    - jobs
+    verbs:
+    - delete
+    - create
 ```
 - **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions
 
@@ -35,13 +42,13 @@ To install a new cluster with actions enabled just follow the installation proce
 
 ### Cluster upgrade
 ```
-helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions=true --reuse-values
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --reuse-values
 ```
 
 ## How to revoke
 To disable the usage of Actions using helm, use the following command:
 ```
-helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions=false --reuse-values
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --reuse-values
 ```
 
 ## How does it work?
