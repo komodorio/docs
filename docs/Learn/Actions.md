@@ -59,7 +59,7 @@ helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm 
 - Kubernetes will now execute the command
 - During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.
 
-**Please note:** Due to Kubernetes nature, this feature is built in an asynchronic way, review the timeline after triggering any action for updates
+**Please note:** Due to Kubernetes nature, this feature is built in an asynchronous way, review the timeline after triggering any action for updates
 
 [![Komodor Actions Demo](https://cdn.loom.com/sessions/thumbnails/efa85af0f07c40618f39f4320d9396c2-1658315688940-with-play.gif)](https://www.loom.com/share/efa85af0f07c40618f39f4320d9396c2 "Komodor Actions Demo") 
 
