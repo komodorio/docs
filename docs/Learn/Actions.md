@@ -68,10 +68,10 @@ For auditing purposes, Manual Actions events are created on the Komodor timeline
 
 ### What type of Actions are supported and where can they be triggered from?
 We currently the following actions:
-- Scale service - Allows modifying the nubmer of replicas for a Service, can be triggered from Deployment/StatefulSet inspection pages (under Workloads) ans also from a Service timeline page
-- Delete Pod - Deletes/kills a specific Pod, can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen
-- Restart service - Triggers a rolling restart of all the Pods of a Service, can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page
-- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it, can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer
+- Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page
+- Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen
+- Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page
+- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer
 
 ## Coming soon / Komodor Actions roadmap
 We plan on adding mutliple actions in the near future, here are some of those  
