@@ -16,7 +16,7 @@
     
     
       
-        <title>Actions (initial release) - Komodor</title>
+        <title>Actions - Komodor</title>
       
     
     
@@ -113,7 +113,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Actions (initial release)
+              Actions
             
           </span>
         </div>
@@ -197,13 +197,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Komodor-Agent.html" class="md-tabs__link">
+      <a href="Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
         Learn
       </a>
     </li>
@@ -303,12 +305,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -460,6 +464,129 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <a href="Static-Prevention.html" class="md-nav__link">
         Static Prevention
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Actions.html" class="md-nav__link md-nav__link--active">
+        Actions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-opt-in" class="md-nav__link">
+    How to opt-in
+  </a>
+  
+    <nav class="md-nav" aria-label="How to opt-in">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-cluster-installation" class="md-nav__link">
+    New cluster installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-upgrade" class="md-nav__link">
+    Cluster upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-revoke" class="md-nav__link">
+    How to revoke
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-it-work" class="md-nav__link">
+    How does it work?
+  </a>
+  
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audit" class="md-nav__link">
+    Audit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-type-of-actions-are-supported-and-where-can-they-be-triggered-from" class="md-nav__link">
+    What type of Actions are supported and where can they be triggered from?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-soon-komodor-actions-roadmap" class="md-nav__link">
+    Coming soon / Komodor Actions roadmap
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -820,6 +947,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     resources:
     - deployments/scale
     - statefulsets/scale
+    - deployments
+    - replicasets
+    - statefulsets
     verbs:
     - patch
   - apiGroups:
@@ -828,6 +958,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     - pods
     verbs:
     - delete
+  - apiGroups:
+    - batch
+    resources:
+    - jobs
+    verbs:
+    - delete
+    - create
 </code></pre></div>
 
 <ul>
@@ -838,12 +975,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p>To install a new cluster with actions enabled just follow the installation process from the Komodor console</p>
 <p><img src="./img/install-cluster-with-actions.png" width="450"></p>
 <h3 id="cluster-upgrade">Cluster upgrade<a class="headerlink" href="#cluster-upgrade" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="o">=</span><span class="nt">true</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="p">.</span><span class="nc">basic</span><span class="o">=</span><span class="nt">true</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="how-to-revoke">How to revoke<a class="headerlink" href="#how-to-revoke" title="Permanent link">&para;</a></h2>
 <p>To disable the usage of Actions using helm, use the following command:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="o">=</span><span class="nt">false</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">add</span><span class="w"> </span><span class="nt">komodorio</span><span class="w"> </span><span class="nt">https</span><span class="o">://</span><span class="nt">helm-charts</span><span class="p">.</span><span class="nc">komodor</span><span class="p">.</span><span class="nc">io</span><span class="w"> </span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">repo</span><span class="w"> </span><span class="nt">update</span><span class="o">;</span><span class="w"> </span><span class="nt">helm</span><span class="w"> </span><span class="nt">upgrade</span><span class="w"> </span><span class="nt">--install</span><span class="w"> </span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">komodorio</span><span class="o">/</span><span class="nt">k8s-watcher</span><span class="w"> </span><span class="nt">--set</span><span class="w"> </span><span class="nt">watcher</span><span class="p">.</span><span class="nc">actions</span><span class="p">.</span><span class="nc">basic</span><span class="o">=</span><span class="nt">false</span><span class="w"> </span><span class="nt">--reuse-values</span><span class="w"></span>
 </code></pre></div>
 
 <h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
@@ -855,21 +992,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li>Kubernetes will now execute the command</li>
 <li>During the entire process you can track the changes/events through a dedicated Event that will be created on the Komodor timeline.</li>
 </ul>
-<p><strong>Please note:</strong> Due to Kubernetes nature, this feature is built in an async way, review the timeline after triggering any action for updates</p>
+<p><strong>Please note:</strong> Due to Kubernetes nature, this feature is built in an asynchronous way, review the timeline after triggering any action for updates</p>
 <p><a href="https://www.loom.com/share/efa85af0f07c40618f39f4320d9396c2" title="Komodor Actions Demo"><img alt="Komodor Actions Demo" src="https://cdn.loom.com/sessions/thumbnails/efa85af0f07c40618f39f4320d9396c2-1658315688940-with-play.gif" /></a> </p>
 <h3 id="audit">Audit<a class="headerlink" href="#audit" title="Permanent link">&para;</a></h3>
 <p>For auditing purposes, Manual Actions events are created on the Komodor timeline</p>
 <h3 id="what-type-of-actions-are-supported-and-where-can-they-be-triggered-from">What type of Actions are supported and where can they be triggered from?<a class="headerlink" href="#what-type-of-actions-are-supported-and-where-can-they-be-triggered-from" title="Permanent link">&para;</a></h3>
-<p>We currently support two main actions:
-- Scale service - can be triggered from a Service Timeline page
-- Delete Pod - can be triggered from both the Pod inspection page (under Workloads) and the Pods &amp; Logs screen</p>
-<p>In the future, we will spread Actions all across the platform to help mitigating on-going issues</p>
+<p>We currently support the following actions:
+- Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page
+- Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods &amp; Logs screen
+- Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page
+- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer</p>
 <h2 id="coming-soon-komodor-actions-roadmap">Coming soon / Komodor Actions roadmap<a class="headerlink" href="#coming-soon-komodor-actions-roadmap" title="Permanent link">&para;</a></h2>
 <p>We plan on adding mutliple actions in the near future, here are some of those<br />
 - Create/Update/Delete resource (will be supported for all resources)<br />
 - Modify requests/limits<br />
-- Restart service<br />
-- Re-trigger failed Job<br />
 - Revert deployment  </p>
 
               
