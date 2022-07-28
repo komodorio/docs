@@ -7,7 +7,7 @@ Komodor Monitors are built to detect different scenarios, investigate certain as
 Komodor monitors are being configured on a cluster level, each monitor supports the following configurations:
 - Trigger conditions - specify when this monitor should be triggered, conditions vary per monitor.
 - Scope - which resources should be monitored, the scope can be configured for the entire cluster, specific namespaces, annotations or labels, the relationship between the selected resources is currently OR relationship.
-- Sink/Notification - where do you want to receive notifications.
+- Sink/Notification - where do you want to receive notifications (Slack/Teams/OpsGenie/PagerDuty).
 
 ## Prerequisites:
 
@@ -31,6 +31,11 @@ Service (Deployment/DaemonSet/Rollout/StatefulSet) number of available replicas 
     - Service describe 
 
 **Please note** Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.
+
+## Deploy Monitor
+A Deploy monitor will be trigerred whenever a resource is being deployed/rolled-out.  
+Using the Deploy Monitor configuration you can define on what resources (scope) and in what occasion (failed deploy/successful deploy/both) when you would like to get a notification in one of your notification channel (Slack/Teams)  
+<img src="./img/deploy-monitor-config.png" width="450">
 
 ## Node Monitor
 Monitors Nodes with faulty [Conditions](https://kubernetes.io/docs/concepts/architecture/nodes/#condition).
@@ -61,3 +66,11 @@ PVC in a pending state for the defined duration
     - Volume provisioner related issues
     - PVC spec change
     - Identify the impact on your services
+
+## Job Monitor
+The Job Monitor will be triggered when a job fails execution.  
+It allows you to get notified for Job failures on the defined scope.
+
+## CronJob Monitor
+The CronJob Monitor will be triggered when a job (managed by CronJob) fails execution.  
+It allows you to get notified for the first (first failure ater a success) or any CronJob failures on the defined scope.
