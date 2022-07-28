@@ -1172,6 +1172,10 @@ Please find the below examples as references for common applications.</p>
 <span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span><span class="w"></span>
 <span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">lables</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">app.kubernetes.io/name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">        </span><span class="nt">app.kubernetes.io/managed-by</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">helm</span><span class="w"> </span>
 </code></pre></div>
 
 <table>
@@ -1202,6 +1206,11 @@ Please find the below examples as references for common applications.</p>
 <td>${yaml[spec.template.spec.containers]}</td>
 <td>undefined</td>
 <td>path doesn't resolve to an actual value</td>
+</tr>
+<tr>
+<td>${yaml[spec.metadata.template.labels['app.kubernetes.io/name']]}</td>
+<td>nginx</td>
+<td>full path usage using dictionary key</td>
 </tr>
 </tbody>
 </table>
