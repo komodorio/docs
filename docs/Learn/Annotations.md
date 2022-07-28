@@ -87,14 +87,19 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+    metadata:
+      lables:
+        app.kubernetes.io/name: nginx
+        app.kubernetes.io/managed-by: helm 
 ```
 
-| YAML Path                                       | Value     | Explanation                             |
-| ----------------------------------------------- | --------- | --------------------------------------- |
-| ${yaml[spec.replicas]}                          | 5         | full path usage                         |
-| ${yaml[spec.template.spec.containers[0\].name]} | test      | full path usage using path index        |
-| ${yaml[spec.my_replicas]}                       | undefined | path doesn't exist                      |
-| ${yaml[spec.template.spec.containers]}          | undefined | path doesn't resolve to an actual value |
+| YAML Path                                                         | Value     | Explanation                             |
+| ----------------------------------------------------------------- | --------- | --------------------------------------- |
+| ${yaml[spec.replicas]}                                            | 5         | full path usage                         |
+| ${yaml[spec.template.spec.containers[0\].name]}                   | test      | full path usage using path index        |
+| ${yaml[spec.my_replicas]}                                         | undefined | path doesn't exist                      |
+| ${yaml[spec.template.spec.containers]}                            | undefined | path doesn't resolve to an actual value |
+| ${yaml[spec.metadata.template.labels['app.kubernetes.io/name']]}  | nginx     | full path usage using dictionary key    |
 
 \*Custom links with a failed pod name will be created on health events only.
 \*\*Dates can be crafted using the display guidelines of date-fns https://date-fns.org/v2.25.0/docs/format
