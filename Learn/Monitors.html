@@ -418,6 +418,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
+  <a href="#deploy-monitor" class="md-nav__link">
+    Deploy Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-monitor" class="md-nav__link">
     Node Monitor
   </a>
@@ -427,6 +434,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <li class="md-nav__item">
   <a href="#pvc-monitor" class="md-nav__link">
     PVC Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-monitor" class="md-nav__link">
+    Job Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronjob-monitor" class="md-nav__link">
+    CronJob Monitor
   </a>
   
 </li>
@@ -823,6 +844,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
+  <a href="#deploy-monitor" class="md-nav__link">
+    Deploy Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#node-monitor" class="md-nav__link">
     Node Monitor
   </a>
@@ -832,6 +860,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <li class="md-nav__item">
   <a href="#pvc-monitor" class="md-nav__link">
     PVC Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-monitor" class="md-nav__link">
+    Job Monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronjob-monitor" class="md-nav__link">
+    CronJob Monitor
   </a>
   
 </li>
@@ -860,7 +902,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p>Komodor monitors are being configured on a cluster level, each monitor supports the following configurations:
 - Trigger conditions - specify when this monitor should be triggered, conditions vary per monitor.
 - Scope - which resources should be monitored, the scope can be configured for the entire cluster, specific namespaces, annotations or labels, the relationship between the selected resources is currently OR relationship.
-- Sink/Notification - where do you want to receive notifications.</p>
+- Sink/Notification - where do you want to receive notifications (Slack/Teams/OpsGenie/PagerDuty).</p>
 <h2 id="prerequisites">Prerequisites:<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p><strong>Required agent version</strong> - 1.0.78 (recommended - latest version)  </p>
 <h2 id="availability-monitor">Availability Monitor<a class="headerlink" href="#availability-monitor" title="Permanent link">&para;</a></h2>
@@ -887,6 +929,10 @@ Foreach Pod we'll provide the following:<ul>
 </li>
 </ul>
 <p><strong>Please note</strong> Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.</p>
+<h2 id="deploy-monitor">Deploy Monitor<a class="headerlink" href="#deploy-monitor" title="Permanent link">&para;</a></h2>
+<p>A Deploy monitor will be trigerred whenever a resource is being deployed/rolled-out.<br />
+Using the Deploy Monitor configuration you can define on what resources (scope) and in what occasion (failed deploy/successful deploy/both) when you would like to get a notification in one of your notification channel (Slack/Teams)<br />
+<img src="./img/deploy-monitor-config.png" width="450"></p>
 <h2 id="node-monitor">Node Monitor<a class="headerlink" href="#node-monitor" title="Permanent link">&para;</a></h2>
 <p>Monitors Nodes with faulty <a href="https://kubernetes.io/docs/concepts/architecture/nodes/#condition">Conditions</a>.</p>
 <ul>
@@ -923,6 +969,12 @@ PVC in a pending state for the defined duration</li>
 </ul>
 </li>
 </ul>
+<h2 id="job-monitor">Job Monitor<a class="headerlink" href="#job-monitor" title="Permanent link">&para;</a></h2>
+<p>The Job Monitor will be triggered when a job fails execution.<br />
+It allows you to get notified for Job failures on the defined scope.</p>
+<h2 id="cronjob-monitor">CronJob Monitor<a class="headerlink" href="#cronjob-monitor" title="Permanent link">&para;</a></h2>
+<p>The CronJob Monitor will be triggered when a job (managed by CronJob) fails execution.<br />
+It allows you to get notified for the first (first failure ater a success) or any CronJob failures on the defined scope.</p>
 
               
             </article>

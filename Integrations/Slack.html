@@ -659,32 +659,26 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#creating-notifications" class="md-nav__link">
     Creating notifications
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -805,32 +799,26 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#creating-notifications" class="md-nav__link">
     Creating notifications
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -854,11 +842,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 <h1 id="slack-integration">Slack Integration<a class="headerlink" href="#slack-integration" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Slack integration allows you to recieve notification for events such as successfull or failed deployments, service health state changes, and triggered Workflows from Komodor to a Slack channel. Komodor supports different granularity levels, Cluster, Namespace and Service for each notification. The notification type, destination, and granularity can be defined in the Komodor Notifications screen.</p>
-<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<p>The Slack integration allows you to be notified on issues triggered by Komodor <a href="https://app.komodr.com/com/main/monitors">Monitors</a>.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>Depending on your companies Slack settings a company admin may be required to enable the integration, the same user will need to be a Komodor Admin in order to start the installation from the Komodor integration page.</p>
 <p>!!! Note The free version of Slack is limited to 10 applications.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Once logged into the Komodor platform click on the <a href="https://app.komodor.com/main/integration"><em>Integrations</em></a> tab.</li>
 <li>Locate the Slack integration under the <em>Avaiable Integrations</em> section and click on <em>Install Integration</em> to start, this will forward you to the Slack Workspace login page.</li>
@@ -881,8 +869,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <ol>
 <li>Once completed you will be forwarded back to the Komodor Integration page where you will find the Slack integration listed under the <em>Installed Integrations</em>.</li>
 </ol>
-<h3 id="creating-notifications">Creating notifications<a class="headerlink" href="#creating-notifications" title="Permanent link">&para;</a></h3>
-<p>To enable per service or deployment notifications you may either use the <a href="https://app.komodor.com/main/notifications">Notifications</a> tab in the UI or create them using <a href="https://docs.komodor.com/Learn/Annotations.html#notifications">deployment annotations</a>.</p>
+<h2 id="creating-notifications">Creating notifications<a class="headerlink" href="#creating-notifications" title="Permanent link">&para;</a></h2>
+<p>To enable notifications use the <a href="https://app.komodor.com/main/monitors">Monitors</a> tab in the UI </p>
+<ol>
+<li>Open up the Komodor <a href="https://app.komodor.com/main/monitors">Monitors page</a>. </li>
+<li>Select the Cluster</li>
+<li>Select the Monitor type</li>
+<li>
+<p>Create/modify Monitor rule, configure it's trigger conditions, the scope on which you'd like to be notified on and specify the Slack channel you want the notification to be sent to.
+<img src="./img/sinks-slack.png" width="450"></p>
+</li>
+<li>
+<p>Save the rule</p>
+</li>
+</ol>
 
               
             </article>

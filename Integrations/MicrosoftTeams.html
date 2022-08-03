@@ -825,43 +825,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 <h1 id="microsoft-teams-integration">Microsoft Teams Integration<a class="headerlink" href="#microsoft-teams-integration" title="Permanent link">&para;</a></h1>
-<p>The Teams integration allows configuration of notifications for events such as Deploy or Health from Komodor to a Teams channel. Komodor supports different granularity levels, Cluster, Namespace and Service for each notification. The notification type, destination, and granularity can be defined in the Komodor Notifications screen.</p>
+<p>The Teams integration allows you to be notified on issues triggered by Komodor <a href="https://app.komodr.com/com/main/monitors">Monitors</a>.</p>
 <h2 id="configuring-teams-notifications">Configuring Teams Notifications<a class="headerlink" href="#configuring-teams-notifications" title="Permanent link">&para;</a></h2>
 <h3 id="configuration-steps">Configuration Steps<a class="headerlink" href="#configuration-steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Open up the Komodor <a href="https://app.komodor.com/main/notifications">Notifications Panel</a>. On this screen you can see all existing notifications or configure new ones.</li>
-<li>Scroll to the bottom of the page and decide which type of notification you would like to create, Deployment or Health Change.</li>
+<li>Open up the Komodor <a href="https://app.komodor.com/main/monitors">Monitors page</a>. </li>
+<li>Select the Cluster</li>
+<li>Select the Monitor type</li>
+<li>Create/modify Monitor rule, configure it's trigger conditions, the scope on which you'd like to be notified on and specify the Teams channel you want the notification to be sent to.</li>
+<li>On your first use, you will have to configure a Teams channel, to do so, click on "Add New Channel" and follow the guide provided in the UI</li>
 </ol>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/28837372/140755810-57065b49-739e-4c8c-80b0-2da332364aa9.png" />
-</p>
-
+<p><img src="./img/sinks-teams.png" width="450"></p>
 <ol>
-<li>Select <strong>Add this notification</strong> for the type of notification you would like to configure.</li>
-<li>Choose the cluster that you would like to alert on, or leave empty to alert on all clusters. Click <strong>Continue</strong> to proceed to the webhook configuration.</li>
+<li>Save the rule</li>
 </ol>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/28837372/140756824-9a6e42cb-db05-40a2-83c3-dcd2b5aa7aa8.png" />
-</p>
-
-<ol>
-<li>Enter the channel name that you would like to post to (starting with @. "@channel" for example)</li>
-<li>Retrieve the webhook URL from Teams using the on screen instructions:<ol>
-<li>Navigate to the channel where you want to add the webhook and select (•••) More Options from the top navigation bar.</li>
-<li>Choose  <strong>Connectors</strong>  from the drop-down menu and search for Incoming Webhook.</li>
-<li>Select the  <strong>Configure</strong>  button, provide a name, and optionally, upload an image avatar for your webhook.</li>
-<li>The dialog window will present a unique URL that will map to the channel. Make sure that you copy and paste the URL into the "webhook URL" field.</li>
-</ol>
-</li>
-</ol>
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/28837372/140756915-4686f3c3-defd-4e43-bcb8-246bf63f23b5.png" />
-</p>
-
-<ol>
-<li>Click on <strong>Create Notification</strong> to complete the Notification Configuration</li>
-</ol>
-<p>More information on Microsoft Teams integration with webhooks can be found in the <a href="https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook">Official Documentation</a>.</p>
 
               
             </article>
