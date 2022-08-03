@@ -2,8 +2,7 @@
 
 ## Overview
 
-// TODO: fix syntax
-The Teams integration allows you to be notified on issues triggered by Komodor [Monitors](https://app.komodr.com/com/main/monitors).
+The Slack integration allows you to be notified on issues triggered by Komodor [Monitors](https://app.komodr.com/com/main/monitors).
 
 ## Requirements
 Depending on your companies Slack settings a company admin may be required to enable the integration, the same user will need to be a Komodor Admin in order to start the installation from the Komodor integration page.
