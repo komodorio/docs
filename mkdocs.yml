@@ -48,5 +48,5 @@ nav:
       - Okta: Integrations/Okta/Okta.md
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
       - Grafana / Alert Manager: Integrations/AlertManager.md
-      - Slack: Integrations/ArgoCD.md
+      - ArgoCD: Integrations/ArgoCD.md
   - Komodor API: openapi/redoc-static.html
