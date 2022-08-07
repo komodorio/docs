@@ -53,8 +53,7 @@ Thus providing a quick way to get a clear understanding of the relevant context 
 1. Add annotations to the requested Kubernetes workload resources 
 2. The URL should follow the structure bellow \
 
-
-        [https://app.komodor.com/main/deep-dive/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}](https://app.komodor.com/main/deep-dive/%7B%7Baccount-name%7D%7D.%7B%7Bcluster%7D%7D-%7B%7Bnamespace%7D%7D.%7B%7Bservice%7D%7D)
+![Screen Shot 2022-08-04 at 11 48 48](https://user-images.githubusercontent.com/109901035/183279853-213a4b1f-5d04-4cc4-8a22-dccc31374774.png)
 
 
 **Example**
@@ -64,4 +63,7 @@ Thus providing a quick way to get a clear understanding of the relevant context 
 
 
 1. Open the ArgoCD application details page and make sure that the external link icon is visible for the respective resource 
+
+![Screen Shot 2022-08-04 at 12 01 47](https://user-images.githubusercontent.com/109901035/183279888-da169dc7-92ab-4fe0-a884-810810116d4a.png)
+
 2. click on the external link icon to get directly to relevant workload in Komodor.
