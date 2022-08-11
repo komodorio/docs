@@ -103,6 +103,6 @@ We currently support the following actions:
 - Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page  
 - Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen  
 - Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page  
-- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer
+- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer  
 - Cordon/Uncordon node - Allows marking a node as unscehduable, preventing new Pods from being scheduled on it. You can revert this by using the Uncordon action  
-- Delete/Edit resources
+- Delete/Edit resources  
