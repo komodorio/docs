@@ -2,11 +2,11 @@
 
 To allow our users to close the troubleshooting loop through Komodor, we’re adding the ability to perform Actions through the platform.
 
-Using Komodor you can run multiple actions against your resources, including the ability to terminate Pod/s, scale your Deployments, re-trigger your Jobs, revert a deployment and many more to come.
+Using Komodor you can run multiple actions against your resources, you'll be able to easily track what was done and by whom.
 
 ## Prerequisites 
 - Agent version 0.1.104
-- Required permissions (as more actions will be supported, more permissions will be required) 
+- Required permissions (permissions can be modified as needed)
 ```
   - apiGroups:
     - apps
@@ -31,10 +31,42 @@ Using Komodor you can run multiple actions against your resources, including the
     verbs:
     - delete
     - create
+  - apiGroups:
+    - ""
+    resources:
+    - pods
+    - persistentvolumeclaims
+    - configmaps
+    - secrets
+    - services
+    - ingresses
+    - networkpolicies
+    - persistentvolumes
+    - storageclasses
+    - replicasets
+    - deployments
+    - statefulsets
+    - daemonsets
+    - cronjobs
+    verbs:
+    - delete
+    - patch
+    - update
+    - create
+  - apiGroups:
+    - ""
+    resources:
+    - nodes
+    verbs:
+    - patch
 ```
 - **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions
 
 ## How to opt-in 
+For convienece purposes we've seperated the actions helm chart values into two sections
+- watcher.actions.basic - Enables basic actions (Delete pods, Scale and restart deployments, statefulsets, replicasets. Restart and trigger jobs)
+- watcher.actions.advanced - Enables advanced actions (Update, Create and Delete resources, Cordon/Uncordon nodes)
+
 ### New cluster installation
 To install a new cluster with actions enabled just follow the installation process from the Komodor console
 
@@ -42,13 +74,13 @@ To install a new cluster with actions enabled just follow the installation proce
 
 ### Cluster upgrade
 ```
-helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --reuse-values
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --reuse-values
 ```
 
 ## How to revoke
 To disable the usage of Actions using helm, use the following command:
 ```
-helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --reuse-values
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --reuse-values
 ```
 
 ## How does it work?
@@ -71,10 +103,6 @@ We currently support the following actions:
 - Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page  
 - Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen  
 - Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page  
-- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer  
-
-## Coming soon / Komodor Actions roadmap
-We plan on adding mutliple actions in the near future, here are some of those  
-- Create/Update/Delete resource (will be supported for all resources)  
-- Modify requests/limits  
-- Revert deployment  
+- Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer
+- Cordon/Uncordon node - Allows marking a node as unscehduable, preventing new Pods from being scheduled on it. You can revert this by using the Uncordon action  
+- Delete/Edit resources
