@@ -1,5 +1,0 @@
-make: Entering directory `/Users/amitbaroz/Documents/docs'
-pip install -r docs/requirements.txt
-mkdocs serve
-make: Leaving directory `/Users/amitbaroz/Documents/docs'
- 

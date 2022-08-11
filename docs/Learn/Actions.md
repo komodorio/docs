@@ -2,7 +2,7 @@
 
 To allow our users to close the troubleshooting loop through Komodor, we’re adding the ability to perform Actions through the platform.
 
-Using Komodor you can run multiple actions against your resources, you'll be able to easily track what was done and by whom.
+Using Komodor you can run multiple actions against your resource. You'll be able to easily track what was done and by whom.
 
 ## Prerequisites 
 - Agent version 0.1.104
