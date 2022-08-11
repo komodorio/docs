@@ -21,7 +21,7 @@ nameBlacklist: ["leader", "election"]
 collectHistory: false
 ```
 
-### How to integarate using helm upgrade command
+### How to integrate using helm upgrade command
 
 ``` bash
 helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact="{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}" --set apiKey=<API-KEY> --set watcher.clusterName=<cluster-name> --set watcher.enableAgentTaskExecution=true --set watcher.allowReadingPodLogs=true 
