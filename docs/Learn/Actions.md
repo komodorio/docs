@@ -64,8 +64,8 @@ Using Komodor you can run multiple actions against your resource. You'll be able
 
 ## How to opt-in 
 For convienece purposes we've seperated the actions helm chart values into two sections
-- watcher.actions.basic - Enables basic actions (Delete pods, Scale and restart deployments, statefulsets, replicasets. Restart and trigger jobs)
-- watcher.actions.advanced - Enables advanced actions (Update, Create and Delete resources, Cordon/Uncordon nodes)
+- watcher.actions.basic - Enables basic actions (Delete pods, Scale and restart deployments, statefulsets, replicasets. Restart and trigger jobs)  
+- watcher.actions.advanced - Enables advanced actions (Update, Create and Delete resources, Cordon/Uncordon nodes)  
 
 ### New cluster installation
 To install a new cluster with actions enabled just follow the installation process from the Komodor console
