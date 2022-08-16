@@ -16,6 +16,7 @@ Using Komodor you can run multiple actions against your resource. You'll be able
     - deployments
     - replicasets
     - statefulsets
+    - daemonsets
     verbs:
     - patch
   - apiGroups:
@@ -37,17 +38,41 @@ Using Komodor you can run multiple actions against your resource. You'll be able
     - pods
     - persistentvolumeclaims
     - configmaps
-    - secrets
     - services
-    - ingresses
-    - networkpolicies
     - persistentvolumes
     - storageclasses
+    verbs:
+    - delete
+    - patch
+    - update
+    - create
+  - apiGroups:
+    - apps
+    resources:
     - replicasets
     - deployments
     - statefulsets
     - daemonsets
+    verbs:
+    - delete
+    - patch
+    - update
+    - create
+  - apiGroups:
+    - batch
+    resources:
     - cronjobs
+    - jobs
+    verbs:
+    - delete
+    - patch
+    - update
+    - create
+  - apiGroups:
+    - networking.k8s.io
+    resources:
+    - ingresses
+    - networkpolicies
     verbs:
     - delete
     - patch
@@ -103,6 +128,7 @@ We currently support the following actions:
 - Scale service - Allows modifying the number of replicas for a Service. Can be triggered from Deployment/StatefulSet inspection pages (under Workloads) and also from a Service timeline page  
 - Delete Pod - Deletes/kills a specific Pod. Can be triggered from both the Pod inspection page (under Workloads) and the Pods & Logs screen  
 - Restart service - Triggers a rolling restart of all the Pods of a Service. Can be triggered from Deployment/StatefulSet inspection page (under Workloads) ans also from a Service timeline page  
+- Rollback service - Rolls back a service to the previous generation  
 - Re-trigger Job/CronJob - Re-creates the Job to trigger a new run of it. Can be triggered from a Job/CronJob timeline, Job/CronJob inspection pages (under Workloads) and from a Job event drawer  
 - Cordon/Uncordon node - Allows marking a node as unscehduable, preventing new Pods from being scheduled on it. You can revert this by using the Uncordon action  
 - Delete/Edit resources  
