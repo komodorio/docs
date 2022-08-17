@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/github.html">
+        <link rel="canonical" href="https://www.komodor.com/docs/Integrations/ArgoCD.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
     
     
       
-        <title>Github - Komodor</title>
+        <title>ArgoCD - Komodor</title>
       
     
     
@@ -79,6 +79,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#argocd-integration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +113,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github
+              ArgoCD
             
           </span>
         </div>
@@ -208,13 +213,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Datadog.html" class="md-tabs__link">
+      <a href="Datadog.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -486,12 +493,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -680,11 +689,94 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ArgoCD.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ArgoCD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ArgoCD.html" class="md-nav__link md-nav__link--active">
         ArgoCD
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-komodor-on-top-of-argocd" class="md-nav__link">
+    Why use Komodor on top of ArgoCD?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -728,6 +820,65 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-komodor-on-top-of-argocd" class="md-nav__link">
+    Why use Komodor on top of ArgoCD?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -739,15 +890,60 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Integrations/github.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Integrations/ArgoCD.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Github</h1>
+<!-----
 
-<p>ToDo - add github docs</p>
+Conversion notes:
+
+* Docs to Markdown version 1.0β33
+* Sat Aug 13 2022 23:09:46 GMT-0700 (PDT)
+* Source doc: ArgoCD - Komodor integration
+
+----->
+
+<h1 id="argocd-integration"><strong>ArgoCD integration</strong><a class="headerlink" href="#argocd-integration" title="Permanent link">&para;</a></h1>
+<p>This tutorial demonstrates how to utilize ArgoCD’s external links to seamlessly hop from a specific K8s resource on Argo to its parallel on Komodor.
+This is meant to reduce friction and context-swtiching when troubleshooting incidents.</p>
+<p>Komodor is a continuous reliability platform for Kubernetes that collects all changes and events across your system, provides a coherent timeline view, and offers actionable insights for remediation.  </p>
+<h3 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<p>ArgoCD can generate clickable links to external pages for a resource based on per resource annotation.</p>
+<p>Adding a Komodor dynamic link to ArgoCD will generate a direct link from an ArgoCD application to the relevant workload in Komodor, based on the Kubernetes workload resources annotation.</p>
+<p>Thus providing a way to quickly get the full context of an incident and resolve it end-to-end with minimal effort.</p>
+<h3 id="why-use-komodor-on-top-of-argocd"><strong>Why use Komodor on top of ArgoCD?</strong><a class="headerlink" href="#why-use-komodor-on-top-of-argocd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To resolve incidents in complex and distributed environments you need full context which can only be understood by looking at changes and events over time </li>
+<li>Komodor provides visibility to all resources and not only ArgoCD managed apps</li>
+<li>Komodor can compliment Argo with more capabilities dedicated specifically for rapid incident response. </li>
+</ul>
+<h3 id="prerequisites"><strong>Prerequisites</strong><a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Installed ArgoCD</li>
+<li>Installed Komodor </li>
+</ul>
+<h3 id="installation"><strong>Installation</strong><a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Add annotations to the requested Kubernetes workload resources </li>
+<li>The URL should follow the structure bellow <div class="codehilite"><pre><span></span><code><span class="x">https://app.komodor.com/main/deep-dive/</span><span class="cp">{{</span><span class="nv">account-name</span><span class="cp">}}</span><span class="x">.</span><span class="cp">{{</span><span class="nv">cluster</span><span class="cp">}}</span><span class="x">-</span><span class="cp">{{</span><span class="nv">namespace</span><span class="cp">}}</span><span class="x">.</span><span class="cp">{{</span><span class="nv">service</span><span class="cp">}}</span><span class="x"></span>
+</code></pre></div>
+
+</li>
+</ol>
+<h3 id="example"><strong>Example</strong><a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>&nbsp;</p>
+<p><img alt="Screen Shot 2022-08-04 at 11 48 48" src="https://user-images.githubusercontent.com/109901035/185045272-1269b941-1b89-4dce-8049-27472a2d7028.png" /></p>
+<h3 id="testing"><strong>Testing</strong><a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open the ArgoCD application details page and make sure that the external link icon is visible for the respective resource </li>
+<li>Click on the external link icon to directly hop onto the relevant workload in Komodor.</li>
+</ol>
+<p><img alt="Screen Shot 2022-08-04 at 12 01 47" src="https://user-images.githubusercontent.com/109901035/185045403-b16e62c6-335e-4f57-9aea-f958679ab725.png" /></p>
+<h3 id="demo"><strong>Demo</strong><a class="headerlink" href="#demo" title="Permanent link">&para;</a></h3>
+<p>https://user-images.githubusercontent.com/109901035/185045498-18569afc-0871-4903-8c7c-dff80fbda1cd.mov</p>
 
 
 
