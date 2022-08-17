@@ -43,7 +43,6 @@ Thus providing a way to quickly get the full context of an incident and resolve 
 ### **Installation**
 
 
-
 1. Add annotations to the requested Kubernetes workload resources 
 2. The URL should follow the structure bellow 
 
@@ -54,17 +53,20 @@ Thus providing a way to quickly get the full context of an incident and resolve 
 ### **Example** 
 &nbsp;
 
+![Screen Shot 2022-08-04 at 11 48 48](https://user-images.githubusercontent.com/109901035/185045272-1269b941-1b89-4dce-8049-27472a2d7028.png)
 
 ###  **Testing**
-
-
 
 1. Open the ArgoCD application details page and make sure that the external link icon is visible for the respective resource 
 2. Click on the external link icon to directly hop onto the relevant workload in Komodor.
 
+![Screen Shot 2022-08-04 at 12 01 47](https://user-images.githubusercontent.com/109901035/185045403-b16e62c6-335e-4f57-9aea-f958679ab725.png)
+
+
 ### **Demo**  
 
+https://user-images.githubusercontent.com/109901035/185045498-18569afc-0871-4903-8c7c-dff80fbda1cd.mov
 
-	    [Link to the demo video]
+
 
 	
