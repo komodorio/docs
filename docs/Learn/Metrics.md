@@ -7,6 +7,8 @@ Komodor enables you to overview metrics like cpu and memory on your cluster usin
 - Agent version from 0.1.108
 - Installed prometheus on your cluster
 
+Coming soon: prometheus installation integration!
+
 ## How does it work?
 
 Komodor agent identifies prometheus in the cluster and saves the configuration details.
