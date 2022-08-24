@@ -21,6 +21,10 @@ Data is displayed in 2 columns:
 
 <img src="./img/pod_metrics.png" width="550">
 
+More columns can be added: %CPU/L, %MEM/L, CPU, Memory
+
+<img src="./img/metrics_columns.png" width="200">
+
 ## Add metrics integration
 
 In case you have prometheus in your cluster and the agent doesn’t identify it you can add metrics integration.
