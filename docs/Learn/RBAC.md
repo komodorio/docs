@@ -31,19 +31,19 @@ A policy is built from a list of Statements, formatted as follows:
 ```
 ### Actions
 A list of allowed actions, formatted as follows:  
-`action:supported-resource-types`  
+`action:supported-resource-type`  
 
 List of the supported combinations:
 
-| Action  	| Supported Resources                         	|
-|---------	|---------------------------------------------	|
-| view    	| * (all)                                     	|
-| edit    	| * (all), deployment, statefulset, daemonset 	|
-| delete  	| * (all), deployment, statefulset, daemonset 	|
-| scale   	| deployment, statefulset                     	|
-| restart 	| deployment, statefulset, daemonset          	|
-| rerun     | job                                           |
-| manage  	| users, monitors, integrations               	|
+|  Action 	|                                                    Supported Resource Types                                                    	|
+|:-------:	|:------------------------------------------------------------------------------------------------------------------------------:	|
+|   view  	| * (all)                                                                                                                        	|
+|   edit  	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjobs, configmap, secrets, services, ingresses               	|
+|  delete 	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjobs, pvc, pv, storageclasses, secrets, services, ingresses 	|
+|  scale  	| deployment, statefulset                                                                                                        	|
+| restart 	| deployment, statefulset, daemonset                                                                                             	|
+|  manage 	| users, monitors, integrations                                                                                                  	|
+
 
 **Please note** - The `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.
 
