@@ -44,7 +44,6 @@ List of the supported combinations:
 | restart 	| deployment, statefulset, daemonset                                                                                             	|
 |  manage 	| users, monitors, integrations                                                                                                  	|
 
-
 **Please note** - The `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.
 
 ### Resources
@@ -60,20 +59,20 @@ The <strong>cluster clause</strong> supports specifying a specific cluster or "*
 The <strong>namespaces clause</strong> is optional and allows specifying a list of one or more namespaces. 
 
 ### Policy Examples
-1. The following policy allows performing the following actions on resources running in the **kube-system** namespaces on **all** clusters and on namespaces **brain** and **k8s-watcher** on the cluster named **main**  
+1 - The following policy allows performing the following actions on resources running in the **kube-system** namespaces on **all** clusters and on namespaces **brain** and **k8s-watcher** on the cluster named **main**  
     - Deletion of Pods  
     - Scaling all supported resource types   
     - Restarting all supported resource types   
 ```
-    [
-        {
-            "actions": [
-                "view:all"
-                "delete:pod",
-                "scale:*",
-                "restart:*",
-            ],
-            "resources": [
+[
+    {
+        "actions": [
+            "view:all"
+            "delete:pod",
+            "scale:*",
+            "restart:*",
+        ],
+        "resources": [
             {
                 "cluster": "main",
                 "namespaces": [
@@ -87,8 +86,24 @@ The <strong>namespaces clause</strong> is optional and allows specifying a list 
                 "kube-system"
                 ]
             }
-            ]
-        }
-    ]
+        ]
+    }
+]
 ```
 
+2 - The following policy allows viewing all resources and managing all Komodor configurations for all clusters  
+```
+[
+    {
+        "actions": [
+            "view:all"
+            "manage:*"
+        ],
+        "resources": [
+            {
+                "cluster": "*",
+            }
+        ]
+    }
+]
+```
