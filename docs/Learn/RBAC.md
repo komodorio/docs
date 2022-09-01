@@ -35,14 +35,16 @@ A list of allowed actions, formatted as follows:
 
 List of the supported combinations:
 
-|  Action 	|                                                    Supported Resource Types                                                    	|
-|:-------:	|:------------------------------------------------------------------------------------------------------------------------------:	|
-|   view  	| * (all)                                                                                                                        	|
-|   edit  	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjobs, configmap, secrets, services, ingresses               	|
-|  delete 	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjobs, pvc, pv, storageclasses, secrets, services, ingresses 	|
-|  scale  	| deployment, statefulset                                                                                                        	|
-| restart 	| deployment, statefulset, daemonset                                                                                             	|
-|  manage 	| users, monitors, integrations                                                                                                  	|
+|  Action 	|                                                 Supported Resource Types                                                 	|
+|:-------:	|:------------------------------------------------------------------------------------------------------------------------:	|
+| view    	| * (all)                                                                                                                  	|
+| edit    	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjob, configmap, secret, service, ingress              	|
+| delete  	| * (all), deployment, statefulset, daemonset, replicaset, jobs, cronjob, pvc, pv, storageclasse, secret, service, ingress 	|
+| scale   	| deployment, statefulset                                                                                                  	|
+| restart 	| deployment, statefulset, daemonset                                                                                       	|
+| manage  	| users, monitors, integrations                                                                                            	|
+| run     	| cronjob                                                                                                                  	|
+| rerun   	| job                                                                                                                      	|
 
 **Please note** - The `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.
 
