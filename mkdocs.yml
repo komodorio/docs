@@ -1,6 +1,6 @@
 site_name: Komodor 
 strict: true
-site_url: "https://www.komodor.com/docs"
+site_url: "https://www.docs.komodor.com"
 repo_url: https://github.com/komodorio/docs
 repo_name: komodorio/docs
 edit_uri: https://github.com/komodorio/docs/edit/main/docs/getting-started.md
