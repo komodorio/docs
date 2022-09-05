@@ -1,157 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.docs.komodor.com/index.html</loc>
+         <loc>https://docs.komodor.com/index.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/getting-started.html</loc>
+         <loc>https://docs.komodor.com/getting-started.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/index.html</loc>
+         <loc>https://docs.komodor.com/Integrations/index.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/AlertManager.html</loc>
+         <loc>https://docs.komodor.com/Integrations/AlertManager.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/ArgoCD.html</loc>
+         <loc>https://docs.komodor.com/Integrations/ArgoCD.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/AzureActiveDirectory.html</loc>
+         <loc>https://docs.komodor.com/Integrations/AzureActiveDirectory.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Datadog-Monitor-Notification.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Datadog.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Datadog.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/LaunchDarkly.html</loc>
+         <loc>https://docs.komodor.com/Integrations/LaunchDarkly.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/MicrosoftTeams.html</loc>
+         <loc>https://docs.komodor.com/Integrations/MicrosoftTeams.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Opsgenie.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Opsgenie.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/PagerDuty.html</loc>
+         <loc>https://docs.komodor.com/Integrations/PagerDuty.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Sentry.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Sentry.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Slack.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Slack.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/datadog-webhook.html</loc>
+         <loc>https://docs.komodor.com/Integrations/datadog-webhook.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/github.html</loc>
+         <loc>https://docs.komodor.com/Integrations/github.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/gitlab.html</loc>
+         <loc>https://docs.komodor.com/Integrations/gitlab.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Integrations/Okta/Okta.html</loc>
+         <loc>https://docs.komodor.com/Integrations/Okta/Okta.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/index.html</loc>
+         <loc>https://docs.komodor.com/Learn/index.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Actions.html</loc>
+         <loc>https://docs.komodor.com/Learn/Actions.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Annotations.html</loc>
+         <loc>https://docs.komodor.com/Learn/Annotations.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Interaction-With-The-Cluster.html</loc>
+         <loc>https://docs.komodor.com/Learn/Interaction-With-The-Cluster.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Komodor-Agent.html</loc>
+         <loc>https://docs.komodor.com/Learn/Komodor-Agent.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/ManageUsers.html</loc>
+         <loc>https://docs.komodor.com/Learn/ManageUsers.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Metrics.html</loc>
+         <loc>https://docs.komodor.com/Learn/Metrics.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Monitors.html</loc>
+         <loc>https://docs.komodor.com/Learn/Monitors.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/RBAC.html</loc>
+         <loc>https://docs.komodor.com/Learn/RBAC.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Sensitive-Information-Redaction.html</loc>
+         <loc>https://docs.komodor.com/Learn/Sensitive-Information-Redaction.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/Static-Prevention.html</loc>
+         <loc>https://docs.komodor.com/Learn/Static-Prevention.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/config-changes.html</loc>
+         <loc>https://docs.komodor.com/Learn/config-changes.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.docs.komodor.com/Learn/komodor-source-control.html</loc>
+         <loc>https://docs.komodor.com/Learn/komodor-source-control.html</loc>
          <lastmod>2022-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
