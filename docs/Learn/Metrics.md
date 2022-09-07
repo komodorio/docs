@@ -11,8 +11,8 @@ Coming soon: prometheus installation integration!
 
 ## How does it work?
 
-Komodor agent identifies prometheus in the cluster and saves the configuration details.
-The agent sends an HTTP request to the prometheus metrics server and gets matric results like cpu and memory. The received data is processed and displayed in the Pods and Nodes screens.
+Komodor agent identifies Prometheus in the cluster and saves the configuration details.
+The agent sends an HTTP request to the Prometheus metrics server and gets matric results like CPU and memory. The received data is processed and displayed in the Pods and Nodes screens.
 
 ### Pods:
 
@@ -31,9 +31,9 @@ More columns can be added: %CPU/L, %MEM/L, CPU, Memory
 
 Data is displayed in 3 columns:
 
-- %CPU - usage of cpu allocation in precentage
-- %Memory - usage of memory allocation in precentage
-- %Disk - usage of disk capacity in precentage
+- %CPU - utilization of CPU allocation in percentage
+- %Memory - utilization of memory allocation in percentage
+- %Disk - utilization of disk capacity in percentage
 
 <img src="./img/node_metrics.png" width="550">
 
