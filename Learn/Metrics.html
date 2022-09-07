@@ -534,6 +534,26 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     How does it work?
   </a>
   
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pods" class="md-nav__link">
+    Pods:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    Nodes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -840,6 +860,26 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     How does it work?
   </a>
   
+    <nav class="md-nav" aria-label="How does it work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pods" class="md-nav__link">
+    Pods:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodes" class="md-nav__link">
+    Nodes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -889,8 +929,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </ul>
 <p>Coming soon: prometheus installation integration!</p>
 <h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
-<p>Komodor agent identifies prometheus in the cluster and saves the configuration details.
-The agent sends an HTTP request to the prometheus metrics server and gets matric results like cpu and memory. The received data is processed and displayed in the “Pods” screen.</p>
+<p>Komodor agent identifies Prometheus in the cluster and saves the configuration details.
+The agent sends an HTTP request to the Prometheus metrics server and gets matric results like CPU and memory. The received data is processed and displayed in the Pods and Nodes screens.</p>
+<h3 id="pods">Pods:<a class="headerlink" href="#pods" title="Permanent link">&para;</a></h3>
 <p>Data is displayed in 2 columns:</p>
 <ul>
 <li>%CPU/R - percentage of cpu usage per request</li>
@@ -899,6 +940,15 @@ The agent sends an HTTP request to the prometheus metrics server and gets matric
 <p><img src="./img/pod_metrics.png" width="550"></p>
 <p>More columns can be added: %CPU/L, %MEM/L, CPU, Memory</p>
 <p><img src="./img/metrics_columns.png" width="200"></p>
+<h3 id="nodes">Nodes:<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h3>
+<p>Data is displayed in 3 columns:</p>
+<ul>
+<li>%CPU - utilization of CPU allocation in percentage</li>
+<li>%Memory - utilization of memory allocation in percentage</li>
+<li>%Disk - utilization of disk capacity in percentage</li>
+</ul>
+<p><img src="./img/node_metrics.png" width="550"></p>
+<p>More usage columns can be added: CPU, Memory, Disk</p>
 <h2 id="add-metrics-integration">Add metrics integration<a class="headerlink" href="#add-metrics-integration" title="Permanent link">&para;</a></h2>
 <p>In case you have prometheus in your cluster and the agent doesn’t identify it you can add metrics integration.</p>
 <h3 id="steps">Steps:<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
