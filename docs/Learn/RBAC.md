@@ -29,6 +29,7 @@ A policy is built from a list of Statements, formatted as follows:
     }
 ]
 ```
+
 ### Actions
 A list of allowed actions, formatted as follows:  
 `action:supported-resource-type`  

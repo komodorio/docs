@@ -84,6 +84,11 @@ Using Komodor you can run multiple actions against your resource. You'll be able
     - nodes
     verbs:
     - patch
+    - ""
+    resources:
+    - pods/eviction
+    verbs:
+    - create
 ```
 - **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions
 
