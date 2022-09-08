@@ -84,6 +84,7 @@ Using Komodor you can run multiple actions against your resource. You'll be able
     - nodes
     verbs:
     - patch
+  - apiGroups:
     - ""
     resources:
     - pods/eviction
