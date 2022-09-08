@@ -47,7 +47,11 @@ List of the supported combinations:
 | run     	| cronjob                                                                                                                  	|
 | rerun   	| job                                                                                                                      	|
 
-**Please note** - The `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.
+**Please note**:  
+
+- `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.  
+- `manage` permissions cannot be scoped, once provided the user will have access to manage all resources of the provided category  
+
 
 ### Resources
 A list of resources, formatted as follows:
