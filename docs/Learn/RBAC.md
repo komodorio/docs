@@ -7,9 +7,9 @@ Komodor allows assigning users with Roles to control their access and permission
 Roles are built from one or more policies.
 
 ### Built-in Roles
-- Admin - has full permissions on the account
-- Viewer - has access to view all resources on the account
-- Developer - has access to view all resources and perform basic actions (TODO: link to actions page)  
+- account-admin - has full permissions on the account
+- viewer - has access to view all resources on the account
+- developer - has access to view all resources and perform basic actions (TODO: link to actions page)  
 
 **Please note** - The built-in roles and policies cannot be modified.
 
@@ -49,8 +49,9 @@ List of the supported combinations:
 
 **Please note**:  
 
-- `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause.  
+- `view:all` permission is required in any policy to allow viewing anything in Komodor, you can limit the allowed access using the Resources clause  
 - `manage` permissions cannot be scoped, once provided the user will have access to manage all resources of the provided category  
+- Only `account-admin`s or users with `manage:users` permission can see the Roles & Policies pages under in the settings section    
 
 
 ### Resources
@@ -114,3 +115,15 @@ The <strong>namespaces clause</strong> is optional and allows specifying a list 
     }
 ]
 ```
+
+### Policy Creation
+You can easily create new policies using the Komodor platform  
+
+1. Access the settings page  
+<img src="./img/settings.png" width="250">  
+2. Go to the Policies page  
+<img src="./img/policies.png" width="250">    
+3. Add policy   
+You will now enter a policy creation wizard, you can easily manage your policies with it
+<img src="./img/policy-wizard.png" width="650">    
+
