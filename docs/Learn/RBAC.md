@@ -126,6 +126,9 @@ You can easily create new policies using the Komodor platform
 3. Add policy   
 You will now enter a policy creation wizard, you can easily manage your policies with it
 <img src="./img/policy-wizard.png" width="650"> 
-4. Create a role associated with this policy
-5. Associate the role to an existing/new user/s   
+4. Create a role associated with this policy  
+<img src="./img/createrole.png" width="300"> 
+5. Associate the role to an existing/new user/s    
+<img src="./img/adduser.png" width="300"> 
+
 
