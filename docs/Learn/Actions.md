@@ -84,8 +84,14 @@ Using Komodor you can run multiple actions against your resource. You'll be able
     - nodes
     verbs:
     - patch
+  - apiGroups:
+    - ""
+    resources:
+    - pods/eviction
+    verbs:
+    - create
 ```
-- **Please note:** At this stage, only account **Admins** can see and perform actions against their resources, in the near future we will add the ability to configure granular permissions
+- **Please note:** To perform actions against your resources, the user have to be either an `account-admin` or be provided with permission to perform actions, to read more about [Komodor RBAC](https://docs.komodor.com/Learn/RBAC.html)
 
 ## How to opt-in 
 For convienece purposes we've seperated the actions helm chart values into two sections
