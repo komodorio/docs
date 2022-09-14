@@ -9,7 +9,16 @@ Roles are built from one or more policies.
 ### Built-in Roles
 - account-admin - has full permissions on the account
 - viewer - has access to view all resources on the account
-- developer - has access to view all resources and perform [basic actions](https://docs.komodor.com/Learn/Actions.html)  
+- developer - has access to view all resources and perform the following basic actions:
+``` 
+    "delete:pod",
+    "scale:deployment",
+    "scale:statefulset",
+    "restart:deployment",
+    "restart:statefulset",
+    "rerun:job"
+```
+Learn more about [actions](https://docs.komodor.com/Learn/Actions.html)  
 
 **Please note** - The built-in account-admin role and policy cannot be modified, there has to be at-least one account-admin on the account, the last account-admin cannot be removed or provided with a different role.
 
