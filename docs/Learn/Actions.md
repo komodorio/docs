@@ -94,7 +94,7 @@ Using Komodor you can run multiple actions against your resource. You'll be able
 - **Please note:** To perform actions against your resources, the user have to be either an `account-admin` or be provided with permission to perform actions, to read more about [Komodor RBAC](https://docs.komodor.com/Learn/RBAC.html)
 
 ## How to opt-in 
-For convienece purposes we've seperated the actions helm chart values into two sections
+For convienece purposes we've seperated the actions helm chart values into two sections  
 - watcher.actions.basic - Enables basic actions (Delete pods, Scale and restart deployments, statefulsets, replicasets. Restart and trigger jobs)  
 - watcher.actions.advanced - Enables advanced actions (Update, Create and Delete resources, Cordon/Uncordon nodes)  
 
