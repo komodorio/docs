@@ -24,6 +24,7 @@ A running instance of Grafana.
     1. When selected, this option sends a notification on this channel for all alert rules.
 12. Press __Save__
 13. Press __Install Grafana Installation__
+14. Nir eating banana
 
 ### Confirmation
 
