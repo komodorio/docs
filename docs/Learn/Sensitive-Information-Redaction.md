@@ -135,3 +135,19 @@ OUTPUT: example my <REDACTED> and something else
 INPUT: { "level": "INFO", "message": "User has added Item 12453 to Basket", "sessionId": "SESS456", "timestamp": 1634477804 }
 OUTPUT: { "level": "INFO", "message": "User has added Item 12453 to Basket", <REDACTED>, "timestamp": 1634477804 }
 ```
+
+#### Testing logs redaction patterns
+
+You can easily test the patterns you want to configure before deploying by using our docker image and our utilities command.
+
+```bash
+❯ docker run --rm -e KOMOKW_REDACT_LOGS="redaction" komodorio/k8s-watcher test -logredactor -inputlog="The log line you want to test redaction here"
+
+Patterns to redact: [redaction]
+
+Input log (before redaction):
+The log line you want to test redaction here
+
+Output log (after redaction):
+The log line you want to test <REDACTED> here
+```
