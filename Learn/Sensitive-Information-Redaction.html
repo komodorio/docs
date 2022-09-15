@@ -1069,7 +1069,7 @@ To include a whitespace in the patterns to redact, make sure to use <code>\s</co
 <p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
 <p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration.</p>
 <h3 id="pod-logs">Pod Logs<a class="headerlink" href="#pod-logs" title="Permanent link">&para;</a></h3>
-<p><strong>Note: Pod Logs redaction is available starting from Komodor Agent version</strong></p>
+<p><strong>Note: Pod Logs redaction is available starting from Komodor Agent version 0.1.126</strong></p>
 <p>Komodor's agent will redact any logs matching one of the patterns set in the <code>redactLogs</code> configuration.</p>
 <p>komodor-k8s-watcher.yaml:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">redactLogs</span><span class="p">:</span><span class="w"></span>
