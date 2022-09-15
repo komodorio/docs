@@ -146,6 +146,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.komodor.com/Learn/Test-Utilities-Commands.html</loc>
+         <lastmod>2022-09-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.komodor.com/Learn/config-changes.html</loc>
          <lastmod>2022-09-15</lastmod>
          <changefreq>daily</changefreq>

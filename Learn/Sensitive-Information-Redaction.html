@@ -495,6 +495,19 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Pod Logs
   </a>
   
+    <nav class="md-nav" aria-label="Pod Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-logs-redaction-patterns" class="md-nav__link">
+    Testing logs redaction patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -589,6 +602,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item">
       <a href="Metrics.html" class="md-nav__link">
         Metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Test-Utilities-Commands.html" class="md-nav__link">
+        Test Utilities Commands
       </a>
     </li>
   
@@ -913,6 +940,19 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Pod Logs
   </a>
   
+    <nav class="md-nav" aria-label="Pod Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-logs-redaction-patterns" class="md-nav__link">
+    Testing logs redaction patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1047,6 +1087,19 @@ To include a whitespace in the patterns to redact, make sure to use <code>\s</co
 
 <span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SESS456&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="testing-logs-redaction-patterns">Testing logs redaction patterns<a class="headerlink" href="#testing-logs-redaction-patterns" title="Permanent link">&para;</a></h4>
+<p>You can easily test the patterns you want to configure before deploying by using our docker image and our utilities command.</p>
+<div class="codehilite"><pre><span></span><code>❯ docker run --rm -e <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;redaction&quot;</span> komodorio/k8s-watcher <span class="nb">test</span> -logredactor -inputlog<span class="o">=</span><span class="s2">&quot;The log line you want to test redaction here&quot;</span>
+
+Patterns to redact: <span class="o">[</span>redaction<span class="o">]</span>
+
+Input log <span class="o">(</span>before redaction<span class="o">)</span>:
+The log line you want to <span class="nb">test</span> redaction here
+
+Output log <span class="o">(</span>after redaction<span class="o">)</span>:
+The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
 </code></pre></div>
 
 
