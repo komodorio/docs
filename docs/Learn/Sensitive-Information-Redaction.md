@@ -2,12 +2,12 @@
 
 ## What is it
 
-It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
+It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values, container environment variables or pod logs.
 When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff.
 
 ## How to integrate
 
-Inside `komodor-k8s-watcher.yaml` you should add a list of string or regular expressions under redact key as such:
+Inside `komodor-k8s-watcher.yaml` you should add a list of string or regular expressions under `redact` and `redactLogs` key as such:
 
 komodor-k8s-watcher
 ``` yaml
@@ -17,6 +17,9 @@ namespacesBlacklist:
 redact:
    - "PG_.*"
    - ".*PASSWORD.*"
+redactLogs:
+   - "password=(.+?)\b"
+   - "(?U)\"sessionId\": (\".+\"{1})"
 nameBlacklist: ["leader", "election"]
 collectHistory: false
 ```
@@ -24,11 +27,21 @@ collectHistory: false
 ### How to integrate using helm upgrade command
 
 ``` bash
-helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact="{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}" --set apiKey=<API-KEY> --set watcher.clusterName=<cluster-name> --set watcher.enableAgentTaskExecution=true --set watcher.allowReadingPodLogs=true 
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact="{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}" --set watcher.redactLogs="{password=(.+?)\b,(?U)\"sessionId\": (\".+\"{1})}" --set apiKey=<API-KEY> --set watcher.clusterName=<cluster-name> --set watcher.enableAgentTaskExecution=true --set watcher.allowReadingPodLogs=true 
+```
+
+### How to integrate using environment variables
+
+Separate multiple values with a whitespace in the environment variable value.  
+To include a whitespace in the patterns to redact, make sure to use `\s` as it the patterns are regexp.
+
+```bash
+export KOMOKW_REDACT=".*password.* PG_.*"
+export KOMOKW_REDACT_LOGS="password=(.+?)\b (?U)\"sessionId\": (\".+\"{1})"
 ```
 
 ### Secret Resource
-By default, Komodor’s k8s-watcher is hashing all secrets values.
+By default, Komodor’s agent is hashing all secrets values.
 
 ### ConfigMap resource
 You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.
@@ -56,7 +69,7 @@ data:
 All the above “super_secret” will be sent has hashed value.
 
 ### Deployment resource
-Komodor’s k8s-watcher will hash `template.spec.template.[containeres|initContainers].env` list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.
+Komodor’s agent will hash `template.spec.template.[containeres|initContainers].env` list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.
 
 komodor-k8s-watcher.yaml:
 ``` yaml
@@ -94,3 +107,31 @@ spec:
 In the above deployment example we will not send the secret values for PG_USERNAME.
 
 SECRET will show up as is due to the fact it won’t match any string or regex in our configuration.
+
+
+### Pod Logs
+
+**Note: Pod Logs redaction is available starting from Komodor Agent version**
+
+Komodor's agent will redact any logs matching one of the patterns set in the `redactLogs` configuration.
+
+komodor-k8s-watcher.yaml:
+``` yaml
+redactLogs:
+   - "password=(.+?)\b"
+   - "(?U)\"sessionId\": (\".+\"{1})"
+```
+
+Environment variables:
+```bash
+export KOMOKW_REDACT_LOGS="password=(.+?)\b (?U)\"sessionId\": (\".+\"{1})"
+```
+
+Example logs:
+```json
+INPUT: example my password=supersecret and something else
+OUTPUT: example my <REDACTED> and something else
+
+INPUT: { "level": "INFO", "message": "User has added Item 12453 to Basket", "sessionId": "SESS456", "timestamp": 1634477804 }
+OUTPUT: { "level": "INFO", "message": "User has added Item 12453 to Basket", <REDACTED>, "timestamp": 1634477804 }
+```
