@@ -463,6 +463,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-to-integrate-using-environment-variables" class="md-nav__link">
+    How to integrate using environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#secret-resource" class="md-nav__link">
     Secret Resource
   </a>
@@ -479,6 +486,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <li class="md-nav__item">
   <a href="#deployment-resource" class="md-nav__link">
     Deployment resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-logs" class="md-nav__link">
+    Pod Logs
   </a>
   
 </li>
@@ -867,6 +881,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-to-integrate-using-environment-variables" class="md-nav__link">
+    How to integrate using environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#secret-resource" class="md-nav__link">
     Secret Resource
   </a>
@@ -883,6 +904,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <li class="md-nav__item">
   <a href="#deployment-resource" class="md-nav__link">
     Deployment resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-logs" class="md-nav__link">
+    Pod Logs
   </a>
   
 </li>
@@ -914,10 +942,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 <h1 id="sensitive-data-redaction-in-komodors-k8s-watcher">Sensitive data redaction in Komodor’s k8s-watcher<a class="headerlink" href="#sensitive-data-redaction-in-komodors-k8s-watcher" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-it">What is it<a class="headerlink" href="#what-is-it" title="Permanent link">&para;</a></h2>
-<p>It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values or container environment variables.
+<p>It’s likely that there are values you don’t want to send to Komodor as plain text. Kubernetes Secrets, for instance, ConfigMap sensitive values, container environment variables or pod logs.
 When configured - we will redact the specific value. That way Komodor won't see any sensitive data while you will still see configuration diff.</p>
 <h2 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h2>
-<p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under redact key as such:</p>
+<p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under <code>redact</code> and <code>redactLogs</code> key as such:</p>
 <p>komodor-k8s-watcher</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">watchNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
 <span class="nt">namespacesBlacklist</span><span class="p">:</span><span class="w"></span>
@@ -925,16 +953,26 @@ When configured - we will redact the specific value. That way Komodor won't see 
 <span class="nt">redact</span><span class="p">:</span><span class="w"></span>
 <span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span><span class="w"></span>
 <span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;.*PASSWORD.*&quot;</span><span class="w"></span>
+<span class="nt">redactLogs</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span><span class="w"></span>
 <span class="nt">nameBlacklist</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;leader&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;election&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="nt">collectHistory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="how-to-integrate-using-helm-upgrade-command">How to integrate using helm upgrade command<a class="headerlink" href="#how-to-integrate-using-helm-upgrade-command" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact<span class="o">=</span><span class="s2">&quot;{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}&quot;</span> --set <span class="nv">apiKey</span><span class="o">=</span>&lt;API-KEY&gt; --set watcher.clusterName<span class="o">=</span>&lt;cluster-name&gt; --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --set watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span> 
+<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact<span class="o">=</span><span class="s2">&quot;{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}&quot;</span> --set watcher.redactLogs<span class="o">=</span><span class="s2">&quot;{password=(.+?)\b,(?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})}&quot;</span> --set <span class="nv">apiKey</span><span class="o">=</span>&lt;API-KEY&gt; --set watcher.clusterName<span class="o">=</span>&lt;cluster-name&gt; --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --set watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span> 
+</code></pre></div>
+
+<h3 id="how-to-integrate-using-environment-variables">How to integrate using environment variables<a class="headerlink" href="#how-to-integrate-using-environment-variables" title="Permanent link">&para;</a></h3>
+<p>Separate multiple values with a whitespace in the environment variable value.<br />
+To include a whitespace in the patterns to redact, make sure to use <code>\s</code> as it the patterns are regexp.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_REDACT</span><span class="o">=</span><span class="s2">&quot;.*password.* PG_.*&quot;</span>
+<span class="nb">export</span> <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
 </code></pre></div>
 
 <h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
-<p>By default, Komodor’s k8s-watcher is hashing all secrets values.</p>
+<p>By default, Komodor’s agent is hashing all secrets values.</p>
 <h3 id="configmap-resource">ConfigMap resource<a class="headerlink" href="#configmap-resource" title="Permanent link">&para;</a></h3>
 <p>You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.</p>
 <p>komodor-k8s-watcher.yaml:</p>
@@ -956,7 +994,7 @@ When configured - we will redact the specific value. That way Komodor won't see 
 
 <p>All the above “super_secret” will be sent has hashed value.</p>
 <h3 id="deployment-resource">Deployment resource<a class="headerlink" href="#deployment-resource" title="Permanent link">&para;</a></h3>
-<p>Komodor’s k8s-watcher will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
+<p>Komodor’s agent will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
 <p>komodor-k8s-watcher.yaml:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;SENTRY_API_KEY&quot;</span><span class="w"></span>
@@ -990,6 +1028,26 @@ When configured - we will redact the specific value. That way Komodor won't see 
 
 <p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
 <p>SECRET will show up as is due to the fact it won’t match any string or regex in our configuration.</p>
+<h3 id="pod-logs">Pod Logs<a class="headerlink" href="#pod-logs" title="Permanent link">&para;</a></h3>
+<p><strong>Note: Pod Logs redaction is available starting from Komodor Agent version</strong></p>
+<p>Komodor's agent will redact any logs matching one of the patterns set in the <code>redactLogs</code> configuration.</p>
+<p>komodor-k8s-watcher.yaml:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">redactLogs</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span><span class="w"></span>
+</code></pre></div>
+
+<p>Environment variables:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
+</code></pre></div>
+
+<p>Example logs:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">password=supersecre</span><span class="kc">t</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span><span class="w"></span>
+<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span><span class="w"></span>
+
+<span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SESS456&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
 
 
