@@ -111,7 +111,7 @@ SECRET will show up as is due to the fact it won’t match any string or regex i
 
 ### Pod Logs
 
-**Note: Pod Logs redaction is available starting from Komodor Agent version**
+**Note: Pod Logs redaction is available starting from Komodor Agent version 0.1.126**
 
 Komodor's agent will redact any logs matching one of the patterns set in the `redactLogs` configuration.
 
