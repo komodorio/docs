@@ -36,6 +36,7 @@ nav:
       - Static Prevention: Learn/Static-Prevention.md
       - Actions: Learn/Actions.md
       - Metrics: Learn/Metrics.md
+      - Test Utilities Commands: Learn/Test-Utilities-Commands.md
   - Integrations:
       - Datadog: Integrations/Datadog.md
       - Datadog Webhook: Integrations/datadog-webhook.md
