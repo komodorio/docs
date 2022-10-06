@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://docs.komodor.com/Learn/Test-Utilities-Commands.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.0">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2e8b5541.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
@@ -554,6 +554,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
         
           <li class="md-nav__item">
+  <a href="#testing-connectivity-to-kubernetes-api" class="md-nav__link">
+    Testing connectivity to Kubernetes API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#testing-logs-redaction-patterns" class="md-nav__link">
     Testing logs redaction patterns
   </a>
@@ -853,6 +860,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
         
           <li class="md-nav__item">
+  <a href="#testing-connectivity-to-kubernetes-api" class="md-nav__link">
+    Testing connectivity to Kubernetes API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#testing-logs-redaction-patterns" class="md-nav__link">
     Testing logs redaction patterns
   </a>
@@ -903,6 +917,22 @@ no configuration file found, starting with env vars / defaults
 <span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Using cluster name &lt;production&gt; from context&quot;</span>
 <span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Identifying agent with Komodor servers&quot;</span> <span class="nv">agentId</span><span class="o">=</span>xxx <span class="nv">serverHost</span><span class="o">=</span><span class="s2">&quot;https://app.komodor.com&quot;</span>
 <span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:30Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Successfully connected to Komodor API !!!&quot;</span>
+</code></pre></div>
+
+<h3 id="testing-connectivity-to-kubernetes-api">Testing connectivity to Kubernetes API<a class="headerlink" href="#testing-connectivity-to-kubernetes-api" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>❯ docker run --rm -v <span class="nv">$HOME</span>/.kube/config:/root/.kube/config komodorio/k8s-watcher <span class="nb">test</span> -clusterconnectivity
+no configuration file found, starting with env vars / defaults
+Running outside kubernetes - using kubeconfig file: /Users/mickael/.kube/config
+Successfully connected to Kubernetes API !!!  <span class="nv">kubernetesServerInfo</span><span class="o">=</span>v1.22.12-gke.2300
+Available API Groups:
+core
+    v1
+apiregistration.k8s.io
+    apiregistration.k8s.io/v1
+apps
+    apps/v1
+...
+...
 </code></pre></div>
 
 <h3 id="testing-logs-redaction-patterns">Testing logs redaction patterns<a class="headerlink" href="#testing-logs-redaction-patterns" title="Permanent link">&para;</a></h3>
@@ -958,10 +988,10 @@ The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.48f2be22.min.js"></script>
+      <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
       
     
   </body>
