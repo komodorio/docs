@@ -26,6 +26,25 @@ time="2022-09-15T13:27:29Z" level=info msg="Identifying agent with Komodor serve
 time="2022-09-15T13:27:30Z" level=info msg="Successfully connected to Komodor API !!!"
 ```
 
+### Testing connectivity to Kubernetes API
+
+```bash
+❯ docker run --rm -v $HOME/.kube/config:/root/.kube/config komodorio/k8s-watcher test -clusterconnectivity
+no configuration file found, starting with env vars / defaults
+Running outside kubernetes - using kubeconfig file: /Users/mickael/.kube/config
+Successfully connected to Kubernetes API !!!  kubernetesServerInfo=v1.22.12-gke.2300
+Available API Groups:
+core
+	v1
+apiregistration.k8s.io
+	apiregistration.k8s.io/v1
+apps
+ 	apps/v1
+...
+...
+```
+
+
 ### Testing logs redaction patterns
 
 You can easily test the patterns you want to configure before deploying by using our docker image and our utilities command.
