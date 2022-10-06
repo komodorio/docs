@@ -7,6 +7,8 @@ You can use the `komodorio/k8s-watcher` docker image to run the `test` command.
 ```
 Komodor Agent Test Utilities
 Usage:
+  -clusterconnectivity
+    	Run utility to test connectivity to Kubernetes API.
   -connectivity
     	Run utility to test connectivity to Komodor's API. Requires env var: [KOMOKW_API_KEY]
   -inputlog string
