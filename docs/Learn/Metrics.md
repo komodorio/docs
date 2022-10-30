@@ -2,6 +2,8 @@
 
 Komodor enables you to overview metrics like cpu and memory on your cluster using the prometheus metrics server.
 
+NOTE: We also support prometheus that is installed by GrafanaLabs managed service
+
 ## Prerequisites
 
 - Agent version from 0.1.108
