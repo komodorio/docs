@@ -1,10 +1,10 @@
 # Loft Integration
 
 The Loft integration enables you to install a Komodor agent automatically on every vcluster created by Loft.
-The vcluster appears in Komodor's UI like a regular cluster and allows users to access, detect, invetigate and remediate their own vclusters independently.
+The vcluster appears in Komodor's UI like a regular cluster and allows users to access, detect, investigate and remediate their own vclusters independently.
 You can see the full potential of the Loft <> Komodor integration in this [Live Demo](https://www.linkedin.com/video/event/urn:li:ugcPost:7004685584732471296/).
-ג
-In the Demo, there is a detailed exaplanation on how to configure it using the Loft UI.
+
+In the Demo, there is a detailed explanation on how to configure it using the Loft UI.
 The steps below include the configuration manifests to create the same environment configuration using Loft Custom Resources.
 
 <br>
