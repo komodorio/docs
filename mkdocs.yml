@@ -51,4 +51,5 @@ nav:
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
       - Grafana / Alert Manager: Integrations/AlertManager.md
       - ArgoCD: Integrations/ArgoCD.md
+      - Loft: Integrations/Loft.md
   - Komodor API: openapi/redoc-static.html
