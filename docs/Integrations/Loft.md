@@ -1,11 +1,11 @@
 # Loft Integration
 
-Loft integration allows you to install Komodor agent automatically on every vcluster created by Loft.
-The vcluster appears in Komodor like a regular cluster and allow users to access, detect, invetigate and remidiate their own vclusters.
-You can watch the full capability of the Loft <> Komodor integration in the [Live Demo in this Webinar](https://www.linkedin.com/video/event/urn:li:ugcPost:7004685584732471296/).
-
+The Loft integration enables you to install a Komodor agent automatically on every vcluster created by Loft.
+The vcluster appears in Komodor's UI like a regular cluster and allows users to access, detect, invetigate and remediate their own vclusters independently.
+You can see the full potential of the Loft <> Komodor integration in this [Live Demo](https://www.linkedin.com/video/event/urn:li:ugcPost:7004685584732471296/).
+ג
 In the Demo, there is a detailed exaplanation on how to configure it using the Loft UI.
-The steps below includes the configuration manifests to create the same environment configuration using Loft Custom Resources.
+The steps below include the configuration manifests to create the same environment configuration using Loft Custom Resources.
 
 <br>
 
@@ -13,14 +13,14 @@ The steps below includes the configuration manifests to create the same environm
 
 1. Create a Komodor App in Loft
 2. Create a vcluster template with the Komodor App
-3. Deploy you first vcluster with the Komodor App
+3. Deploy your first vcluster with the Komodor App
 
 <br>
 
 ### Step1: Create a Komodor App in Loft
 
-Before applying this yaml, please create a Kubernetes Cluster integration in Komodor and replate the `{{API-KEY}}` with the API key use just created.
-Create a Komodor App in loft by applying his Application configuration.
+Before applying this YAML, please create a Kubernetes Cluster integration in Komodor and replace the `{{API-KEY}}` with the API key Komodor generated for you.
+Create a Komodor App in loft by applying this application configuration.
 
 ``` bash
 apiVersion: storage.loft.sh/v1
@@ -113,13 +113,13 @@ spec:
 <br>
 
 ### Step 3: Deploy your first vcluster with Komodor
-Create a new vcluster using the Loft UI and sync an existing one that use a vcluster template with the Komodor app.
+Create a new vcluster using the Loft UI or sync an existing one that uses a vcluster template with the Komodor app.
 
 <br>
 
-## Want to simluate the demo explained in the video? Use this CRs
+## Want to simluate the exact scenario as explained in the demo? Use these CRs:
 
-In the Demo we showed an example of application that deplyed with the Komodor app.
+In the Demo we showed an example of an application being deployed with the Komodor app.
 You can use the same configratuion by applying these files:
 ``` bash
 apiVersion: storage.loft.sh/v1
