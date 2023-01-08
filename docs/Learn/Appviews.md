@@ -5,7 +5,9 @@ When creating an Application view, the user will be provided with the Overview s
 - Availability issues histogram - visualizes all the Availability issues associated with your application 
 - Resources inventory - provides a list of the resources related to the application  
 - List of open availability issues  
-- List of recent deployments  
+- List of recent deployments    
+<img src="./img/app-view-overview.png" width="1000">
+
 
 On top of that, you can easily navigate between the Services, Jobs, Events & Resources sections, those will be scoped to the relevant selected workloads.
 
