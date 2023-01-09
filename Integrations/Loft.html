@@ -11,8 +11,14 @@
       
         <link rel="canonical" href="https://docs.komodor.com/Integrations/Loft.html">
       
+      
+        <link rel="prev" href="ArgoCD.html">
+      
+      
+        <link rel="next" href="../openapi/redoc-static.html">
+      
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -20,15 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
       
       
 
@@ -312,12 +313,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
           Learn
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -379,6 +381,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item">
       <a href="../Learn/config-changes.html" class="md-nav__link">
         Config Changes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn/ExternalLinks.html" class="md-nav__link">
+        External Links
       </a>
     </li>
   
@@ -530,12 +546,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
           Integrations
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -920,10 +937,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                   
 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Integrations/Loft.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="loft-integration">Loft Integration<a class="headerlink" href="#loft-integration" title="Permanent link">&para;</a></h1>
@@ -943,88 +959,88 @@ The steps below include the configuration manifests to create the same environme
 <h3 id="step1-create-a-komodor-app-in-loft">Step1: Create a Komodor App in Loft<a class="headerlink" href="#step1-create-a-komodor-app-in-loft" title="Permanent link">&para;</a></h3>
 <p>Before applying this YAML, please create a Kubernetes Cluster integration in Komodor and replace the <code>{{API-KEY}}</code> with the API key Komodor generated for you.
 Create a Komodor App in loft by applying this application configuration.</p>
-<div class="codehilite"><pre><span></span><code>apiVersion: storage.loft.sh/v1
-kind: App
+<div class="codehilite"><pre><span></span><code>apiVersion:<span class="w"> </span>storage.loft.sh/v1
+kind:<span class="w"> </span>App
 metadata:
-  name: komodor
+<span class="w">  </span>name:<span class="w"> </span>komodor
 spec:
-  access:
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - admin
-    verbs:
-    - <span class="s1">&#39;*&#39;</span>
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - <span class="s1">&#39;*&#39;</span>
-    verbs:
-    - get
-  config:
-    chart:
-      name: k8s-watcher
-      repoURL: https://helm-charts.komodor.io
-      version: <span class="m">1</span>.0.18
-    values: <span class="p">|</span>+
-      watcher:
-        clusterName: <span class="o">{{</span> .Values.clusterName <span class="o">}}</span>
-        actions:
-          basic: <span class="nb">true</span>
-          advanced: <span class="nb">true</span>
+<span class="w">  </span>access:
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span>admin
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span>get
+<span class="w">  </span>config:
+<span class="w">    </span>chart:
+<span class="w">      </span>name:<span class="w"> </span>k8s-watcher
+<span class="w">      </span>repoURL:<span class="w"> </span>https://helm-charts.komodor.io
+<span class="w">      </span>version:<span class="w"> </span><span class="m">1</span>.0.18
+<span class="w">    </span>values:<span class="w"> </span><span class="p">|</span>+
+<span class="w">      </span>watcher:
+<span class="w">        </span>clusterName:<span class="w"> </span><span class="o">{{</span><span class="w"> </span>.Values.clusterName<span class="w"> </span><span class="o">}}</span>
+<span class="w">        </span>actions:
+<span class="w">          </span>basic:<span class="w"> </span><span class="nb">true</span>
+<span class="w">          </span>advanced:<span class="w"> </span><span class="nb">true</span>
 
-      apiKey: <span class="o">{{</span>API-KEY<span class="o">}}</span>
+<span class="w">      </span>apiKey:<span class="w"> </span><span class="o">{{</span>API-KEY<span class="o">}}</span>
 
-  displayName: Komodor
-  icon: https://komodor.com/wp-content/uploads/2022/11/komodor-logo-blue.jpg
-  owner:
-    user: admin
-  parameters:
-  - description: Cluster Name
-    label: Cluster Name
-    required: <span class="nb">true</span>
-    variable: clusterName
+<span class="w">  </span>displayName:<span class="w"> </span>Komodor
+<span class="w">  </span>icon:<span class="w"> </span>https://komodor.com/wp-content/uploads/2022/11/komodor-logo-blue.jpg
+<span class="w">  </span>owner:
+<span class="w">    </span>user:<span class="w"> </span>admin
+<span class="w">  </span>parameters:
+<span class="w">  </span>-<span class="w"> </span>description:<span class="w"> </span>Cluster<span class="w"> </span>Name
+<span class="w">    </span>label:<span class="w"> </span>Cluster<span class="w"> </span>Name
+<span class="w">    </span>required:<span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span>variable:<span class="w"> </span>clusterName
 </code></pre></div>
 
 <p><br></p>
 <h3 id="step-2-create-a-vcluster-template-with-the-komodor-app">Step 2: Create a vcluster template with the Komodor App<a class="headerlink" href="#step-2-create-a-vcluster-template-with-the-komodor-app" title="Permanent link">&para;</a></h3>
 <p>Add the Komodor App to the vcluster templates you are using or create a new one using this vcluster template.</p>
-<div class="codehilite"><pre><span></span><code>apiVersion: storage.loft.sh/v1
-kind: VirtualClusterTemplate
+<div class="codehilite"><pre><span></span><code>apiVersion:<span class="w"> </span>storage.loft.sh/v1
+kind:<span class="w"> </span>VirtualClusterTemplate
 metadata:
-  name: cluster-with-komodor
+<span class="w">  </span>name:<span class="w"> </span>cluster-with-komodor
 spec:
-  access:
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - admin
-    verbs:
-    - <span class="s1">&#39;*&#39;</span>
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - <span class="s1">&#39;*&#39;</span>
-    verbs:
-    - get
-  displayName: cluster-with-komodor-and-apps
-  owner:
-    user: admin
-  template:
-    access: <span class="o">{}</span>
-    apps:
-    - name: komodor
-      namespace: default
-    helmRelease:
-      chart:
-        name: vcluster
-      values: <span class="s2">&quot;# Additional helm values for the virtual cluster\n# Loft will automatically</span>
+<span class="w">  </span>access:
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span>admin
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span>get
+<span class="w">  </span>displayName:<span class="w"> </span>cluster-with-komodor-and-apps
+<span class="w">  </span>owner:
+<span class="w">    </span>user:<span class="w"> </span>admin
+<span class="w">  </span>template:
+<span class="w">    </span>access:<span class="w"> </span><span class="o">{}</span>
+<span class="w">    </span>apps:
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>komodor
+<span class="w">      </span>namespace:<span class="w"> </span>default
+<span class="w">    </span>helmRelease:
+<span class="w">      </span>chart:
+<span class="w">        </span>name:<span class="w"> </span>vcluster
+<span class="w">      </span>values:<span class="w"> </span><span class="s2">&quot;# Additional helm values for the virtual cluster\n# Loft will automatically</span>
 <span class="s2">        add the correct service CIDR \n# and k3s version to the helm values upon deployment\nstorage:\n</span>
 <span class="s2">        \ size: 1Gi\n\n# syncer:\n   # If you don&#39;t want to sync ingresses from the</span>
 <span class="s2">        virtual cluster to \n   # the host cluster uncomment the next lines\n   #</span>
 <span class="s2">        extraArgs: [\&quot;--disable-sync-resources=ingresses\&quot;]&quot;</span>
-    metadata:
-      creationTimestamp: null
+<span class="w">    </span>metadata:
+<span class="w">      </span>creationTimestamp:<span class="w"> </span>null
 </code></pre></div>
 
 <p><br></p>
@@ -1034,147 +1050,147 @@ spec:
 <h2 id="want-to-simluate-the-exact-scenario-as-explained-in-the-demo-use-these-crs">Want to simluate the exact scenario as explained in the demo? Use these CRs:<a class="headerlink" href="#want-to-simluate-the-exact-scenario-as-explained-in-the-demo-use-these-crs" title="Permanent link">&para;</a></h2>
 <p>In the Demo we showed an example of an application being deployed with the Komodor app.
 You can use the same configratuion by applying these files:</p>
-<div class="codehilite"><pre><span></span><code>apiVersion: storage.loft.sh/v1
-kind: VirtualClusterTemplate
+<div class="codehilite"><pre><span></span><code>apiVersion:<span class="w"> </span>storage.loft.sh/v1
+kind:<span class="w"> </span>VirtualClusterTemplate
 metadata:
-  annotations:
-  name: cluster-with-komodor
+<span class="w">  </span>annotations:
+<span class="w">  </span>name:<span class="w"> </span>cluster-with-komodor
 spec:
-  access:
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - admin
-    verbs:
-    - <span class="s1">&#39;*&#39;</span>
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - <span class="s1">&#39;*&#39;</span>
-    verbs:
-    - get
-  displayName: cluster-with-komodor-and-apps
-  owner:
-    user: admin
-  template:
-    access: <span class="o">{}</span>
-    apps:
-    - name: komodor
-      namespace: default
-    - name: my-service
-      namespace: default
-    helmRelease:
-      chart:
-        name: vcluster
-      values: <span class="s2">&quot;# Additional helm values for the virtual cluster\n# Loft will automatically</span>
+<span class="w">  </span>access:
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span>admin
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span>get
+<span class="w">  </span>displayName:<span class="w"> </span>cluster-with-komodor-and-apps
+<span class="w">  </span>owner:
+<span class="w">    </span>user:<span class="w"> </span>admin
+<span class="w">  </span>template:
+<span class="w">    </span>access:<span class="w"> </span><span class="o">{}</span>
+<span class="w">    </span>apps:
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>komodor
+<span class="w">      </span>namespace:<span class="w"> </span>default
+<span class="w">    </span>-<span class="w"> </span>name:<span class="w"> </span>my-service
+<span class="w">      </span>namespace:<span class="w"> </span>default
+<span class="w">    </span>helmRelease:
+<span class="w">      </span>chart:
+<span class="w">        </span>name:<span class="w"> </span>vcluster
+<span class="w">      </span>values:<span class="w"> </span><span class="s2">&quot;# Additional helm values for the virtual cluster\n# Loft will automatically</span>
 <span class="s2">        add the correct service CIDR \n# and k3s version to the helm values upon deployment\nstorage:\n</span>
 <span class="s2">        \ size: 1Gi\n\n# syncer:\n   # If you don&#39;t want to sync ingresses from the</span>
 <span class="s2">        virtual cluster to \n   # the host cluster uncomment the next lines\n   #</span>
 <span class="s2">        extraArgs: [\&quot;--disable-sync-resources=ingresses\&quot;]&quot;</span>
 ---
-apiVersion: storage.loft.sh/v1
-kind: App
+apiVersion:<span class="w"> </span>storage.loft.sh/v1
+kind:<span class="w"> </span>App
 metadata:
-  name: my-service
+<span class="w">  </span>name:<span class="w"> </span>my-service
 spec:
-  access:
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - admin
-    verbs:
-    - <span class="s1">&#39;*&#39;</span>
-  - subresources:
-    - <span class="s1">&#39;*&#39;</span>
-    users:
-    - <span class="s1">&#39;*&#39;</span>
-    verbs:
-    - get
-  config:
-    chart: <span class="o">{}</span>
-    manifests: <span class="p">|</span>-
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        name: accounts-api
-        labels:
-          app: komodor-oomkilled
-      spec:
-        replicas: <span class="m">1</span>
-        selector:
-          matchLabels:
-            app: komodor-oomkilled
-        template:
-          metadata:
-            labels:
-              app: komodor-oomkilled
-          spec:
-            containers:
-            - name: komodor-oomkilled
-              image: polinux/stress
-              command: <span class="o">[</span><span class="s2">&quot;stress&quot;</span><span class="o">]</span>
-              args: <span class="o">[</span><span class="s2">&quot;--vm&quot;</span>, <span class="s2">&quot;10&quot;</span>, <span class="s2">&quot;--vm-bytes&quot;</span>, <span class="s2">&quot;100M&quot;</span>, <span class="s2">&quot;--vm-hang&quot;</span>, <span class="s2">&quot;120&quot;</span>, <span class="s2">&quot;--backoff&quot;</span>, <span class="s2">&quot;10000&quot;</span>, <span class="s2">&quot;--verbose&quot;</span><span class="o">]</span>
-              resources:
-                requests:
-                  memory: <span class="s2">&quot;120Mi&quot;</span>
-                limits:
-                  memory: <span class="s2">&quot;120Mi&quot;</span>
-      ---
-      apiVersion: v1
-      kind: ConfigMap
-      metadata:
-        name: komodor-python-script
-      data:
-        python-script: <span class="p">|</span>-
-          import <span class="nb">time</span>
-          import os
-          def start_service<span class="o">()</span>:
-              initialize_connections<span class="o">()</span>
-          def initialize_connections<span class="o">()</span>:
-              fetch_configuration<span class="o">()</span>
-          def fetch_configuration<span class="o">()</span>:
-              create_connection<span class="o">()</span>
-          def create_connection<span class="o">()</span>:
-              conn_auth<span class="o">()</span>
-          def conn_auth<span class="o">()</span>:
-              raise Exception<span class="o">(</span><span class="s2">&quot;Can&#39;t perform the requested task - authentication error&quot;</span><span class="o">)</span>
-          start_service<span class="o">()</span>
-      ---
-      apiVersion: apps/v1
-      kind: Deployment
-      metadata:
-        annotations:
-          app: main-api
-        labels:
-          app: users-api
-        name: users-api
-      spec:
-        replicas: <span class="m">1</span>
-        selector:
-          matchLabels:
-            app: users-api
-        template:
-          metadata:
-            labels:
-              app: users-api
-          spec:
-            containers:
-            - env:
-              image: python:3.11-alpine
-              name: python
-              command: <span class="o">[</span><span class="s2">&quot;python&quot;</span><span class="o">]</span>
-              args: <span class="o">[</span><span class="s2">&quot;/usr/share/app/code.py&quot;</span><span class="o">]</span>
-              volumeMounts:
-                - name: komodor-python-script
-                  mountPath: /usr/share/app/code.py
-                  subPath: python-script
-            volumes:
-            - name: komodor-python-script
-              configMap:
-                name: komodor-python-script
-  displayName: application-deployment
-  owner:
-    user: admin
+<span class="w">  </span>access:
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span>admin
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">  </span>-<span class="w"> </span>subresources:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>users:
+<span class="w">    </span>-<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span>verbs:
+<span class="w">    </span>-<span class="w"> </span>get
+<span class="w">  </span>config:
+<span class="w">    </span>chart:<span class="w"> </span><span class="o">{}</span>
+<span class="w">    </span>manifests:<span class="w"> </span><span class="p">|</span>-
+<span class="w">      </span>apiVersion:<span class="w"> </span>apps/v1
+<span class="w">      </span>kind:<span class="w"> </span>Deployment
+<span class="w">      </span>metadata:
+<span class="w">        </span>name:<span class="w"> </span>accounts-api
+<span class="w">        </span>labels:
+<span class="w">          </span>app:<span class="w"> </span>komodor-oomkilled
+<span class="w">      </span>spec:
+<span class="w">        </span>replicas:<span class="w"> </span><span class="m">1</span>
+<span class="w">        </span>selector:
+<span class="w">          </span>matchLabels:
+<span class="w">            </span>app:<span class="w"> </span>komodor-oomkilled
+<span class="w">        </span>template:
+<span class="w">          </span>metadata:
+<span class="w">            </span>labels:
+<span class="w">              </span>app:<span class="w"> </span>komodor-oomkilled
+<span class="w">          </span>spec:
+<span class="w">            </span>containers:
+<span class="w">            </span>-<span class="w"> </span>name:<span class="w"> </span>komodor-oomkilled
+<span class="w">              </span>image:<span class="w"> </span>polinux/stress
+<span class="w">              </span>command:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;stress&quot;</span><span class="o">]</span>
+<span class="w">              </span>args:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;--vm&quot;</span>,<span class="w"> </span><span class="s2">&quot;10&quot;</span>,<span class="w"> </span><span class="s2">&quot;--vm-bytes&quot;</span>,<span class="w"> </span><span class="s2">&quot;100M&quot;</span>,<span class="w"> </span><span class="s2">&quot;--vm-hang&quot;</span>,<span class="w"> </span><span class="s2">&quot;120&quot;</span>,<span class="w"> </span><span class="s2">&quot;--backoff&quot;</span>,<span class="w"> </span><span class="s2">&quot;10000&quot;</span>,<span class="w"> </span><span class="s2">&quot;--verbose&quot;</span><span class="o">]</span>
+<span class="w">              </span>resources:
+<span class="w">                </span>requests:
+<span class="w">                  </span>memory:<span class="w"> </span><span class="s2">&quot;120Mi&quot;</span>
+<span class="w">                </span>limits:
+<span class="w">                  </span>memory:<span class="w"> </span><span class="s2">&quot;120Mi&quot;</span>
+<span class="w">      </span>---
+<span class="w">      </span>apiVersion:<span class="w"> </span>v1
+<span class="w">      </span>kind:<span class="w"> </span>ConfigMap
+<span class="w">      </span>metadata:
+<span class="w">        </span>name:<span class="w"> </span>komodor-python-script
+<span class="w">      </span>data:
+<span class="w">        </span>python-script:<span class="w"> </span><span class="p">|</span>-
+<span class="w">          </span>import<span class="w"> </span><span class="nb">time</span>
+<span class="w">          </span>import<span class="w"> </span>os
+<span class="w">          </span>def<span class="w"> </span>start_service<span class="o">()</span>:
+<span class="w">              </span>initialize_connections<span class="o">()</span>
+<span class="w">          </span>def<span class="w"> </span>initialize_connections<span class="o">()</span>:
+<span class="w">              </span>fetch_configuration<span class="o">()</span>
+<span class="w">          </span>def<span class="w"> </span>fetch_configuration<span class="o">()</span>:
+<span class="w">              </span>create_connection<span class="o">()</span>
+<span class="w">          </span>def<span class="w"> </span>create_connection<span class="o">()</span>:
+<span class="w">              </span>conn_auth<span class="o">()</span>
+<span class="w">          </span>def<span class="w"> </span>conn_auth<span class="o">()</span>:
+<span class="w">              </span>raise<span class="w"> </span>Exception<span class="o">(</span><span class="s2">&quot;Can&#39;t perform the requested task - authentication error&quot;</span><span class="o">)</span>
+<span class="w">          </span>start_service<span class="o">()</span>
+<span class="w">      </span>---
+<span class="w">      </span>apiVersion:<span class="w"> </span>apps/v1
+<span class="w">      </span>kind:<span class="w"> </span>Deployment
+<span class="w">      </span>metadata:
+<span class="w">        </span>annotations:
+<span class="w">          </span>app:<span class="w"> </span>main-api
+<span class="w">        </span>labels:
+<span class="w">          </span>app:<span class="w"> </span>users-api
+<span class="w">        </span>name:<span class="w"> </span>users-api
+<span class="w">      </span>spec:
+<span class="w">        </span>replicas:<span class="w"> </span><span class="m">1</span>
+<span class="w">        </span>selector:
+<span class="w">          </span>matchLabels:
+<span class="w">            </span>app:<span class="w"> </span>users-api
+<span class="w">        </span>template:
+<span class="w">          </span>metadata:
+<span class="w">            </span>labels:
+<span class="w">              </span>app:<span class="w"> </span>users-api
+<span class="w">          </span>spec:
+<span class="w">            </span>containers:
+<span class="w">            </span>-<span class="w"> </span>env:
+<span class="w">              </span>image:<span class="w"> </span>python:3.11-alpine
+<span class="w">              </span>name:<span class="w"> </span>python
+<span class="w">              </span>command:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;python&quot;</span><span class="o">]</span>
+<span class="w">              </span>args:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;/usr/share/app/code.py&quot;</span><span class="o">]</span>
+<span class="w">              </span>volumeMounts:
+<span class="w">                </span>-<span class="w"> </span>name:<span class="w"> </span>komodor-python-script
+<span class="w">                  </span>mountPath:<span class="w"> </span>/usr/share/app/code.py
+<span class="w">                  </span>subPath:<span class="w"> </span>python-script
+<span class="w">            </span>volumes:
+<span class="w">            </span>-<span class="w"> </span>name:<span class="w"> </span>komodor-python-script
+<span class="w">              </span>configMap:
+<span class="w">                </span>name:<span class="w"> </span>komodor-python-script
+<span class="w">  </span>displayName:<span class="w"> </span>application-deployment
+<span class="w">  </span>owner:
+<span class="w">    </span>user:<span class="w"> </span>admin
 </code></pre></div>
 
 
@@ -1217,12 +1233,11 @@ spec:
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>

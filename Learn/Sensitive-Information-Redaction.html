@@ -11,8 +11,14 @@
       
         <link rel="canonical" href="https://docs.komodor.com/Learn/Sensitive-Information-Redaction.html">
       
+      
+        <link rel="prev" href="komodor-source-control.html">
+      
+      
+        <link rel="next" href="Interaction-With-The-Cluster.html">
+      
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -20,15 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
       
       
 
@@ -314,12 +315,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Learn
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -381,6 +383,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item">
       <a href="config-changes.html" class="md-nav__link">
         Config Changes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ExternalLinks.html" class="md-nav__link">
+        External Links
       </a>
     </li>
   
@@ -639,12 +655,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Integrations
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -988,10 +1005,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                   
 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/Sensitive-Information-Redaction.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="sensitive-data-redaction-in-komodors-k8s-watcher">Sensitive data redaction in Komodor’s k8s-watcher<a class="headerlink" href="#sensitive-data-redaction-in-komodors-k8s-watcher" title="Permanent link">&para;</a></h1>
@@ -1001,28 +1017,28 @@ When configured - we will redact the specific value. That way Komodor won't see 
 <h2 id="how-to-integrate">How to integrate<a class="headerlink" href="#how-to-integrate" title="Permanent link">&para;</a></h2>
 <p>Inside <code>komodor-k8s-watcher.yaml</code> you should add a list of string or regular expressions under <code>redact</code> and <code>redactLogs</code> key as such:</p>
 <p>komodor-k8s-watcher</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">watchNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="w"></span>
-<span class="nt">namespacesBlacklist</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span><span class="w"></span>
-<span class="nt">redact</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;.*PASSWORD.*&quot;</span><span class="w"></span>
-<span class="nt">redactLogs</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span><span class="w"></span>
-<span class="nt">nameBlacklist</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;leader&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;election&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">collectHistory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">watchNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all</span>
+<span class="nt">namespacesBlacklist</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class="nt">redact</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;.*PASSWORD.*&quot;</span>
+<span class="nt">redactLogs</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span>
+<span class="nt">nameBlacklist</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;leader&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;election&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">collectHistory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 
 <h3 id="how-to-integrate-using-helm-upgrade-command">How to integrate using helm upgrade command<a class="headerlink" href="#how-to-integrate-using-helm-upgrade-command" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.redact<span class="o">=</span><span class="s2">&quot;{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}&quot;</span> --set watcher.redactLogs<span class="o">=</span><span class="s2">&quot;{password=(.+?)\b,(?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})}&quot;</span> --set <span class="nv">apiKey</span><span class="o">=</span>&lt;API-KEY&gt; --set watcher.clusterName<span class="o">=</span>&lt;cluster-name&gt; --set watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span> --set watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span> 
+<div class="codehilite"><pre><span></span><code>helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span>k8s-watcher<span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span>--set<span class="w"> </span>watcher.redact<span class="o">=</span><span class="s2">&quot;{.*PASSWORD.*,.*password.*,.*KEY.*,.*key.*,.*SECRET.*,.*secret.*}&quot;</span><span class="w"> </span>--set<span class="w"> </span>watcher.redactLogs<span class="o">=</span><span class="s2">&quot;{password=(.+?)\b,(?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})}&quot;</span><span class="w"> </span>--set<span class="w"> </span><span class="nv">apiKey</span><span class="o">=</span>&lt;API-KEY&gt;<span class="w"> </span>--set<span class="w"> </span>watcher.clusterName<span class="o">=</span>&lt;cluster-name&gt;<span class="w"> </span>--set<span class="w"> </span>watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--set<span class="w"> </span>watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span><span class="w"> </span>
 </code></pre></div>
 
 <h3 id="how-to-integrate-using-environment-variables">How to integrate using environment variables<a class="headerlink" href="#how-to-integrate-using-environment-variables" title="Permanent link">&para;</a></h3>
 <p>Separate multiple values with a whitespace in the environment variable value.<br />
 To include a whitespace in the patterns to redact, make sure to use <code>\s</code> as it the patterns are regexp.</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_REDACT</span><span class="o">=</span><span class="s2">&quot;.*password.* PG_.*&quot;</span>
-<span class="nb">export</span> <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">KOMOKW_REDACT</span><span class="o">=</span><span class="s2">&quot;.*password.* PG_.*&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
 </code></pre></div>
 
 <h3 id="secret-resource">Secret Resource<a class="headerlink" href="#secret-resource" title="Permanent link">&para;</a></h3>
@@ -1030,54 +1046,54 @@ To include a whitespace in the patterns to redact, make sure to use <code>\s</co
 <h3 id="configmap-resource">ConfigMap resource<a class="headerlink" href="#configmap-resource" title="Permanent link">&para;</a></h3>
 <p>You can preconfigure a list of keys for Kubernetes watcher to also redact specific values from ConfigMap.</p>
 <p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;SENTRY_API_KEY&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;SENTRY_API_KEY&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span>
 </code></pre></div>
 
 <p>configmap.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensitive-config-map</span><span class="w"></span>
-<span class="nt">data</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">SENTRY_API_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span><span class="w"></span>
-<span class="w">  </span><span class="nt">PG_SECRET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span><span class="w"></span>
-<span class="w">  </span><span class="nt">PG_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensitive-config-map</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">SENTRY_API_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+<span class="w">  </span><span class="nt">PG_SECRET</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+<span class="w">  </span><span class="nt">PG_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span>
 </code></pre></div>
 
 <p>All the above “super_secret” will be sent has hashed value.</p>
 <h3 id="deployment-resource">Deployment resource<a class="headerlink" href="#deployment-resource" title="Permanent link">&para;</a></h3>
 <p>Komodor’s agent will hash <code>template.spec.template.[containeres|initContainers].env</code> list of variables inside Deployment objects for pre-configured list of keys or list of regular expressions.</p>
 <p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;SENTRY_API_KEY&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">redact</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;SENTRY_API_KEY&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;PG_.*&quot;</span>
 </code></pre></div>
 
 <p>deployment.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensitive-deployment</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span><span class="w"></span>
-<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span><span class="w"></span>
-<span class="w">          </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PG_USERNAME</span><span class="w"></span>
-<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECRET</span><span class="w"></span>
-<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">this_will_show_up</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sensitive-deployment</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hello-world</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gcr.io/google-samples/node-hello:1.0</span>
+<span class="w">          </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PG_USERNAME</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">super_secret</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECRET</span>
+<span class="w">              </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">this_will_show_up</span>
 </code></pre></div>
 
 <p>In the above deployment example we will not send the secret values for PG_USERNAME.</p>
@@ -1086,34 +1102,34 @@ To include a whitespace in the patterns to redact, make sure to use <code>\s</co
 <p><strong>Note: Pod Logs redaction is available starting from Komodor Agent version 0.1.126</strong></p>
 <p>Komodor's agent will redact any logs matching one of the patterns set in the <code>redactLogs</code> configuration.</p>
 <p>komodor-k8s-watcher.yaml:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">redactLogs</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">redactLogs</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;password=(.+?)\b&quot;</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;(?U)\&quot;sessionId\&quot;:</span><span class="nv"> </span><span class="s">(\&quot;.+\&quot;{1})&quot;</span>
 </code></pre></div>
 
 <p>Environment variables:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;password=(.+?)\b (?U)\&quot;sessionId\&quot;: (\&quot;.+\&quot;{1})&quot;</span>
 </code></pre></div>
 
 <p>Example logs:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">password=supersecre</span><span class="kc">t</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span><span class="w"></span>
-<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">password=supersecre</span><span class="kc">t</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span>
+<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="err">example</span><span class="w"> </span><span class="err">my</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="err">some</span><span class="kc">t</span><span class="err">hi</span><span class="kc">n</span><span class="err">g</span><span class="w"> </span><span class="err">else</span>
 
-<span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SESS456&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="err">INPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sessionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SESS456&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span>
+<span class="err">OUTPUT</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User has added Item 12453 to Basket&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;REDACTED&gt;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1634477804</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
 
 <h4 id="testing-logs-redaction-patterns">Testing logs redaction patterns<a class="headerlink" href="#testing-logs-redaction-patterns" title="Permanent link">&para;</a></h4>
 <p>You can easily test the patterns you want to configure before deploying by using our docker image and our utilities command.</p>
-<div class="codehilite"><pre><span></span><code>❯ docker run --rm -e <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;redaction&quot;</span> komodorio/k8s-watcher <span class="nb">test</span> -logredactor -inputlog<span class="o">=</span><span class="s2">&quot;The log line you want to test redaction here&quot;</span>
+<div class="codehilite"><pre><span></span><code>❯<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-e<span class="w"> </span><span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;redaction&quot;</span><span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-logredactor<span class="w"> </span>-inputlog<span class="o">=</span><span class="s2">&quot;The log line you want to test redaction here&quot;</span>
 
-Patterns to redact: <span class="o">[</span>redaction<span class="o">]</span>
+Patterns<span class="w"> </span>to<span class="w"> </span>redact:<span class="w"> </span><span class="o">[</span>redaction<span class="o">]</span>
 
-Input log <span class="o">(</span>before redaction<span class="o">)</span>:
-The log line you want to <span class="nb">test</span> redaction here
+Input<span class="w"> </span>log<span class="w"> </span><span class="o">(</span>before<span class="w"> </span>redaction<span class="o">)</span>:
+The<span class="w"> </span>log<span class="w"> </span>line<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>redaction<span class="w"> </span>here
 
-Output log <span class="o">(</span>after redaction<span class="o">)</span>:
-The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
+Output<span class="w"> </span>log<span class="w"> </span><span class="o">(</span>after<span class="w"> </span>redaction<span class="o">)</span>:
+The<span class="w"> </span>log<span class="w"> </span>line<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>&lt;REDACTED&gt;<span class="w"> </span>here
 </code></pre></div>
 
 
@@ -1156,12 +1172,11 @@ The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>

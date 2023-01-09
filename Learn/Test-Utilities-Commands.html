@@ -11,8 +11,14 @@
       
         <link rel="canonical" href="https://docs.komodor.com/Learn/Test-Utilities-Commands.html">
       
+      
+        <link rel="prev" href="Metrics.html">
+      
+      
+        <link rel="next" href="../Integrations/Datadog.html">
+      
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -20,15 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
       
       
 
@@ -314,12 +315,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Learn
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -381,6 +383,20 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item">
       <a href="config-changes.html" class="md-nav__link">
         Config Changes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ExternalLinks.html" class="md-nav__link">
+        External Links
       </a>
     </li>
   
@@ -598,12 +614,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Integrations
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -906,62 +923,61 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
                   
 
-  <a href="https://github.com/komodorio/docs/edit/main/docs/getting-started.md/Learn/Test-Utilities-Commands.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="test-utilities-commands">Test Utilities Commands<a class="headerlink" href="#test-utilities-commands" title="Permanent link">&para;</a></h1>
 <h2 id="komodor-agent-test-utilities">Komodor Agent Test Utilities<a class="headerlink" href="#komodor-agent-test-utilities" title="Permanent link">&para;</a></h2>
 <p>You can use the <code>komodorio/k8s-watcher</code> docker image to run the <code>test</code> command.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Komodor</span><span class="w"> </span><span class="n">Agent</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="n">Utilities</span><span class="w"></span>
-<span class="k">Usage</span><span class="err">:</span><span class="w"></span>
-<span class="w">  </span><span class="o">-</span><span class="n">clusterconnectivity</span><span class="w"></span>
-<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">connectivity</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">Kubernetes</span><span class="w"> </span><span class="n">API</span><span class="p">.</span><span class="w"></span>
-<span class="w">  </span><span class="o">-</span><span class="n">connectivity</span><span class="w"></span>
-<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">connectivity</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">Komodor</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">API</span><span class="p">.</span><span class="w"> </span><span class="n">Requires</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="nf">var</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">KOMOKW_API_KEY</span><span class="o">]</span><span class="w"></span>
-<span class="w">  </span><span class="o">-</span><span class="n">inputlog</span><span class="w"> </span><span class="n">string</span><span class="w"></span>
-<span class="w">        </span><span class="n">Used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">conjunction</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">-</span><span class="n">logredactor</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">redact</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="ss">&quot;Example log with supersecret password:abc123 and username=root&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="o">-</span><span class="n">logredactor</span><span class="w"></span>
-<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">redaction</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">pod</span><span class="w"> </span><span class="n">logs</span><span class="p">.</span><span class="w"> </span><span class="n">Requires</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="nf">var</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">KOMOKW_REDACT_LOG</span><span class="o">]</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">Komodor</span><span class="w"> </span><span class="n">Agent</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="n">Utilities</span>
+<span class="k">Usage</span><span class="err">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">clusterconnectivity</span>
+<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">connectivity</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">Kubernetes</span><span class="w"> </span><span class="n">API</span><span class="p">.</span>
+<span class="w">  </span><span class="o">-</span><span class="n">connectivity</span>
+<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">connectivity</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">Komodor</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">API</span><span class="p">.</span><span class="w"> </span><span class="n">Requires</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="nf">var</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">KOMOKW_API_KEY</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-</span><span class="n">inputlog</span><span class="w"> </span><span class="n">string</span>
+<span class="w">        </span><span class="n">Used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">conjunction</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">-</span><span class="n">logredactor</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="k">input</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">redact</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="w"> </span><span class="ss">&quot;Example log with supersecret password:abc123 and username=root&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="n">logredactor</span>
+<span class="w">        </span><span class="n">Run</span><span class="w"> </span><span class="n">utility</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="n">redaction</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">pod</span><span class="w"> </span><span class="n">logs</span><span class="p">.</span><span class="w"> </span><span class="n">Requires</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="nf">var</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">KOMOKW_REDACT_LOG</span><span class="o">]</span>
 </code></pre></div>
 
 <h3 id="testing-connectivity-to-komodor-api">Testing connectivity to Komodor API<a class="headerlink" href="#testing-connectivity-to-komodor-api" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>❯ docker run --rm -e <span class="nv">KOMOKW_API_KEY</span><span class="o">=</span><span class="s2">&quot;YOUR_API_KEY&quot;</span> komodorio/k8s-watcher <span class="nb">test</span> -connectivity
-no configuration file found, starting with env vars / defaults
-<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Using cluster name &lt;production&gt; from context&quot;</span>
-<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Identifying agent with Komodor servers&quot;</span> <span class="nv">agentId</span><span class="o">=</span>xxx <span class="nv">serverHost</span><span class="o">=</span><span class="s2">&quot;https://app.komodor.com&quot;</span>
-<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:30Z&quot;</span> <span class="nv">level</span><span class="o">=</span>info <span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Successfully connected to Komodor API !!!&quot;</span>
+<div class="codehilite"><pre><span></span><code>❯<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-e<span class="w"> </span><span class="nv">KOMOKW_API_KEY</span><span class="o">=</span><span class="s2">&quot;YOUR_API_KEY&quot;</span><span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-connectivity
+no<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>found,<span class="w"> </span>starting<span class="w"> </span>with<span class="w"> </span>env<span class="w"> </span>vars<span class="w"> </span>/<span class="w"> </span>defaults
+<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span><span class="w"> </span><span class="nv">level</span><span class="o">=</span>info<span class="w"> </span><span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Using cluster name &lt;production&gt; from context&quot;</span>
+<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:29Z&quot;</span><span class="w"> </span><span class="nv">level</span><span class="o">=</span>info<span class="w"> </span><span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Identifying agent with Komodor servers&quot;</span><span class="w"> </span><span class="nv">agentId</span><span class="o">=</span>xxx<span class="w"> </span><span class="nv">serverHost</span><span class="o">=</span><span class="s2">&quot;https://app.komodor.com&quot;</span>
+<span class="nv">time</span><span class="o">=</span><span class="s2">&quot;2022-09-15T13:27:30Z&quot;</span><span class="w"> </span><span class="nv">level</span><span class="o">=</span>info<span class="w"> </span><span class="nv">msg</span><span class="o">=</span><span class="s2">&quot;Successfully connected to Komodor API !!!&quot;</span>
 </code></pre></div>
 
 <h3 id="testing-connectivity-to-kubernetes-api">Testing connectivity to Kubernetes API<a class="headerlink" href="#testing-connectivity-to-kubernetes-api" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>❯ docker run --rm -v <span class="nv">$HOME</span>/.kube/config:/root/.kube/config komodorio/k8s-watcher <span class="nb">test</span> -clusterconnectivity
-no configuration file found, starting with env vars / defaults
-Running outside kubernetes - using kubeconfig file: /Users/mickael/.kube/config
-Successfully connected to Kubernetes API !!!  <span class="nv">kubernetesServerInfo</span><span class="o">=</span>v1.22.12-gke.2300
-Available API Groups:
+<div class="codehilite"><pre><span></span><code>❯<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="nv">$HOME</span>/.kube/config:/root/.kube/config<span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-clusterconnectivity
+no<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>found,<span class="w"> </span>starting<span class="w"> </span>with<span class="w"> </span>env<span class="w"> </span>vars<span class="w"> </span>/<span class="w"> </span>defaults
+Running<span class="w"> </span>outside<span class="w"> </span>kubernetes<span class="w"> </span>-<span class="w"> </span>using<span class="w"> </span>kubeconfig<span class="w"> </span>file:<span class="w"> </span>/Users/mickael/.kube/config
+Successfully<span class="w"> </span>connected<span class="w"> </span>to<span class="w"> </span>Kubernetes<span class="w"> </span>API<span class="w"> </span>!!!<span class="w">  </span><span class="nv">kubernetesServerInfo</span><span class="o">=</span>v1.22.12-gke.2300
+Available<span class="w"> </span>API<span class="w"> </span>Groups:
 core
-    v1
+<span class="w">    </span>v1
 apiregistration.k8s.io
-    apiregistration.k8s.io/v1
+<span class="w">    </span>apiregistration.k8s.io/v1
 apps
-    apps/v1
+<span class="w">    </span>apps/v1
 ...
 ...
 </code></pre></div>
 
 <h3 id="testing-logs-redaction-patterns">Testing logs redaction patterns<a class="headerlink" href="#testing-logs-redaction-patterns" title="Permanent link">&para;</a></h3>
 <p>You can easily test the patterns you want to configure before deploying by using our docker image and our utilities command.</p>
-<div class="codehilite"><pre><span></span><code>❯ docker run --rm -e <span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;redaction&quot;</span> komodorio/k8s-watcher <span class="nb">test</span> -logredactor -inputlog<span class="o">=</span><span class="s2">&quot;The log line you want to test redaction here&quot;</span>
+<div class="codehilite"><pre><span></span><code>❯<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-e<span class="w"> </span><span class="nv">KOMOKW_REDACT_LOGS</span><span class="o">=</span><span class="s2">&quot;redaction&quot;</span><span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-logredactor<span class="w"> </span>-inputlog<span class="o">=</span><span class="s2">&quot;The log line you want to test redaction here&quot;</span>
 
-Patterns to redact: <span class="o">[</span>redaction<span class="o">]</span>
+Patterns<span class="w"> </span>to<span class="w"> </span>redact:<span class="w"> </span><span class="o">[</span>redaction<span class="o">]</span>
 
-Input log <span class="o">(</span>before redaction<span class="o">)</span>:
-The log line you want to <span class="nb">test</span> redaction here
+Input<span class="w"> </span>log<span class="w"> </span><span class="o">(</span>before<span class="w"> </span>redaction<span class="o">)</span>:
+The<span class="w"> </span>log<span class="w"> </span>line<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>redaction<span class="w"> </span>here
 
-Output log <span class="o">(</span>after redaction<span class="o">)</span>:
-The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
+Output<span class="w"> </span>log<span class="w"> </span><span class="o">(</span>after<span class="w"> </span>redaction<span class="o">)</span>:
+The<span class="w"> </span>log<span class="w"> </span>line<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">test</span><span class="w"> </span>&lt;REDACTED&gt;<span class="w"> </span>here
 </code></pre></div>
 
 
@@ -1004,12 +1020,11 @@ The log line you want to <span class="nb">test</span> &lt;REDACTED&gt; here
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>
