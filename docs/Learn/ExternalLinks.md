@@ -15,7 +15,7 @@ Use the Komodor the Komodor Smart Links to connect between Komodor to any system
 Here are a few examples for common use cases:
 
 - Add a link on Komodor's availability issues to the logging system dashboard (like Kibana) that is pre-filtered with values like the cluster name, the namespace, the name of the pod, and the relevant timeframe. 
-- Add a link on Komodor's avilability issues relevant metrics dashboards (Grafana / DataDog / NewRelic) with pre-filtered values like the cluster name, the namespace, the name of the pod, and the relevant timeframe.
+- Add a link on Komodor's availability issues relevant metrics dashboards (Grafana / DataDog / NewRelic) with pre-filtered values like the cluster name, the namespace, the name of the pod, and the relevant timeframe.
 - Add a link from Komodor to the relevant internal documentation.
 - Add a link from Komodor to the relevant support ticket system.
 
