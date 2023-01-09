@@ -1,6 +1,6 @@
 # Komodor External Links
 
-Custom links allow to connect your systems and create an easy navigation from Komodor to your logging, metrics, tickting & documentation systems with the relevant context.
+Custom links allow to connect your systems and create an easy navigation from Komodor to your logging, metrics, ticketing & documentation systems with the relevant context.
 
 ## How It Works?
 
