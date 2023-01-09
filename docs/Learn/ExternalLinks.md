@@ -6,7 +6,7 @@ Custom links allow to connect your systems and create an easy navigation from Ko
 
 Komodor generate the link based on a link template. After adding the template, Komodor generates the links in each one of the screens.
 
-Use the Komodor the Komodor Smart Links to connect between Komodor to any system that you have!
+Use the Komodor Smart Links to connect between Komodor to any system that you have!
 <br>
 <img title="example" src="./img/komodor-connectivity.png" width="200" height="300  ">
 
