@@ -24,6 +24,7 @@ extra:
 nav:
   - Home: index.md
   - Learn:
+      - Install the agent: Learn/Install-Komodor-Agent.md
       - Komodor's Agent: Learn/Komodor-Agent.md
       - Annotations: Learn/Annotations.md
       - Monitors: Learn/Monitors.md

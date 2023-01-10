@@ -1,34 +1,5 @@
 # The Komodor Agent
 
-## Installation
-
-### Get an API Key
-
-The API key can be found in the [Integration page](https://app.komodor.com/main/integration).
-
-![API Key Location](./img/api_key_location.png)
-
-### Helm
-
-```bash
-helm repo add komodorio https://helm-charts.komodor.io
-helm repo update
-helm upgrade --install k8s-watcher komodorio/k8s-watcher \
- --set apiKey=YOUR_API_KEY_HERE \
- --set watcher.clusterName=CLUSTER_NAME \
- --set watcher.enableAgentTaskExecution=true \
- --set watcher.allowReadingPodLogs=true
-```
-
-### Kustomize
-
-```bash
-export KOMOKW_API_KEY= # API KEY Required
-export KOMOKW_CLUSTER_NAME= # Optional
-kubectl create ns komodor
-kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref=master
-```
-
 ## Permissions
 
 The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:
