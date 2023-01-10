@@ -10,6 +10,7 @@ Komodor supports notifications using a custom webhook.
 ## Define Webhook Notification
 1. On the “Monitors” page, choose your desired cluster and specific monitor  
 2. On the “Edit Role” section, select “Webhook” as notification definition  
+<img src="./img/webhook-config.png" width="400">  
 If you have already set up a notification channel - choose one from the list, if not, create the wanted channel with the following configuration:
     1. **Webhook URL** - The destination URL to which notifications will be sent
     2. **Webhook Name** - Choose a meaningful name
@@ -28,7 +29,7 @@ The webhook feature will allow you to integrate into the following channels:
 
 Monitor types: availability, node, PVC, job, cronJob  
 Status: open / close  
-Close time will appear only when the “close” message is sent”   
+Close time will appear only when the “close” message is sent” 
 
     {   
     	"cluster": " production",
