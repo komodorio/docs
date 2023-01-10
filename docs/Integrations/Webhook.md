@@ -1,11 +1,9 @@
 # Webhook Notification
-
 Komodor supports notifications using a custom webhook.
 
 ##  Prerequisites
 - Webhooks via HTTPS only   
 - Desired destination URL  
-
 
 ## Define Webhook Notification
 1. On the “Monitors” page, choose your desired cluster and specific monitor  
