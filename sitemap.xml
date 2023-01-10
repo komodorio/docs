@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.komodor.com/Integrations/Webhook.html</loc>
+         <lastmod>2023-01-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.komodor.com/Integrations/datadog-webhook.html</loc>
          <lastmod>2023-01-10</lastmod>
          <changefreq>daily</changefreq>
