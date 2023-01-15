@@ -9,7 +9,7 @@ To create a personal access token follow the following process:
 2. Go to the API Keys tab  
 <img src="./img/api-keys.png" width="350">   
 
-3. Click Generate Key  
+3. Click "Generate Key"
 <img src="./img/generate-token.png" width="300">   
 
 4. Add a description and click Generate  
