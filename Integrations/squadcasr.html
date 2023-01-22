@@ -9,20 +9,16 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Integrations/datadog-webhook.html">
+        <link rel="canonical" href="https://docs.komodor.com/Integrations/squadcasr.html">
       
       
-        <link rel="prev" href="Datadog.html">
-      
-      
-        <link rel="next" href="Datadog-Monitor-Notification.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Datadog Webhook - Komodor</title>
+        <title>Squadcast - Komodor</title>
       
     
     
@@ -83,7 +79,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#datadog-webhook-integration" class="md-skip">
+        <a href="#squadcast" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +112,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Datadog Webhook
+              Squadcast
             
           </span>
         </div>
@@ -216,15 +212,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Datadog.html" class="md-tabs__link md-tabs__link--active">
+      <a href="Datadog.html" class="md-tabs__link">
         Integrations
       </a>
     </li>
@@ -553,20 +547,18 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Integrations
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -596,86 +588,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Datadog Webhook
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="datadog-webhook.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="datadog-webhook.html" class="md-nav__link">
         Datadog Webhook
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    Installation Steps
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confirmation" class="md-nav__link">
-    Confirmation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-webhook-in-datadog" class="md-nav__link">
-    Configuring the webhook in Datadog
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -911,43 +828,16 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#using-komodor-as-an-alert-source" class="md-nav__link">
+    Using Komodor as an Alert Source
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#installation-steps" class="md-nav__link">
-    Installation Steps
+      
+        <li class="md-nav__item">
+  <a href="#create-a-squadcast-webhook-alert-in-komodor" class="md-nav__link">
+    Create a Squadcast Webhook Alert in Komodor
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#confirmation" class="md-nav__link">
-    Confirmation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-webhook-in-datadog" class="md-nav__link">
-    Configuring the webhook in Datadog
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -970,75 +860,27 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 
-<h1 id="datadog-webhook-integration">Datadog Webhook Integration<a class="headerlink" href="#datadog-webhook-integration" title="Permanent link">&para;</a></h1>
-<p>Komodor-Datadog webhook integration allows Komodor to receive alerts from Datadog Monitors. You will see all alerts in the Komodor Service View.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>In order for us to connect your services according to Datadog events, the following environment variables should exist on your kubernetes deployments:
-- <code>DD_ENV</code> should match the environment specified on the Datadog tags
-- <code>DD_SERVICE</code> should match the service name specified on the Datadog tags</p>
-<h3 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h3>
+<h1 id="squadcast">Squadcast<a class="headerlink" href="#squadcast" title="Permanent link">&para;</a></h1>
+<p>Send alerts to Squadcast from Komodor</p>
+<p><a href="https://www.squadcast.com/">Squadcast</a> is a full stack Reliability Management &amp; Incident Response software that's designed to help you promote SRE best practices.</p>
+<p>Route detailed alerts from Komodor to the right users in Squadcast.</p>
+<h3 id="using-komodor-as-an-alert-source">Using Komodor as an Alert Source<a class="headerlink" href="#using-komodor-as-an-alert-source" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Make sure the prerequisites above are met.</li>
-<li>Locate the Datadog installation tile on <a href="https://app.komodor.com/main/integration">Komodor Integrations</a> page.</li>
-<li>Press <strong>Install Integration</strong>.</li>
-<li>Follow the on screen instructions.</li>
+<li>Navigate to <strong>Services</strong> -&gt; <strong>Service Overview</strong> -&gt; select or search for your Service. Expand the accordion -&gt; In the Alert Sources section, click <strong>Add</strong>.</li>
 </ol>
-<h3 id="confirmation">Confirmation<a class="headerlink" href="#confirmation" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://3939804252-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F8TaWz01jmUJl58p4ZVel%2Fuploads%2Fgit-blob-0fe7b657e32aa4dc525b39230eeb6f7628304674%2FScreenshot%202022-07-29%20at%2012.09.33%20PM%20(1)%20(1).png?alt=media" /></p>
 <ol>
-<li>A Datadog Integration tile will be added to the top section under <strong>Installed Integrations</strong>.</li>
+<li>Select <strong>Komodor.</strong> Copy the displayed <strong>Webhook URL</strong> to <a href="https://support.squadcast.com/integrations/alert-source-integrations-native/hydrozen#create-a-squadcast-webhook-alert-in-komodor">configure</a> it within <strong>Komodor.</strong> Finish by clicking <strong>Add Alert Source</strong> -&gt; <strong>Done.</strong></li>
 </ol>
-<h3 id="configuring-the-webhook-in-datadog">Configuring the webhook in Datadog<a class="headerlink" href="#configuring-the-webhook-in-datadog" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Go to <a href="https://app.datadoghq.com/account/settings#integrations/webhooks">Datadog Webhook Integration Setup</a></li>
-<li>Create a <code>+ New</code> Webhook</li>
-<li>Name the webhook <code>komodor</code></li>
-<li>Enter the webhook server URL in the URL field: https://app.komodor.com/collector/datadog/webhook</li>
-<li>Copy the following Payload schema into the Payload field:</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$EVENT_MSG&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;last_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$LAST_UPDATED&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;event_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$EVENT_TYPE&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$EVENT_TITLE&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$DATE&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;org&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ORG_ID&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ORG_NAME&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ID&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$TAGS&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;alert&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_ID&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_TYPE&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;transition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_TRANSITION&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;cycleId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_CYCLE_KEY&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$PRIORITY&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_STATUS&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_SCOPE&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_QUERY&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;metric&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$ALERT_METRIC&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;metric_namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$METRIC_NAMESPACE&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;aggregation_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$AGGREG_KEY&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$LINK&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;snapshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$SNAPSHOT&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$USER&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$USERNAME&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$EMAIL&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<ol>
-<li>Add a Custom Header <code>X-API-KEY</code> with the Api Key found in the Komodor Integration page from the Datadog integration tile at the bottom of the setup modal in a JSON format.</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="o">{</span><span class="s2">&quot;X-API-KEY&quot;</span>:<span class="w"> </span><span class="s2">&quot;YOUR_KOMODOR_API_KEY&quot;</span><span class="o">}</span>
-</code></pre></div>
-
-<ol>
-<li>When completed click on <code>Save</code>.</li>
-<li>For every monitor you wish to receive alerts from in Komodor. Edit the monitor and add <code>@webhook-komodor</code> at the end of the Monitor message.</li>
-</ol>
+<p><img alt="" src="https://3939804252-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F8TaWz01jmUJl58p4ZVel%2Fuploads%2Fgit-blob-ebe92f2d7609bc5a1836ad7bf4ae87b5333a8474%2Fkomodor_00.png?alt=media" /></p>
+<p><strong>Important:</strong>
+When an alert source turns Active, it’ll show up under Configured Alert Sources, you can either generate a test alert from the integration or wait for a real-time alert to be generated by the Alert Source. An Alert Source is active if there is a recorded incident via that Alert Source for the Service.</p>
+<h2 id="create-a-squadcast-webhook-alert-in-komodor">Create a Squadcast Webhook Alert in Komodor<a href="https://support.squadcast.com/integrations/alert-source-integrations-native/komodor#create-a-squadcast-webhook-alert-in-komodor"></a><a class="headerlink" href="#create-a-squadcast-webhook-alert-in-komodor" title="Permanent link">&para;</a></h2>
+<p><strong>(1)</strong> Login to Komodor. Navigate to the <strong>Monitors</strong> page, choose your desired cluster and specific monitor</p>
+<p><strong>(2)</strong> Now, On the <strong>Edit Role</strong> section, select <strong>Webhook</strong> as notification definition. Click on <strong>Add New Webhook</strong> and put in the <strong>Name</strong> and paste the previously copied Squadcast Webhook URL in the <strong>Webhook URL</strong> place holder. Then click on <strong>Save Monitor</strong></p>
+<p><img alt="" src="https://3939804252-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F8TaWz01jmUJl58p4ZVel%2Fuploads%2Fgit-blob-305a9ca3474fc48ba2b12095ec282b5e898b95d1%2Fkomodor_2.png?alt=media" /></p>
+<p>That's it, you are good to go! Your Squadcast integration is now complete.</p>
+<p>Whenever Komodor fires an alert, an incident will be created in Squadcast for it. Once Komodor sends a <strong>close</strong> alert, it will automatically be resolved in Squadcast as well.</p>
 
 
 
