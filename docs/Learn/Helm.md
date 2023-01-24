@@ -14,6 +14,7 @@ Some of the key capabilities are:
 ## Pre-requisites 
 ### Agent permissions/values
 In order to add those capabilities, the Komodor agent has to have permission to read and manipulate secrets.
+
 To add those permissions, enable the following values on the helm chart:  
 
 - **watcher.resources.secret=true** - allows Komodor agent to send secrets to the Komodor SaaS (all secrets are redacted by default)  
@@ -22,26 +23,59 @@ To add those permissions, enable the following values on the helm chart:
 
 
 ### Upgrade command
-// TODO: Check reuse-values
+
 `helm upgrade --install k8s-watcher komodorio/k8s-watcher --create-namespace --set apiKey=YOUR_API_KEY_HERE --set watcher.clusterName=CLUSTER_NAME --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true`
 
-## Releases
-// TODO: 
-## Helm Actions
-// TODO: Add relevant actions (upgrade)
-## Repositories
-To enable upgrading HELM charts directly from Komodor you have to add the HELM repositories where you charts reside.
+### Permissions 
+You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
+The following actions can be specified on the RBAC policy level:
 
-Komodor will automatically detect available upgrades and will suggest those through the UI
+`read:helm-repo`  
+`update:helm-repo`  
+`add:helm-repo`  
+`remove:helm-repo`  
+`install:helm-chart`  
+`uninstall:helm-chart`  
+`revert:helm-chart`  
+
+**Please note:** account-admin would be able to perform all of those
+
+## Releases (charts)
+When entering the HELM section in the Komodor UI, on the releases tab, you can see all your helm charts, you can filter them, and perform various actions on them. 
+
+// TODO: image
+
+When viewing a specific release, you can easily get the revision history and compare its manifest/values with other revisions.
+
+## Helm Actions
+
+Supported actions for charts:
+- Upgrade - will only appear when a repository containing the chart is configured for the relevant cluster.   
+You’ll be able to select either a newer or older version of that chart.  
+This action performs the following helm command  
+`helm upgrade --install ${name} ${chartName} --create-namespace --namespace ${namespace} --version ${version} --values ${values}`
+- Uninstall - Uninstall a chart.  
+Will perform the following command:  
+`helm uninstall RELEASE_NAME [...] [flags]`  
+- Rollback - Rollback to the chosen version.  
+Will perform the following command:   
+`helm rollback <RELEASE> [REVISION] [flags]`
+
+## Repositories
+To enable upgrading HELM charts directly from Komodor you have to add the HELM repositories where your charts reside.
 
 Adding a repository: 
 
-- Enter the Repositories tab on the HELM page in Komodor  
-- Click Add Repository  
-- Specify the Repository Name, URL and clusters to associate those repositories to  
+- Navigate to the HELM under the Resources section in Komodor   
+- Switch to the Repositories tab  
+- Click “Add Repository”  
+- Specify the repository details - Name, URL, and Clusters to associate this repository with  
 - Save the repository  
 
 Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. 
+
+**Please note:** Currently, the only repo authentication method supported is user:password
+
 
 
 
