@@ -5,7 +5,7 @@ To facilitate the assignment of Komodor roles via Okta we first need to configur
 
 ### Configure a custom attribute
 - Navigate to the Profile Editor section under Directory   
-<img src="./profile-editor-2.png" width="200">
+<img src="./profile-editor-2.png" width="200">  
 
 - Select the User (default) profile  
 <img src="./profile-editor-user.png" width="800">
