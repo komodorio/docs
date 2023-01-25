@@ -943,7 +943,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li><strong>helm.enableActions=true</strong>  - adds relevant permissions to the Komodor agent to allow performing various helm-related actions (manipulation of secrets)  </li>
 </ul>
 <h3 id="upgrade-command">Upgrade command<a class="headerlink" href="#upgrade-command" title="Permanent link">&para;</a></h3>
-<p><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --create-namespace --set apiKey=YOUR_API_KEY_HERE --set watcher.clusterName=CLUSTER_NAME --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true</code></p>
+<p><code>helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true --reuse-values</code></p>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
 <p>You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
 The following actions can be specified on the RBAC policy level:</p>
