@@ -22,7 +22,7 @@ Learn how to set up [data redaction](./Sensitive-Information-Redaction.md) in Ko
 
 ### Resources
 
-By default, the Komodor agent watches the majority of the resources in your cluster (**secrets and events are opt out**)
+By default, the Komodor agent watches the majority of the resources in your cluster.
 You can enable/disable watching a resource using the following command:
 
 1. Helm: `--set watcher.resources.RESOURCE=true/off`
