@@ -9,20 +9,16 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Learn/Komodor-Agent.html">
+        <link rel="canonical" href="https://docs.komodor.com/Learn/Helm.html">
       
       
-        <link rel="prev" href="Install-Komodor-Agent.html">
-      
-      
-        <link rel="next" href="Annotations.html">
       
       <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Komodor's Agent - Komodor</title>
+        <title>HELM - Komodor</title>
       
     
     
@@ -83,7 +79,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#the-komodor-agent" class="md-skip">
+        <a href="#helm" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +112,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Komodor's Agent
+              HELM
             
           </span>
         </div>
@@ -200,15 +196,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Install-Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
+      <a href="Install-Komodor-Agent.html" class="md-tabs__link">
         Learn
       </a>
     </li>
@@ -308,20 +302,18 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
           Learn
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -351,174 +343,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Komodor's Agent
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Komodor-Agent.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Komodor-Agent.html" class="md-nav__link">
         Komodor's Agent
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arm-support" class="md-nav__link">
-    ARM Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-configuration" class="md-nav__link">
-    Advanced Configuration
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-redaction" class="md-nav__link">
-    Data Redaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
-    Namespaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Namespaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#denylist" class="md-nav__link">
-    Denylist
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agent-tasks" class="md-nav__link">
-    Agent Tasks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    Environment Variables
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-the-agent" class="md-nav__link">
-    Updating the agent
-  </a>
-  
-    <nav class="md-nav" aria-label="Updating the agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kustomize" class="md-nav__link">
-    Kustomize
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#helm" class="md-nav__link">
-    Helm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstalling" class="md-nav__link">
-    Uninstalling
-  </a>
-  
-    <nav class="md-nav" aria-label="Uninstalling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kustomize_1" class="md-nav__link">
-    Kustomize
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#helm_1" class="md-nav__link">
-    Helm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1013,74 +842,40 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-requisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-permissionsvalues" class="md-nav__link">
+    Agent permissions/values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-command" class="md-nav__link">
+    Upgrade command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#permissions" class="md-nav__link">
     Permissions
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#arm-support" class="md-nav__link">
-    ARM Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-configuration" class="md-nav__link">
-    Advanced Configuration
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-redaction" class="md-nav__link">
-    Data Redaction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
-    Namespaces
-  </a>
-  
-    <nav class="md-nav" aria-label="Namespaces">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#denylist" class="md-nav__link">
-    Denylist
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agent-tasks" class="md-nav__link">
-    Agent Tasks
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    Environment Variables
-  </a>
-  
-</li>
         
       </ul>
     </nav>
@@ -1088,56 +883,23 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-the-agent" class="md-nav__link">
-    Updating the agent
+  <a href="#releases-charts" class="md-nav__link">
+    Releases (charts)
   </a>
-  
-    <nav class="md-nav" aria-label="Updating the agent">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kustomize" class="md-nav__link">
-    Kustomize
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#helm" class="md-nav__link">
-    Helm
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstalling" class="md-nav__link">
-    Uninstalling
-  </a>
-  
-    <nav class="md-nav" aria-label="Uninstalling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kustomize_1" class="md-nav__link">
-    Kustomize
+  <a href="#helm-actions" class="md-nav__link">
+    Helm Actions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#helm_1" class="md-nav__link">
-    Helm
+      
+        <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    Repositories
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1160,75 +922,75 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 
-<h1 id="the-komodor-agent">The Komodor Agent<a class="headerlink" href="#the-komodor-agent" title="Permanent link">&para;</a></h1>
-<h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
-<p>The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:</p>
-<ol>
-<li><a href="https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml">helm</a></li>
-<li><a href="https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml">kustomize base</a>, <a href="https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml">kustomize final</a></li>
-</ol>
-<h2 id="arm-support">ARM Support<a class="headerlink" href="#arm-support" title="Permanent link">&para;</a></h2>
-<p>Arm64 image is supported via docker manifest. </p>
-<h2 id="advanced-configuration">Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Permanent link">&para;</a></h2>
-<p>You can configure the agent's functionality using the following configuration file: <code>komodor-k8s-watcher.yaml</code> (assuming the RBAC permissions are satisfied).
-A more detailed list of the configurable parameters can be found <a href="https://github.com/komodorio/helm-charts/tree/master/charts/k8s-watcher#configuration">here</a></p>
-<h3 id="data-redaction">Data Redaction<a class="headerlink" href="#data-redaction" title="Permanent link">&para;</a></h3>
-<p>Learn how to set up <a href="Sensitive-Information-Redaction.html">data redaction</a> in Komodor</p>
-<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
-<p>By default, the Komodor agent watches the majority of the resources in your cluster.
-You can enable/disable watching a resource using the following command:</p>
-<ol>
-<li>Helm: <code>--set watcher.resources.RESOURCE=true/off</code></li>
-<li>Kustomize: update the configuration file and the RBAC rule to have <code>get</code>, <code>list</code> and <code>watch</code> permissions</li>
-</ol>
-<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<p>The Komodor agent watches all the namespaces (by default <code>watchNamespace=all</code>)</p>
-<p>To watch a single namespace use the following command:</p>
-<ol>
-<li>Helm: <code>--set watcher.watchNamespace=NAMESPACE</code></li>
-<li>Kustomize: patch the configuration file <code>watchNamespace=NAMESPACE</code></li>
-</ol>
-<h4 id="denylist">Denylist<a class="headerlink" href="#denylist" title="Permanent link">&para;</a></h4>
-<p>Using <code>namespacesDenylist</code> you can opt list of namespaces</p>
-<h3 id="agent-tasks">Agent Tasks<a class="headerlink" href="#agent-tasks" title="Permanent link">&para;</a></h3>
-<p>Agent tasks are used to interact with the cluster on demand, read more about interaction with the cluster <a href="Interaction-With-The-Cluster.html">here</a></p>
-<p>To enable agent tasks (default is <code>off</code>):</p>
-<ol>
-<li>Helm: <code>--set watcher.enableAgentTaskExecution=true &amp;&amp; --set watcher.allowReadingPodLogs=true</code></li>
-<li>Kustomize: The <code>full</code> overlay already has this turned on. If you are building it manually from <code>base</code>, patch the configuration file <code>enableAgentTaskExecution=true</code> and make sure to have RBAC permissions to <code>get</code> and <code>list</code> for <code>pods</code> and <code>pods/log</code></li>
-</ol>
-<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
-<p>Alternativly, you can pass the configuration as environment variables using the <code>KOMOKW_</code> prefix and by replacing all the . to _, for the root items the camelcase transforms into underscores as well.</p>
-<p>For example:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># apiKey</span>
-<span class="nv">KOMOKW_API_KEY</span><span class="o">=</span>1a2b3c4d5e6f7g7h
-<span class="c1"># watcher.resources.replicaSet</span>
-<span class="nv">KOMOKW_RESOURCES_REPLICASET</span><span class="o">=</span><span class="nb">false</span>
-
-<span class="c1"># watcher.watchNamespace</span>
-<span class="nv">KOMOKW_WATCH_NAMESPACE</span><span class="o">=</span>my-namespace
-<span class="c1"># watcher.collectHistory</span>
-<span class="nv">KOMOKW_COLLECT_HISTORY</span><span class="o">=</span><span class="nb">true</span>
+<h1 id="helm">HELM<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>As part of Komodor vision of helping Kubernetes users to navigate and troubleshoot their clusters, Komodor provides an extensive UI to view and manage installed Helm charts, and see their revision history and corresponding k8s resources. It also allows performing simple actions like rollback to a previous revision or upgrading to a newer version.</p>
+<p>Some of the key capabilities are:  </p>
+<ul>
+<li>Multiple clusters support  </li>
+<li>See all installed charts and their revision history   </li>
+<li>See manifest diff of the past revisions   </li>
+<li>Browse k8s resources managed by the chart   </li>
+<li>Easy rollback or upgrade version with a clear and easy manifest diff   </li>
+</ul>
+<h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
+<h3 id="agent-permissionsvalues">Agent permissions/values<a class="headerlink" href="#agent-permissionsvalues" title="Permanent link">&para;</a></h3>
+<p>In order to add those capabilities, the Komodor agent has to have permission to read and manipulate secrets.</p>
+<p>To add those permissions, enable the following values on the helm chart:  </p>
+<ul>
+<li><strong>watcher.resources.secret=true</strong> - allows Komodor agent to send secrets to the Komodor SaaS (all secrets are redacted by default)  </li>
+<li><strong>watcher.enableHelm=true</strong> - allows Komodor agent to send Helm-related secrets without redaction  </li>
+<li><strong>helm.enableActions=true</strong>  - adds relevant permissions to the Komodor agent to allow performing various helm-related actions (manipulation of secrets)  </li>
+</ul>
+<h3 id="upgrade-command">Upgrade command<a class="headerlink" href="#upgrade-command" title="Permanent link">&para;</a></h3>
+<p><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --create-namespace --set apiKey=YOUR_API_KEY_HERE --set watcher.clusterName=CLUSTER_NAME --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true</code></p>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<p>You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
+The following actions can be specified on the RBAC policy level:</p>
+<p><code>read:helm-repo</code><br />
+<code>update:helm-repo</code><br />
+<code>add:helm-repo</code><br />
+<code>remove:helm-repo</code><br />
+<code>install:helm-chart</code><br />
+<code>uninstall:helm-chart</code><br />
+<code>revert:helm-chart</code>  </p>
+<p><strong>Please note:</strong> account-admin would be able to perform all of those</p>
+<h2 id="releases-charts">Releases (charts)<a class="headerlink" href="#releases-charts" title="Permanent link">&para;</a></h2>
+<p>When entering the HELM section in the Komodor UI, on the releases tab, you can see all your helm charts, you can filter them, and perform various actions on them. </p>
+<p><img src="./img/helm-charts.png" width="450"></p>
+<p>When viewing a specific release, you can easily get the revision history
+<img src="./img/helm-chart-resources.png" width="450"></p>
+<p>You can also compare its manifest/values with other revisions.
+<img src="./img/helm-chart-manifests.png" width="450"></p>
+<h2 id="helm-actions">Helm Actions<a class="headerlink" href="#helm-actions" title="Permanent link">&para;</a></h2>
+<p>Supported actions for charts:
+- Upgrade - will only appear when a repository containing the chart is configured for the relevant cluster. <br />
+You’ll be able to select either a newer or older version of that chart.<br />
+<img src="./img/helm-upgrade.png" width="450"></p>
+<div class="codehilite"><pre><span></span><code>This<span class="w"> </span>action<span class="w"> </span>performs<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>helm<span class="w"> </span>command<span class="w">  </span>
+`helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span><span class="cp">${</span><span class="n">name</span><span class="cp">}</span><span class="w"> </span><span class="cp">${</span><span class="n">chartName</span><span class="cp">}</span><span class="w"> </span>--create-namespace<span class="w"> </span>--namespace<span class="w"> </span><span class="cp">${</span><span class="n">namespace</span><span class="cp">}</span><span class="w"> </span>--version<span class="w"> </span><span class="cp">${</span><span class="n">version</span><span class="cp">}</span><span class="w"> </span>--values<span class="w"> </span><span class="cp">${</span><span class="n">values</span><span class="cp">}</span>`
 </code></pre></div>
 
-<h2 id="updating-the-agent">Updating the agent<a class="headerlink" href="#updating-the-agent" title="Permanent link">&para;</a></h2>
-<h3 id="kustomize">Kustomize<a class="headerlink" href="#kustomize" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>kubectl<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>komodor<span class="w"> </span>-k<span class="w"> </span>https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref<span class="o">=</span>master
-</code></pre></div>
-
-<h3 id="helm">Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>update
-helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class="w"> </span>k8s-watcher<span class="w"> </span>komodorio/k8s-watcher<span class="w"> </span>--reuse-values
-</code></pre></div>
-
-<h2 id="uninstalling">Uninstalling<a class="headerlink" href="#uninstalling" title="Permanent link">&para;</a></h2>
-<h3 id="kustomize_1">Kustomize<a class="headerlink" href="#kustomize_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>ns<span class="w"> </span>komodor
-</code></pre></div>
-
-<h3 id="helm_1">Helm<a class="headerlink" href="#helm_1" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>helm<span class="w"> </span>uninstall<span class="w"> </span>k8s-watcher
-</code></pre></div>
+<ul>
+<li>Uninstall - Uninstall a chart.<br />
+Will perform the following command:<br />
+<code>helm uninstall RELEASE_NAME [...] [flags]</code>  </li>
+<li>Rollback - Rollback to the chosen version.<br />
+Will perform the following command: <br />
+<code>helm rollback &lt;RELEASE&gt; [REVISION] [flags]</code></li>
+</ul>
+<h2 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">&para;</a></h2>
+<p>To enable upgrading HELM charts directly from Komodor you have to add the HELM repositories where your charts reside.</p>
+<p>Adding a repository: </p>
+<ul>
+<li>Navigate to the HELM under the Resources section in Komodor   </li>
+<li>Switch to the Repositories tab  </li>
+<li>Click “Add Repository”  </li>
+<li>Specify the repository details - Name, URL, and Clusters to associate this repository with  </li>
+<li>Save the repository  </li>
+</ul>
+<p>Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. </p>
+<p><strong>Please note:</strong> Currently, the only repo authentication method supported is user:password</p>
 
 
 
