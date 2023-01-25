@@ -49,7 +49,9 @@ nav:
       - Sentry: Integrations/Sentry.md
       - Slack: Integrations/Slack.md
       - Microsoft Teams: Integrations/MicrosoftTeams.md
-      - Okta: Integrations/Okta/Okta.md
+      - Okta: 
+          - Okta SSO (SAML): Integrations/Okta/Okta.md
+          - Role Provisoining (Okta): Integrations/Okta/Okta-Role-Provsioning.md
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
       - Grafana / Alert Manager: Integrations/AlertManager.md
       - ArgoCD: Integrations/ArgoCD.md
