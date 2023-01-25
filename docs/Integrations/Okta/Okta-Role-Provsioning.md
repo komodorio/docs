@@ -13,7 +13,7 @@ To facilitate the assignment of Komodor roles via Okta we first need to configur
 - Click the + Add Attribute button
 <img src="./profile-editor-add.png" width="800">
 
-- Fill in the form as specified in the image below and save the changes
+- Fill in the form as specified in the image below and save the changes. Note that while the variable name should remain `komodorRoles`, the description can be anything you choose.
 <img src="./add-attribute.png" width="600">
 
 - We now need to add the same attribtue to the Komodor User profile, return to the Profile Editor page and select the Komodor User profile  
