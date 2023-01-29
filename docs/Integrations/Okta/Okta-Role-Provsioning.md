@@ -101,7 +101,7 @@ To facilitate the assignment of Komodor roles via Okta we first need to configur
 - To convert the assignment type from Individual to Group, click Convert assignments button   
 <img src="./assignment-conversion-button.png" width="600">
 
-- Select the users that you'd like to convert the assignment, and click Convert selected (alternativly you can click the Convert all assignments button) 
+- Select the users for whom you'd like to convert the assignment, and click Convert selected (alternatively you can click the Convert all assignments button) 
 <img src="./assignment-conversion.png" width="600">
 
 - Going back to the previous screen, you can confirm that the assignment type has changed  
