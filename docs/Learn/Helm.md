@@ -22,7 +22,7 @@ To add those permissions, enable the following values on the helm chart:
 - **helm.enableActions=true**  - adds relevant permissions to the Komodor agent to allow performing various helm-related actions (manipulation of secrets)  
 
 ### Upgrade command
-`helm upgrade --install k8s-watcher komodorio/k8s-watcher --create-namespace --set apiKey=YOUR_API_KEY_HERE --set watcher.clusterName=CLUSTER_NAME --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true`
+`helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true --reuse-values`
 
 ### Permissions 
 You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
