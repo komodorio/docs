@@ -34,7 +34,7 @@ To facilitate the assignment of Komodor roles via Okta we first need to configur
 - Everything is now set to assign Komodor roles through Okta
 
 ## Adding Roles to a User
-- Navigate to the People section 
+- Navigate to the People section  
 <img src="./people.png" width="200">
 
 - Select the user you'd like to assign roles to
@@ -81,25 +81,30 @@ To facilitate the assignment of Komodor roles via Okta we first need to configur
 <img src="./group-edit-roles.png" width="600">
 
 ### Adding Members to a Group
-- Navigate to the groups section
-<img src="./groups-nav.png">
+- Navigate to the groups section  
+<img src="./groups-nav.png" width="200">
 
-- Click the Assign people button
-<img src="./assign-people.png">
+- Click the Assign people button  
+<img src="./assign-people.png" width="600">
 
-- Click the + button next to the names of the users you wish to add to the group. Click Done at the end.
-<img src="./assign-person.png">
+- Click the + button for each user you'd like to add to the group. Click Done at the end   
+<img src="./assign-person.png" width="600">
 
-- Navigate to the Applications section, pick the Komodor application and go to the Assignments tab. <br>
-Note the Type of the user assignment. If the user was previously individually assigned the Application, it should say Individual in the Type column.
-<img src="./application-assignment.png">
+- Navigate to the Applications section  
+<img src="./applications.png" width="200">
 
-- If the assignment is indeed Individual, you'd want to convert it into a group assignment.<br>
-To that end, click the Convert assignments button, and pick select assignments to convert (or convert all assignments, depending on your goals).
+- Select the Komodor application and navigate to the Assignments tab  
+<img src="./application-assignment.png" width="600">
+
+**Please note:** The Type of the assignment defines whether the Individual or Group roles will take over. 
+
+- To convert the assignment type from Individual to Group, click Convert assignments button 
 <img src="./assignment-conversion-button.png">
+
+and pick select assignments to convert (or convert all assignments, depending on your goals).
 
 - Select the users for whom you'd wish to convert the assignment, and click Convert selected.
 <img src="./assignment-conversion.png">
 
 - Going back to the previous screen, you can confirm that the assignment type has changed.
-<img src="./assignment-conversion-successful.png">
+<img src="./assignment-conversion-successful.png" width="600">
