@@ -51,7 +51,7 @@ nav:
       - Microsoft Teams: Integrations/MicrosoftTeams.md
       - Okta: 
           - Okta SSO (SAML): Integrations/Okta/Okta.md
-          - Role Provisoining (Okta): Integrations/Okta/Okta-Role-Provsioning.md
+          - Role Provisioning (Okta): Integrations/Okta/Okta-Role-Provsioning.md
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
       - Grafana / Alert Manager: Integrations/AlertManager.md
       - ArgoCD: Integrations/ArgoCD.md
