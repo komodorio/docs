@@ -1,4 +1,4 @@
-# Okta Role Provsionining 
+# Okta Role Provisioning 
 
 ## Setup
 To facilitate the assignment of Komodor roles via Okta we first need to configure a few things on the organization Okta account.
