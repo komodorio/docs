@@ -75,18 +75,22 @@ Adding a repository:
 
 Adding a repository will add the repository to komodor agent that is running on the chosen clusters.
 
+- Navigate to the HELM under the Resources section in Komodor   
+- Switch to the Repositories tab
+
 <img src="./img/helm-repo-add-header.png" width="450">
+
+- Click “Add Repository”  
+- Specify the repository details - Name, URL, and Clusters to associate this repository with  
+- Save the repository
 
 <img src="./img/helm-repo-add.png" width="450">
 
+Test connection: 
 
-- Navigate to the HELM under the Resources section in Komodor   
-- Switch to the Repositories tab  
-- Click “Add Repository”  
-- Specify the repository details - Name, URL, and Clusters to associate this repository with  
-- Save the repository  
+When adding a repo, Komodor verifies that the Repo is accessible from a public network. 
 
-Test connection: When adding a repo, Komodor verifies that the Repo is accessible from a public network.
+In case you are referring to a private repo, ignore the warning
 
 Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. 
 
