@@ -86,7 +86,7 @@ Adding a repository will add the repository to komodor agent that is running on 
 - Specify the repository details - Name, URL, and Clusters to associate this repository with  
 - Save the repository  
 
-Test connection: Currently we are checking that the URL is accessible from a publicfrom public network only.
+Test connection: When adding a repo, Komodor verifies that the Repo is accessible from a public network.
 
 Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. 
 
