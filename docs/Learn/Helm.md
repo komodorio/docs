@@ -12,6 +12,8 @@ Some of the key capabilities are:
 - Easy rollback or upgrade version with a clear and easy manifest diff   
 
 ## Pre-requisites 
+Agent version 0.1.158 and above
+
 ### Agent permissions/values
 In order to add those capabilities, the Komodor agent has to have permission to read and manipulate secrets.
 
@@ -27,11 +29,8 @@ To add those permissions, enable the following values on the helm chart:
 ### Permissions 
 You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
 The following actions can be specified on the RBAC policy level:
-
+`manage:helm` (allowing the following: update, add and remove repos)
 `read:helm-repo`  
-`update:helm-repo`  
-`add:helm-repo`  
-`remove:helm-repo`  
 `install:helm-chart`  
 `uninstall:helm-chart`  
 `revert:helm-chart`  
@@ -52,7 +51,7 @@ You can also compare its manifest/values with other revisions.
 ## Helm Actions
 
 Supported actions for charts:
-- Upgrade - will only appear when a repository containing the chart is configured for the relevant cluster.   
+- Change version - will only appear when a repository containing the chart is configured for the relevant cluster.   
 You’ll be able to select either a newer or older version of that chart.  
 <img src="./img/helm-upgrade.png" width="450">
 
@@ -68,13 +67,26 @@ Will perform the following command:
 ## Repositories
 To enable upgrading HELM charts directly from Komodor you have to add the HELM repositories where your charts reside.
 
+In order to view and manage your repositories you need the following permissions:
+`manage:helm` (allowing the following: update, add and remove repos)
+`read:helm-repo`
+
 Adding a repository: 
+
+Adding a repository will add the repository to komodor agent that is running on the chosen clusters.
+
+<img src="./img/helm-repo-add-header.png" width="450">
+
+<img src="./img/helm-repo-add.png" width="450">
+
 
 - Navigate to the HELM under the Resources section in Komodor   
 - Switch to the Repositories tab  
 - Click “Add Repository”  
 - Specify the repository details - Name, URL, and Clusters to associate this repository with  
 - Save the repository  
+
+Test connection: Currently we are checking that the URL is accessible from a publicfrom public network only.
 
 Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. 
 

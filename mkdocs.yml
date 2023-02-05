@@ -37,6 +37,7 @@ nav:
       - RBAC: Learn/RBAC.md
       - Static Prevention: Learn/Static-Prevention.md
       - Actions: Learn/Actions.md
+      - Helm: Learn/Helm.md
       - Metrics: Learn/Metrics.md
       - Test Utilities Commands: Learn/Test-Utilities-Commands.md
   - Integrations:
