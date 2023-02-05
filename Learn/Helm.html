@@ -12,13 +12,17 @@
         <link rel="canonical" href="https://docs.komodor.com/Learn/Helm.html">
       
       
+        <link rel="prev" href="Actions.html">
+      
+      
+        <link rel="next" href="Metrics.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
-        <title>HELM - Komodor</title>
+        <title>Helm - Komodor</title>
       
     
     
@@ -112,7 +116,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HELM
+              Helm
             
           </span>
         </div>
@@ -196,13 +200,15 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Install-Komodor-Agent.html" class="md-tabs__link">
+      <a href="Install-Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
         Learn
       </a>
     </li>
@@ -302,14 +308,16 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -318,7 +326,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Learn
@@ -502,6 +510,116 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <a href="Actions.html" class="md-nav__link">
         Actions
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Helm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Helm.html" class="md-nav__link md-nav__link--active">
+        Helm
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-requisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-permissionsvalues" class="md-nav__link">
+    Agent permissions/values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-command" class="md-nav__link">
+    Upgrade command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases-charts" class="md-nav__link">
+    Releases (charts)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-actions" class="md-nav__link">
+    Helm Actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    Repositories
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -982,6 +1100,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li>Easy rollback or upgrade version with a clear and easy manifest diff   </li>
 </ul>
 <h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
+<p>Agent version 0.1.158 and above</p>
 <h3 id="agent-permissionsvalues">Agent permissions/values<a class="headerlink" href="#agent-permissionsvalues" title="Permanent link">&para;</a></h3>
 <p>In order to add those capabilities, the Komodor agent has to have permission to read and manipulate secrets.</p>
 <p>To add those permissions, enable the following values on the helm chart:  </p>
@@ -994,11 +1113,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <p><code>helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.resources.secret=true --set watcher.enableHelm=true --set helm.enableActions=true --reuse-values</code></p>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
 <p>You can control who has access to view or modify helm charts within your clusters using Komodor RBAC.
-The following actions can be specified on the RBAC policy level:</p>
-<p><code>read:helm-repo</code><br />
-<code>update:helm-repo</code><br />
-<code>add:helm-repo</code><br />
-<code>remove:helm-repo</code><br />
+The following actions can be specified on the RBAC policy level:
+<code>manage:helm</code> (allowing the following: update, add and remove repos)
+<code>read:helm-repo</code><br />
 <code>install:helm-chart</code><br />
 <code>uninstall:helm-chart</code><br />
 <code>revert:helm-chart</code>  </p>
@@ -1012,7 +1129,7 @@ The following actions can be specified on the RBAC policy level:</p>
 <img src="./img/helm-chart-manifests.png" width="450"></p>
 <h2 id="helm-actions">Helm Actions<a class="headerlink" href="#helm-actions" title="Permanent link">&para;</a></h2>
 <p>Supported actions for charts:
-- Upgrade - will only appear when a repository containing the chart is configured for the relevant cluster. <br />
+- Change version - will only appear when a repository containing the chart is configured for the relevant cluster. <br />
 You’ll be able to select either a newer or older version of that chart.<br />
 <img src="./img/helm-upgrade.png" width="450"></p>
 <div class="codehilite"><pre><span></span><code>This<span class="w"> </span>action<span class="w"> </span>performs<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>helm<span class="w"> </span>command<span class="w">  </span>
@@ -1029,14 +1146,25 @@ Will perform the following command: <br />
 </ul>
 <h2 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">&para;</a></h2>
 <p>To enable upgrading HELM charts directly from Komodor you have to add the HELM repositories where your charts reside.</p>
+<p>In order to view and manage your repositories you need the following permissions:
+<code>manage:helm</code> (allowing the following: update, add and remove repos)
+<code>read:helm-repo</code></p>
 <p>Adding a repository: </p>
+<p>Adding a repository will add the repository to komodor agent that is running on the chosen clusters.</p>
 <ul>
 <li>Navigate to the HELM under the Resources section in Komodor   </li>
-<li>Switch to the Repositories tab  </li>
+<li>Switch to the Repositories tab</li>
+</ul>
+<p><img src="./img/helm-repo-add-header.png" width="450"></p>
+<ul>
 <li>Click “Add Repository”  </li>
 <li>Specify the repository details - Name, URL, and Clusters to associate this repository with  </li>
-<li>Save the repository  </li>
+<li>Save the repository</li>
 </ul>
+<p><img src="./img/helm-repo-add.png" width="450"></p>
+<p>Test connection: </p>
+<p>When adding a repo, Komodor verifies that the Repo is accessible from a public network. </p>
+<p>In case you are referring to a private repo, ignore the warning</p>
 <p>Behind the scenes, the Komodor Agent will install those repositories and will use them to initiate the relevant commands. </p>
 <p><strong>Please note:</strong> Currently, the only repo authentication method supported is user:password</p>
 
@@ -1083,7 +1211,7 @@ Will perform the following command: <br />
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      <script src="../assets/javascripts/bundle.6df46069.min.js"></script>
       
     
   </body>
