@@ -41,6 +41,55 @@ If you would also like to revoke actions permission from the agent run the follo
 
 `helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --set watcher.actions.podExec=false --reuse-values`
 
+## Accessing pod shell
+
+Pod shell is accessible from two main places in Komodor
+
+### Option 1: Via Pods Page
+
+Navigate to pods page on the left navbar
+![select pods](../img/podexec/tour1/1-select-pods.png)
+
+Select a pod in Running state
+![select running pod](../img/podexec/tour1/2-select-a-running-pod.png)
+
+Either Click on actions -> PodExec
+![click actions](../img/podexec/tour1/3-click-on-action.png)
+
+OR Click the pod row -> Click Pod Shell button on the top
+
+![click pod row](../img/podexec/tour1/3-pod-shell-button.png)
+
+The shell is opened
+
+![terminal](../img/podexec/tour1/4-terminal.png)
+
+### Option 2: Via Service Page
+
+Select the services page on the left navbar
+![select services](../img/podexec/tour2/1-select-services.png)
+
+Select a service with at least one healthy pod
+![select a healthy service](../img/podexec/tour2/2-select-a-service.png)
+
+Select the pods tab
+![select pods tab](../img/podexec/tour2/3-select-pods-tab.png)
+
+Select a pod in Running state
+
+![select running pod](../img/podexec/tour2/4-select-a-running-pod.png)
+
+Either click on actions -> Pod Exec
+
+![actions](../img/podexec/tour2/5-actions-pod-exec.png)
+
+Or click on the pod row -> Click on Pod Shell button on the top
+
+![pod row -> shell button](../img/podexec/tour2/5-pod-shell-button.png)
+
+The shell is opened
+![terminal](../img/podexec/tour2/6-terminal.png)
+
 ## How does it work?
 
 - Both client and agent are keeping a persistent connection to Komodor's backend
