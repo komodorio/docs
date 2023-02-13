@@ -1,6 +1,6 @@
-# Pod Shell Access
+# Pod Shell
 
-Pod shell access allows you to start a shell session against containers in your clusters so you can run various commands to examine the state of the container from within.
+Pod shell allows you to initiate a shell session against containers in your clusters so you can run various commands to examine the state of the container from within.
 
 In essense, it is similar to the experience provided by the `kubectl exec -it POD_NAME -- /bin/bash` command
 
@@ -99,9 +99,9 @@ The shell is opened
 - An audit record and an event on the corresponding service timeline are created so you can track pod shell usage
 - The agent receives the message and opens a shell session against the requested pod and container using the Kubernetes API
 - All subsequent messages are passed from the Client to the Agent, injected into the session and then routed back to the Client for display
-- When the Client closes the session voluntarily or if the session is idle for a long time the Agent will close the shell session against the pod
+- The agent will close the shell session if the client closes the session voluntarily or if the session has been idle for a long time.
 
-Take in mind that Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
+Please note: Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
 
 The remote container has to have either `sh` or `bash` installed on it in order to open a shell session against it
 
