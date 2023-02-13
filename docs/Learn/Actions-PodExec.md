@@ -92,13 +92,13 @@ The shell is opened
 
 ## How does it work?
 
-- Both client and agent are keeping a persistent connection to Komodor's backend
+- Both client and agent keep a persistent connection to Komodor's backend
 - Client initiates a pod shell session
 - If there are multiple containers the user will have to choose the container to open the shell session to
 - Authentication and authoriztion take place to make sure the client has permissions to run a shell session against the requested pod
-- An audit record and an event on the corresponding service timeline are created so you can track pod shell sessions
-- The agent receives the message and opens a shell session against the requested pod using the Kubernetes API
-- All subsequent messages go from the Client to the Agent, injected into the session and then routed back to the Client for display
+- An audit record and an event on the corresponding service timeline are created so you can track pod shell usage
+- The agent receives the message and opens a shell session against the requested pod and container using the Kubernetes API
+- All subsequent messages are passed from the Client to the Agent, injected into the session and then routed back to the Client for display
 - When the Client closes the session voluntarily or if the session is idle for a long time the Agent will close the shell session against the pod
 
 Take in mind that Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
@@ -107,5 +107,8 @@ The remote container has to have either `sh` or `bash` installed on it in order 
 
 ## Multiple Shells & Shell Minimization
 
-You can minimize a shell session. The session will be kept in a tab in the bottom side of the web application. While it is minimized, you can keep exploring your system, move between different pages and interact regularly with the web application. When you'd like to resume to the shell session, just click the tab on the bottom of the screen and the terminal will be displayed again.
+You can minimize a shell session. The session will be kept in a tab in the bottom side of the web application. While it is minimized, you can keep exploring your system, move between different pages and interact regularly with the web application. When you'd like to resume to the shell session, click the tab on the bottom of the screen and the terminal will be displayed again.
+
 You can also open and keep multiple shell sessions minimized. In this case you will be able to choose which session you'd like to resume to by using the select menu from the shells tab on the bottom side of the web application.
+
+![multiple minimized shell sessions](../img/podexec/multiple-minimized.png)
