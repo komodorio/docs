@@ -99,7 +99,7 @@ The shell is opened
 - An audit record and an event on the corresponding service timeline are created so you can track pod shell usage
 - The agent receives the message and opens a shell session against the requested pod and container using the Kubernetes API
 - All subsequent messages are passed from the Client to the Agent, injected into the session and then routed back to the Client for display
-- The agent will close the shell session if the client closes the session voluntarily or if the session has been idle for a long time.
+- The agent will close the shell session if the client closes the session voluntarily or if the session has been idle for more than 5 minutes.
 
 Please note: Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
 
