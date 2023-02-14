@@ -35,11 +35,11 @@ To upgrade an existing agent to supports pod shell access execute the following 
 
 If you would like to revoke only pod shell access run the following command:
 
-`helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.podExec=false --reuse-values`
+```helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.podExec=false --reuse-values```
 
 If you would also like to revoke actions permission from the agent run the following command:
 
-`helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --set watcher.actions.podExec=false --reuse-values`
+```helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --set watcher.actions.podExec=false --reuse-values```
 
 ## Accessing pod shell
 
@@ -76,15 +76,12 @@ Select the pods tab
 ![select pods tab](../img/podexec/tour2/3-select-pods-tab.png)
 
 Select a pod in Running state
-
 ![select running pod](../img/podexec/tour2/4-select-a-running-pod.png)
 
 Either click on actions -> Pod Exec
-
 ![actions](../img/podexec/tour2/5-actions-pod-exec.png)
 
 Or click on the pod row -> Click on Pod Shell button on the top
-
 ![pod row -> shell button](../img/podexec/tour2/5-pod-shell-button.png)
 
 The shell is opened
@@ -101,7 +98,7 @@ The shell is opened
 - All subsequent messages are passed from the Client to the Agent, injected into the session and then routed back to the Client for display
 - The agent will close the shell session if the client closes the session voluntarily or if the session has been idle for more than 5 minutes.
 
-Please note: Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
+**Please note:** Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)
 
 The remote container has to have either `sh` or `bash` installed on it in order to open a shell session against it
 
