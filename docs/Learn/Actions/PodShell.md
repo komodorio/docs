@@ -35,11 +35,15 @@ To upgrade an existing agent to supports pod shell access execute the following 
 
 If you would like to revoke only pod shell access run the following command:
 
-```helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.podExec=false --reuse-values```
+```
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.podExec=false --reuse-values
+```
 
 If you would also like to revoke actions permission from the agent run the following command:
 
-```helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --set watcher.actions.podExec=false --reuse-values```
+```
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=false --set watcher.actions.advanced=false --set watcher.actions.podExec=false --reuse-values
+```
 
 ## Accessing pod shell
 
