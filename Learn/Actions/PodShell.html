@@ -9,7 +9,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Learn/Actions/PodExec.html">
+        <link rel="canonical" href="https://docs.komodor.com/Learn/Actions/PodShell.html">
       
       
         <link rel="prev" href="Overview.html">
@@ -564,7 +564,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="PodExec.html" class="md-nav__link md-nav__link--active">
+      <a href="PodShell.html" class="md-nav__link md-nav__link--active">
         Pod Shell
       </a>
       
@@ -1200,12 +1200,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <img alt="select a healthy service" src="../img/podexec/tour2/2-select-a-service.png" /></p>
 <p>Select the pods tab
 <img alt="select pods tab" src="../img/podexec/tour2/3-select-pods-tab.png" /></p>
-<p>Select a pod in Running state</p>
-<p><img alt="select running pod" src="../img/podexec/tour2/4-select-a-running-pod.png" /></p>
-<p>Either click on actions -&gt; Pod Exec</p>
-<p><img alt="actions" src="../img/podexec/tour2/5-actions-pod-exec.png" /></p>
-<p>Or click on the pod row -&gt; Click on Pod Shell button on the top</p>
-<p><img alt="pod row -&gt; shell button" src="../img/podexec/tour2/5-pod-shell-button.png" /></p>
+<p>Select a pod in Running state
+<img alt="select running pod" src="../img/podexec/tour2/4-select-a-running-pod.png" /></p>
+<p>Either click on actions -&gt; Pod Exec
+<img alt="actions" src="../img/podexec/tour2/5-actions-pod-exec.png" /></p>
+<p>Or click on the pod row -&gt; Click on Pod Shell button on the top
+<img alt="pod row -&gt; shell button" src="../img/podexec/tour2/5-pod-shell-button.png" /></p>
 <p>The shell is opened
 <img alt="terminal" src="../img/podexec/tour2/6-terminal.png" /></p>
 <h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
@@ -1219,7 +1219,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <li>All subsequent messages are passed from the Client to the Agent, injected into the session and then routed back to the Client for display</li>
 <li>The agent will close the shell session if the client closes the session voluntarily or if the session has been idle for more than 5 minutes.</li>
 </ul>
-<p>Please note: Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)</p>
+<p><strong>Please note:</strong> Agent restarts will cause the session to restart and any in-session state will be lost (environment variables for example)</p>
 <p>The remote container has to have either <code>sh</code> or <code>bash</code> installed on it in order to open a shell session against it</p>
 <h2 id="multiple-shells-shell-minimization">Multiple Shells &amp; Shell Minimization<a class="headerlink" href="#multiple-shells-shell-minimization" title="Permanent link">&para;</a></h2>
 <p>You can minimize a shell session. The session will be kept in a tab in the bottom side of the web application. While it is minimized, you can keep exploring your system, move between different pages and interact regularly with the web application. When you'd like to resume to the shell session, click the tab on the bottom of the screen and the terminal will be displayed again.</p>
