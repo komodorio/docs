@@ -29,7 +29,9 @@ For convienece, the following flag has been added to configure the agent to supp
 
 To upgrade an existing agent to supports pod shell access execute the following command:
 
-`helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --reuse-values`
+```
+helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --reuse-values
+```
 
 ## Revoking Shell Access
 
