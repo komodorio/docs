@@ -38,7 +38,7 @@ nav:
       - Static Prevention: Learn/Static-Prevention.md
       - Actions:
           - Overview: Learn/Actions/Overview.md
-          - Pod Shell: Learn/Actions/PodExec.md
+          - Pod Shell: Learn/Actions/PodShell.md
       - Helm: Learn/Helm.md
       - Metrics: Learn/Metrics.md
       - Test Utilities Commands: Learn/Test-Utilities-Commands.md
