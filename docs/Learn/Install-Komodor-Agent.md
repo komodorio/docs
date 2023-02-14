@@ -122,7 +122,7 @@ Easily run day-to-day operations like restarting a service, rollbacks, comparing
 Control more complex configurations by editing resources, manifests and config files
 Validate your K8s configurations with real-time feedback for best practices
 
-Learn how to [interact](./Actions.md) with your K8s cluster using Komodor
+Learn how to [interact](./Actions/Overview.md) with your K8s cluster using Komodor
 
 
 🛠️ Troubleshoot: Automated and Guided

@@ -36,7 +36,9 @@ nav:
       - Manage Users: Learn/ManageUsers.md
       - RBAC: Learn/RBAC.md
       - Static Prevention: Learn/Static-Prevention.md
-      - Actions: Learn/Actions.md
+      - Actions:
+          - Overview: Learn/Actions/Overview.md
+          - Pod Shell: Learn/Actions/PodExec.md
       - Helm: Learn/Helm.md
       - Metrics: Learn/Metrics.md
       - Test Utilities Commands: Learn/Test-Utilities-Commands.md
@@ -50,7 +52,7 @@ nav:
       - Sentry: Integrations/Sentry.md
       - Slack: Integrations/Slack.md
       - Microsoft Teams: Integrations/MicrosoftTeams.md
-      - Okta: 
+      - Okta:
           - Okta SSO (SAML): Integrations/Okta/Okta.md
           - Role Provisioning (Okta): Integrations/Okta/Okta-Role-Provisioning.md
       - Azure Active Directory: Integrations/AzureActiveDirectory.md
