@@ -57,11 +57,9 @@ Either Click on actions -> PodExec
 ![click actions](../img/podexec/tour1/3-click-on-action.png)
 
 OR Click the pod row -> Click Pod Shell button on the top
-
 ![click pod row](../img/podexec/tour1/3-pod-shell-button.png)
 
 The shell is opened
-
 ![terminal](../img/podexec/tour1/4-terminal.png)
 
 ### Option 2: Via Service Page
