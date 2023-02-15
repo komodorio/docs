@@ -55,6 +55,7 @@ List of the supported combinations:
 | manage  	| users, monitors, integrations                                                                                            	|
 | run     	| cronjob                                                                                                                  	|
 | rerun   	| job                                                                                                                      	|
+| exec      | pod
 
 **Please note**:  
 
