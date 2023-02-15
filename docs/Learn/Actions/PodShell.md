@@ -19,6 +19,9 @@ In essense, it is similar to the experience provided by the `kubectl exec -it PO
       - create
 ```
 
+## User permissions
+Pod Shell is available for admin users or users with the `pod:exec` Komodor RBAC permission, read more about Komodor RBAC [here](https://docs.komodor.com/Learn/RBAC.html)
+
 ## Opting-in
 
 For convienece, the following flag has been added to configure the agent to support pod shell access:
