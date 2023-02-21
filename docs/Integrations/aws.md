@@ -1,4 +1,5 @@
 # AWS and Komodor
+![komodor badge](https://user-images.githubusercontent.com/28837372/220358091-ff5a8b23-f451-4b0d-852e-e3c7352b875d.png)
 
 ## The Challange 
 According to a recent CNCF survey, the top barriers for K8s adoption are the complexity of daily operations and the lack of expertise.
