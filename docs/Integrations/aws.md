@@ -1,7 +1,7 @@
 # AWS and Komodor
 ![komodor badge](https://user-images.githubusercontent.com/28837372/220358091-ff5a8b23-f451-4b0d-852e-e3c7352b875d.png)
 
-## The Challange 
+## The Challenge 
 According to a recent CNCF survey, the top barriers for K8s adoption are the complexity of daily operations and the lack of expertise.
 
 The fear of migrating mission critical workloads to K8s is hindering organizations from going full cloud-native and expanding the consumption of AWS services. Komodor simplifies K8s ops to a point that eliminates the fear of migration, day 2 operations, automation, maintaining reliability, and deploying frequently.
