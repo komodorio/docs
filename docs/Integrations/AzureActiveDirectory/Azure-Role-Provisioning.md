@@ -11,14 +11,9 @@ For each Komodor role we'd wish to assign to users in Azure AD, we'll have to cr
 
 ## Creating App Roles
 
-Next, let's assume that there are already roles configured on our account in Komodor:
-<img src="./img/komodor-roles.png">
+To create app roles, follow the steps below:
 
-Note that for this example we have configured three custom roles, despite there already being default roles that are defined for every Komodor account.
-
-<br />
-For each role, there is a unique ID. We use those to create custom app roles in Azure AD.
-Going back to the Azure Active Directory, we go to "App registrations":
+Go to "App registrations":
 <img src="./img/app-registrations.png">
 
 Pick "All applications", and then click the Komodor app:
@@ -31,6 +26,7 @@ Click, "Create app role":
 <img src="./img/create-app-role.png">
 
 Fill in the form as below. Note that the value must be the ID as it appears in Komodor (seen above):
+<img src="./img/komodor-roles.png">
 <img src="./img/role-1.png">
 
 Finally, click "Apply". Repeat this for all the roles you wish to add, and you should see them added in the portal, like so:
