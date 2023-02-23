@@ -1,31 +1,13 @@
 # Azure AD Role Provisioning
 
-## Setup
+To assign Komodor roles to Azure AD users we'll be utilizing the App Roles
+capability.
 
-To support the provisioning of Komodor roles for users in Azure AD, we create a SAML-based connection
-with the Komodor app.
-To that end, let us start by getting to the Azure Active Directory dashboard in the Azure portal.
-From there, we navigate to "Enterprise applications":
-<img src="./img/enterprise-applications.png">
+For each Komodor role we'd wish to assign to users in Azure AD, we'll have to create a corresponding Azure AD App Role.
 
-Next, we click on "New application":
-<img src="./img/new-application.png">
-
-Subsequently, click on "Create your own application":
-<img src="./img/create-own-application">
-
-Fill-in the application creation form as depicted below, and click "Create":
-<img src="./img/app-creation-form.png">
-
-This should lead you to the following page, where we set up the SSO connection:
-<img src="./img/set-up-sso.png">
-
-Pick SAML as your preferred SSO method:
-<img src="./img/saml-connection.png">
-
-To finish the process, follow [this guide](https://community.auth0.com/t/setting-up-azure-ad-as-saml-enterprise-connection/87829).
-
-> **_NOTE:_** This part should be consulted with Amit.
+> Prerequisites:
+>
+> - Integrate Azure AD with Komodor using SAML. [Link to guide.](./Azure-SAML-Integration.md)
 
 ## Creating App Roles
 

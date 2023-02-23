@@ -57,6 +57,7 @@ nav:
           - Role Provisioning (Okta): Integrations/Okta/Okta-Role-Provisioning.md
       - Azure Active Directory:
           - Set Up Azure AD Connection: Integrations/AzureActiveDirectory/AzureActiveDirectory.md
+          - Azure AD SSO (SAML): Integrations/AzureActiveDirectory/Azure-SAML-Integration.md
           - Role Provisioning (SAML): Integrations/AzureActiveDirectory/Azure-Role-Provisioning.md
       - Grafana / Alert Manager: Integrations/AlertManager.md
       - ArgoCD: Integrations/ArgoCD.md
