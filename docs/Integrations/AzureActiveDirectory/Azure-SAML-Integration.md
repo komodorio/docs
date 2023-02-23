@@ -10,7 +10,7 @@ Next, we click on "New application":
 <img src="./img/new-application.png">
 
 Subsequently, click on "Create your own application":
-<img src="./img/create-own-application">
+<img src="./img/create-own-application.png">
 
 Fill-in the application creation form as depicted below, and click "Create":
 <img src="./img/app-creation-form.png">
@@ -24,7 +24,7 @@ Pick SAML as your preferred SSO method:
 This should lead you to the following page, where you click "Edit" on "Basic SAML Configuration":
 <img src="./img/saml-based-sign-on.png">
 
-This is where those parameters that are supplied by Komodor support are required. We fill in the form as follows, and click "Save":
+This is where those parameters that are supplied by Komodor support (above) are required. We fill in the form as follows, and click "Save":
 <img src="./img/basic-saml-configuration.png">
 
 Next, we scroll down to the "SAML Certificates" section. We download the certificate file by clicking on the higlighted link.

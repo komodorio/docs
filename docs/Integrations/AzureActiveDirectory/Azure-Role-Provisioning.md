@@ -25,9 +25,11 @@ Next, navigate to "App roles":
 Click, "Create app role":
 <img src="./img/create-app-role.png">
 
-Fill in the form as below. Note that the value must be the ID as it appears in Komodor (seen above):
-<img src="./img/komodor-roles.png">
+Fill in the form as below.
 <img src="./img/role-1.png">
+
+Note that the value must be the role ID as it appears in Komodor:
+<img src="./img/komodor-roles.png">
 
 Finally, click "Apply". Repeat this for all the roles you wish to add, and you should see them added in the portal, like so:
 <img src="./img/created-app-roles.png">
@@ -64,11 +66,7 @@ Note that members of groups automatically get assigned the roles that are assign
 
 ## Sending Role Assignments Over SAML Response
 
-Finally, having assigned roles to users (either directly, or via groups), we'd like to send those role IDs together with the SAML response that is returned when a user is authenticated upon logging into Komdoor.
-
-This way, Komodor will know to automatically assign those roles to the user inside the Komodor app.
-
-To do this, we go back to the "Single sign-on" page where we configured the SAML connection to Komodor (above), and click "Edit" on "Attributes & Claims":
+We go to the "Single sign-on" page where we configured the SAML connection to Komodor ([here](./Azure-SAML-Integration.md)), and click "Edit" on "Attributes & Claims":
 <img src="./img/attributes-and-claims.png">
 
 We click on "Add new claim":
@@ -76,7 +74,5 @@ We click on "Add new claim":
 
 We then fill in the form like below, and then finally click "Save":
 <img src="./img/manage-claim.png">
-
-What will happen as a result is that every new SAML response that is sent upon user authentication will contain the attribute "komodorRoles", which the Komodor app expects to receive. This attribute will contain a list of all the values of the roles that are assigned to said user (i.e. the role IDs).
 
 That's it! Next time the user logs in to Komodor via Azure AD, they will have been assigned the roles in Komodor which are respective to the roles they have been assigned in Azure.
