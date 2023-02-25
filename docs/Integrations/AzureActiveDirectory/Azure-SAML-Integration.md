@@ -1,6 +1,6 @@
 # Azure AD SSO (SAML)
 
-> For the following part you need to contact Komodor support to receive the paramters Identifier and Reply URL (we specify below where they come into play).
+> For the following part you need to contact Komodor support to receive the paramters Identifier and Reply URL (we specify below where they are needed).
 
 Start by getting to the Azure Active Directory dashboard in the Azure portal.
 From there, we navigate to "Enterprise applications":
@@ -9,7 +9,7 @@ From there, we navigate to "Enterprise applications":
 Next, we click on "New application":
 <img src="./img/new-application.png">
 
-Subsequently, click on "Create your own application":
+Then, click on "Create your own application":
 <img src="./img/create-own-application.png">
 
 Fill-in the application creation form as depicted below, and click "Create":
@@ -27,7 +27,7 @@ This should lead you to the following page, where you click "Edit" on "Basic SAM
 This is where those parameters that are supplied by Komodor support (above) are required. We fill in the form as follows, and click "Save":
 <img src="./img/basic-saml-configuration.png">
 
-Next, we scroll down to the "SAML Certificates" section. We download the certificate file by clicking on the higlighted link.
+Next, we scroll down to the "SAML Certificates" section. We download the certificate file by clicking on the highlighted link.
 Then, we copy the "Login URL" under the "Set up Komodor" section:
 <img src="./img/saml-certificates.png">
 

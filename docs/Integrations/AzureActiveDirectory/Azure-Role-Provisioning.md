@@ -62,7 +62,7 @@ Just like we assigned a role to a user, we can assign a role to a group. To that
 Having done that, we should see the group with the role assigned to it (we can also see the user who was assigned a role above):
 <img src="./img/assigned-roles.png">
 
-Note that members of groups automatically get assigned the roles that are assigned to some group. It means that since "Alon Glatter" is a member of "Group-1", he will be assigned both "Role-2" and "Role-1" (which was assigned to him via "Group-1").
+Note that members of a group automatically get assigned the roles that are assigned to the group. It means that since "Alon Glatter" is a member of "Group-1", he will be assigned both "Role-2" and "Role-1" (which was assigned to him via "Group-1").
 
 ## Sending Role Assignments Over SAML Response
 
