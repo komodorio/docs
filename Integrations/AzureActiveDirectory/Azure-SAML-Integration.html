@@ -9,27 +9,27 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Integrations/AzureActiveDirectory.html">
+        <link rel="canonical" href="https://docs.komodor.com/Integrations/AzureActiveDirectory/Azure-SAML-Integration.html">
       
       
-        <link rel="prev" href="Okta/Okta-Role-Provisioning.html">
+        <link rel="prev" href="AzureActiveDirectory.html">
       
       
-        <link rel="next" href="AlertManager.html">
+        <link rel="next" href="Azure-Role-Provisioning.html">
       
-      <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
-        <title>Azure Active Directory - Komodor</title>
+        <title>Azure AD SSO (SAML) - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -58,7 +58,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +83,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#azure-active-directory" class="md-skip">
+        <a href="#azure-ad-sso-saml" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure Active Directory
+              Azure AD SSO (SAML)
             
           </span>
         </div>
@@ -191,7 +191,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+    <a href="../../index.html" class="md-tabs__link">
       Home
     </a>
   </li>
@@ -206,7 +206,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-tabs__item">
-      <a href="../Learn/Install-Komodor-Agent.html" class="md-tabs__link">
+      <a href="../../Learn/Install-Komodor-Agent.html" class="md-tabs__link">
         Learn
       </a>
     </li>
@@ -224,7 +224,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-tabs__item">
-      <a href="Datadog.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../Datadog.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -237,7 +237,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
   <li class="md-tabs__item">
-    <a href="../openapi/redoc-static.html" class="md-tabs__link">
+    <a href="../../openapi/redoc-static.html" class="md-tabs__link">
       Komodor API
     </a>
   </li>
@@ -295,7 +295,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home
       </a>
     </li>
@@ -337,7 +337,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Install-Komodor-Agent.html" class="md-nav__link">
+      <a href="../../Learn/Install-Komodor-Agent.html" class="md-nav__link">
         Install the agent
       </a>
     </li>
@@ -351,7 +351,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Komodor-Agent.html" class="md-nav__link">
+      <a href="../../Learn/Komodor-Agent.html" class="md-nav__link">
         Komodor's Agent
       </a>
     </li>
@@ -365,7 +365,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Annotations.html" class="md-nav__link">
+      <a href="../../Learn/Annotations.html" class="md-nav__link">
         Annotations
       </a>
     </li>
@@ -379,7 +379,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Monitors.html" class="md-nav__link">
+      <a href="../../Learn/Monitors.html" class="md-nav__link">
         Monitors
       </a>
     </li>
@@ -393,7 +393,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/config-changes.html" class="md-nav__link">
+      <a href="../../Learn/config-changes.html" class="md-nav__link">
         Config Changes
       </a>
     </li>
@@ -407,7 +407,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/ExternalLinks.html" class="md-nav__link">
+      <a href="../../Learn/ExternalLinks.html" class="md-nav__link">
         External Links
       </a>
     </li>
@@ -421,7 +421,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/komodor-source-control.html" class="md-nav__link">
+      <a href="../../Learn/komodor-source-control.html" class="md-nav__link">
         Source Control
       </a>
     </li>
@@ -435,7 +435,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
+      <a href="../../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
         Sensitive Information Redaction
       </a>
     </li>
@@ -449,7 +449,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
+      <a href="../../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
         Interaction with the Cluster
       </a>
     </li>
@@ -463,7 +463,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/ManageUsers.html" class="md-nav__link">
+      <a href="../../Learn/ManageUsers.html" class="md-nav__link">
         Manage Users
       </a>
     </li>
@@ -477,7 +477,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/RBAC.html" class="md-nav__link">
+      <a href="../../Learn/RBAC.html" class="md-nav__link">
         RBAC
       </a>
     </li>
@@ -491,7 +491,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Static-Prevention.html" class="md-nav__link">
+      <a href="../../Learn/Static-Prevention.html" class="md-nav__link">
         Static Prevention
       </a>
     </li>
@@ -532,7 +532,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Actions/Overview.html" class="md-nav__link">
+      <a href="../../Learn/Actions/Overview.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -546,7 +546,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Actions/PodShell.html" class="md-nav__link">
+      <a href="../../Learn/Actions/PodShell.html" class="md-nav__link">
         Pod Shell
       </a>
     </li>
@@ -567,7 +567,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Helm.html" class="md-nav__link">
+      <a href="../../Learn/Helm.html" class="md-nav__link">
         Helm
       </a>
     </li>
@@ -581,7 +581,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Metrics.html" class="md-nav__link">
+      <a href="../../Learn/Metrics.html" class="md-nav__link">
         Metrics
       </a>
     </li>
@@ -595,7 +595,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Learn/Test-Utilities-Commands.html" class="md-nav__link">
+      <a href="../../Learn/Test-Utilities-Commands.html" class="md-nav__link">
         Test Utilities Commands
       </a>
     </li>
@@ -646,7 +646,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Datadog.html" class="md-nav__link">
+      <a href="../Datadog.html" class="md-nav__link">
         Datadog
       </a>
     </li>
@@ -660,7 +660,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="datadog-webhook.html" class="md-nav__link">
+      <a href="../datadog-webhook.html" class="md-nav__link">
         Datadog Webhook
       </a>
     </li>
@@ -674,7 +674,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Datadog-Monitor-Notification.html" class="md-nav__link">
+      <a href="../Datadog-Monitor-Notification.html" class="md-nav__link">
         Datadog Monitor Notifications
       </a>
     </li>
@@ -688,7 +688,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="LaunchDarkly.html" class="md-nav__link">
+      <a href="../LaunchDarkly.html" class="md-nav__link">
         LaunchDarkly
       </a>
     </li>
@@ -702,7 +702,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Opsgenie.html" class="md-nav__link">
+      <a href="../Opsgenie.html" class="md-nav__link">
         Opsgenie
       </a>
     </li>
@@ -716,7 +716,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="PagerDuty.html" class="md-nav__link">
+      <a href="../PagerDuty.html" class="md-nav__link">
         PagerDuty
       </a>
     </li>
@@ -730,7 +730,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Sentry.html" class="md-nav__link">
+      <a href="../Sentry.html" class="md-nav__link">
         Sentry
       </a>
     </li>
@@ -744,7 +744,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Slack.html" class="md-nav__link">
+      <a href="../Slack.html" class="md-nav__link">
         Slack
       </a>
     </li>
@@ -758,7 +758,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="MicrosoftTeams.html" class="md-nav__link">
+      <a href="../MicrosoftTeams.html" class="md-nav__link">
         Microsoft Teams
       </a>
     </li>
@@ -799,7 +799,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Okta/Okta.html" class="md-nav__link">
+      <a href="../Okta/Okta.html" class="md-nav__link">
         Okta SSO (SAML)
       </a>
     </li>
@@ -813,7 +813,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Okta/Okta-Role-Provisioning.html" class="md-nav__link">
+      <a href="../Okta/Okta-Role-Provisioning.html" class="md-nav__link">
         Role Provisioning (Okta)
       </a>
     </li>
@@ -835,6 +835,49 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          Azure Active Directory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          Azure Active Directory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AzureActiveDirectory.html" class="md-nav__link">
+        Set Up Azure AD Connection (OAuth) – Deprecated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -843,101 +886,9 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Azure Active Directory
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="AzureActiveDirectory.html" class="md-nav__link md-nav__link--active">
-        Azure Active Directory
+      <a href="Azure-SAML-Integration.html" class="md-nav__link md-nav__link--active">
+        Azure AD SSO (SAML)
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#register-komodor-app-with-the-microsoft-identity-platform" class="md-nav__link">
-    Register Komodor App with the Microsoft identity platform
-  </a>
-  
-    <nav class="md-nav" aria-label="Register Komodor App with the Microsoft identity platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#under-manage-select-app-registrations-new-registration" class="md-nav__link">
-    Under Manage, select App registrations &gt; New registration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-client-secret" class="md-nav__link">
-    Create a Client secret
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-permissions" class="md-nav__link">
-    Add permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-another-redirect-uris" class="md-nav__link">
-    Add another Redirect URIs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#done-the-komodor-app-is-registered" class="md-nav__link">
-    Done! The Komodor app is registered  🌻
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#please-send-the-next-values-to-your-contact-at-komodor" class="md-nav__link">
-    Please send the next values to your contact at Komodor:
-  </a>
-  
-    <nav class="md-nav" aria-label="Please send the next values to your contact at Komodor:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    resources:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -950,7 +901,28 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="AlertManager.html" class="md-nav__link">
+      <a href="Azure-Role-Provisioning.html" class="md-nav__link">
+        Role Provisioning (SAML)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AlertManager.html" class="md-nav__link">
         Grafana / Alert Manager
       </a>
     </li>
@@ -964,7 +936,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="ArgoCD.html" class="md-nav__link">
+      <a href="../ArgoCD.html" class="md-nav__link">
         ArgoCD
       </a>
     </li>
@@ -978,7 +950,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Webhook.html" class="md-nav__link">
+      <a href="../Webhook.html" class="md-nav__link">
         Webhook
       </a>
     </li>
@@ -992,7 +964,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Loft.html" class="md-nav__link">
+      <a href="../Loft.html" class="md-nav__link">
         Loft
       </a>
     </li>
@@ -1006,7 +978,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Squadcast.html" class="md-nav__link">
+      <a href="../Squadcast.html" class="md-nav__link">
         Squadcast
       </a>
     </li>
@@ -1028,7 +1000,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../openapi/redoc-static.html" class="md-nav__link">
+      <a href="../../openapi/redoc-static.html" class="md-nav__link">
         Komodor API
       </a>
     </li>
@@ -1055,82 +1027,6 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#register-komodor-app-with-the-microsoft-identity-platform" class="md-nav__link">
-    Register Komodor App with the Microsoft identity platform
-  </a>
-  
-    <nav class="md-nav" aria-label="Register Komodor App with the Microsoft identity platform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#under-manage-select-app-registrations-new-registration" class="md-nav__link">
-    Under Manage, select App registrations &gt; New registration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-client-secret" class="md-nav__link">
-    Create a Client secret
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-permissions" class="md-nav__link">
-    Add permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-another-redirect-uris" class="md-nav__link">
-    Add another Redirect URIs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#done-the-komodor-app-is-registered" class="md-nav__link">
-    Done! The Komodor app is registered  🌻
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#please-send-the-next-values-to-your-contact-at-komodor" class="md-nav__link">
-    Please send the next values to your contact at Komodor:
-  </a>
-  
-    <nav class="md-nav" aria-label="Please send the next values to your contact at Komodor:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    resources:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1147,70 +1043,33 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
 
 
-<h1 id="azure-active-directory">Azure active directory<a class="headerlink" href="#azure-active-directory" title="Permanent link">&para;</a></h1>
-<h2 id="register-komodor-app-with-the-microsoft-identity-platform">Register Komodor App with the Microsoft identity platform<a class="headerlink" href="#register-komodor-app-with-the-microsoft-identity-platform" title="Permanent link">&para;</a></h2>
-<h3 id="under-manage-select-app-registrations-new-registration">Under <strong>Manage</strong>, select <strong>App registrations</strong> &gt; <strong>New registration</strong><a class="headerlink" href="#under-manage-select-app-registrations-new-registration" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Name:</strong> Komodor</li>
-<li><strong>Supported account types:</strong><ul>
-<li>Accounts in any organizational directory (Any Azure AD directory - Multitenant)</li>
-</ul>
-</li>
-<li><strong>Redirect URI:</strong><ul>
-<li><strong>Platform:</strong> Web</li>
-<li><strong>URL:</strong> <a href="https://auth.komodor.com/login/callback">https://auth.komodor.com/login/callback</a></li>
-</ul>
-</li>
-<li>Click on the <code>Register</code> button</li>
-</ul>
-<h3 id="create-a-client-secret">Create a Client secret<a class="headerlink" href="#create-a-client-secret" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Select <strong>Certificates &amp; secrets</strong> &gt; <strong>Client secrets</strong> &gt; <strong>New client secret</strong><ul>
-<li><strong>Description:</strong> Komodor client secret</li>
-<li><strong>Expires:</strong> choose whatever right for you</li>
-<li>Click on the <code>Add</code> button</li>
-<li><strong>Once generated, copy its value and save it!</strong> This secret value is <em>never displayed again</em> after you leave this page</li>
-<li>Make sure to record the expiration date, you will need to renew the key before that day to avoid a service interruption</li>
-</ul>
-</li>
-</ul>
-<h3 id="add-permissions">Add permissions<a class="headerlink" href="#add-permissions" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Select <strong>API permissions</strong> &gt; <strong>Add a permission &gt; Microsoft APIs &gt; Microsoft Graph</strong></li>
-<li>choose <strong>Delegated permissions</strong></li>
-<li>Search <strong>Directory</strong></li>
-<li>choose <strong>Directory &gt; Directory.Read.All</strong></li>
-<li>Click the <code>Add Premission</code> button</li>
-</ul>
-<h3 id="add-another-redirect-uris">Add another Redirect URIs<a class="headerlink" href="#add-another-redirect-uris" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Select <strong>Authentication &gt; WEB &gt; Add URI</strong></li>
-<li>Add this url <a href="https://komodorio.us.auth0.com/login/callback">https://komodorio.us.auth0.com/login/callback</a></li>
-<li>Save</li>
-</ul>
-<h3 id="done-the-komodor-app-is-registered">Done! The Komodor app is registered  🌻<a class="headerlink" href="#done-the-komodor-app-is-registered" title="Permanent link">&para;</a></h3>
-<h2 id="please-send-the-next-values-to-your-contact-at-komodor">Please send the next values to your contact at Komodor:<a class="headerlink" href="#please-send-the-next-values-to-your-contact-at-komodor" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Microsoft Azure AD Domain</strong><ul>
-<li>Your Azure AD domain name. You can find this on your Azure AD directory's overview page in the Microsoft Azure portal.</li>
-<li><img alt="azure_domain" src="img/azure/azure_domain.png" /></li>
-</ul>
-</li>
-<li><strong>Client ID</strong><ul>
-<li>Unique identifier for your registered Azure AD application. Enter the saved value of the <strong>Application (client) ID</strong> for the app you just registered in Azure AD.</li>
-<li><img alt="azure_client" src="img/azure/azure_client.png" /></li>
-</ul>
-</li>
-<li><strong>Client Secret</strong><ul>
-<li>String used to gain access to your registered Azure AD application. Enter the saved value of the <strong>Client secret</strong> for the app you just registered in Azure AD.</li>
-</ul>
-</li>
-</ul>
-<h3 id="resources">resources:<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://auth0.com/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2?_ga=2.209803797.1637188949.1651998798-1042904470.1642416106&amp;_gl=1*flhqna*rollup_ga*MTA0MjkwNDQ3MC4xNjQyNDE2MTA2*rollup_ga_F1G3E656YZ*MTY1MTk5ODc5Ny4xMy4wLjE2NTE5OTg3OTcuNjA.">Auth0 tutorial</a></li>
-<li><a href="https://youtu.be/tV-2nQRFCio">youtube</a> (old Azure version but a really nice video)</li>
-</ul>
+<h1 id="azure-ad-sso-saml">Azure AD SSO (SAML)<a class="headerlink" href="#azure-ad-sso-saml" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>For the following part you need to contact Komodor support to receive the paramters Identifier and Reply URL (we specify below where they are needed).</p>
+</blockquote>
+<p>Start by getting to the Azure Active Directory dashboard in the Azure portal.
+From there, we navigate to "Enterprise applications":
+<img src="./img/enterprise-applications.png"></p>
+<p>Next, we click on "New application":
+<img src="./img/new-application.png"></p>
+<p>Then, click on "Create your own application":
+<img src="./img/create-own-application.png"></p>
+<p>Fill-in the application creation form as depicted below, and click "Create":
+<img src="./img/app-creation-form.png"></p>
+<p>This should lead you to the following page, where we set up the SSO connection:
+<img src="./img/set-up-sso.png"></p>
+<p>Pick SAML as your preferred SSO method:
+<img src="./img/saml-connection.png"></p>
+<p>This should lead you to the following page, where you click "Edit" on "Basic SAML Configuration":
+<img src="./img/saml-based-sign-on.png"></p>
+<p>This is where those parameters that are supplied by Komodor support (above) are required. We fill in the form as follows, and click "Save":
+<img src="./img/basic-saml-configuration.png"></p>
+<p>Next, we scroll down to the "SAML Certificates" section. We download the certificate file by clicking on the highlighted link.
+Then, we copy the "Login URL" under the "Set up Komodor" section:
+<img src="./img/saml-certificates.png"></p>
+<p>Both of those need to be sent to Komodor support to finish the setup for the SAML connection to Komodor.</p>
+<p>Once the setup is done on both sides, you can click the "Test" button to test that the sign-in works.
+<img src="./img/test-sign-in.png"></p>
 
 
 
@@ -1252,10 +1111,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
     
   </body>
