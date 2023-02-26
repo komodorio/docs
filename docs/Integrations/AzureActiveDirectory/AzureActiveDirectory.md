@@ -1,4 +1,6 @@
-# Azure active directory
+# Azure active directory OAuth (Deprecated)
+
+> **_Note:_** this integration is deprecated, please follow the [SAML guide](./Azure-SAML-Integration.md).
 
 ## Register Komodor App with the Microsoft identity platform
 

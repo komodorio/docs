@@ -1,7 +1,6 @@
 # Azure AD Role Provisioning
 
-To assign Komodor roles to Azure AD users we'll be utilizing the App Roles
-capability.
+To assign Komodor roles to Azure AD users we'll be utilizing the App Roles capability.
 
 For each Komodor role we'd wish to assign to users in Azure AD, we'll have to create a corresponding Azure AD App Role.
 
