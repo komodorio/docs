@@ -9,7 +9,7 @@ For example, you can use Annotations to provide hyperlinks to the following
 - Integrated solutions
 
 **Where does Komodor utilize annotations?**
-Komodor uses these annotations enrich service information and creates powerful connections between services.
+Komodor uses these annotations to enrich service information and creates powerful connections between services.
 
 - Services explorer
 - Related services
