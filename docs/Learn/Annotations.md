@@ -1,7 +1,7 @@
 # Komodor Kubernetes Annotations
 
-Komodor annotations enable users to create static and dynamic hyperlinks
-to other solutions and resources. For example, you can use Annotations to provide hyperlinks to the following
+Komodor annotations enable users to create static and dynamic hyperlinks to other solutions and resources.
+For example, you can use Annotations to provide hyperlinks to the following
 
 - Source Control like Git
 - DevOps tools 
