@@ -1,7 +1,8 @@
 # Komodor Kubernetes Annotations
 
 Komodor annotations enable users to create static and dynamic hyperlinks to other solutions and resources.
-For example, you can use Annotations to provide hyperlinks to the following
+
+For example, you can use Annotations to provide hyperlinks to the following:
 
 - Source Control like Git
 - DevOps tools 
@@ -9,6 +10,7 @@ For example, you can use Annotations to provide hyperlinks to the following
 - Integrated solutions
 
 **Where does Komodor utilize annotations?**
+
 Komodor uses these annotations to enrich service information and creates powerful connections between services.
 
 - Services explorer
@@ -16,7 +18,7 @@ Komodor uses these annotations to enrich service information and creates powerfu
 - Events screen
 - Matching alerts to the correct services
 
-There are Annotations you can declare in a **Deployment manifest that will populate specific dashboards
+There are annotations you can declare in a **Deployment manifest that will populate specific dashboards
 within Komodor**.
 
 
@@ -33,13 +35,14 @@ The Yaml Path is ```metadata.annotations```
 ```
 metadata:
   annotations:
-    app.komodor.com/deploy.deploy.github: 'https://github.com/cloudecho/hello-world-go'
+    app.komodor.com/deploy.link.cloudecho: 'https://github.com/cloudecho/hello-world-go'
+    app.komodor.com/service.link.cloudecho: 'https://github.com/cloudecho/hello-world-go'
 ```
 
 Komodor Annotations provide links from the Troubleshooting components for Deployments and Services 
 
-- The **Info** tab of the Service 
 - The **Deployment Details** of a Deployment Event 
+- The **Info** tab of the Service 
 
 
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)
@@ -71,12 +74,12 @@ For each deployment version, you can add a quick link with the relevant filters 
 
 ### Job
 
-`app.komodor.com/deploy.job.name:url`
+`app.komodor.com/job.link.name:url`
 Example:
 
 | Annotation                         | Values | Description                                  | Example                                |
 | ---------------------------------- | ------ | -------------------------------------------- | -------------------------------------- |
-| app.komodor.com/deploy.job.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |
+| app.komodor.com/job.link.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |
 
 
 
