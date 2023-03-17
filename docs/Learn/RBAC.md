@@ -18,7 +18,7 @@ Roles are built from one or more policies.
     "restart:statefulset",
     "rerun:job"
 ```
-Learn more about [actions](https://docs.komodor.com/Learn/Actions.html)  
+Learn more about [actions](https://docs.komodor.com/Learn/Actions/Overview.html)  
 
 **Please note** - The built-in account-admin role and policy cannot be modified, there has to be at-least one account-admin on the account, the last account-admin cannot be removed or provided with a different role.
 
