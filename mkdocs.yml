@@ -64,4 +64,4 @@ nav:
       - Webhook: Integrations/Webhook.md
       - Loft: Integrations/Loft.md
       - Squadcast: Integrations/Squadcast.md
-  - Komodor API: openapi/redoc-static.html
+  - Komodor API: https://api.komodor.com/mgmt/api#/
