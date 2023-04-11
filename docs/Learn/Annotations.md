@@ -1,47 +1,106 @@
-# Komodor kubernetes annotations
+# Komodor Kubernetes Annotations
 
-Komodor annotations (AKA Komodor as Code), is a method to allow users to configure everything related to Komodor as part of their native k8s yaml.
+Komodor annotations enable users to create static and dynamic hyperlinks to other solutions and resources.
+
+For example, you can use Annotations to provide hyperlinks to the following:
+
+- Source Control like Git
+- DevOps tools 
+- Monitoring and observability
+- Integrated solutions
+
+**Where does Komodor utilize annotations?**
+
+Komodor uses these annotations to enrich service information and creates powerful connections between services.
+
+- Services explorer
+- Related services
+- Events screen
+- Matching alerts to the correct services
+
+There are annotations you can declare in a **Deployment manifest that will populate specific dashboards
+within Komodor**.
+
+
+<!--div style="height:500px;border:1px solid #000;"></div-->
+
+
+|Deploy Links    |      Service Links      | 
+|:----------:|:-------------:|
+| <img src="img/AnnocationsDeployLink.png" width="450"/> |  <img src="img/AnnotationsServiceLink.png" width="450"/> | 
+
+
+The Yaml Path is ```metadata.annotations```
+
+```
+metadata:
+  annotations:
+    app.komodor.com/deploy.link.cloudecho: 'https://github.com/cloudecho/hello-world-go'
+    app.komodor.com/service.link.cloudecho: 'https://github.com/cloudecho/hello-world-go'
+```
+
+Komodor Annotations provide links from the Troubleshooting components for Deployments and Services 
+
+- The **Deployment Details** of a Deployment Event 
+- The **Info** tab of the Service 
+
+
 Komodor annotations should be placed in the deployment resource annotations (annotations set on the pod template are ignored)
 
 
-## CI-Deploy Links
+## Annotation Links
 
-For each deployment version, you can add a quick link with the job url.
+Annotation links have  different types:
 
-### How
+- Deploy 
+- Job
+- Service
 
-`app.komodor.com/deploy.job.name:url`
-
-Example:
-
-| Annotation                         | Values | Description                                  | Example                                |
-| ---------------------------------- | ------ | -------------------------------------------- | -------------------------------------- |
-| app.komodor.com/deploy.job.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |
-
-## Deploy Links
+### Deploy
 
 For each deployment version, you can add a quick link with the relevant filters already in place!
 
-### How
+#### Example 
 
 `app.komodor.com/deploy.link.name:url`
 
-Examples:
+
 
 | Annotation                         | Values | Description                                 | Example                                                                                                    |
 | ---------------------------------- | ------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | app.komodor.com/deploy.link.logs   | url    | Link for the specific version logs          | https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1                                             |
 | app.komodor.com/deploy.link.sentry | url    | Link for the specific version Sentry issues | https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d |
+ 
 
-## Custom Links
+### Job
+
+`app.komodor.com/job.link.name:url`
+Example:
+
+| Annotation                         | Values | Description                                  | Example                                |
+| ---------------------------------- | ------ | -------------------------------------------- | -------------------------------------- |
+| app.komodor.com/job.link.jenkins | url    | Link to Jenkins job that deploys the service | https://ci.jenkins-ci.org/computer/job |
+
+
+
+### Service
+
+| Annotation                         | Values | Description                                 | Example                                                                                                    |
+| ---------------------------------- | ------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| app.komodor.com/service.link.logs   | url    | Link for the specific version logs          | https://app.logz.io/#/dashboard/kibana/discover?_a=env:123.0.1                                             |
+| app.komodor.com/service.link.sentry | url    | Link for the specific version Sentry issues | https://sentry.io/organizations/rookoutz/issues/?project=1320440&query=sdk.version%3A1.0.1&statsPeriod=14d |
+
+
+
+## Customing  Links
 
 You can create custom links to external and internal applications by crafting your own URL to the application using a skeleton URL and placeholders provided by Komodor.
 Just copy the URL of the application you want to link to, identify the placeholders in the URL that are used to query the application, and replace them with placeholders for your own use.
 Please find the below examples as references for common applications.
 
-### How
+### Custom Format 
 
-`app.komodor.com/deploy.link.name:value`
+`app.komodor.com/[deploy|service].link.name:value`
 
 Examples:
 
@@ -137,20 +196,11 @@ spec:
               protocol: TCP
 ```
 
-## Annotations Best Practices
+# Annotations Best Practices
 
 At Komodor we believe that k8s annotations are the best method for describing services metadata.
 This includes all the “extra” fields used to tag and label your services, both for other team members and for external tools.
 BTW, We collect data from both annotations and labels.
-
-### Where does Komodor utilize annotations?
-
-Everywhere! Komodor will use these annotations to create powerful connections between services and enrich service information in the following areas:
-
-- Services explorer
-- Related services
-- Events screen
-- Matching alerts to the correct services
 
 ### [Official Kubernetes recommendations](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 
