@@ -7,7 +7,7 @@
 - Enter a Display Label in the General Info tab. **Komodor** is recommended.
 ### Configure SAML
 - Go to the SSO tab
-    - pick a TEAMNAME, replace it in the following steps
+    - choose a TEAMNAME, preferably your company name, and replace it in the following steps
     - Change the **IDP URL** suffix to `komodor`
     - Change the **IdP Entity ID** to `https://komodorio.com`
     - Change the **SP Entity ID** to `urn:auth0:komdoorio:TEAMNAME`
