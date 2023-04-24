@@ -9,27 +9,27 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Learn/Monitors.html">
+        <link rel="canonical" href="https://docs.komodor.com/Integrations/JumpCloud/JumpCloudSamlAttributes.html">
       
       
-        <link rel="prev" href="Annotations.html">
+        <link rel="prev" href="JumpCloud.html">
       
       
-        <link rel="next" href="config-changes.html">
+        <link rel="next" href="../AlertManager.html">
       
-      <link rel="icon" href="../img/favicon.png">
+      <link rel="icon" href="../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
-        <title>Monitors - Komodor</title>
+        <title>Role Provisioning (SAML) - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -58,7 +58,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +83,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#monitors" class="md-skip">
+        <a href="#configure-saml-attributes-for-jumpcloud-sso" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Monitors
+              Role Provisioning (SAML)
             
           </span>
         </div>
@@ -191,10 +191,26 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+    <a href="../../index.html" class="md-tabs__link">
       Home
     </a>
   </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Learn/Install-Komodor-Agent.html" class="md-tabs__link">
+        Learn
+      </a>
+    </li>
+  
 
       
         
@@ -208,23 +224,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-tabs__item">
-      <a href="Install-Komodor-Agent.html" class="md-tabs__link md-tabs__link--active">
-        Learn
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Integrations/Datadog.html" class="md-tabs__link">
+      <a href="../Datadog.html" class="md-tabs__link md-tabs__link--active">
         Integrations
       </a>
     </li>
@@ -295,7 +295,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home
       </a>
     </li>
@@ -308,16 +308,14 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -326,7 +324,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Learn
@@ -339,7 +337,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Install-Komodor-Agent.html" class="md-nav__link">
+      <a href="../../Learn/Install-Komodor-Agent.html" class="md-nav__link">
         Install the agent
       </a>
     </li>
@@ -353,7 +351,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Komodor-Agent.html" class="md-nav__link">
+      <a href="../../Learn/Komodor-Agent.html" class="md-nav__link">
         Komodor's Agent
       </a>
     </li>
@@ -367,7 +365,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Annotations.html" class="md-nav__link">
+      <a href="../../Learn/Annotations.html" class="md-nav__link">
         Annotations
       </a>
     </li>
@@ -379,101 +377,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Monitors
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Monitors.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Learn/Monitors.html" class="md-nav__link">
         Monitors
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#supported-configurations-per-monitor" class="md-nav__link">
-    Supported configurations per Monitor:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#availability-monitor" class="md-nav__link">
-    Availability Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-monitor" class="md-nav__link">
-    Deploy Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#node-monitor" class="md-nav__link">
-    Node Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pvc-monitor" class="md-nav__link">
-    PVC Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#job-monitor" class="md-nav__link">
-    Job Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cronjob-monitor" class="md-nav__link">
-    CronJob Monitor
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -485,7 +393,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="config-changes.html" class="md-nav__link">
+      <a href="../../Learn/config-changes.html" class="md-nav__link">
         Config Changes
       </a>
     </li>
@@ -499,7 +407,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="ExternalLinks.html" class="md-nav__link">
+      <a href="../../Learn/ExternalLinks.html" class="md-nav__link">
         External Links
       </a>
     </li>
@@ -513,7 +421,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="komodor-source-control.html" class="md-nav__link">
+      <a href="../../Learn/komodor-source-control.html" class="md-nav__link">
         Source Control
       </a>
     </li>
@@ -527,7 +435,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Sensitive-Information-Redaction.html" class="md-nav__link">
+      <a href="../../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
         Sensitive Information Redaction
       </a>
     </li>
@@ -541,7 +449,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Interaction-With-The-Cluster.html" class="md-nav__link">
+      <a href="../../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
         Interaction with the Cluster
       </a>
     </li>
@@ -555,7 +463,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="ManageUsers.html" class="md-nav__link">
+      <a href="../../Learn/ManageUsers.html" class="md-nav__link">
         Manage Users
       </a>
     </li>
@@ -569,7 +477,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="RBAC.html" class="md-nav__link">
+      <a href="../../Learn/RBAC.html" class="md-nav__link">
         RBAC
       </a>
     </li>
@@ -583,7 +491,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Static-Prevention.html" class="md-nav__link">
+      <a href="../../Learn/Static-Prevention.html" class="md-nav__link">
         Static Prevention
       </a>
     </li>
@@ -624,7 +532,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Actions/Overview.html" class="md-nav__link">
+      <a href="../../Learn/Actions/Overview.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -638,7 +546,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Actions/PodShell.html" class="md-nav__link">
+      <a href="../../Learn/Actions/PodShell.html" class="md-nav__link">
         Pod Shell
       </a>
     </li>
@@ -659,7 +567,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Helm.html" class="md-nav__link">
+      <a href="../../Learn/Helm.html" class="md-nav__link">
         Helm
       </a>
     </li>
@@ -673,7 +581,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Metrics.html" class="md-nav__link">
+      <a href="../../Learn/Metrics.html" class="md-nav__link">
         Metrics
       </a>
     </li>
@@ -687,7 +595,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Test-Utilities-Commands.html" class="md-nav__link">
+      <a href="../../Learn/Test-Utilities-Commands.html" class="md-nav__link">
         Test Utilities Commands
       </a>
     </li>
@@ -707,14 +615,16 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -723,7 +633,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Integrations
@@ -736,7 +646,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Datadog.html" class="md-nav__link">
+      <a href="../Datadog.html" class="md-nav__link">
         Datadog
       </a>
     </li>
@@ -750,7 +660,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/datadog-webhook.html" class="md-nav__link">
+      <a href="../datadog-webhook.html" class="md-nav__link">
         Datadog Webhook
       </a>
     </li>
@@ -764,7 +674,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Datadog-Monitor-Notification.html" class="md-nav__link">
+      <a href="../Datadog-Monitor-Notification.html" class="md-nav__link">
         Datadog Monitor Notifications
       </a>
     </li>
@@ -778,7 +688,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/LaunchDarkly.html" class="md-nav__link">
+      <a href="../LaunchDarkly.html" class="md-nav__link">
         LaunchDarkly
       </a>
     </li>
@@ -792,7 +702,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Opsgenie.html" class="md-nav__link">
+      <a href="../Opsgenie.html" class="md-nav__link">
         Opsgenie
       </a>
     </li>
@@ -806,7 +716,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/PagerDuty.html" class="md-nav__link">
+      <a href="../PagerDuty.html" class="md-nav__link">
         PagerDuty
       </a>
     </li>
@@ -820,7 +730,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Sentry.html" class="md-nav__link">
+      <a href="../Sentry.html" class="md-nav__link">
         Sentry
       </a>
     </li>
@@ -834,7 +744,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Slack.html" class="md-nav__link">
+      <a href="../Slack.html" class="md-nav__link">
         Slack
       </a>
     </li>
@@ -848,7 +758,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/MicrosoftTeams.html" class="md-nav__link">
+      <a href="../MicrosoftTeams.html" class="md-nav__link">
         Microsoft Teams
       </a>
     </li>
@@ -889,7 +799,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Okta/Okta.html" class="md-nav__link">
+      <a href="../Okta/Okta.html" class="md-nav__link">
         Okta SSO (SAML)
       </a>
     </li>
@@ -903,7 +813,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Okta/Okta-Role-Provisioning.html" class="md-nav__link">
+      <a href="../Okta/Okta-Role-Provisioning.html" class="md-nav__link">
         Role Provisioning (Okta)
       </a>
     </li>
@@ -951,7 +861,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/AzureActiveDirectory/AzureActiveDirectory.html" class="md-nav__link">
+      <a href="../AzureActiveDirectory/AzureActiveDirectory.html" class="md-nav__link">
         Set Up Azure AD Connection (OAuth) – Deprecated
       </a>
     </li>
@@ -965,7 +875,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/AzureActiveDirectory/Azure-SAML-Integration.html" class="md-nav__link">
+      <a href="../AzureActiveDirectory/Azure-SAML-Integration.html" class="md-nav__link">
         Azure AD SSO (SAML)
       </a>
     </li>
@@ -979,7 +889,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/AzureActiveDirectory/Azure-Role-Provisioning.html" class="md-nav__link">
+      <a href="../AzureActiveDirectory/Azure-Role-Provisioning.html" class="md-nav__link">
         Role Provisioning (SAML)
       </a>
     </li>
@@ -998,14 +908,16 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
       
       
       
@@ -1014,7 +926,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_12">
           <span class="md-nav__icon md-icon"></span>
           JumpCloud
@@ -1027,7 +939,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/JumpCloud/JumpCloud.html" class="md-nav__link">
+      <a href="JumpCloud.html" class="md-nav__link">
         JumpCloud SSO (SAML)
       </a>
     </li>
@@ -1039,11 +951,65 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Integrations/JumpCloud/JumpCloudSamlAttributes.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Role Provisioning (SAML)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="JumpCloudSamlAttributes.html" class="md-nav__link md-nav__link--active">
         Role Provisioning (SAML)
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-komodor-roles-to-a-user-from-the-jumpcloud-admin-portal" class="md-nav__link">
+    Add Komodor Roles to a user from the JumpCloud Admin Portal:
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Komodor Roles to a user from the JumpCloud Admin Portal:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1062,7 +1028,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/AlertManager.html" class="md-nav__link">
+      <a href="../AlertManager.html" class="md-nav__link">
         Grafana / Alert Manager
       </a>
     </li>
@@ -1076,7 +1042,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/ArgoCD.html" class="md-nav__link">
+      <a href="../ArgoCD.html" class="md-nav__link">
         ArgoCD
       </a>
     </li>
@@ -1090,7 +1056,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Webhook.html" class="md-nav__link">
+      <a href="../Webhook.html" class="md-nav__link">
         Webhook
       </a>
     </li>
@@ -1104,7 +1070,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Loft.html" class="md-nav__link">
+      <a href="../Loft.html" class="md-nav__link">
         Loft
       </a>
     </li>
@@ -1118,7 +1084,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Integrations/Squadcast.html" class="md-nav__link">
+      <a href="../Squadcast.html" class="md-nav__link">
         Squadcast
       </a>
     </li>
@@ -1174,58 +1140,22 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-configurations-per-monitor" class="md-nav__link">
-    Supported configurations per Monitor:
+  <a href="#add-komodor-roles-to-a-user-from-the-jumpcloud-admin-portal" class="md-nav__link">
+    Add Komodor Roles to a user from the JumpCloud Admin Portal:
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Komodor Roles to a user from the JumpCloud Admin Portal:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#availability-monitor" class="md-nav__link">
-    Availability Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-monitor" class="md-nav__link">
-    Deploy Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#node-monitor" class="md-nav__link">
-    Node Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pvc-monitor" class="md-nav__link">
-    PVC Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#job-monitor" class="md-nav__link">
-    Job Monitor
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cronjob-monitor" class="md-nav__link">
-    CronJob Monitor
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1247,136 +1177,38 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
 
 
-<h1 id="monitors">Monitors<a class="headerlink" href="#monitors" title="Permanent link">&para;</a></h1>
-<p>Komodor Monitors are built to detect different scenarios, investigate certain aspects around them and provide additional context to simplify the troubleshooting process and reduce the MTTR.</p>
-<h2 id="supported-configurations-per-monitor">Supported configurations per Monitor:<a class="headerlink" href="#supported-configurations-per-monitor" title="Permanent link">&para;</a></h2>
-<p>Komodor monitors are being configured on a cluster level, each monitor supports the following configurations:</p>
+<h1 id="configure-saml-attributes-for-jumpcloud-sso">Configure SAML Attributes for JumpCloud SSO<a class="headerlink" href="#configure-saml-attributes-for-jumpcloud-sso" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Trigger conditions - specify when this monitor should be triggered, conditions vary per monitor.</li>
-<li>Scope - which resources should be monitored, the scope can be configured for the entire cluster, specific namespaces, annotations or labels, the relationship between the selected resources is currently OR relationship.</li>
-<li>Sink/Notification - where do you want to receive notifications (Slack/Teams/OpsGenie/PagerDuty).</li>
+<li>This tutorial is based on <a href="https://support.jumpcloud.com/support/s/article/custom-user-attributes-2019-08-21-10-36-47">this article</a> from JumpCloud.</li>
+<li>After configuring youre JumpCloud SAML connection to Komodor,
+  you can assign RBAC roles to users based on your account's Komodor roles.</li>
 </ul>
-<h2 id="prerequisites">Prerequisites:<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p><strong>Required agent version</strong> - 1.0.78 (recommended - latest version)</p>
-<h2 id="availability-monitor">Availability Monitor<a class="headerlink" href="#availability-monitor" title="Permanent link">&para;</a></h2>
-<p>Monitor your workload’s health (available replicas &lt; desired replicas), creates an Availability issue on the Events and Service timelines that provides relevant information to resolve the issue.
-The Availability monitor will not be triggered during an active rollout.</p>
-<p><strong>Please note</strong> Modifying the scope of an Availability monitor might affect (remove) events from the timeline.</p>
+<h2 id="add-komodor-roles-to-a-user-from-the-jumpcloud-admin-portal">Add Komodor Roles to a user from the JumpCloud Admin Portal:<a class="headerlink" href="#add-komodor-roles-to-a-user-from-the-jumpcloud-admin-portal" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Monitor is triggered by -
-  Service (Deployment/DaemonSet/Rollout/StatefulSet) number of available replicas &lt; desired replicas by the specified conditions for the defined duration</p>
-</li>
-<li>
-<p>The following checks are performed -</p>
-</li>
-<li>Pods health
-    Foreach Pod we'll provide the following: - Phase, Reason, Pod events - Containers list with their state, reason &amp; logs</li>
-<li>Service latest deployments</li>
-<li>Service describe</li>
+<li>Login to the Admin Portal: https://console.jumpcloud.com/.</li>
+<li>Go to <strong>User Management &gt; Users</strong>.</li>
+<li>Click the green + symbol at the top-left to create a new user,
+  or select an existing user for the User Details Panel. click <strong>details</strong> on the right-hand column of an existing user.</li>
+<li>Go to <strong>Custom Attributes</strong>.</li>
+<li>Click <strong>Add New Custom Attribute</strong>.</li>
+<li>For <strong>Attribute Name</strong>, enter <code>komodorRoles</code></li>
+<li>For <strong>Attribute Value</strong>, enter a comma-separated list of roleIds.</li>
+<li>For example: <code>role-id-1,role-id-2</code></li>
+<li>No spaces and quotes are allowed.</li>
+<li>You can find the roleIds in the Komodor UI by going to Settings &gt; Roles.</li>
+<li>Click <strong>Save</strong>.</li>
 </ul>
-<p><strong>Please note</strong> Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.</p>
-<p><strong>Please note</strong> It is possible to costume your notifications to alert for specific error categories.</p>
-<p>Each <strong>category</strong> is including the following <strong>reasons</strong> :</p>
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Reasons</th>
-  </tr>
-  <tr>
-    <td>NonZeroExitCode</td>
-    <td>NonZeroExitCode</td>
-  </tr>
-  <tr>
-    <td>Unhealthy</td>
-    <td>Unhealthy</td>
-  </tr>
-  <tr>
-    <td>OOMKilled</td>
-    <td>OOMKilled, NonZeroExitCode - Exit code: 137</td>
-  </tr>
-  <tr>
-    <td>Creating/Initializing</td>
-    <td>ContainerCreating, PodInitializing, PodNotReady, ContainersNotReady, ReadinessGatesNotReady</td>
-  </tr>
-  <tr>
-    <td>BackOff</td>
-    <td>BackOff, CrashLoopBackOff, ImagePullBackOff</td>
-  </tr>
-  <tr>
-    <td>Infrastructure</td>
-    <td>NodeNotReady, NetworkNotReady, Evicted,NodeShutdown, Terminated, Preempted</td>
-  </tr>
-  <tr>
-    <td>Pending</td>
-    <td>FailedScheduling, NotTriggerScaleUp, PodPending, NodeAffinity</td>
-  </tr>
-  <tr>
-    <td>Image</td>
-    <td>ErrImagePull, InvalidImageName</td>
-  </tr>
-  <tr>
-    <td>Volume/Secret/ConfigMap</td>
-    <td>FailedMount, FailedAttachVolume, CreateContainerConfigError</td>
-  </tr>
-  <tr>
-    <td>Container Creation</td>
-    <td>CreateContainerError, RunContainerError, ContainerCannotRun, ContainerStatusUnknown</td>
-  </tr>
-  <tr>
-    <td>Pod Termination</td>
-    <td>FailedPreStopHook, FailedKillPod</td>
-  </tr>
-  <tr>
-    <td>Completed</td>
-    <td>Completed</td>
-  </tr>
-  <tr>
-    <td>Other</td>
-    <td>Any reason that was not mapped in other categories</td>
-  </tr>
-</table>
-
-<h2 id="deploy-monitor">Deploy Monitor<a class="headerlink" href="#deploy-monitor" title="Permanent link">&para;</a></h2>
-<p>A Deploy monitor will be trigerred whenever a resource is being deployed/rolled-out.<br />
-Using the Deploy Monitor configuration you can define on what resources (scope) and in what occasion (failed deploy/successful deploy/both) when you would like to get a notification in one of your notification channel (Slack/Teams)<br />
-<img src="./img/deploy-monitor-config.png" width="450"></p>
-<h2 id="node-monitor">Node Monitor<a class="headerlink" href="#node-monitor" title="Permanent link">&para;</a></h2>
-<p>Monitors Nodes with faulty <a href="https://kubernetes.io/docs/concepts/architecture/nodes/#condition">Conditions</a>.</p>
+<h3 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Monitor is triggered by -
-  Node Conditions change to a faulty Condition, the faulty condition/s last through the configured Duration</li>
-<li>We perform the following checks as part of our investigation</li>
-<li>Is the node ready?</li>
-<li>Is the node overcommitted?</li>
-<li>Is the node under pressure?</li>
-<li>Are system Pods healthy?</li>
-<li>Is the network available?</li>
-<li>Are Pods being evicted?
-    -Are user pods healthy?</li>
-<li>Is the node scheduable?</li>
-<li>Node overall resource consumption including top 5 pod consumers (requires metric-server installed)</li>
-<li>Notes</li>
-<li>The Node detector currently does not deal with nodes in an Unknown state (this means Spot interruptions or scale-down events will not be handled by the WF, could affect other scenarios as well)</li>
-<li>Will only run on Nodes that are created for more than 3 minutes (there is a 3-minute delay from Node create time prior to running the WF)</li>
+<li>You can also assign roles to groups.</li>
+<li>Go to <strong>User Management &gt; User Groups</strong>.</li>
+<li>Choose a group -&gt; Details -&gt; Custom Attributes -&gt; Add New Custom Attribute.</li>
+<li>For <strong>Attribute Name</strong>, enter <code>komodorRoles</code></li>
+<li>For <strong>Attribute Value</strong>, do the same as for users</li>
+<li>Click <strong>Save</strong>.</li>
+<li>Now, all users in this group will have the roles you specified.</li>
+<li>If a user in this group has a different set of roles, the user's roles will override the group's roles.</li>
 </ul>
-<h2 id="pvc-monitor">PVC Monitor<a class="headerlink" href="#pvc-monitor" title="Permanent link">&para;</a></h2>
-<p>Monitors PVCs in a pending state.</p>
-<ul>
-<li>Triggered by -
-  PVC in a pending state for the defined duration</li>
-<li>We perform the following checks as part of our investigation</li>
-<li>PVC creation, utilization, and readiness issues</li>
-<li>Volume provisioner related issues</li>
-<li>PVC spec change</li>
-<li>Identify the impact on your services</li>
-</ul>
-<h2 id="job-monitor">Job Monitor<a class="headerlink" href="#job-monitor" title="Permanent link">&para;</a></h2>
-<p>The Job Monitor will be triggered when a job fails execution.<br />
-It allows you to get notified for Job failures on the defined scope.</p>
-<h2 id="cronjob-monitor">CronJob Monitor<a class="headerlink" href="#cronjob-monitor" title="Permanent link">&para;</a></h2>
-<p>The CronJob Monitor will be triggered when a job (managed by CronJob) fails execution.<br />
-It allows you to get notified for the first (first failure ater a success) or any CronJob failures on the defined scope.</p>
 
 
 
@@ -1418,10 +1250,10 @@ It allows you to get notified for the first (first failure ater a success) or an
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
       
     
   </body>
