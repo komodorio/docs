@@ -13,6 +13,7 @@
 - For **Attribute Name**, enter `komodorRoles`
 - For **Attribute Value**, enter a comma-separated list of roleIds.
   - For example: `role-id-1,role-id-2`
+  - No spaces and quotes are allowed.
   - You can find the roleIds in the Komodor UI by going to Settings > Roles.
 - Click **Save**.
 
