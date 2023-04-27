@@ -36,13 +36,17 @@ Using an API call customers can enrich the Komodor timeline with their own custo
 | severity           	| Enum - Info (**default**), Warning, Error 	| **Optional**                                                                       	|
 | details            	| Object (key:value pairs)              	| **Optional**, key:value pairs allowing specifying any additonal categories of data 	|
 
-### Scope 
+#### Scope 
 The scope field allows the user to define the Services to associate the custom event with.
 
 By default, when no scope is specified, the event will be correlated to all Services on the account level. when specifying a cluster/namespace/service name you are narrowing the scope accordingly (within a specific scope field (e.g - cluster, namespaces, serviceNames) there is an OR condition, between the fields its AND).  
 
-**Examples: **   
-- By specifying no scope - the evnet will be correlated to all Services on the account level  
-- By specifying a list of one or more clusters - the event will be correlated to all Services in those clusters  
-- By specifying a list of namespaces - the event will be correlated to all Services in those namespaces (accross all clusters, unless mentioning otherwise)   
-- By specifying a list of servicesNames - the event will be correlated to those Services  
+**Examples:**   
+Let's assume the following scenario: we run 2 clusters, A and B, in those we have 2 namespaces, C and D, in each of those namespaces we have 5 Services, numbered from 1-5. In total we have 20 Services in those clusters.
+
+- By specifying no scope at all - the event will be correlated to all 20 Services  
+- By specifying just cluster A - the event will be correlated to all the services (10) running in cluster A  
+- By specifying namespace C - the event will be correlated to all services running in namespace C (within both clusters)   
+- By specfiying services 1, 2, 3 - the event will be correlated to all services with names 1 or 2 or 3
+- By specifying a combiniation of cluster B namespace D - the event will be correlated to all the services running in namespace D on cluster B
+- By specifying a combination of namespace C and service 5 - the event will be correlated to service 5 running on namespace C on both clusters
