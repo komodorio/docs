@@ -841,12 +841,18 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Body
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Body">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#scope" class="md-nav__link">
     Scope
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1201,12 +1207,18 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Body
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Body">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#scope" class="md-nav__link">
     Scope
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1305,14 +1317,19 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </tr>
 </tbody>
 </table>
-<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h3>
+<h4 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h4>
 <p>The scope field allows the user to define the Services to associate the custom event with.</p>
 <p>By default, when no scope is specified, the event will be correlated to all Services on the account level. when specifying a cluster/namespace/service name you are narrowing the scope accordingly (within a specific scope field (e.g - cluster, namespaces, serviceNames) there is an OR condition, between the fields its AND).  </p>
-<p><strong>Examples: </strong> <br />
-- By specifying no scope - the evnet will be correlated to all Services on the account level<br />
-- By specifying a list of one or more clusters - the event will be correlated to all Services in those clusters<br />
-- By specifying a list of namespaces - the event will be correlated to all Services in those namespaces (accross all clusters, unless mentioning otherwise) <br />
-- By specifying a list of servicesNames - the event will be correlated to those Services  </p>
+<p><strong>Examples:</strong> <br />
+Let's assume the following scenario: we run 2 clusters, A and B, in those we have 2 namespaces, C and D, in each of those namespaces we have 5 Services, numbered from 1-5. In total we have 20 Services in those clusters.</p>
+<ul>
+<li>By specifying no scope at all - the event will be correlated to all 20 Services  </li>
+<li>By specifying just cluster A - the event will be correlated to all the services (10) running in cluster A  </li>
+<li>By specifying namespace C - the event will be correlated to all services running in namespace C (within both clusters)   </li>
+<li>By specfiying services 1, 2, 3 - the event will be correlated to all services with names 1 or 2 or 3</li>
+<li>By specifying a combiniation of cluster B namespace D - the event will be correlated to all the services running in namespace D on cluster B</li>
+<li>By specifying a combination of namespace C and service 5 - the event will be correlated to service 5 running on namespace C on both clusters</li>
+</ul>
 
 
 
