@@ -2,7 +2,7 @@
 Using an API call customers can enrich the Komodor timeline with their own custom events and correlate them to the relevant services
 
 ## Prerequisites 
-- [API key](https://docs.komodor.com//Learn/Create-API-Token.html)
+- [API key](https://docs.komodor.com/Learn/Create-API-Token.html)
 
 *Please note*: This feature is only available for paying/trial users
 
