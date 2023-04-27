@@ -39,7 +39,7 @@ Using an API call customers can enrich the Komodor timeline with their own custo
 ### Scope 
 The scope field allows the user to define the Services to associate the custom event with.
 
-By default, everything is selected (e.g - when no scope specified), when specifying a cluster/namespace/service name you are narrowing the scope accordingly (within a specific scope field (e.g - cluster, namespaces, serviceNames) there is an OR condition, between the fields its AND).  
+By default, when no scope is specified, the event will be correlated to all Services on the account level. when specifying a cluster/namespace/service name you are narrowing the scope accordingly (within a specific scope field (e.g - cluster, namespaces, serviceNames) there is an OR condition, between the fields its AND).  
 
 **Examples: **   
 - By specifying no scope - the evnet will be correlated to all Services on the account level  
