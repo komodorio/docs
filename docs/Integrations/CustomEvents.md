@@ -36,7 +36,7 @@ Using an API call customers can enrich the Komodor timeline with their own custo
 | severity           	| Enum - Info (**default**), Warning, Error 	| **Optional**                                                                       	|
 | details            	| Object (key:value pairs)              	| **Optional**, key:value pairs allowing specifying any additonal categories of data 	|
 
-### Scope 
+#### Scope 
 The scope field allows the user to define the Services to associate the custom event with.
 
 By default, when no scope is specified, the event will be correlated to all Services on the account level. when specifying a cluster/namespace/service name you are narrowing the scope accordingly (within a specific scope field (e.g - cluster, namespaces, serviceNames) there is an OR condition, between the fields its AND).  
