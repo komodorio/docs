@@ -29,6 +29,7 @@ nav:
       - Annotations: Learn/Annotations.md
       - Monitors: Learn/Monitors.md
       - Config Changes: Learn/config-changes.md
+      - Create Personal Access Token: Learn/Create-API-Token.md
       - External Links: Learn/ExternalLinks.md
       - Source Control: Learn/komodor-source-control.md
       - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
@@ -52,6 +53,7 @@ nav:
       - Sentry: Integrations/Sentry.md
       - Slack: Integrations/Slack.md
       - Microsoft Teams: Integrations/MicrosoftTeams.md
+      - Custom Events: Integrations/CustomEvents.md
       - Okta:
           - Okta SSO (SAML): Integrations/Okta/Okta.md
           - Role Provisioning (Okta): Integrations/Okta/Okta-Role-Provisioning.md
