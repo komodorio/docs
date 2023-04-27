@@ -7,7 +7,6 @@ Using an API call customers can enrich the Komodor timeline with their own custo
 *Please note*: This feature is only available for paying/trial users
 
 ## Using the API
-### Generate an API key
 ### Body 
 ```
 {
