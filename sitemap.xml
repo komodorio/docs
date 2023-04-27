@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.komodor.com/Integrations/CustomEvents.html</loc>
+         <lastmod>2023-04-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html</loc>
          <lastmod>2023-04-27</lastmod>
          <changefreq>daily</changefreq>
