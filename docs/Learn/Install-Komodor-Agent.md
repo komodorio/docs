@@ -33,7 +33,7 @@ The Komodor agent uses the native RBAC model of Kubernetes. All the permissions 
 1. [helm](https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml)
 2. [kustomize base](https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml), [kustomize final](https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml)
 
-## Step 1 - Sign up to Komdor
+## Step 1 - Sign up to Komodor
 
 To create your account, [sign up](https://app.komodor.com/#mode=signUp) for Komodor with your email address or by using SSO via your Google, GitHub or Microsoft accounts.
 
