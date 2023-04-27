@@ -1,6 +1,6 @@
 # Azure AD SSO (SAML)
 
-> For the following part you need to contact Komodor support to receive the paramters Identifier and Reply URL (we specify below where they are needed).
+> For the following part you need to contact Komodor support to receive the parameters Identifier and Reply URL (we specify below where they are needed).
 
 Start by getting to the Azure Active Directory dashboard in the Azure portal.
 From there, we navigate to "Enterprise applications":
