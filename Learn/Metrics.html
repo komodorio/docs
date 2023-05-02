@@ -18,7 +18,7 @@
         <link rel="next" href="Test-Utilities-Commands.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
     
     
       
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -637,26 +637,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Prerequisites
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-it-work" class="md-nav__link">
-    How does it work?
-  </a>
-  
-    <nav class="md-nav" aria-label="How does it work?">
+    <nav class="md-nav" aria-label="Prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pods" class="md-nav__link">
-    Pods:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
-    Nodes:
+  <a href="#agent-values" class="md-nav__link">
+    Agent values¶
   </a>
   
 </li>
@@ -667,22 +653,36 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-metrics-integration" class="md-nav__link">
-    Add metrics integration
+  <a href="#upgrade-command" class="md-nav__link">
+    Upgrade command¶
   </a>
   
-    <nav class="md-nav" aria-label="Add metrics integration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-to-metrics-in-availability-issues" class="md-nav__link">
+    Access to Metrics in Availability Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Access to Metrics in Availability Issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps:
+  <a href="#graph-values" class="md-nav__link">
+    Graph values
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-disable" class="md-nav__link">
+    How to disable
+  </a>
   
 </li>
       
@@ -1206,26 +1206,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     Prerequisites
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-it-work" class="md-nav__link">
-    How does it work?
-  </a>
-  
-    <nav class="md-nav" aria-label="How does it work?">
+    <nav class="md-nav" aria-label="Prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pods" class="md-nav__link">
-    Pods:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodes" class="md-nav__link">
-    Nodes:
+  <a href="#agent-values" class="md-nav__link">
+    Agent values¶
   </a>
   
 </li>
@@ -1236,22 +1222,36 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-metrics-integration" class="md-nav__link">
-    Add metrics integration
+  <a href="#upgrade-command" class="md-nav__link">
+    Upgrade command¶
   </a>
   
-    <nav class="md-nav" aria-label="Add metrics integration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-to-metrics-in-availability-issues" class="md-nav__link">
+    Access to Metrics in Availability Issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Access to Metrics in Availability Issues">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps:
+  <a href="#graph-values" class="md-nav__link">
+    Graph values
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-disable" class="md-nav__link">
+    How to disable
+  </a>
   
 </li>
       
@@ -1274,63 +1274,37 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 
 <h1 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h1>
-<p>Komodor enables you to overview metrics like cpu and memory on your cluster using the prometheus metrics server.</p>
-<p>NOTE: We also support prometheus that is installed by GrafanaLabs managed service</p>
+<p>Komodor shows your resource CPU and memory usage as well as their limits and requests as part of the Availability Issues in order to help you troubleshoot faster.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Agent version from 0.1.108</li>
-<li>Installed prometheus on your cluster</li>
-</ul>
-<p>Coming soon: prometheus installation integration!</p>
-<h2 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h2>
-<p>Komodor agent identifies Prometheus in the cluster and saves the configuration details.
-The agent sends an HTTP request to the Prometheus metrics server and gets matric results like CPU and memory. The received data is processed and displayed in the Pods and Nodes screens.</p>
-<h3 id="pods">Pods:<a class="headerlink" href="#pods" title="Permanent link">&para;</a></h3>
-<p>Data is displayed in 2 columns:</p>
-<ul>
-<li>%CPU/R - percentage of cpu usage per request</li>
-<li>%MEM/R - percentage of memory usage per request</li>
-</ul>
-<p><img src="./img/pod_metrics.png" width="550"></p>
-<p>More columns can be added: %CPU/L, %MEM/L, CPU, Memory</p>
-<p><img src="./img/metrics_columns.png" width="200"></p>
-<h3 id="nodes">Nodes:<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h3>
-<p>Data is displayed in 3 columns:</p>
-<ul>
-<li>%CPU - utilization of CPU allocation in percentage</li>
-<li>%Memory - utilization of memory allocation in percentage</li>
-<li>%Disk - utilization of disk capacity in percentage</li>
-</ul>
-<p><img src="./img/node_metrics.png" width="550"></p>
-<p>More usage columns can be added: CPU, Memory, Disk</p>
-<h2 id="add-metrics-integration">Add metrics integration<a class="headerlink" href="#add-metrics-integration" title="Permanent link">&para;</a></h2>
-<p>In case you have prometheus in your cluster and the agent doesn’t identify it you can add metrics integration.</p>
-<h3 id="steps">Steps:<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Go to integration screen and click on Prometheus metrics server</li>
-</ol>
-<figure>
-    <img src="./img/prometheus_metrics_icon.png" width="400">
-</figure>
+<p>Agent version 0.1.191 and above.</p>
+<h3 id="agent-values">Agent values¶<a class="headerlink" href="#agent-values" title="Permanent link">&para;</a></h3>
+<p>The Komodor agent consists of a Deployment and a DaemonSet, the DaemonSet is responsible for collecting the metrics of Pods running on nodes it runs on.</p>
+<p>To add it, enable the following values on the helm chart:
+<code>--set metrics.enabled=true</code> - install Komodor DaemonSet, which allows it to send metrics to the Komodor SaaS.</p>
+<h2 id="upgrade-command">Upgrade command¶<a class="headerlink" href="#upgrade-command" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --set metrics.enabled=true
+</code></pre></div>
 
+<h2 id="access-to-metrics-in-availability-issues">Access to Metrics in Availability Issues<a class="headerlink" href="#access-to-metrics-in-availability-issues" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p>Enter the fqdn as follows: <code>&lt;namespace&gt;/&lt;service&gt;:&lt;port&gt;</code></p>
-</li>
-<li>
-<p>Namespace - prometheus service namespace</p>
-</li>
-<li>Service - prometheus service name</li>
-<li>Port - The port that prometheus service is listening to</li>
+<li>Open the Komodor UI in your web browser and navigate to any availability issue.</li>
+<li>Click on “Investigate”</li>
 </ol>
-<figure>
-    <img src="./img/prometheus_metrics.png" width="400">
-</figure>
-
+<p><img src="./img/Investigate metrics.png" width="550"></p>
 <ol>
-<li>Choose how you installed prometheus: helm or other operator</li>
-<li>Click install</li>
+<li>The metrics will appear in the containers section - for each container you’ll see the metrics graph for CPU  and memory, with the ability to switch between time periods of 24 hours / 7 days.</li>
 </ol>
+<p><img src="./img/metrics example.png" width="550"></p>
+<ul>
+<li>The metrics will be seen only for issues that started after the agent installation. </li>
+</ul>
+<h3 id="graph-values">Graph values<a class="headerlink" href="#graph-values" title="Permanent link">&para;</a></h3>
+<p>Komodor DaemonSet is collecting the metrics every 15 sec.
+For each data point on the graph, you’ll see the average of the collected snapshots.</p>
+<h2 id="how-to-disable">How to disable<a class="headerlink" href="#how-to-disable" title="Permanent link">&para;</a></h2>
+<p>To disable the metrics collection, use the following command:</p>
+<div class="codehilite"><pre><span></span><code>helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --set metrics.enabled=false
+</code></pre></div>
 
 
 
@@ -1375,7 +1349,7 @@ The agent sends an HTTP request to the Prometheus metrics server and gets matric
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   </body>
