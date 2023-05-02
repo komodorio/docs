@@ -1,66 +1,48 @@
 # Metrics
 
-Komodor enables you to overview metrics like cpu and memory on your cluster using the prometheus metrics server.
-
-NOTE: We also support prometheus that is installed by GrafanaLabs managed service
+Komodor shows your resource CPU and memory usage as well as their limits and requests as part of the Availability Issues in order to help you troubleshoot faster.
 
 ## Prerequisites
 
-- Agent version from 0.1.108
-- Installed prometheus on your cluster
+Agent version 0.1.191 and above.
 
-Coming soon: prometheus installation integration!
+### Agent values¶
 
-## How does it work?
+The Komodor agent consists of a Deployment and a DaemonSet, the DaemonSet is responsible for collecting the metrics of Pods running on nodes it runs on.
 
-Komodor agent identifies Prometheus in the cluster and saves the configuration details.
-The agent sends an HTTP request to the Prometheus metrics server and gets matric results like CPU and memory. The received data is processed and displayed in the Pods and Nodes screens.
+To add it, enable the following values on the helm chart:
+`--set metrics.enabled=true` - install Komodor DaemonSet, which allows it to send metrics to the Komodor SaaS.
 
-### Pods:
+## Upgrade command¶
 
-Data is displayed in 2 columns:
+```
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --set metrics.enabled=true
+```
 
-- %CPU/R - percentage of cpu usage per request
-- %MEM/R - percentage of memory usage per request
+## Access to Metrics in Availability Issues
 
-<img src="./img/pod_metrics.png" width="550">
+1. Open the Komodor UI in your web browser and navigate to any availability issue.
+2. Click on “Investigate”
 
-More columns can be added: %CPU/L, %MEM/L, CPU, Memory
+<img src="./img/Investigate metrics.png" width="550">
 
-<img src="./img/metrics_columns.png" width="200">
+3. The metrics will appear in the containers section - for each container you’ll see the metrics graph for CPU  and memory, with the ability to switch between time periods of 24 hours / 7 days.
 
-### Nodes:
+<img src="./img/metrics example.png" width="550">
 
-Data is displayed in 3 columns:
+* The metrics will be seen only for issues that started after the agent installation. 
 
-- %CPU - utilization of CPU allocation in percentage
-- %Memory - utilization of memory allocation in percentage
-- %Disk - utilization of disk capacity in percentage
+### Graph values
+Komodor DaemonSet is collecting the metrics every 15 sec.
+For each data point on the graph, you’ll see the average of the collected snapshots.
 
-<img src="./img/node_metrics.png" width="550">
+## How to disable
 
-More usage columns can be added: CPU, Memory, Disk
+To disable the metrics collection, use the following command:
+```
+helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --set metrics.enabled=false
+```
 
-## Add metrics integration
 
-In case you have prometheus in your cluster and the agent doesn’t identify it you can add metrics integration.
 
-### Steps:
 
-1. Go to integration screen and click on Prometheus metrics server
-
-<figure>
-    <img src="./img/prometheus_metrics_icon.png" width="400">
-</figure>
-
-2. Enter the fqdn as follows: `<namespace>/<service>:<port>`
-
-- Namespace - prometheus service namespace
-- Service - prometheus service name
-- Port - The port that prometheus service is listening to
-<figure>
-    <img src="./img/prometheus_metrics.png" width="400">
-</figure>
-
-3. Choose how you installed prometheus: helm or other operator
-4. Click install
