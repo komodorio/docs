@@ -18,7 +18,7 @@
         <link rel="next" href="Okta/Okta.html">
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
@@ -1247,12 +1247,24 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 
 <h1 id="custom-events">Custom Events<a class="headerlink" href="#custom-events" title="Permanent link">&para;</a></h1>
 <p>Using an API call customers can enrich the Komodor timeline with their own custom events and correlate them to the relevant services</p>
+<p><strong>Example events (UI)</strong><br />
+Events list
+<img src="./img/custom-event-table.png"><br />
+Events page filters<br />
+<img src="./img/custom-event-filter.png"><br />
+Custom event drawer<br />
+<img src="./img/custom-event-drawer.png"></p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.komodor.com/Learn/Create-API-Token.html">API key</a></li>
 </ul>
 <p><em>Please note</em>: This feature is only available for paying/trial users</p>
 <h2 id="using-the-api">Using the API<a class="headerlink" href="#using-the-api" title="Permanent link">&para;</a></h2>
+<p><code>curl --location 'https://api.komodor.com/mgmt/v1/events' \</code><br />
+<code>--header 'x-api-key: &lt;TOKEN&gt; \</code><br />
+<code>--header 'Content-Type: application/json' \</code> <br />
+<code>--data-raw &lt;BODY&gt;</code>  </p>
+<p>Replace the <TOKEN> with the token you've generated and the <BODY> with the event content as described below</p>
 <h3 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>{
     &quot;eventType&quot;: &quot;string&quot;, 
