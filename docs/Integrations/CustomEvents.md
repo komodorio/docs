@@ -1,12 +1,29 @@
 # Custom Events
 Using an API call customers can enrich the Komodor timeline with their own custom events and correlate them to the relevant services
 
+**Example events (UI)**  
+Events list
+<img src="./img/custom-event-table.png">  
+Events page filters  
+<img src="./img/custom-event-filter.png">  
+Custom event drawer  
+<img src="./img/custom-event-drawer.png">
+
+
 ## Prerequisites 
 - [API key](https://docs.komodor.com/Learn/Create-API-Token.html)
 
 *Please note*: This feature is only available for paying/trial users
 
 ## Using the API
+
+`curl --location 'https://api.komodor.com/mgmt/v1/events' \  `  
+`--header 'x-api-key: <TOKEN> \  `  
+`--header 'Content-Type: application/json' \  `   
+`--data-raw <BODY>`  
+
+Replace the <TOKEN> with the token you've generated and the <BODY> with the event content as described below
+
 ### Body 
 ```
 {
