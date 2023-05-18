@@ -25,3 +25,6 @@ Please make sure the following environment variables exist in your kubernetes de
 
 1. A PagerDuty Integration tile will be added to the top section of labeled __Installed Integrations__.
 1. When an issue from Datadog is raised through PD, you will be able to find it in the appropriate Komodor services page.
+
+### Support 
+In case you encounter any issue, please contact us at support@komodor.com
