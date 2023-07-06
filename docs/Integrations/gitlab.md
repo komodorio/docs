@@ -11,7 +11,7 @@ If you don't have one, create an account at [gitlab.com](https://about.gitlab.co
 Create a repository on GitLab or have access to an existing repository.
 Integration Steps
 
-# Follow these steps to integrate your project with GitLab:
+## Follow these steps to integrate your project with GitLab:
 
 ### Create a Project in GitLab: 
 If you haven't already, create a project repository in GitLab. Make a note of the repository URL.
