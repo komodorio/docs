@@ -12,4 +12,4 @@ Komodor’s cost allocation page provides clear visibility into your Kubernetes 
     - Limited permissions or any filters applied for either your Komodor user or this specific page can impact the numbers presented  
 - **Potential Saving:**  The $ amount you can save by applying all of our recommendations  
 - **Unallocated resources:** Cost of resources not currently associated with any pod or resources reserved for system processes  
-    - Unallocated resources will be displayed as a column when grouping by cluster, or an aggregated, additional row when grouping by namespace or service   
+    - Unallocated resources will be displayed as a column when grouping by cluster, or an aggregated, additional row when grouping by namespace or service   git 

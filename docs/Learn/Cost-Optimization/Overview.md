@@ -10,7 +10,7 @@ Komodor analyzes your cluster resources and consumption and provides 3 main capa
 
 **When clicking on ‘Cost Optimization’, you’ll notice tabs for two different pages:** 
 1. <u>Cost Allocation</u> - full visibility into your costs structure from your overall environment to specific clusters, namespaces, or services   
-2. <u>Right Sizing</u> - Detailed recommendations based on actual consumption vs. configured requests
+2. <u>Right Sizing</u> - Detailed recommendations based on actual consumption vs. configured requests  
 
 ## Prerequisites
 - An agent update is required per cluster   
