@@ -3,7 +3,7 @@
 >Komodor’s advanced cost capabilities are offered as part of Komodor’s paid plans, including 14-day trials.  
 >[Learn more about our pricing plans](https://komodor.com/pricing-and-plans/), or [contact us](https://komodor.chilipiper.com/book/me/timi-petrov) to request trial access
 
-Komodor analyzes your cluster resources and consumption and provides 3 main capabilities:   
+Komodor analyzes your cluster resources and consumption and provides 2 main capabilities:   
 1. Complete **visibility** into your Kubernetes cost allocation   
 2. Actionable optimization via **right sizing recommendations**   
 
