@@ -6,7 +6,6 @@
 Komodor analyzes your cluster resources and consumption and provides 3 main capabilities:   
 1. Complete **visibility** into your Kubernetes cost allocation   
 2. Actionable optimization via **right sizing recommendations**   
-3. Costs vs. performance impact analysis   
 
 **When clicking on ‘Cost Optimization’, you’ll notice tabs for two different pages:** 
 1. <u>Cost Allocation</u> - full visibility into your costs structure from your overall environment to specific clusters, namespaces, or services   
