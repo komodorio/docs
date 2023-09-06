@@ -79,4 +79,4 @@ For more information about DataDog tags for Kubernetes go into [DataDog tagging 
 
 1. A Datadog Integration tile will be added to the top section under __Installed Integrations__.
 1. Your services that interact with each other will appear under the __Related Services__ section in the Komodor services page.
-2. 
+
