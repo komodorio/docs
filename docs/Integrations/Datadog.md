@@ -7,7 +7,7 @@ DataDog integration allows DataDog Monitor Alerts to be available in Komodor. It
 - [Komodor's DataDog  Integration Page](https://app.komodor.com/main/integration)
 
 
-- **Install the Komodor platform integration** - This first integration step allows Komodor to access your Datadog account via API key and Token key, and to **suggest related services based on service dependencies** detected in Datadog.
+- **Install the Komodor platform integration** - This first integration step creates a license key to be used by DataDog in Webhook Callback. The key will be used to configure a [DataDog Webhook](https://app.datadoghq.com/integrations/webhooks?search=webhook).
 - **Install the Datadog Webhook integration** - This allows Komodor to receive alerts from Datadog monitors. You can see all alerts in the Komodor Service View.
 - **Configure a Datadog Monitor notification** - Adding a Komodor dynamic link to Datadog monitor notifications generates a direct link to the relevant service in Komodor. See the alert link in your Alerting provider connected to Datadog.
 
