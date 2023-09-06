@@ -4,6 +4,7 @@
 DataDog integration allows DataDog Monitor Alerts to be available in Komodor and to suggest related service based on services connection deteced by DataDog.
 
 [DataDog's Komodor Integration Page](https://app.datadoghq.com/integrations/komodor?search=komo)
+
 [Komodor's DataDog  Integration Page](https://app.komodor.com/main/integration)
 
 
