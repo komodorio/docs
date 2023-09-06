@@ -11,16 +11,12 @@ DataDog integration allows DataDog Monitor Alerts to be available in Komodor. It
 - **Install the Datadog Webhook integration** - This allows Komodor to receive alerts from Datadog monitors. You can see all alerts in the Komodor Service View.
 - **Configure a Datadog Monitor notification** - Adding a Komodor dynamic link to Datadog monitor notifications generates a direct link to the relevant service in Komodor. See the alert link in your Alerting provider connected to Datadog.
 
-## Configure Hyperlinks 
+- **Configure Hyperlinks** -  link back to [existing documentation](https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html#link-setup) 
 
-## Configure Taggiing  
+- **Configure Taggiing** - link back to [exiting documentation](https://docs.komodor.com/Integrations/Datadog.html)
 
 
 Use Kubernetes annotations to enrich the Komodor service and deployment screens with links to relevant Datadog APM dashboards, as well as dynamic links to specific service metrics and time ranges within Datadog.
-
-## Uninstallation
-This will remove the Integration’s functionality and included assets from your organization.
-
 
 
 ## Instructions
