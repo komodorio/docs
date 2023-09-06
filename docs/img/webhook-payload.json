@@ -1,0 +1,31 @@
+{
+  "body": "$EVENT_MSG",
+  "last_updated": "$LAST_UPDATED",
+  "event_type": "$EVENT_TYPE",
+  "title": "$EVENT_TITLE",
+  "date": "$DATE",
+  "org": {
+    "id": "$ORG_ID",
+    "name": "$ORG_NAME"
+  },
+  "id": "$ID",
+  "tags": "$TAGS",
+  "alert": {
+    "id": "$ALERT_ID",
+    "type": "$ALERT_TYPE",
+    "transition": "$ALERT_TRANSITION",
+    "cycleId": "$ALERT_CYCLE_KEY",
+    "priority": "$PRIORITY",
+    "status": "$ALERT_STATUS",
+    "scope": "$ALERT_SCOPE",
+    "query": "$ALERT_QUERY",
+    "metric": "$ALERT_METRIC",
+    "metric_namespace": "$METRIC_NAMESPACE"
+  },
+  "aggregation_key": "$AGGREG_KEY",
+  "link": "$LINK",
+  "snapshot": "$SNAPSHOT",
+  "user": "$USER",
+  "username": "$USERNAME",
+  "email": "$EMAIL"
+}
