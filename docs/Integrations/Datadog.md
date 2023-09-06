@@ -24,9 +24,10 @@ Use Kubernetes annotations to enrich the Komodor service and deployment screens 
 
 Follow the link to the [Komodor Integrations page](https://app.komodor.com/main/integration).  
 
-Find this Icon ![Create Integration with DataDog](https://raw.githubusercontent.com/komodorio/docs/datadog-markdown-update/docs/img/DataDog-CreateIntegration.png) 
+ ![Create Integration with DataDog](https://raw.githubusercontent.com/komodorio/docs/datadog-markdown-update/docs/img/DataDog-CreateIntegration.png) 
 
-Press the button Install Integration button
+
+Press the  Install Integration button
 
 ---
 
