@@ -1,20 +1,15 @@
 # Datadog Integration
 
 
-DataDog integration allows DataDog Monitor Alerts to be available in Komodor and to suggest related service based on services connection deteced by DataDog.
+DataDog integration allows DataDog Monitor Alerts to be available in Komodor. It also provides a facility for create dynamic hyperlinks between both platforms.
 
 - [DataDog's Komodor Integration Page](https://app.datadoghq.com/integrations/komodor?search=komo)
 - [Komodor's DataDog  Integration Page](https://app.komodor.com/main/integration)
 
 
-## Install the Komodor platform integration
- This first integration step allows Komodor to access your Datadog account via API key and Token key, and to **suggest related services based on service dependencies** detected in Datadog.
-
-## Install the Datadog Webhook integration
- This allows Komodor to receive alerts from Datadog monitors. You can see all alerts in the Komodor Service View.
-
-## Configure a Datadog monitor notification
-Adding a Komodor dynamic link to Datadog monitor notifications generates a direct link to the relevant service in Komodor. See the alert link in your Alerting provider connected to Datadog.
+- **Install the Komodor platform integration** - This first integration step allows Komodor to access your Datadog account via API key and Token key, and to **suggest related services based on service dependencies** detected in Datadog.
+- **Install the Datadog Webhook integration** - This allows Komodor to receive alerts from Datadog monitors. You can see all alerts in the Komodor Service View.
+- **Configure a Datadog Monitor notification** - Adding a Komodor dynamic link to Datadog monitor notifications generates a direct link to the relevant service in Komodor. See the alert link in your Alerting provider connected to Datadog.
 
 ## Configure Hyperlinks 
 
