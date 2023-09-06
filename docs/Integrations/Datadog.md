@@ -28,8 +28,28 @@ This will remove the Integration’s functionality and included assets from your
 
 
 
+## Instructions
 
-1. 
+Follow the link to the [Komodor Integrations page](https://app.komodor.com/main/integration).  
+
+Find this Icon ![Create Integration with DataDog](https://raw.githubusercontent.com/komodorio/docs/datadog-markdown-update/docs/img/DataDog-CreateIntegration.png)  
+
+---
+
+Once you have created the Integration it will look like this. Make a copy of licnese. This key will be used in the next step.
+![Created Integration with Liocense key](https://raw.githubusercontent.com/komodorio/docs/datadog-markdown-update/docs/img/DataDog-IntegrationCreated.png)
+
+Grab a copy of the license key. The key will be used in the next step
+
+
+## Create Webhook in Komodor 
+
+Next proceed to the [DataDog Webhook integration](https://app.datadoghq.com/integrations/webhooks?search=webhook) 
+
+Create a new Webhook.  The payload will look like this. 
+
+Add an HTTP Header.  We use the licesne key from the previous step.  
+
 
 
 
