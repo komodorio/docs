@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -1723,12 +1723,16 @@ The Availability monitor will not be triggered during an active rollout.</p>
 <p>The following checks are performed -</p>
 </li>
 <li>Pods health
-    Foreach Pod we'll provide the following: - Phase, Reason, Pod events - Containers list with their state, reason &amp; logs</li>
-<li>Service latest deployments</li>
-<li>Service describe</li>
+    Foreach Pod we'll provide the following: - Phase, Reason, Pod events - Containers list with their state, reason, logs and metrics (CPU/Memory)</li>
+<li>Correlated latest deployments</li>
+<li>Correlated node issues &amp; node terminations
+ For Out of memory and evicted issues, additional checks are performed -</li>
+<li>Check if container limit has reached</li>
+<li>Check if memory limit decreased prior the issue</li>
+<li>Noisy neighbors report</li>
 </ul>
 <p><strong>Please note</strong> Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.</p>
-<p><strong>Please note</strong> It is possible to costume your notifications to alert for specific error categories.</p>
+<p><strong>Please note</strong> It is possible to costume your monitors conditions and alerts for specific error categories. You can do it easily by going to "Monitors" screen, choose the relevant cluster, click "Add rule" under "Availability monitor", there you can choose the desired categories on "Trigger conditions" section.</p>
 <p>Each <strong>category</strong> is including the following <strong>reasons</strong> :</p>
 <table>
   <tr>
@@ -1749,7 +1753,7 @@ The Availability monitor will not be triggered during an active rollout.</p>
   </tr>
   <tr>
     <td>Creating/Initializing</td>
-    <td>ContainerCreating, PodInitializing, PodNotReady, ContainersNotReady, ReadinessGatesNotReady</td>
+    <td>ContainerCreating, PodInitializing, PodNotReady, ContainersNotReady</td>
   </tr>
   <tr>
     <td>BackOff</td>
@@ -1773,7 +1777,7 @@ The Availability monitor will not be triggered during an active rollout.</p>
   </tr>
   <tr>
     <td>Container Creation</td>
-    <td>CreateContainerError, RunContainerError, ContainerCannotRun, ContainerStatusUnknown</td>
+    <td>CreateContainerError, RunContainerError, ContainerCannotRun, ContainerStatusUnknown, ReadinessGatesNotReady</td>
   </tr>
   <tr>
     <td>Pod Termination</td>
