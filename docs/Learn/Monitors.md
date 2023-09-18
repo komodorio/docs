@@ -26,13 +26,17 @@ The Availability monitor will not be triggered during an active rollout.
 
 - The following checks are performed -
   - Pods health
-    Foreach Pod we'll provide the following: - Phase, Reason, Pod events - Containers list with their state, reason & logs
-  - Service latest deployments
-  - Service describe
+    Foreach Pod we'll provide the following: - Phase, Reason, Pod events - Containers list with their state, reason, logs and metrics (CPU/Memory)
+  - Correlated latest deployments
+  - Correlated node issues & node terminations
+ For Out of memory and evicted issues, additional checks are performed -
+  - Check if container limit has reached
+  - Check if memory limit decreased prior the issue
+  - Noisy neighbors report
 
 **Please note** Data provided in the Availability issue checks is a snapshot in time for when the issue occurred.
 
-**Please note** It is possible to costume your notifications to alert for specific error categories.
+**Please note** It is possible to costume your monitors conditions and alerts for specific error categories. You can do it easily by going to "Monitors" screen, choose the relevant cluster, click "Add rule" under "Availability monitor", there you can choose the desired categories on "Trigger conditions" section.
 
 Each **category** is including the following **reasons** :
 
@@ -55,7 +59,7 @@ Each **category** is including the following **reasons** :
   </tr>
   <tr>
     <td>Creating/Initializing</td>
-    <td>ContainerCreating, PodInitializing, PodNotReady, ContainersNotReady, ReadinessGatesNotReady</td>
+    <td>ContainerCreating, PodInitializing, PodNotReady, ContainersNotReady</td>
   </tr>
   <tr>
     <td>BackOff</td>
@@ -79,7 +83,7 @@ Each **category** is including the following **reasons** :
   </tr>
   <tr>
     <td>Container Creation</td>
-    <td>CreateContainerError, RunContainerError, ContainerCannotRun, ContainerStatusUnknown</td>
+    <td>CreateContainerError, RunContainerError, ContainerCannotRun, ContainerStatusUnknown, ReadinessGatesNotReady</td>
   </tr>
   <tr>
     <td>Pod Termination</td>
