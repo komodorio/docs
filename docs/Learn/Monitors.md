@@ -2,7 +2,7 @@
 
 Komodor Monitors are built to detect different scenarios, investigate certain aspects around them and provide additional context to simplify the troubleshooting process and reduce the MTTR.
 
-## Supported configurations per Monitor:
+## Supported configurations per Monitor :
 
 Komodor monitors are being configured on a cluster level, each monitor supports the following configurations:
 
