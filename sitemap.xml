@@ -2,262 +2,267 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.komodor.com/index.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/getting-started.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/index.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/AlertManager.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/ArgoCD.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/CustomEvents.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Datadog-Monitor-Notification.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Datadog.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/LaunchDarkly.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Loft.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/MicrosoftTeams.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Opsgenie.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/PagerDuty.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Sentry.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Slack.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Squadcast.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Webhook.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/aws.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/datadog-webhook.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/github.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/gitlab.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/AzureActiveDirectory/Azure-Role-Provisioning.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/AzureActiveDirectory/Azure-SAML-Integration.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/AzureActiveDirectory/AzureActiveDirectory.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/JumpCloud/JumpCloud.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/JumpCloud/JumpCloudSamlAttributes.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Okta/Okta-Role-Provisioning.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Integrations/Okta/Okta.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/index.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Annotations.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Appviews.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Create-API-Token.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/ExternalLinks.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Helm.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Install-Komodor-Agent.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Interaction-With-The-Cluster.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Komodor-Agent.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/ManageUsers.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Metrics.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Monitors.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/RBAC.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Sensitive-Information-Redaction.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/SlackApp.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Static-Prevention.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Test-Utilities-Commands.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.komodor.com/Learn/Timeline.html</loc>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/config-changes.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/komodor-source-control.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Actions/Overview.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Actions/PodShell.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Cost-Optimization/Allocation.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Cost-Optimization/Overview.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.komodor.com/Learn/Cost-Optimization/Right-sizing.html</loc>
-         <lastmod>2023-09-18</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
