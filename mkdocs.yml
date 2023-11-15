@@ -32,6 +32,7 @@ nav:
           - Overview: Learn/Cost-Optimization/Overview.md
           - Allocation: Learn/Cost-Optimization/Allocation.md
           - Right-sizing: Learn/Cost-Optimization/Right-sizing.md
+      - Timeline: Learn/Timeline.md
       - Config Changes: Learn/config-changes.md
       - Create Personal Access Token: Learn/Create-API-Token.md
       - External Links: Learn/ExternalLinks.md
