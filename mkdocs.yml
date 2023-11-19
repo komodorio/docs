@@ -37,6 +37,7 @@ nav:
           - Workspace Overview: Learn/Workspaces/workspace-overview.md
           - Create a Workspace: Learn/Workspaces/create-workspace.md
           - Insights: Learn/Workspaces/insights.md
+      - Timeline: Learn/Timeline.md
       - Config Changes: Learn/config-changes.md
       - Create Personal Access Token: Learn/Create-API-Token.md
       - External Links: Learn/ExternalLinks.md
