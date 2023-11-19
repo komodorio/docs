@@ -18,7 +18,7 @@ Specify a unique workspace name, add an optional description, and scope (options
 ## Scoping a Workspace
 You can create a workspace both dynamically based on existing configurations such as labels, and namespaces as well as by manually selecting the relevant services.
 
-- Dynamic scope   
+- **Dynamic scope**   
 Allows for the creation of workspaces with dynamic scope, the user has to select a namespace or a label key:value pair and the workspace scope will consist of Workloads that are either part of the selected namespace or have the specified label across all of your clusters.
 
     Example usage:  
@@ -29,7 +29,7 @@ Allows for the creation of workspaces with dynamic scope, the user has to select
     - Label key:value pair  
     <img src="./img/workspace-dynamic-scope-label.png" width="500">
     
-- Manual scope    
+- **Manual scope**    
 Allows manually selecting the relevant Workloads to include in the workspace scope
 <img src="./img/workspace-static-scope.png" width="700">
 

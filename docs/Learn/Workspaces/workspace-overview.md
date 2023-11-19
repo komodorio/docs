@@ -7,7 +7,7 @@ It is built to provide easy navigation through the Komodor platform.
 The Workspaces overview page consists of the following:
 
 - Summary data  
-    Two charts describing the Availability issues trend alongside the cost optimization trend (e.g - how optimized your workspace is)  
+    Two charts describing the Availability issues trend alongside the cost optimization trend (i.e - how optimized your workspace is)  
     <img src="./img/workspace-summary.png" width="800">
 
 - Open issues (if exist)  

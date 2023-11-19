@@ -10,19 +10,19 @@ Komodor Workspaces are built to address these challenges. By enabling users to d
 ## Common use cases
 To gain the most out of Workspaces, We recommend a workspace to represent one of the following:
 
-- A group of services constructing a system/application  
+- **A group of services constructing a system/application**  
     Create a workspace per a system (or - a group of microservices constructing a bigger application)	
     
     Allows correlating between related issues and cascading failures as well as understanding the overall availability of your system/application.
 
-- A Team / Business Unit  
+- **A Team / Business Unit**  
     Create a workspace per each team's responsibility
     
     Provides a unified view of all the team/business unit responsibilities, easily understand 
     the overall availability of all those services.
 
-- An Environment  
-    Create a workspace per an environment (namespace, )
+- **An Environment**  
+    Create a workspace per an environment
 
 ## Learn more
 - [Workspaces Overview page walkthrough](./workspace-overview.md)  
