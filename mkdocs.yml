@@ -24,8 +24,15 @@ extra:
 nav:
   - Home: index.md
   - Learn:
-      - Install the agent: Learn/Install-Komodor-Agent.md
-      - Komodor's Agent: Learn/Komodor-Agent.md
+      - Getting started: Learn/Getting-Started.md
+      - Advanced agent configurations: Learn/Advanced-Configurations.md
+      - Deprecated - k8s-watcher:
+          - Migration from k8s-watcher to Komodor's Agent: Learn/Migrating-From-K8s-watcher-to-komodor-agent-Chart.md
+          - Install the agent: Learn/Install-Komodor-Agent.md
+          - Komodor's Agent: Learn/Komodor-Agent.md
+          - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
+          - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
+          - Test Utilities Commands: Learn/Test-Utilities-Commands.md
       - Annotations: Learn/Annotations.md
       - Monitors: Learn/Monitors.md
       - Cost Optimization:
@@ -42,8 +49,6 @@ nav:
       - Create Personal Access Token: Learn/Create-API-Token.md
       - External Links: Learn/ExternalLinks.md
       - Source Control: Learn/komodor-source-control.md
-      - Sensitive Information Redaction: Learn/Sensitive-Information-Redaction.md
-      - Interaction with the Cluster: Learn/Interaction-With-The-Cluster.md
       - Manage Users: Learn/ManageUsers.md
       - RBAC: Learn/RBAC.md
       - Static Prevention: Learn/Static-Prevention.md
@@ -52,7 +57,7 @@ nav:
           - Pod Shell: Learn/Actions/PodShell.md
       - Helm: Learn/Helm.md
       - Metrics: Learn/Metrics.md
-      - Test Utilities Commands: Learn/Test-Utilities-Commands.md
+
   - Integrations:
       - Datadog: Integrations/Datadog.md
       - Datadog Webhook: Integrations/datadog-webhook.md
