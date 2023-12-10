@@ -32,6 +32,7 @@ Agent components are initially set up with standard requests and limits tailored
 * `komodorDaemon.metrics.resources`
 * `komodorDaemon.metricsInit.resources`
 * `komodorDaemon.networkSniffer.resources`
+* `komodorDaemon.nodeEnricher.resources`
 
 For instance, to adjust the resource requests and limits for the watcher container in the komodor-agent deployment, use the following YAML configuration:
 
@@ -59,13 +60,14 @@ imageRepo: myrepo/komodor-agent
 ---
 
 ## Disabling a specific capability
-By default, all capabilities are enabled. To disable a specific capability, set the relevant value to `false` in the values file.
+By default, most capabilities are enabled. To disable a specific capability, set the relevant value to `false` in the values file.
 the following capabilities can be disabled:
 
 * `metrics`
 * `networkMapper`
 * `actions`
 * `helm`
+* `nodeEnricher`
 
 For example, to disable the `metrics` capability, apply the following YAML configuration: <br />
 
