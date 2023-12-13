@@ -1,3 +1,8 @@
+
+# ⚠️ Deprecation notice ⚠️
+We have released a new version of the Komodor agent chart. The new chart is available [here](https://github.com/komodorio/helm-charts/tree/master/charts/komodor-agent)
+If you already have k8s-watcher agent installed on your cluster and are looking to migrate its current configuration to the new chart, Please follow the steps [here](./Migrating-From-K8s-watcher-to-komodor-agent-Chart.md):
+
 # Getting started
 
 Welcome to Komodor, the dev-first Kubernetes operations platform 👋
