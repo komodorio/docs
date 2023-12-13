@@ -9,28 +9,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.komodor.com/Integrations/AzureActiveDirectory/Azure-Role-Provisioning.html">
+        <link rel="canonical" href="https://docs.komodor.com/Learn/Migrating-From-K8s-watcher-to-komodor-agent-Chart.html">
       
       
-        <link rel="prev" href="Azure-SAML-Integration.html">
+        <link rel="prev" href="Advanced-Configurations.html">
       
       
-        <link rel="next" href="../JumpCloud/JumpCloud.html">
+        <link rel="next" href="Install-Komodor-Agent.html">
       
       
-      <link rel="icon" href="../../img/favicon.png">
+      <link rel="icon" href="../img/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Role Provisioning (SAML) - Komodor</title>
+        <title>Migration from k8s-watcher to Komodor's Agent - Komodor</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -60,7 +60,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,7 +84,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <div data-md-component="skip">
       
         
-        <a href="#azure-ad-role-provisioning" class="md-skip">
+        <a href="#migrating-from-the-komodor-k8s-agent-chart" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Provisioning (SAML)
+              Migration from k8s-watcher to Komodor's Agent
             
           </span>
         </div>
@@ -199,7 +199,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -214,11 +214,13 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Learn/Getting-Started.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Getting-Started.html" class="md-tabs__link">
           
   
   Learn
@@ -232,13 +234,11 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Datadog.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../Integrations/Datadog.html" class="md-tabs__link">
           
   
   Integrations
@@ -318,7 +318,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,8 +335,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
   
   
+    
   
   
+  
     
     
     
@@ -345,12 +347,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -364,7 +366,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Learn
@@ -378,7 +380,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Getting-Started.html" class="md-nav__link">
+      <a href="Getting-Started.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +401,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Advanced-Configurations.html" class="md-nav__link">
+      <a href="Advanced-Configurations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,19 +419,21 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -443,7 +447,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Deprecated - k8s-watcher
@@ -454,10 +458,30 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Learn/Migrating-From-K8s-watcher-to-komodor-agent-Chart.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Migration from k8s-watcher to Komodor's Agent
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Migrating-From-K8s-watcher-to-komodor-agent-Chart.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -466,6 +490,53 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-from-the-komodor-k8s-agent-chart_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating from the Komodor K8s Agent Chart
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -478,7 +549,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Install-Komodor-Agent.html" class="md-nav__link">
+      <a href="Install-Komodor-Agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +570,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Komodor-Agent.html" class="md-nav__link">
+      <a href="Komodor-Agent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +591,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Sensitive-Information-Redaction.html" class="md-nav__link">
+      <a href="Sensitive-Information-Redaction.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +612,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Interaction-With-The-Cluster.html" class="md-nav__link">
+      <a href="Interaction-With-The-Cluster.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +633,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Test-Utilities-Commands.html" class="md-nav__link">
+      <a href="Test-Utilities-Commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,7 +662,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Annotations.html" class="md-nav__link">
+      <a href="Annotations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -612,7 +683,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Monitors.html" class="md-nav__link">
+      <a href="Monitors.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +741,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Cost-Optimization/Overview.html" class="md-nav__link">
+      <a href="Cost-Optimization/Overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +762,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Cost-Optimization/Allocation.html" class="md-nav__link">
+      <a href="Cost-Optimization/Allocation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,7 +783,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Cost-Optimization/Right-sizing.html" class="md-nav__link">
+      <a href="Cost-Optimization/Right-sizing.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -778,7 +849,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Workspaces/intro.html" class="md-nav__link">
+      <a href="Workspaces/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +870,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Workspaces/workspace-overview.html" class="md-nav__link">
+      <a href="Workspaces/workspace-overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +891,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Workspaces/create-workspace.html" class="md-nav__link">
+      <a href="Workspaces/create-workspace.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +912,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Workspaces/insights.html" class="md-nav__link">
+      <a href="Workspaces/insights.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -870,7 +941,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Timeline.html" class="md-nav__link">
+      <a href="Timeline.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +962,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/config-changes.html" class="md-nav__link">
+      <a href="config-changes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -912,7 +983,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Create-API-Token.html" class="md-nav__link">
+      <a href="Create-API-Token.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -933,7 +1004,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/ExternalLinks.html" class="md-nav__link">
+      <a href="ExternalLinks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +1025,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/komodor-source-control.html" class="md-nav__link">
+      <a href="komodor-source-control.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +1046,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/ManageUsers.html" class="md-nav__link">
+      <a href="ManageUsers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +1067,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/RBAC.html" class="md-nav__link">
+      <a href="RBAC.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +1088,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Static-Prevention.html" class="md-nav__link">
+      <a href="Static-Prevention.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1146,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Actions/Overview.html" class="md-nav__link">
+      <a href="Actions/Overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1167,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Actions/PodShell.html" class="md-nav__link">
+      <a href="Actions/PodShell.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1196,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Helm.html" class="md-nav__link">
+      <a href="Helm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1217,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../../Learn/Metrics.html" class="md-nav__link">
+      <a href="Metrics.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,8 +1242,6 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
   
   
-    
-  
   
   
     
@@ -1183,12 +1252,12 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1202,7 +1271,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Integrations
@@ -1216,7 +1285,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Datadog.html" class="md-nav__link">
+      <a href="../Integrations/Datadog.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1237,7 +1306,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../datadog-webhook.html" class="md-nav__link">
+      <a href="../Integrations/datadog-webhook.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1258,7 +1327,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Datadog-Monitor-Notification.html" class="md-nav__link">
+      <a href="../Integrations/Datadog-Monitor-Notification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1279,7 +1348,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../LaunchDarkly.html" class="md-nav__link">
+      <a href="../Integrations/LaunchDarkly.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1300,7 +1369,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Opsgenie.html" class="md-nav__link">
+      <a href="../Integrations/Opsgenie.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1390,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../PagerDuty.html" class="md-nav__link">
+      <a href="../Integrations/PagerDuty.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1411,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Sentry.html" class="md-nav__link">
+      <a href="../Integrations/Sentry.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,7 +1432,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Slack.html" class="md-nav__link">
+      <a href="../Integrations/Slack.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1453,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../MicrosoftTeams.html" class="md-nav__link">
+      <a href="../Integrations/MicrosoftTeams.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1405,7 +1474,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../CustomEvents.html" class="md-nav__link">
+      <a href="../Integrations/CustomEvents.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1532,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Okta/Okta.html" class="md-nav__link">
+      <a href="../Integrations/Okta/Okta.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1553,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Okta/Okta-Role-Provisioning.html" class="md-nav__link">
+      <a href="../Integrations/Okta/Okta-Role-Provisioning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,21 +1579,19 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
         
           
           <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
@@ -1538,7 +1605,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Azure Active Directory
@@ -1552,7 +1619,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="AzureActiveDirectory.html" class="md-nav__link">
+      <a href="../Integrations/AzureActiveDirectory/AzureActiveDirectory.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1573,7 +1640,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="Azure-SAML-Integration.html" class="md-nav__link">
+      <a href="../Integrations/AzureActiveDirectory/Azure-SAML-Integration.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,30 +1658,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Role Provisioning (SAML)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Azure-Role-Provisioning.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Integrations/AzureActiveDirectory/Azure-Role-Provisioning.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1623,62 +1670,6 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creating-app-roles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating App Roles
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assigning-roles-to-a-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assigning Roles to a User
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assigning-roles-to-a-group" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assigning Roles to a Group
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-role-assignments-over-saml-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Role Assignments Over SAML Response
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1736,7 +1727,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../JumpCloud/JumpCloud.html" class="md-nav__link">
+      <a href="../Integrations/JumpCloud/JumpCloud.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,7 +1748,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../JumpCloud/JumpCloudSamlAttributes.html" class="md-nav__link">
+      <a href="../Integrations/JumpCloud/JumpCloudSamlAttributes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,7 +1777,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../AlertManager.html" class="md-nav__link">
+      <a href="../Integrations/AlertManager.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1807,7 +1798,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../ArgoCD.html" class="md-nav__link">
+      <a href="../Integrations/ArgoCD.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1828,7 +1819,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Webhook.html" class="md-nav__link">
+      <a href="../Integrations/Webhook.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1849,7 +1840,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Loft.html" class="md-nav__link">
+      <a href="../Integrations/Loft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1861,7 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
   
     <li class="md-nav__item">
-      <a href="../Squadcast.html" class="md-nav__link">
+      <a href="../Integrations/Squadcast.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1938,36 +1929,27 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-app-roles" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating App Roles
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assigning-roles-to-a-user" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Assigning Roles to a User
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#assigning-roles-to-a-group" class="md-nav__link">
+  <a href="#migrating-from-the-komodor-k8s-agent-chart_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Assigning Roles to a Group
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-role-assignments-over-saml-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sending Role Assignments Over SAML Response
+      Migrating from the Komodor K8s Agent Chart
     </span>
   </a>
   
@@ -1991,57 +1973,35 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
   
 
 
-<h1 id="azure-ad-role-provisioning">Azure AD Role Provisioning<a class="headerlink" href="#azure-ad-role-provisioning" title="Permanent link">&para;</a></h1>
-<p>To assign Komodor roles to Azure AD users we'll be utilizing the App Roles capability.</p>
-<p>For each Komodor role we'd wish to assign to users in Azure AD, we'll have to create a corresponding Azure AD App Role.</p>
-<blockquote>
-<p>Prerequisites:</p>
+<h1 id="migrating-from-the-komodor-k8s-agent-chart">Migrating from the Komodor K8s Agent Chart<a class="headerlink" href="#migrating-from-the-komodor-k8s-agent-chart" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>As k8s-watcher is being deprecated, we have created a migration tool to help you migrate to the new komodor-agent chart.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Integrate Azure AD with Komodor using SAML. <a href="Azure-SAML-Integration.html">Link to guide.</a></li>
+<li><code>Helm</code> 3.0 or later</li>
+<li><code>Kubectl</code> and a kubeconfig file configured to connect to your cluster</li>
 </ul>
-</blockquote>
-<h2 id="creating-app-roles">Creating App Roles<a class="headerlink" href="#creating-app-roles" title="Permanent link">&para;</a></h2>
-<p>To create app roles, follow the steps below:</p>
-<p>Go to "App registrations":
-<img src="./img/app-registrations.png"></p>
-<p>Pick "All applications", and then click the Komodor app:
-<img src="./img/pick-app-registration.png"></p>
-<p>Next, navigate to "App roles":
-<img src="./img/app-roles.png"></p>
-<p>Click, "Create app role":
-<img src="./img/create-app-role.png"></p>
-<p>Fill in the form as below.
-<img src="./img/role-1.png"></p>
-<p>Note that the value must be the role ID as it appears in Komodor:
-<img src="./img/komodor-roles.png"></p>
-<p>Finally, click "Apply". Repeat this for all the roles you wish to add, and you should see them added in the portal, like so:
-<img src="./img/created-app-roles.png"></p>
-<h2 id="assigning-roles-to-a-user">Assigning Roles to a User<a class="headerlink" href="#assigning-roles-to-a-user" title="Permanent link">&para;</a></h2>
-<p>Now that we have created the Komodor app roles, we move on to assign them to a user.</p>
-<p>Go back to "Enterprise applications" (explained above), and then pick the Komodor app:
-<img src="./img/komodor-app.png"></p>
-<p>Once there, we click on "Assign users and groups":
-<img src="./img/assign-users-and-groups.png"></p>
-<p>Click "Add user/group":
-<img src="./img/add-user-group.png"></p>
-<p>This will allow you to assign a role to a user (or a group, covered below). Simply pick a user:
-<img src="./img/add-assignment.png"></p>
-<p>Next, select a role:
-<img src="./img/select-role.png"></p>
-<p>Finally, click "Assign".</p>
-<h2 id="assigning-roles-to-a-group">Assigning Roles to a Group<a class="headerlink" href="#assigning-roles-to-a-group" title="Permanent link">&para;</a></h2>
-<p>Just like we assigned a role to a user, we can assign a role to a group. To that end, we click "Add user/group", and simply pick a group rather than a user this time. We then select a role, and click "Assign".</p>
-<p>Having done that, we should see the group with the role assigned to it (we can also see the user who was assigned a role above):
-<img src="./img/assigned-roles.png"></p>
-<p>Note that members of a group automatically get assigned the roles that are assigned to the group. It means that since "Alon Glatter" is a member of "Group-1", he will be assigned both "Role-2" and "Role-1" (which was assigned to him via "Group-1").</p>
-<h2 id="sending-role-assignments-over-saml-response">Sending Role Assignments Over SAML Response<a class="headerlink" href="#sending-role-assignments-over-saml-response" title="Permanent link">&para;</a></h2>
-<p>We go to the "Single sign-on" page where we configured the SAML connection to Komodor (<a href="Azure-SAML-Integration.html">here</a>), and click "Edit" on "Attributes &amp; Claims":
-<img src="./img/attributes-and-claims.png"></p>
-<p>We click on "Add new claim":
-<img src="./img/add-new-claim.png"></p>
-<p>We then fill in the form like below, and then finally click "Save":
-<img src="./img/manage-claim.png"></p>
-<p>That's it! Next time the user logs in to Komodor via Azure AD, they will have been assigned the roles in Komodor which are respective to the roles they have been assigned in Azure.</p>
+<h2 id="migrating-from-the-komodor-k8s-agent-chart_1">Migrating from the Komodor K8s Agent Chart<a class="headerlink" href="#migrating-from-the-komodor-k8s-agent-chart_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the <code>komodor-helm-migration</code> tool from the <a href="https://github.com/komodorio/helm-charts/releases/tag/v0.3.0">releases page</a>:</li>
+<li>
+<p>Execute the following command to output an updated values file:</p>
+<p><code>bash
+./komodor-helm-migration&lt;OS&gt;_&lt;ARCH&gt; -r &lt;INSTALLED_RELEASE_NAME&gt;</code>
+For example, to output an updated values file for a release named <code>k8s-watcher-staging</code>:</p>
+<p><code>bash
+./komodor-helm-migration-darwin_arm64 -r komodor-agent</code>
+   execution, this tool will generate a values file that can be used with the new komodor-agent Helm chart.
+   Additionally, it provides step-by-step instructions on uninstalling the old k8s-watcher chart and installing the new komodor-agent chart, ensuring a smooth migration. </p>
+</li>
+<li>
+<p>Command will show an output for all removed, unchanged and automatically mapped values
+<img alt="migration_command_output" src="img/Migration_command_output.png" /></p>
+</li>
+<li>
+<p>Follow the instructions to uninstall the old k8s-watcher chart and install the new komodor-agent chart.</p>
+</li>
+</ol>
 
 
 
@@ -2092,10 +2052,10 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>
