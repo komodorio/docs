@@ -2,43 +2,61 @@
 
 ## Intro
 
-The "AI Log Analysis" feature in Komodor designed to simplify the process of analyzing pod logs within your application environment. 
-Leveraging technology based on OpenAI, this feature helps users efficiently sift through extensive log lines, identify potential root causes of issues, and recommend possible solutions.
+AI log analysis is designed to simplify log analyzing and reading.
+Komodor Leverages OpenAI to analyze the log, identify important log lines, provide a potential root cause, and suggest a solution.
 
-<img src="./img/LogsAI/LogsAIintro.png" width="1000">  
+<img src="./img/LogsAI/Intro.png" width="700">  
 
 ## Pre-requisites
 
-Komodor Admin should enable this feature.
+To use this capability, it has to be enabled on the account level, this can be done by a user who is assigned an `account-admin` role.
 
+1. Navigate to the **settings** page in the user’s dropdown
 
-1. Go to **settings** in the user’s dropdown
+<img src="./img/LogsAI/Settings.png" width="250">  
 
-<img src="./img/LogsAI/LogsAIUserMenu.png" width="250">  
+2. On the General tab, "Features" section, Enable the "AI Log Analysis" feature
 
-2. In “Features” section, look for “AI Log Analysis” and click **“Enable”**
 
 <img src="./img/LogsAI/LogsAISettingsPage.png" width="250">  
 
-**Please note**:  
-- This feature will become usable by **all users** in your account
-- Logs will be sent to OpenAI as-is for analysis, and therefore OpenAI’s [privacy policy](https://openai.com/policies/privacy-policy) applies
-- Only account admins may enable or disable this feature (Consent form)
-
-## How it works?
-
-On any logs view, the AI Log Analysis feature will appear, allowing you to send your logs for AI analysis process, trying to find the root cause and suggested solution.
 
 **Please note**:  
-Due to OpenAI token limits, this response is based on the last 50 lines in the log.
+- After enabling this feature, **all users** will be able to analyze their logs (for resources they have access to)
+- OpenAI’s [privacy policy](https://openai.com/policies/privacy-policy) applies
 
-#### Log analysis for availability issues
-Whenever you click on “investigate” for availability issues that have logs collected - we automatically send those logs for analysis and the output will be in “Container Logs” step on top of the logs area.
+## How to use this feature
 
-<img src="./img/LogsAI/ai logs for issues.png" width="1000">  
 
-#### Log analysis for any pod
-Whenever you are viewing pod logs on any view - service view/node’s pods etc.. You’ll see the AI Log Analysis component on top of the logs area. 
-Just click **“Analyze now”** for results.
+AI Log Analysis is accessible from any log view in the Komodor platform.
+Allowing you to send your logs for AI analysis process, trying to find the root cause and suggested solution.
 
-<img src="./img/LogsAI/LogsAIOnDemand.png" width="1000">  
+**Please note**:  
+Due to OpenAI limitations, the analysis is limited to 50 log lines.
+
+### Log analysis for issues
+As part of Komodor's automatic investigation process of an availability issue or failed deploy, logs are automatically collected (when available) and sent to be analyzed, the analysis can be found under the "Container Logs" step or in the "Unhealthy Pods" section.
+
+<img src="./img/LogsAI/issueslogsai.png" width="700">  
+
+### Log analysis for Live logs view
+Enter the Logs tab of a Pod or a Komodor Service, above the logs section you'll notice the AI Log Analysis component.
+
+
+Click the **“Analyze now”** button to run the analysis.
+
+<img src="./img/LogsAI/LogsAIOnDemand.png" width="700">  
+
+## Disable the feature
+
+1. Navigate to the **settings** page in the user’s dropdown
+
+<img src="./img/LogsAI/Settings.png" width="250">  
+
+2. On the General tab, "Features" section, click on "Enabled" in the "AI Log Analysis" feature
+
+<img src="./img/LogsAI/Disable1.png" width="250">  
+
+3. Click on "Disable"
+
+<img src="./img/LogsAI/disable2.png" width="400">  
