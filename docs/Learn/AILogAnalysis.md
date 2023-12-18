@@ -13,7 +13,7 @@ To use this capability, it has to be enabled on the account level, this can be d
 
 1. Navigate to the **settings** page in the user’s dropdown
 
-<img src="./img/LogsAI/Settings.png" width="250">  
+<img src="./img/LogsAI/SettingsLogsAI.png" width="250">  
 
 2. On the General tab, "Features" section, Enable the "AI Log Analysis" feature
 
