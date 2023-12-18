@@ -57,6 +57,7 @@ nav:
           - Pod Shell: Learn/Actions/PodShell.md
       - Helm: Learn/Helm.md
       - Metrics: Learn/Metrics.md
+      - AI Log Analysis: Learn/AILogAnalysis.md
 
   - Integrations:
       - Datadog: Integrations/Datadog.md
