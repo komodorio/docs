@@ -7,7 +7,7 @@ The Slack integration allows you to be notified on issues triggered by Komodor [
 ## Requirements
 Depending on your companies Slack settings a company admin may be required to enable the integration, the same user will need to be a Komodor Admin in order to start the installation from the Komodor integration page.
 
-!!! Note The free version of Slack is limited to 10 applications.
+Note The free version of Slack is limited to 10 applications!!!
 
 ## Installation
 
