@@ -32,10 +32,11 @@ As k8s-watcher is being deprecated, we have created a migration tool to help you
     For example, to output an updated values file for a release named `k8s-watcher-staging`:
 
     ```bash
-    ./komodor-helm-migration-darwin_arm64 -r k8s-watcher-staging
+    ./komodor-helm-migration-darwin_arm64 -r k8s-watcher
     ```
-   
-    
+   this tool will generate a values file that can be used with the new komodor-agent Helm chart.
+   Additionally, it provides step-by-step instructions on uninstalling the old k8s-watcher chart and installing the new komodor-agent chart, ensuring a smooth migration.
+
 
 3. Command will show an output for all removed, unchanged and automatically mapped values
 ![migration_command_output](./img/Migration_command_output.png)
