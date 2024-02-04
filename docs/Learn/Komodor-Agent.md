@@ -5,7 +5,6 @@
 The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:
 
 1. [helm](https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml)
-2. [kustomize base](https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml), [kustomize final](https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml)
 
 ## ARM Support
 
@@ -26,7 +25,7 @@ By default, the Komodor agent watches the majority of the resources in your clus
 You can enable/disable watching a resource using the following command:
 
 1. Helm: `--set watcher.resources.RESOURCE=true/off`
-2. Kustomize: update the configuration file and the RBAC rule to have `get`, `list` and `watch` permissions
+
 
 ### Namespaces
 
@@ -35,7 +34,7 @@ The Komodor agent watches all the namespaces (by default `watchNamespace=all`)
 To watch a single namespace use the following command:
 
 1. Helm: `--set watcher.watchNamespace=NAMESPACE`
-2. Kustomize: patch the configuration file `watchNamespace=NAMESPACE`
+
 
 #### Denylist
 
@@ -48,7 +47,6 @@ Agent tasks are used to interact with the cluster on demand, read more about int
 To enable agent tasks (default is `off`):
 
 1. Helm: `--set watcher.enableAgentTaskExecution=true && --set watcher.allowReadingPodLogs=true`
-2. Kustomize: The `full` overlay already has this turned on. If you are building it manually from `base`, patch the configuration file `enableAgentTaskExecution=true` and make sure to have RBAC permissions to `get` and `list` for `pods` and `pods/log`
 
 ### Environment Variables
 
@@ -58,7 +56,7 @@ For example:
 
 ```bash
 # apiKey
-KOMOKW_API_KEY=1a2b3c4d5e6f7g7h
+KOMOKW_API_KEY=9950ef9b-e436-4f04-9885-23b9a597b3b0
 # watcher.resources.replicaSet
 KOMOKW_RESOURCES_REPLICASET=false
 
@@ -69,13 +67,6 @@ KOMOKW_COLLECT_HISTORY=true
 ```
 
 ## Updating the agent
-
-### Kustomize
-
-```bash
-kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref=master
-```
-
 ### Helm
 
 ```bash
@@ -85,11 +76,6 @@ helm upgrade --install k8s-watcher komodorio/k8s-watcher --reuse-values
 
 ## Uninstalling
 
-### Kustomize
-
-```bash
-kubectl delete ns komodor
-```
 
 ### Helm
 

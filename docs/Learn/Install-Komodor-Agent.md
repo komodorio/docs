@@ -30,13 +30,11 @@ Komodor is a Kubernetes operations platform for developers, complete with automa
 * Installed kubectl command-line tool.<br />
 * Have a kubeconfig file (default location is ~/.kube/config).<br />
 * Have an active connection to the desired cluster<br />
-* Installed [Helm3](https://helm.sh/docs/intro/install/) or [Kustomize](https://kubectl.docs.kubernetes.io/installation/kustomize/)<br />
 
 ### Permissions
 The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:
 
 1. [helm](https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml)
-2. [kustomize base](https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml), [kustomize final](https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml)
 
 ## Step 1 - Sign up to Komodor
 
@@ -45,7 +43,6 @@ To create your account, [sign up](https://app.komodor.com/#mode=signUp) for Komo
 ## Step 2 - Installing the Agent
 
 * The main installation method uses Helm 3.0 to install the Komodor Agent on your cluster
-* If you aren’t using Helm, you can install the Agent with [Kustomize](#kustomize-install), or with our guided installation script using Bash [Linux/Mac] or Powershell [Windows]
 * You can also install the Agent manually using the Helm command template below
 
 
@@ -84,15 +81,6 @@ helm upgrade --install k8s-watcher komodorio/k8s-watcher \
  --set watcher.allowReadingPodLogs=true
 ```
 
-
-### Kustomize install
-Alternatively you can use the following Kustomize command:
-```bash
-export KOMOKW_API_KEY= # API KEY Required
-export KOMOKW_CLUSTER_NAME= # Cluster name the will be presented in Komodor
-kubectl create ns komodor
-kubectl apply -n komodor -k https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref=master
-```
 
 The API key can be found in the Integration page.
 

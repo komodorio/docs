@@ -52,7 +52,9 @@ components:
 ---
 ## Updating Image Repository Configuration
 
-The chart is set up to use `public.ecr.aws/komodor-public` as the default image repository. If you need to use an alternative repository, such as a private one, you can change the `imageRepo` value in the values file. For example, to switch to the `myrepo/komodor-agent` repository, apply the following YAML configuration:
+The chart is set up to use `public.ecr.aws/komodor-public` as the default image repository.
+
+If you need to use an alternative repository, such as a private one, you can change the `imageRepo` value in the values file. For example, to switch to the `myrepo/komodor-agent` repository, apply the following YAML configuration:
 
 ```yaml
 imageRepo: myrepo/komodor-agent
@@ -79,6 +81,7 @@ capabilities:
 
 ## Limiting the agent to watch specific namespaces
 By default, the agent watches all namespaces. To limit the agent to watch a specific namespace, set the `events.watchNamespace` value in the values file.
+
 For example, to limit the agent to watch the `default` namespace, apply the following YAML configuration:
 
 ```yaml
@@ -87,6 +90,7 @@ events:
 ```
 
 You can also specify a list of namespaces to avoid watching by settings the `events.namespaceDenyList` value in the values file.
+
 For example, to avoid watching the `kube-system` and `kube-public` namespaces, apply the following YAML configuration:
 
 ```yaml
