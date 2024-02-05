@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1924,20 +1924,17 @@ allowfullscreen></iframe>
 <li>Installed kubectl command-line tool.<br /></li>
 <li>Have a kubeconfig file (default location is ~/.kube/config).<br /></li>
 <li>Have an active connection to the desired cluster<br /></li>
-<li>Installed <a href="https://helm.sh/docs/intro/install/">Helm3</a> or <a href="https://kubectl.docs.kubernetes.io/installation/kustomize/">Kustomize</a><br /></li>
 </ul>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
 <p>The Komodor agent uses the native RBAC model of Kubernetes. All the permissions are listed here:</p>
 <ol>
 <li><a href="https://github.com/komodorio/helm-charts/blob/master/charts/k8s-watcher/templates/clusterrole.yaml">helm</a></li>
-<li><a href="https://github.com/komodorio/helm-charts/blob/master/manifests/base/clusterrole.yaml">kustomize base</a>, <a href="https://github.com/komodorio/helm-charts/blob/master/manifests/overlays/full/logs-reader.cr.yaml">kustomize final</a></li>
 </ol>
 <h2 id="step-1-sign-up-to-komodor">Step 1 - Sign up to Komodor<a class="headerlink" href="#step-1-sign-up-to-komodor" title="Permanent link">&para;</a></h2>
 <p>To create your account, <a href="https://app.komodor.com/#mode=signUp">sign up</a> for Komodor with your email address or by using SSO via your Google, GitHub or Microsoft accounts.</p>
 <h2 id="step-2-installing-the-agent">Step 2 - Installing the Agent<a class="headerlink" href="#step-2-installing-the-agent" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The main installation method uses Helm 3.0 to install the Komodor Agent on your cluster</li>
-<li>If you aren’t using Helm, you can install the Agent with <a href="#kustomize-install">Kustomize</a>, or with our guided installation script using Bash [Linux/Mac] or Powershell [Windows]</li>
 <li>You can also install the Agent manually using the Helm command template below</li>
 </ul>
 <h3 id="guided-install">Guided install<a class="headerlink" href="#guided-install" title="Permanent link">&para;</a></h3>
@@ -1968,14 +1965,6 @@ helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class=
 <span class="w"> </span>--set<span class="w"> </span>watcher.clusterName<span class="o">=</span>CLUSTER_NAME<span class="w"> </span><span class="se">\</span>
 <span class="w"> </span>--set<span class="w"> </span>watcher.enableAgentTaskExecution<span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
 <span class="w"> </span>--set<span class="w"> </span>watcher.allowReadingPodLogs<span class="o">=</span><span class="nb">true</span>
-</code></pre></div>
-
-<h3 id="kustomize-install">Kustomize install<a class="headerlink" href="#kustomize-install" title="Permanent link">&para;</a></h3>
-<p>Alternatively you can use the following Kustomize command:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">KOMOKW_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="c1"># API KEY Required</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">KOMOKW_CLUSTER_NAME</span><span class="o">=</span><span class="w"> </span><span class="c1"># Cluster name the will be presented in Komodor</span>
-kubectl<span class="w"> </span>create<span class="w"> </span>ns<span class="w"> </span>komodor
-kubectl<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>komodor<span class="w"> </span>-k<span class="w"> </span>https://github.com/komodorio/helm-charts/manifests/overlays/full/?ref<span class="o">=</span>master
 </code></pre></div>
 
 <p>The API key can be found in the Integration page.</p>
@@ -2064,10 +2053,10 @@ Get simple remediation instructions and take action with just one click</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>

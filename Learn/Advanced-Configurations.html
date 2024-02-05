@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -2126,7 +2126,8 @@ helm<span class="w"> </span>upgrade<span class="w"> </span>--install<span class=
 
 <hr />
 <h2 id="updating-image-repository-configuration">Updating Image Repository Configuration<a class="headerlink" href="#updating-image-repository-configuration" title="Permanent link">&para;</a></h2>
-<p>The chart is set up to use <code>public.ecr.aws/komodor-public</code> as the default image repository. If you need to use an alternative repository, such as a private one, you can change the <code>imageRepo</code> value in the values file. For example, to switch to the <code>myrepo/komodor-agent</code> repository, apply the following YAML configuration:</p>
+<p>The chart is set up to use <code>public.ecr.aws/komodor-public</code> as the default image repository.</p>
+<p>If you need to use an alternative repository, such as a private one, you can change the <code>imageRepo</code> value in the values file. For example, to switch to the <code>myrepo/komodor-agent</code> repository, apply the following YAML configuration:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">imageRepo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myrepo/komodor-agent</span>
 </code></pre></div>
 
@@ -2148,14 +2149,14 @@ the following capabilities can be disabled:</p>
 
 <hr />
 <h2 id="limiting-the-agent-to-watch-specific-namespaces">Limiting the agent to watch specific namespaces<a class="headerlink" href="#limiting-the-agent-to-watch-specific-namespaces" title="Permanent link">&para;</a></h2>
-<p>By default, the agent watches all namespaces. To limit the agent to watch a specific namespace, set the <code>events.watchNamespace</code> value in the values file.
-For example, to limit the agent to watch the <code>default</code> namespace, apply the following YAML configuration:</p>
+<p>By default, the agent watches all namespaces. To limit the agent to watch a specific namespace, set the <code>events.watchNamespace</code> value in the values file.</p>
+<p>For example, to limit the agent to watch the <code>default</code> namespace, apply the following YAML configuration:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">events</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">watchNamespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 </code></pre></div>
 
-<p>You can also specify a list of namespaces to avoid watching by settings the <code>events.namespaceDenyList</code> value in the values file.
-For example, to avoid watching the <code>kube-system</code> and <code>kube-public</code> namespaces, apply the following YAML configuration:</p>
+<p>You can also specify a list of namespaces to avoid watching by settings the <code>events.namespaceDenyList</code> value in the values file.</p>
+<p>For example, to avoid watching the <code>kube-system</code> and <code>kube-public</code> namespaces, apply the following YAML configuration:</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">events</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">namespaceDenyList</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;kube-system&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;kube-public&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
@@ -2298,10 +2299,10 @@ For example, to avoid watching the <code>kube-system</code> and <code>kube-publi
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>

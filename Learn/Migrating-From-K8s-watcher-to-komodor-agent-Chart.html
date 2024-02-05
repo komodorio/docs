@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -2006,14 +2006,22 @@ if (typeof window !== 'undefined' && window.location.href.includes('127.0.0.1'))
 <ol>
 <li>Download the <code>komodor-helm-migration</code> tool from the <a href="https://github.com/komodorio/helm-charts/releases/tag/v0.3.0">releases page</a>:</li>
 <li>
-<p>Execute the following command to output an updated values file:</p>
+<p>Make the tool executable:</p>
 <p><code>bash
-./komodor-helm-migration&lt;OS&gt;_&lt;ARCH&gt; -r &lt;INSTALLED_RELEASE_NAME&gt;</code>
-For example, to output an updated values file for a release named <code>k8s-watcher-staging</code>:</p>
+chmod +x komodor-helm-migration&lt;OS&gt;_&lt;ARCH&gt;</code></p>
+<p>For example, to make the tool executable on a Mac with an M1 chip:</p>
 <p><code>bash
-./komodor-helm-migration-darwin_arm64 -r komodor-agent</code>
-   execution, this tool will generate a values file that can be used with the new komodor-agent Helm chart.
-   Additionally, it provides step-by-step instructions on uninstalling the old k8s-watcher chart and installing the new komodor-agent chart, ensuring a smooth migration. </p>
+chmod +x komodor-helm-migration-darwin_arm64</code></p>
+</li>
+<li>
+<p>Execute the following command to output an updated values file</p>
+<p><code>bash
+./komodor-helm-migration&lt;OS&gt;_&lt;ARCH&gt; -r &lt;INSTALLED_RELEASE_NAME&gt;</code></p>
+<p>For example, to output an updated values file for a release named <code>k8s-watcher-staging</code>:</p>
+<p><code>bash
+./komodor-helm-migration-darwin_arm64 -r k8s-watcher</code>
+   this tool will generate a values file that can be used with the new komodor-agent Helm chart.
+   Additionally, it provides step-by-step instructions on uninstalling the old k8s-watcher chart and installing the new komodor-agent chart, ensuring a smooth migration.</p>
 </li>
 <li>
 <p>Command will show an output for all removed, unchanged and automatically mapped values
@@ -2073,10 +2081,10 @@ For example, to output an updated values file for a release named <code>k8s-watc
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>
