@@ -56,7 +56,7 @@ For example:
 
 ```bash
 # apiKey
-KOMOKW_API_KEY=9950ef9b-e436-4f04-9885-23b9a597b3b0
+KOMOKW_API_KEY=00000000-FAKE-GUID-0000-000000000000
 # watcher.resources.replicaSet
 KOMOKW_RESOURCES_REPLICASET=false
 
