@@ -6,6 +6,7 @@ Komodor’s Timelines allow you to see the status of services, pods and differen
 
 Timelines can be found in the following features:
 - When looking at one specific Service in the Service page or the Service drawer
+- When looking at one specific Job in the Job page
 - The Events page \*
 
 <small>\* The events page will often contain a lot of information in its default state. To prevent information overload, the timeline will switch to an aggregation over time graph at a certain threshold.</small>
