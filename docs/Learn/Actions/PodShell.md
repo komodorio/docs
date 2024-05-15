@@ -2,12 +2,12 @@
 
 Pod shell allows you to initiate a shell session against containers in your clusters so you can run various commands to examine the state of the container from within.
 
-In essense, it is similar to the experience provided by the `kubectl exec -it POD_NAME -- /bin/bash` command
+In essence, it is similar to the experience provided by the `kubectl exec -it POD_NAME -- /bin/bash` command
 
 ## Prerequisites
 
 - Agent version >= 0.1.173
-- Prerequisites for performing actions via the agent (see [here](https://docs.komodor.com/Learn/Actions.html))
+- Prerequisites for performing actions via the agent
 - Required Permissions
 
 ```
@@ -24,13 +24,13 @@ Pod Shell is available for admin users or users with the `pod:exec` Komodor RBAC
 
 ## Opting-in
 
-For convienece, the following flag has been added to configure the agent to support pod shell access:
+For convenience, the following flag has been added to configure the agent to support pod shell access:
 
 `watcher.actions.podExec=true`
 
 ## Agent Upgrade
 
-To upgrade an existing agent to supports pod shell access execute the following command:
+To upgrade an existing agent to support pod shell access execute the following command:
 
 ```
 helm repo add komodorio https://helm-charts.komodor.io ; helm repo update; helm upgrade --install k8s-watcher komodorio/k8s-watcher --set watcher.actions.basic=true --set watcher.actions.advanced=true --set watcher.actions.podExec=true --reuse-values
